@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F60F0AF3-BFC9-BDDD-92FE-155FF225D9B1" name="PLANETA">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>3F095EF6-CACC-CD27-ACF6-F02E2EC76E8D</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Planeta" id="519586B6-109D-5A24-9DB1-646B53CBCD97">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>2C7D76AB-1D0E-1658-4B20-7D223F03B84A</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="D5C5FCF2-788F-0338-50AC-A0CA74201720">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>A9F7C55A-FDA3-1163-2B63-F270B326E423</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_cristal" id="2C235486-BAD6-FAE8-2C94-5A2F46BEF33D">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>F2B6E302-7D9E-23DD-420A-19BB4FD21437</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_metal" id="6964D9F3-F315-4E79-F8A4-2DD29C5ECC04">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>87345E1E-61AE-7BBE-5EC1-332A5995078D</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_deuterium" id="1ACB823D-3269-7E0B-8B81-CA16E87FBFE2">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>594297F4-83E3-245C-F5A1-1374BE9AF525</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61C337F4-CC18-6601-21D7-AEA0BF927E34" name="PLANETA_PK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>A590F5E3-63B8-C1F8-7BE0-07158ED2AD36</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="519586B6-109D-5A24-9DB1-646B53CBCD97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

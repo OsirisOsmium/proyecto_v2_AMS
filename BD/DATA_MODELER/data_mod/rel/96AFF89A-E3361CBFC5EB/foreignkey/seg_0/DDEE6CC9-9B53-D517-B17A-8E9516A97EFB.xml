@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DDEE6CC9-9B53-D517-B17A-8E9516A97EFB" containerWithKeyObject="3A70ABEC-788D-CB34-DE41-5D6CFC83D74B" localFKIndex="4A5E4678-0B48-9EE8-7C14-817A386B7C73" name="Relation_2_PLANETA_FK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>C22E9CF6-0CB5-B527-BA82-E00D92D006D8</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<referredTableLongName>PLANETA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F60F0AF3-BFC9-BDDD-92FE-155FF225D9B1</referredTableID>
+<keyObject>61C337F4-CC18-6601-21D7-AEA0BF927E34</keyObject>
+<referredKeyID>61C337F4-CC18-6601-21D7-AEA0BF927E34</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Planeta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

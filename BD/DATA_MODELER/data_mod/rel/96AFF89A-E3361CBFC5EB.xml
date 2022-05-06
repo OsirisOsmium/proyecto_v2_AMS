@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="96AFF89A-C229-F43A-423B-E3361CBFC5EB" mainViewID="786782A9-0A66-2585-6FE1-0D2437F1BFDA">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:00:54 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>
