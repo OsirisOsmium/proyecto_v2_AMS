@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B6BE2677-D37D-6D3B-3D56-FD67935C101E" name="DEFENSE">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>3F095EF6-CACC-CD27-ACF6-F02E2EC76E8D</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Defense" id="01171CB2-B5A7-14C6-99E0-B436DE7F2A67">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="6D47E707-2BDD-292A-1B57-6830812BFE05">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Metal_Cost" id="4956C7F1-4E28-7C9A-0BE1-7CA6A28F4CEF">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Crystal_Cost" id="AEA0BEFB-1897-A077-B136-86906AB51273">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Deuterium_Cost" id="28484327-CEB5-393A-97D3-6C34D3B8C67C">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="InitialArmor" id="586A1C90-0A08-8589-77F3-F01E2D061580">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Armor" id="B1358164-AA31-1F57-29D5-F111446DF819">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BaseDamage" id="5761D77E-0FEF-8F07-4F04-42FBC439B0C4">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Speed" id="E5C86839-A20F-E5F7-D5BA-87C12175495B">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GenerateWastings" id="7F02B8B1-8B4F-DC1F-6CED-D0FE87A0EADA">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:15 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="942E321D-984C-8687-59DC-6C8AD0F88352" name="Key_1">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:19:45 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<engineerTo>
+<item key="96AFF89A-C229-F43A-423B-E3361CBFC5EB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>01171CB2-B5A7-14C6-99E0-B436DE7F2A67</newElementsIDs>
+<usedAttributes>
+<attributeRef>01171CB2-B5A7-14C6-99E0-B436DE7F2A67</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="data_mod" id="1F03A995-FD1D-4AB8-F546-05F17D8FDD87" version="3.5">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:00:54 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>1F03A995-FD1D-4AB8-F546-05F17D8FDD87</designId>
+</OSDM_Design>

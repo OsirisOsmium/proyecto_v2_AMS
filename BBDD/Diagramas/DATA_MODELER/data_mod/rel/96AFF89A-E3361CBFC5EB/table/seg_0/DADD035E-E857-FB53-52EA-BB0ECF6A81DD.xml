@@ -1,0 +1,181 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DADD035E-E857-FB53-52EA-BB0ECF6A81DD" name="SHIP">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>6E5D1125-2119-F49B-810A-073B6492A61B</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Planeta" id="D881E722-BBC1-4EB5-1465-6462CBFCEBD9">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>2C7D76AB-1D0E-1658-4B20-7D223F03B84A</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="078D05D0-21C4-1937-B5E1-4298DDF9D9F9" referredColumn="519586B6-109D-5A24-9DB1-646B53CBCD97"/>
+</associations>
+</Column>
+<Column name="ID_Ship" id="537D883D-0B89-F0D5-D533-8FC31094F17A">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>EB21E08D-D078-9EE9-FA73-EF2F9A62BEF5</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="1A8490CC-3055-B735-4137-A166E6B38DE0">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>89E73B26-76DE-E644-1FFD-33A258BE979E</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Metal_Cost" id="D52935E5-A3F3-EE0D-95EF-BD5B1ABE68B0">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>A2FE6D3C-4F38-7E1A-5DEE-339135826622</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Crystal_Cost" id="845B8D86-E37D-EDD1-9582-1BCC525692C9">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>A5CC7A94-28FC-05F7-CB7D-892615A805F5</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Deuterium_Cost" id="2243A4E6-1582-A7A6-D080-40B07B558152">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>0C3B737D-417C-7832-5685-40058B0DA9A8</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="InitialArmor" id="BF39441E-EE50-6F4D-4661-E46B6EBD6B66">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>3FA80533-B507-0D64-749C-956FB684CCF7</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Armor" id="611F0A3D-BEE7-5A62-E11A-AEF1958DBDE1">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>5A97175F-D45C-6F50-1F4E-8F56895742EC</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BaseDamage" id="D879C679-0A43-CE34-F2C1-B9B4ED0DCF3A">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>1B24CA20-8FB1-A707-4C38-6CC9608E560D</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Speed" id="4CEA9999-8B58-DD1D-7897-56EDD83CEC94">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>ACF43B0C-FF42-2FF0-7D3A-013795354993</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GenerateWastings" id="CFF58307-21A6-9D6B-ED43-9E6DF44BAA4C">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>3C9552DA-F458-A9C7-FF49-D63C4EC85616</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0F0935D8-CA12-60DD-A430-54A79114CC66" name="SHIP_PK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>A590F5E3-63B8-C1F8-7BE0-07158ED2AD36</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D881E722-BBC1-4EB5-1465-6462CBFCEBD9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF96B801-8B38-EF38-E1B4-BC04F80C0693" name="SHIP_PKv1">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>9D40BF06-4916-E789-55FD-59FF6B53EDEF</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="537D883D-0B89-F0D5-D533-8FC31094F17A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41FE8C76-69E5-7607-0927-32A1B2AC4F35" name="SHIP_PLANETA_FK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>5A8B5682-0C71-151E-D5C8-ADE282FFA37E</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D881E722-BBC1-4EB5-1465-6462CBFCEBD9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

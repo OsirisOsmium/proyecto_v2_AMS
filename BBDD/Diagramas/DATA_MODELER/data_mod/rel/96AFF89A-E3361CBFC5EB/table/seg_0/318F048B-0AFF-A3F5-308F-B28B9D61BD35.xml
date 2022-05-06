@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="318F048B-0AFF-A3F5-308F-B28B9D61BD35" name="TECHNOLOGY_DEFENSE">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>53C1A374-2C63-2D3F-2FA6-13A1965F78EB</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Planeta" id="9DE304B5-E9AD-B800-0956-03BE97185CDE">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>2C7D76AB-1D0E-1658-4B20-7D223F03B84A</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B7B82EF2-3305-2771-FA72-BD9BA3AEF80F" referredColumn="519586B6-109D-5A24-9DB1-646B53CBCD97"/>
+</associations>
+</Column>
+<Column name="price" id="0248BBC0-E976-D54C-37BC-B08357125B56">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>293921B3-CF54-7945-BEF3-16FC07B2CEA2</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C76B9784-257A-1B9D-AA62-379DF2E56B55" name="TECHNOLOGY_DEFENSE_PK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>A590F5E3-63B8-C1F8-7BE0-07158ED2AD36</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DE304B5-E9AD-B800-0956-03BE97185CDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25D5CA86-E869-5448-4EEA-BA2F1BE46865" name="TECHNOLOGY_DEFENSE_PLANETA_FK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>5D193DA1-97D5-F8D2-0C2E-710BDB0FCD5C</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DE304B5-E9AD-B800-0956-03BE97185CDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
