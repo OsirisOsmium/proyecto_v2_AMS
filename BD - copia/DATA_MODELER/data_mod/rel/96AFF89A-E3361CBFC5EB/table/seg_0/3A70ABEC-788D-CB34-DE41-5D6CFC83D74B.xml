@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A70ABEC-788D-CB34-DE41-5D6CFC83D74B" name="Relation_2">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PLANETA_ID_Planeta" id="6248A901-EBD2-CF3D-1042-9574007FA9D1">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DDEE6CC9-9B53-D517-B17A-8E9516A97EFB" referredColumn="519586B6-109D-5A24-9DB1-646B53CBCD97"/>
+</associations>
+</Column>
+<Column name="USER_ID_User" id="7171EAA0-1C90-A738-5948-F55E6FD75E0B">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E0BB2EBD-5F88-0417-3C17-FD4B84A70451" referredColumn="F042C750-FD85-2A10-82BC-B8CDFB92C20B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44B3E688-0AA1-BB00-5EC5-BAA3F3B28891" name="Relation_2_PK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6248A901-EBD2-CF3D-1042-9574007FA9D1"/>
+<colUsage columnID="7171EAA0-1C90-A738-5948-F55E6FD75E0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A5E4678-0B48-9EE8-7C14-817A386B7C73" name="Relation_2_PLANETA_FK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>C22E9CF6-0CB5-B527-BA82-E00D92D006D8</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6248A901-EBD2-CF3D-1042-9574007FA9D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E6D7C6D-BB0F-3313-DD6C-FDD84CADAD3E" name="Relation_2_USER_FK">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:43:16 UTC</createdTime>
+<generatorID>C22E9CF6-0CB5-B527-BA82-E00D92D006D8</generatorID>
+<ownerDesignName>data_mod</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7171EAA0-1C90-A738-5948-F55E6FD75E0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

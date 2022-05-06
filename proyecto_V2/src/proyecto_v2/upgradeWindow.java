@@ -8,15 +8,20 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class upgradeWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JButton btnUpDef, btnUpAtack, btnBack;
+	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
+	private JLabel lblNewLabel_2;
 
 	/**
 	 * Launch the application.
@@ -37,67 +42,129 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		
+		////////////////////////////
+				
+		btnViewPlanetStat = new JButton("View Stats");
+		btnViewPlanetStat.addActionListener(this);
+		btnViewPlanetStat.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnViewPlanetStat.setBounds(10, 46, 92, 33);
+		contentPane.add(btnViewPlanetStat);
+		
+		btnBuild = new JButton("Build");
+		btnBuild.addActionListener(this);
+		btnBuild.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnBuild.setBounds(10, 127, 92, 33);
+		contentPane.add(btnBuild);
+		
+		btnUpgrade = new JButton("Upgrade");
+		btnUpgrade.addActionListener(this);
+		btnUpgrade.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnUpgrade.setBounds(10, 84, 92, 33);
+		contentPane.add(btnUpgrade);
+		
+		btnReports = new JButton("Reports");
+		btnReports.addActionListener(this);
+		btnReports.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnReports.setBounds(10, 170, 92, 33);
+		contentPane.add(btnReports);
+		
+		btnThreadComing = new JButton("Coming");
+		btnThreadComing.addActionListener(this);
+		btnThreadComing.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnThreadComing.setBounds(10, 213, 92, 33);
+		contentPane.add(btnThreadComing);
+		
+		btnMain = new JButton("Main");
+		btnMain.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnMain.setBounds(10, 256, 92, 33);
+		btnMain.addActionListener(this);
+		contentPane.add(btnMain);
+		
+		btnLogOut = new JButton("Log Out");
+		btnLogOut.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnLogOut.addActionListener(this);
+		btnLogOut.setBounds(10, 406, 92, 33);
+		contentPane.add(btnLogOut);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setBackground(SystemColor.inactiveCaption);
+		lblNewLabel_2.setBounds(0, 0, 110, 482);
+		lblNewLabel_2.setOpaque(true);
+		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
+		contentPane.add(lblNewLabel_2);//añadimos el label
+		contentPane.add(lblNewLabel_2);
+		
+		////////////////////////////
+		
+		
+		
 		JLabel lblNewLabel = new JLabel("UPGRADE TECHNOLOGY");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		lblNewLabel.setBounds(81, 46, 550, 61);
+		lblNewLabel.setBounds(138, 46, 550, 61);
 		contentPane.add(lblNewLabel);
 		
 		btnUpDef = new JButton(" UPDATE DEFENSE");
 		btnUpDef.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnUpDef.addActionListener(this);
-		btnUpDef.setBounds(481, 177, 168, 45);
+		btnUpDef.setBounds(493, 181, 168, 45);
 		contentPane.add(btnUpDef);
 		
 		btnUpAtack = new JButton("UPDATE ATTACK");
 		btnUpAtack.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnUpAtack.addActionListener(this);
-		btnUpAtack.setBounds(481, 230, 168, 45);
+		btnUpAtack.setBounds(493, 236, 168, 45);
 		contentPane.add(btnUpAtack);
 		
+		/*
 		btnBack = new JButton("BACK");
 		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnBack.addActionListener(this);
 		btnBack.setBounds(499, 376, 150, 45);
 		contentPane.add(btnBack);
+		*/
 		
 		JLabel lblNewLabel_1 = new JLabel("Update Defense Technology.      Cost: ");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1.setBounds(81, 177, 261, 45);
+		lblNewLabel_1.setBounds(138, 183, 261, 45);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Update Attack Technology.      Cost: ");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2.setBounds(81, 230, 261, 45);
+		lblNewLabel_2.setBounds(138, 236, 261, 45);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("x");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_3.setBounds(377, 177, 80, 45);
+		lblNewLabel_3.setBounds(434, 183, 80, 45);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_3_1 = new JLabel("xx");
 		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_3_1.setBounds(377, 230, 80, 45);
+		lblNewLabel_3_1.setBounds(434, 236, 80, 45);
 		contentPane.add(lblNewLabel_3_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Actual Defense Technology");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1.setBounds(81, 323, 197, 45);
+		lblNewLabel_1_1.setBounds(144, 322, 197, 45);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Actual Attack Technology");
 		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2_1.setBounds(81, 376, 197, 45);
+		lblNewLabel_2_1.setBounds(144, 375, 197, 45);
 		contentPane.add(lblNewLabel_2_1);
 		
 		JLabel lblActDefTech = new JLabel("xxx");
 		lblActDefTech.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblActDefTech.setBounds(288, 323, 80, 45);
+		lblActDefTech.setBounds(351, 322, 80, 45);
 		contentPane.add(lblActDefTech);
 		
 		JLabel lblActAtaTech = new JLabel("xxxx");
 		lblActAtaTech.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblActAtaTech.setBounds(288, 376, 80, 45);
+		lblActAtaTech.setBounds(351, 375, 80, 45);
 		contentPane.add(lblActAtaTech);
 		
 		setVisible(true);
@@ -111,7 +178,41 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		if (btnUpAtack==e.getSource()) {
 			
 		}
-		if (btnBack==e.getSource()) {
+		if (btnViewPlanetStat==e.getSource()){
+			viewWindow view=new viewWindow();
+			this.setVisible(false);
+			view.setVisible(true);
+		}
+		
+		if (btnUpgrade==e.getSource()){
+			upgradeWindow upgrade=new upgradeWindow();
+			this.setVisible(false);
+			upgrade.setVisible(true);
+		}
+		
+		if (btnBuild==e.getSource()){
+			buildWindow view=new buildWindow();
+			this.setVisible(false);
+			view.setVisible(true);
+		}
+		
+		if (btnReports==e.getSource()){
+			reportsWindow report=new reportsWindow();
+			this.setVisible(false);
+			report.setVisible(true);
+		}
+		
+		if (btnThreadComing==e.getSource()){
+			comingWindow coming=new comingWindow();
+			this.setVisible(false);
+			coming.setVisible(true);
+		}
+		if (btnLogOut==e.getSource()) {
+			logInWindow logIn=new logInWindow();
+			this.setVisible(false);
+			logIn.setVisible(true);
+		}
+		if (btnMain==e.getSource()) {
 			mainWindow main=new mainWindow();
 			this.setVisible(false);
 			main.setVisible(true);

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="3EEF36F9-DB63-A0C5-C5F5-087A370D5BB0">
+<createdBy>fraci</createdBy>
+<createdTime>2022-05-05 07:00:54 UTC</createdTime>
+<ownerDesignName>data_mod</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>
