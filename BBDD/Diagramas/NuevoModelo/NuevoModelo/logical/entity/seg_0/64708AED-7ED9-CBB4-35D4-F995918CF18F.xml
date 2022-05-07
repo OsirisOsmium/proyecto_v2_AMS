@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="64708AED-7ED9-CBB4-35D4-F995918CF18F" name="Defense">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Defense" id="B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="6110A651-5766-E1BD-B8BF-BB668575D76E">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="metal_Cost" id="C82612CB-8782-B678-1BB3-040D5A91D4FB">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="crystal_Cost" id="DCD5C194-233C-9697-5933-D4B7E84E3C9D">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="deuterium_Cost" id="C4ABD622-92C7-24FD-952E-71152D3EB1BD">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="initialArmor" id="069410F1-3193-15E8-0E8B-D6470171E2BE">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="armor" id="6435AACF-AC75-5193-E4D2-AC96BBD4CA40">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="baseDamage" id="4081B60B-774F-F92B-9672-5002400EC31A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="speed" id="F8BADA47-792F-D5B8-A2C7-8B9F76FC5D5F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="generateWasting" id="FF15CAA3-1F2C-DC4F-12BD-BB267D1FCCDF">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:00 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9E61785A-9E87-2C3D-9638-3AA64BB20E82" name="ID_Defense">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:45:11 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4</newElementsIDs>
+<usedAttributes>
+<attributeRef>B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

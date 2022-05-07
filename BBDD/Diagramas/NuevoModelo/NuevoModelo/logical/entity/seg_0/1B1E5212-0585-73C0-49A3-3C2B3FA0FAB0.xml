@@ -1,0 +1,242 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1B1E5212-0585-73C0-49A3-3C2B3FA0FAB0" name="Planet">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:03:40 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Planet" id="64DF48F0-A271-B873-75B5-ADED0517DEA5">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:05:56 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_User" id="F9F761BE-59B1-328B-0AC3-27AC30BA8A0B">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:20:50 UTC</createdTime>
+<generatorID>F26765E6-ACD9-AA0F-F693-A1C37201EC7A</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<referedAttribute>464E4531-9CBD-FD74-FE6C-F8741911903E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="planet_Name" id="859CA4BF-9946-076D-7602-E849677EB269">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:15:36 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantity_Metal" id="7C1B9ECD-6DF8-D661-2C58-B0D1BD807B20">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:19:26 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantity_Crystal" id="FCF469E4-91CB-CCBE-E3FE-771522DDD974">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:19:57 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantity_Deuterium" id="3B83B322-EE56-FFD5-F816-34551A17C2D5">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:19:58 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_LightHunter" id="764F72A7-D9A5-8934-8783-27DCF1C6C40F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:33:20 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_HeavyHunter" id="0821EC05-4727-2EEB-B860-F9DE8063B297">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:34:26 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_BattleShip" id="1785E531-1FBA-3487-806F-8B34A13A4A6E">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:34:27 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_ArmoredShip" id="E7195053-1EE0-847C-B3F4-AA40E154E899">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:34:27 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_MissileLauncher" id="0C065BEC-36E3-7492-303E-593BC4DA4928">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:34:28 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_IonCannon" id="BE4D4631-B3A5-F2A9-CFD0-8E60446C94FE">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:34:28 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_PlasmaCannon" id="708D1F55-3DD0-24FB-1B8B-0F25E7B14CE7">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:34:28 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_LevelDefense" id="27B30E62-DCD4-2A7F-B118-77C98F28DC18">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:54:22 UTC</createdTime>
+<generatorID>1EF5C47E-C985-B4FF-718F-F63D62B8C577</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<referedAttribute>7235EF01-8049-16D1-4E92-C76DA668BAC6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_LevelAttack" id="EF5527F0-5F34-0365-4F98-1F34952B3C8D">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:54:34 UTC</createdTime>
+<generatorID>31066CC6-62B9-5473-56BA-AAEC9326989C</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<referedAttribute>60626D00-D568-5317-977A-DC6F39C5B3BA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9C97825F-4376-6603-794E-408A4FC34B08" name="ID_Planet">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:15:08 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>64DF48F0-A271-B873-75B5-ADED0517DEA5,F26765E6-ACD9-AA0F-F693-A1C37201EC7A,1EF5C47E-C985-B4FF-718F-F63D62B8C577,31066CC6-62B9-5473-56BA-AAEC9326989C</newElementsIDs>
+<usedAttributes>
+<attributeRef>64DF48F0-A271-B873-75B5-ADED0517DEA5</attributeRef>
+<attributeRef>F9F761BE-59B1-328B-0AC3-27AC30BA8A0B</attributeRef>
+<attributeRef>27B30E62-DCD4-2A7F-B118-77C98F28DC18</attributeRef>
+<attributeRef>EF5527F0-5F34-0365-4F98-1F34952B3C8D</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="3071BC30-D439-6CFA-9E26-B98D4EC58B3A" name="planet_Name">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:16:02 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<newElementsIDs>859CA4BF-9946-076D-7602-E849677EB269</newElementsIDs>
+</identifier>
+</identifiers>
+</Entity>

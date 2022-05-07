@@ -1,0 +1,260 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76B3D66A-39B8-5AF7-5EB9-DC6F9376A837" name="Planet">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>1B1E5212-0585-73C0-49A3-3C2B3FA0FAB0</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Planet" id="0C92107A-BA17-39DC-8AAC-079DD8526C18">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>64DF48F0-A271-B873-75B5-ADED0517DEA5</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="planet_Name" id="8330722D-B429-0F00-24A2-E39992D94276">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>859CA4BF-9946-076D-7602-E849677EB269</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Metal" id="8FD16275-67DB-719B-AA4F-26A22E751A0F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>7C1B9ECD-6DF8-D661-2C58-B0D1BD807B20</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Crystal" id="EF66C603-9E6B-402C-C042-D170D091BDDD">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>FCF469E4-91CB-CCBE-E3FE-771522DDD974</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Deuterium" id="875EC317-2004-6994-40E0-8D64BB10A090">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>3B83B322-EE56-FFD5-F816-34551A17C2D5</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_ID_User" id="3960A7B9-CC8C-0699-2C96-3E72040A12C2">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>F9F761BE-59B1-328B-0AC3-27AC30BA8A0B</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA4356CD-520E-0EA7-ECBF-ED9B256E9022" referredColumn="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</associations>
+</Column>
+<Column name="num_LightHunter" id="64B7B701-4351-1AEF-0572-9F31B9AFA3EC">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>764F72A7-D9A5-8934-8783-27DCF1C6C40F</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_HeavyHunter" id="10A4F3A8-3720-6FA5-E650-9BED5E1507E5">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>0821EC05-4727-2EEB-B860-F9DE8063B297</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_BattleShip" id="1FA4CA89-B4FE-98BC-2531-E6A59A5BC949">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>1785E531-1FBA-3487-806F-8B34A13A4A6E</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_ArmoredShip" id="3AF88E55-3893-B2EA-E151-7462EAAEC18F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>E7195053-1EE0-847C-B3F4-AA40E154E899</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_MissileLauncher" id="B2C12236-11EE-2E7E-078F-D353FD682077">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>0C065BEC-36E3-7492-303E-593BC4DA4928</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_IonCannon" id="7E697674-9759-139E-765E-ADC2BD5C8886">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>BE4D4631-B3A5-F2A9-CFD0-8E60446C94FE</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_PlasmaCannon" id="2B5869B0-9713-0F76-F22D-E04262A6969A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>708D1F55-3DD0-24FB-1B8B-0F25E7B14CE7</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="technology_Defense_ID_LevelDefense" id="6F8B7D27-04C9-0C81-7CAC-FC1FC479F5BC">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>27B30E62-DCD4-2A7F-B118-77C98F28DC18</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="61B9BDC5-A3F0-DED9-9F60-20BAA0BB976D" referredColumn="FD152FC2-E4B4-A281-07BF-4E63575AB28B"/>
+</associations>
+</Column>
+<Column name="technology_Attack_ID_LevelAttack" id="F42691A3-3916-E934-F8BC-FC596918BCCF">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>EF5527F0-5F34-0365-4F98-1F34952B3C8D</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F8EEF826-521C-0088-C718-F434E77D9385" referredColumn="10783D28-036A-FFB3-E396-9E2D2580B326"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="096E386B-3EEC-A21B-D963-3091095CFED3" name="Planet_PK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>9C97825F-4376-6603-794E-408A4FC34B08</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+<colUsage columnID="6F8B7D27-04C9-0C81-7CAC-FC1FC479F5BC"/>
+<colUsage columnID="F42691A3-3916-E934-F8BC-FC596918BCCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29CE6345-C951-610C-D9BA-25E5177A9A64" name="Planet__UN">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>3071BC30-D439-6CFA-9E26-B98D4EC58B3A</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8330722D-B429-0F00-24A2-E39992D94276"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1BE9BDE-978B-9590-7A54-5FE9FEE4A952" name="Planet_User_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>F26765E6-ACD9-AA0F-F693-A1C37201EC7A</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EF4D7F2-FCD7-A656-BBBA-0A330CB67CBF" name="Planet_technology_Defense_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>1EF5C47E-C985-B4FF-718F-F63D62B8C577</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F8B7D27-04C9-0C81-7CAC-FC1FC479F5BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6098C7FB-E2B7-D2FD-DBAD-3174694030AC" name="Planet_technology_Attack_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>31066CC6-62B9-5473-56BA-AAEC9326989C</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F42691A3-3916-E934-F8BC-FC596918BCCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="61B9BDC5-A3F0-DED9-9F60-20BAA0BB976D" containerWithKeyObject="76B3D66A-39B8-5AF7-5EB9-DC6F9376A837" localFKIndex="5EF4D7F2-FCD7-A656-BBBA-0A330CB67CBF" name="Planet_technology_Defense_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>1EF5C47E-C985-B4FF-718F-F63D62B8C577</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<referredTableLongName>technology_Defense</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F4A0BC9B-DFF7-AE38-403F-A8221FD863E6</referredTableID>
+<keyObject>F51FB58F-E9B7-D910-0B87-996096788A15</keyObject>
+<referredKeyID>F51FB58F-E9B7-D910-0B87-996096788A15</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_LevelDefense</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

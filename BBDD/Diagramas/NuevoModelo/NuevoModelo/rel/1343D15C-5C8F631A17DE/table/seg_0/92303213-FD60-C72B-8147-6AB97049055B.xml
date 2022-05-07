@@ -1,0 +1,436 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92303213-FD60-C72B-8147-6AB97049055B" name="Battle">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>1E4A2CC3-1CC6-C056-2B1A-4833468F7728</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Battle" id="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>3A5A2215-7F1A-8723-9C4F-1F75487237ED</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_ID_User" id="0751E043-FBAC-31A4-9451-2AFAA98EBCE9">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>FA833A99-5012-8F7F-30C0-B002DE77EDF5</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96950C32-300C-621C-16E7-6CC83A3C42C6" referredColumn="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</associations>
+</Column>
+<Column name="UI_LightHunter" id="2772C3E6-2774-7B49-A39C-11A5DE225D17">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>83902E15-D2C6-B832-7FA9-895195FFB400</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_HeavyHunter" id="451403B5-F3D6-1344-5041-6D070E0D90A8">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>4DC9F438-33DD-83A2-BBEC-417426E571EF</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_BattleShip" id="D072ED72-3A05-592A-4E9F-CCF0E8E55ED2">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>8044EC12-A779-BAE8-2308-2AFC7293C67C</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_ArmoredShip" id="2D61E30B-63A9-AAE6-D706-FF39BC4B108F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>623C3FCE-0A5A-D673-17E0-EFB539C083FD</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_MissileLauncher" id="32831C16-03B5-39B1-20A4-0FE255A30BD0">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>70E503AB-6443-8D8F-4F25-99AE3477E431</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_IonCannon" id="2ADB4E7B-DB6A-3FA4-7973-2B4BD4180225">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>E1E808A9-EAF1-EFAB-2CDF-AA1AA30E0373</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_PlasmaCannon" id="E24E9231-A6EE-BC0B-257B-4F92039936A4">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>0E6DCE9C-2C57-AE06-3365-0137108575E0</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_LightHunter" id="8A37A05F-8CDE-BB8F-95B2-789A9BEF60AE">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>30D6A83E-C3B2-AFD1-0ADD-5B50708A5599</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_HeavyHunter" id="1F04974A-FED0-4766-635D-A2CA1436AA87">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>C4C9DAD4-F856-662D-49F5-2EBA90047440</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_BattleShip" id="FCDC0A68-3ABA-A5B1-5292-AF480D851C41">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>62F79974-17E4-F1B0-FF8F-4C24D8DDFED2</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_ArmoredShip" id="3A3F9277-8754-91C6-98D2-83C99E6D81F0">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>04413105-C642-ADD0-F658-5DC93D7324B4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_MissileLauncher" id="6600080E-262D-8EEE-1781-DF0FB0D64E03">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>020D4716-4D7B-5832-C438-1C76501B01D5</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_IonCannon" id="66B9EC46-5EC2-15AF-3FBC-830DFC5DA012">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>2874C378-3D3C-E3CD-1033-7027E6B5B6AD</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_PlasmaCannon" id="17AA9B9B-9C57-1650-1AB3-3BBC03070F5A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>6C989D55-A55F-689F-8963-6B2E4A1FAF10</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_LightHunter" id="628306E1-1235-E2D8-F53E-F256A1FB8288">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>AC911A5E-4775-61DD-2D44-1A5B4D4B43B4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_HeavyHunter" id="78B35D7A-604E-1738-9B86-D217A37BD206">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>C45DC696-C370-BCC6-4636-4B0080D732B4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_BattleShip" id="F16426E4-BCCF-FE07-B2FD-05FA2012AFFC">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>B845B067-8582-EEF7-F2A0-37FC581DA880</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_ArmoredShip" id="FEFCCA1D-CF60-2DAA-13E7-44BBEA2E1D0D">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>E158A1BA-427A-32E5-7DF2-7AE549C8ADC7</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_MissileLauncher" id="50B9B71B-3B19-95C3-B771-F11FC048678C">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>F0F80872-277F-CEC2-C47D-F0FF35C258F6</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_IonCannon" id="9BDD16F1-6C34-A08F-FEAC-CB6DC9A41128">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>92DBE9AD-E9DF-F915-435A-AE458D386A47</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_PlasmaCannon" id="D4475414-FAB8-ACD1-3301-04C4B18AF0C8">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>9DCFA612-7B77-0DEB-24C9-24B4E8F60451</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_LightHunter" id="ACDFC4E1-9DC5-4FDA-1FB2-B3813A7D12BF">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>6299FF8B-9698-520B-992F-A89826AD2008</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_HeavyHunter" id="98D39DF5-940E-7320-8000-5418F5F9C307">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>1980A86F-CD00-CA26-457B-4A94687BACA5</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_BattleShip" id="4AD1A316-FB13-942B-846A-3235F1FA554D">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>AD37A215-6B1D-261D-0482-633E1BD6966F</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_ArmoredShip" id="B40465A8-1700-35E3-75CE-3B92BF26F7EA">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>24E4399F-B11D-5900-F2AF-19A44ED3DA4F</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_MissileLauncher" id="757827EB-4052-3930-0941-2E3000D54F1A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>3924A12D-BB88-C061-8047-3B077D2C9E17</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_IonCannon" id="50F516E2-4B70-9186-3B40-10B251EA8F50">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>70252AEC-D0C9-BC63-82CB-1179E19BDB31</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_PlasmaCannon" id="575AC5C3-E5BB-D436-1D92-DDF441A432F0">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>EED0D885-23BB-3581-1166-CC8DE66C1AB4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AA88E93E-CA8B-EC88-20EE-203937DBD281" name="Battle_PK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>E64BE4D1-4AB3-3C10-373D-288E8A529176</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
+<colUsage columnID="0751E043-FBAC-31A4-9451-2AFAA98EBCE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5B2A1B0-E265-E09B-20E6-FF41AFB71027" name="Battle_User_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>6410BC16-8499-8734-2142-4F0583248BD3</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0751E043-FBAC-31A4-9451-2AFAA98EBCE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B89C88D-C8AE-CE30-F7F7-0512DC68C4FC" name="Battle_Enemy_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>76D3E3B5-2172-86E9-6D12-3B8646AAEE17</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

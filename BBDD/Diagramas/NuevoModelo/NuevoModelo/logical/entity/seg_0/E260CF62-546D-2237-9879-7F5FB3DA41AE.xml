@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E260CF62-546D-2237-9879-7F5FB3DA41AE" name="technology_Defense">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:53:47 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_LevelDefense" id="7235EF01-8049-16D1-4E92-C76DA668BAC6">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:53:47 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cost" id="FBE8F8CA-90C9-82DB-B089-C9C07D54E3EA">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:53:47 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A874F3DC-32D5-BD04-86E0-F7E02CE1DB46" name="ID_level">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:53:47 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7235EF01-8049-16D1-4E92-C76DA668BAC6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
