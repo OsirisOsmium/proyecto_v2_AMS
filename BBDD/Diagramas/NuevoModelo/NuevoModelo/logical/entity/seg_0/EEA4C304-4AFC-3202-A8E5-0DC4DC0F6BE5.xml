@@ -60,7 +60,6 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -72,13 +71,26 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 10:48:44 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>464E4531-9CBD-FD74-FE6C-F8741911903E</newElementsIDs>
 <usedAttributes>
 <attributeRef>464E4531-9CBD-FD74-FE6C-F8741911903E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="75925457-D7F5-7FBE-8E30-29ADEB60C390" name="username">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:05:16 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<newElementsIDs>1A0B96ED-5CBE-BD54-A7FA-01DE398BBAEB</newElementsIDs>
+<usedAttributes>
+<attributeRef>1A0B96ED-5CBE-BD54-A7FA-01DE398BBAEB</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -60,6 +60,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -73,6 +74,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -86,6 +88,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -99,6 +102,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -112,6 +116,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -125,6 +130,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -138,6 +144,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -151,6 +158,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -164,6 +172,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -177,38 +186,59 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_LevelDefense" id="27B30E62-DCD4-2A7F-B118-77C98F28DC18">
+<Attribute name="current_LevelDefense" id="6CB806A1-81BB-004F-F8E7-71558603FF94">
 <createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:54:22 UTC</createdTime>
-<generatorID>1EF5C47E-C985-B4FF-718F-F63D62B8C577</generatorID>
+<createdTime>2022-05-07 21:47:02 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
-<referedAttribute>7235EF01-8049-16D1-4E92-C76DA668BAC6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_LevelAttack" id="EF5527F0-5F34-0365-4F98-1F34952B3C8D">
+<Attribute name="cost_DefenseUp" id="591B6A68-D427-CA1C-581F-EE2DEA494CB8">
 <createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:54:34 UTC</createdTime>
-<generatorID>31066CC6-62B9-5473-56BA-AAEC9326989C</generatorID>
+<createdTime>2022-05-07 21:47:02 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
-<referedAttribute>60626D00-D568-5317-977A-DC6F39C5B3BA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="current_LevelAttack" id="F228AC4B-3A37-FE02-CA31-5EDD6A3A7CEE">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:48:06 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cost_AttackUp" id="A70CC261-6138-5324-7307-F175A1083E54">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:48:06 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -217,26 +247,29 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:15:08 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
-<newElementsIDs>64DF48F0-A271-B873-75B5-ADED0517DEA5,F26765E6-ACD9-AA0F-F693-A1C37201EC7A,1EF5C47E-C985-B4FF-718F-F63D62B8C577,31066CC6-62B9-5473-56BA-AAEC9326989C</newElementsIDs>
+<newElementsIDs>64DF48F0-A271-B873-75B5-ADED0517DEA5,F26765E6-ACD9-AA0F-F693-A1C37201EC7A</newElementsIDs>
 <usedAttributes>
 <attributeRef>64DF48F0-A271-B873-75B5-ADED0517DEA5</attributeRef>
 <attributeRef>F9F761BE-59B1-328B-0AC3-27AC30BA8A0B</attributeRef>
-<attributeRef>27B30E62-DCD4-2A7F-B118-77C98F28DC18</attributeRef>
-<attributeRef>EF5527F0-5F34-0365-4F98-1F34952B3C8D</attributeRef>
 </usedAttributes>
 </identifier>
 <identifier id="3071BC30-D439-6CFA-9E26-B98D4EC58B3A" name="planet_Name">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:16:02 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <newElementsIDs>859CA4BF-9946-076D-7602-E849677EB269</newElementsIDs>
+<usedAttributes>
+<attributeRef>859CA4BF-9946-076D-7602-E849677EB269</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

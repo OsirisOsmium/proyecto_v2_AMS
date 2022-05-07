@@ -48,7 +48,6 @@
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>A0A0EAFC-5D7F-61E1-6762-4BFE6A9BCF2F</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -67,6 +66,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B0156C59-B80B-9883-EFAA-22A0CCC56DBC" name="User_username_UN">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:12:44 UTC</createdTime>
+<generatorID>75925457-D7F5-7FBE-8E30-29ADEB60C390</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46E8A718-AF02-B362-2798-E8227DBE495D"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

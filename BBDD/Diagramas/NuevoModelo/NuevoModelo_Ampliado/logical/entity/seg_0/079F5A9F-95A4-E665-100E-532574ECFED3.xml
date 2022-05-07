@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E260CF62-546D-2237-9879-7F5FB3DA41AE" name="technology_Defense">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="079F5A9F-95A4-E665-100E-532574ECFED3" name="technology_Attack">
 <createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:53:47 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<createdTime>2022-05-07 12:51:52 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_LevelDefense" id="7235EF01-8049-16D1-4E92-C76DA668BAC6">
+<Attribute name="ID_LevelAttack" id="60626D00-D568-5317-977A-DC6F39C5B3BA">
 <createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:53:47 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<createdTime>2022-05-07 12:51:52 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
@@ -27,10 +27,10 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cost" id="FBE8F8CA-90C9-82DB-B089-C9C07D54E3EA">
+<Attribute name="cost" id="D5A5537E-B39A-0430-E827-E00BD1043C9F">
 <createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:53:47 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<createdTime>2022-05-07 12:51:52 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
@@ -41,16 +41,18 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A874F3DC-32D5-BD04-86E0-F7E02CE1DB46" name="ID_level">
+<identifier id="C39B6FA4-5D61-A7FA-1DC5-559C0E2948AA" name="ID_level">
 <createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:53:47 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<createdTime>2022-05-07 12:51:52 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>60626D00-D568-5317-977A-DC6F39C5B3BA</newElementsIDs>
 <usedAttributes>
-<attributeRef>7235EF01-8049-16D1-4E92-C76DA668BAC6</attributeRef>
+<attributeRef>60626D00-D568-5317-977A-DC6F39C5B3BA</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

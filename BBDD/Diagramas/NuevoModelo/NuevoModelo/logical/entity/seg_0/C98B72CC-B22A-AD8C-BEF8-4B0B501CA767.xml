@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Name" id="04CEEFDD-6D90-A60C-67F0-2535EA541C39">
+<Attribute name="name" id="04CEEFDD-6D90-A60C-67F0-2535EA541C39">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:22:12 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -148,6 +148,18 @@
 <newElementsIDs>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</newElementsIDs>
 <usedAttributes>
 <attributeRef>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="13509901-D719-B25C-FC6C-B53CA472BA01" name="name">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:05:35 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<newElementsIDs>04CEEFDD-6D90-A60C-67F0-2535EA541C39</newElementsIDs>
+<usedAttributes>
+<attributeRef>04CEEFDD-6D90-A60C-67F0-2535EA541C39</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

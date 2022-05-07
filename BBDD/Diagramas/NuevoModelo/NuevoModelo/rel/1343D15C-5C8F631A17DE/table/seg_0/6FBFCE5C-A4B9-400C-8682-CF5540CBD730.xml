@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Name" id="434B5EF8-C27D-7074-E7B2-7D1BDAC516BB">
+<Column name="name" id="434B5EF8-C27D-7074-E7B2-7D1BDAC516BB">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>04CEEFDD-6D90-A60C-67F0-2535EA541C39</generatorID>
@@ -130,6 +130,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C4BEA7F9-EEBD-D443-A46D-DED442946D95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8AF49D3D-E8FE-7602-4E51-8FEEF072AECA" name="Ship_name_UN">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:12:44 UTC</createdTime>
+<generatorID>13509901-D719-B25C-FC6C-B53CA472BA01</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="434B5EF8-C27D-7074-E7B2-7D1BDAC516BB"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

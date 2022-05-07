@@ -34,6 +34,63 @@
 <colAssociation fkAssociation="96950C32-300C-621C-16E7-6CC83A3C42C6" referredColumn="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
 </associations>
 </Column>
+<Column name="Enemy_ID_Enemy" id="3A957B5B-8568-8106-EA1A-6829930036F2">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:12:44 UTC</createdTime>
+<generatorID>6AE4DF2C-B1AF-4C59-C919-A0737EA35884</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9694FA6-3CA1-7575-AF4E-A53D91C14AF6" referredColumn="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
+</associations>
+</Column>
+<Column name="report_StepbyStep" id="0B095D5F-044F-F3F8-DBBE-3F117407E626">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:38:24 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10000</dataTypeSize>
+<ownDataTypeParameters>10000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:42:48 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_Metal" id="9B145455-4F84-9D14-A5B9-38601781C12D">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:44:31 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_Deuterium" id="CDE48CFE-8E8F-E07E-C7BD-AB4D30F2A4AD">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:44:31 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="UI_LightHunter" id="2772C3E6-2774-7B49-A39C-11A5DE225D17">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
@@ -398,6 +455,50 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="report_StepbyStep2" id="F1981AD3-280E-4134-95A8-B91B199230AC">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:51:30 UTC</createdTime>
+<generatorID>80CF8B82-4696-5242-EB71-36821FA19FF4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Winner2" id="EB8922F4-8668-00EF-E8CB-1ABB8BF9F16C">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:51:30 UTC</createdTime>
+<generatorID>79966B2E-2423-0BE2-8F46-8B97FBA6D0BF</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_Metal2" id="D2429FF6-E702-1EEF-0D31-1692EAAFDCB2">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:51:30 UTC</createdTime>
+<generatorID>C52DEBA4-3613-A052-18D6-26616242A445</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_Deuterium2" id="CA6FB11C-3FA3-FA15-43B2-4729312B4F26">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:51:30 UTC</createdTime>
+<generatorID>A0FCF053-4F07-8F37-5094-EBA89DD627DE</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="AA88E93E-CA8B-EC88-20EE-203937DBD281" name="Battle_PK">
@@ -411,6 +512,7 @@
 <indexColumnUsage>
 <colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
 <colUsage columnID="0751E043-FBAC-31A4-9451-2AFAA98EBCE9"/>
+<colUsage columnID="3A957B5B-8568-8106-EA1A-6829930036F2"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="C5B2A1B0-E265-E09B-20E6-FF41AFB71027" name="Battle_User_FK">
@@ -431,6 +533,9 @@
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A957B5B-8568-8106-EA1A-6829930036F2"/>
+</indexColumnUsage>
 </ind_PK_UK>
 </indexes>
 </Table>

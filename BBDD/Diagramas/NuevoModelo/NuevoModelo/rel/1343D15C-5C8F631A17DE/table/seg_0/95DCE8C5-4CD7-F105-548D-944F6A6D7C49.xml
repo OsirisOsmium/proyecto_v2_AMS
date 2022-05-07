@@ -29,6 +29,9 @@
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
+</indexColumnUsage>
 </ind_PK_UK>
 </indexes>
 </Table>

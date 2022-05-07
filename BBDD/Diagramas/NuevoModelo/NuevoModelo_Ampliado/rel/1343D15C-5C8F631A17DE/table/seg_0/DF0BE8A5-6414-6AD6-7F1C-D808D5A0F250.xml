@@ -3,7 +3,7 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 13:00:45 UTC</createdTime>
 <generatorID>079F5A9F-95A4-E665-100E-532574ECFED3</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
@@ -12,7 +12,7 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 13:00:45 UTC</createdTime>
 <generatorID>60626D00-D568-5317-977A-DC6F39C5B3BA</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -23,7 +23,7 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 13:00:45 UTC</createdTime>
 <generatorID>D5A5537E-B39A-0430-E827-E00BD1043C9F</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -36,7 +36,7 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 13:00:45 UTC</createdTime>
 <generatorID>C39B6FA4-5D61-A7FA-1DC5-559C0E2948AA</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
+<ownerDesignName>NuevoModelo_Ampliado</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>

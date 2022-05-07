@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Name" id="3C5DD1A2-32FB-4182-3295-BE6D218C52B6">
+<Column name="name" id="3C5DD1A2-32FB-4182-3295-BE6D218C52B6">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>6110A651-5766-E1BD-B8BF-BB668575D76E</generatorID>
@@ -130,6 +130,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="7AF317E2-BE07-85C1-0A93-1A22B20AE5DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="913D5D8D-6F98-9BC6-A633-ADF2068BF6CD" name="Defense_name_UN">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:12:44 UTC</createdTime>
+<generatorID>620D7DA2-D0C0-28D2-A570-48E6B3F8773C</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C5DD1A2-32FB-4182-3295-BE6D218C52B6"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
