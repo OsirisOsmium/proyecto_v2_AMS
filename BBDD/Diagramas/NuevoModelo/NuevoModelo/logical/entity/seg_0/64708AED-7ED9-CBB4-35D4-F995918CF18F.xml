@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_Defense" id="B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4">
+<Attribute name="ID Defense" id="B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:00 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -37,9 +37,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="metal_Cost" id="C82612CB-8782-B678-1BB3-040D5A91D4FB">
+<Attribute name="metal Cost" id="C82612CB-8782-B678-1BB3-040D5A91D4FB">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:00 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -51,7 +52,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="crystal_Cost" id="DCD5C194-233C-9697-5933-D4B7E84E3C9D">
+<Attribute name="crystal Cost" id="DCD5C194-233C-9697-5933-D4B7E84E3C9D">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:00 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -63,7 +64,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="deuterium_Cost" id="C4ABD622-92C7-24FD-952E-71152D3EB1BD">
+<Attribute name="deuterium Cost" id="C4ABD622-92C7-24FD-952E-71152D3EB1BD">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:00 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -94,6 +95,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -137,7 +139,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="9E61785A-9E87-2C3D-9638-3AA64BB20E82" name="ID_Defense">
+<identifier id="9E61785A-9E87-2C3D-9638-3AA64BB20E82" name="Defense_PK">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:45:11 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -150,7 +152,7 @@
 <attributeRef>B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4</attributeRef>
 </usedAttributes>
 </identifier>
-<identifier id="620D7DA2-D0C0-28D2-A570-48E6B3F8773C" name="name">
+<identifier id="620D7DA2-D0C0-28D2-A570-48E6B3F8773C" name="Defense_name_UN">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 16:06:06 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>

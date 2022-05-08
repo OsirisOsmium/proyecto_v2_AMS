@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_Battle" id="3A5A2215-7F1A-8723-9C4F-1F75487237ED">
+<Attribute name="ID Battle" id="3A5A2215-7F1A-8723-9C4F-1F75487237ED">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 10:50:27 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_User" id="FA833A99-5012-8F7F-30C0-B002DE77EDF5">
+<Attribute name="User ID User" id="FA833A99-5012-8F7F-30C0-B002DE77EDF5">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:55:39 UTC</createdTime>
 <generatorID>6410BC16-8499-8734-2142-4F0583248BD3</generatorID>
@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Enemy" id="6AE4DF2C-B1AF-4C59-C919-A0737EA35884">
+<Attribute name="Enemy ID Enemy" id="6AE4DF2C-B1AF-4C59-C919-A0737EA35884">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 13:01:54 UTC</createdTime>
 <generatorID>76D3E3B5-2172-86E9-6D12-3B8646AAEE17</generatorID>
@@ -55,7 +55,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="report_StepbyStep" id="80CF8B82-4696-5242-EB71-36821FA19FF4">
+<Attribute name="report StepbyStep2" id="80CF8B82-4696-5242-EB71-36821FA19FF4">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 19:52:49 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -67,7 +67,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Winner" id="79966B2E-2423-0BE2-8F46-8B97FBA6D0BF">
+<Attribute name="ID Winner2" id="79966B2E-2423-0BE2-8F46-8B97FBA6D0BF">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 19:53:14 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -79,7 +79,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="waste_Metal" id="C52DEBA4-3613-A052-18D6-26616242A445">
+<Attribute name="waste Metal2" id="C52DEBA4-3613-A052-18D6-26616242A445">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 19:53:29 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -91,7 +91,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="waste_Deuterium" id="A0FCF053-4F07-8F37-5094-EBA89DD627DE">
+<Attribute name="waste Deuterium2" id="A0FCF053-4F07-8F37-5094-EBA89DD627DE">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 19:53:45 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -103,7 +103,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_LightHunter" id="83902E15-D2C6-B832-7FA9-895195FFB400">
+<Attribute name="UI LightHunter" id="83902E15-D2C6-B832-7FA9-895195FFB400">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:00 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -117,7 +117,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_HeavyHunter" id="4DC9F438-33DD-83A2-BBEC-417426E571EF">
+<Attribute name="UI HeavyHunter" id="4DC9F438-33DD-83A2-BBEC-417426E571EF">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:05 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -131,7 +131,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_BattleShip" id="8044EC12-A779-BAE8-2308-2AFC7293C67C">
+<Attribute name="UI BattleShip" id="8044EC12-A779-BAE8-2308-2AFC7293C67C">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:06 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -145,7 +145,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_ArmoredShip" id="623C3FCE-0A5A-D673-17E0-EFB539C083FD">
+<Attribute name="UI ArmoredShip" id="623C3FCE-0A5A-D673-17E0-EFB539C083FD">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:06 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -159,7 +159,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_MissileLauncher" id="70E503AB-6443-8D8F-4F25-99AE3477E431">
+<Attribute name="UI MissileLauncher" id="70E503AB-6443-8D8F-4F25-99AE3477E431">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:07 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -173,7 +173,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_IonCannon" id="E1E808A9-EAF1-EFAB-2CDF-AA1AA30E0373">
+<Attribute name="UI IonCannon" id="E1E808A9-EAF1-EFAB-2CDF-AA1AA30E0373">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:28:14 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -187,7 +187,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UI_PlasmaCannon" id="0E6DCE9C-2C57-AE06-3365-0137108575E0">
+<Attribute name="UI PlasmaCannon" id="0E6DCE9C-2C57-AE06-3365-0137108575E0">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:08 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -201,7 +201,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_LightHunter" id="30D6A83E-C3B2-AFD1-0ADD-5B50708A5599">
+<Attribute name="UF LightHunter" id="30D6A83E-C3B2-AFD1-0ADD-5B50708A5599">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:09 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -215,7 +215,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_HeavyHunter" id="C4C9DAD4-F856-662D-49F5-2EBA90047440">
+<Attribute name="UF HeavyHunter" id="C4C9DAD4-F856-662D-49F5-2EBA90047440">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:19 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -229,7 +229,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_BattleShip" id="62F79974-17E4-F1B0-FF8F-4C24D8DDFED2">
+<Attribute name="UF BattleShip" id="62F79974-17E4-F1B0-FF8F-4C24D8DDFED2">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:19 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -243,7 +243,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_ArmoredShip" id="04413105-C642-ADD0-F658-5DC93D7324B4">
+<Attribute name="UF ArmoredShip" id="04413105-C642-ADD0-F658-5DC93D7324B4">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:20 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -257,7 +257,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_MissileLauncher" id="020D4716-4D7B-5832-C438-1C76501B01D5">
+<Attribute name="UF MissileLauncher" id="020D4716-4D7B-5832-C438-1C76501B01D5">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:20 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -271,7 +271,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_IonCannon" id="2874C378-3D3C-E3CD-1033-7027E6B5B6AD">
+<Attribute name="UF IonCannon" id="2874C378-3D3C-E3CD-1033-7027E6B5B6AD">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:20 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -285,7 +285,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="UF_PlasmaCannon" id="6C989D55-A55F-689F-8963-6B2E4A1FAF10">
+<Attribute name="UF PlasmaCannon" id="6C989D55-A55F-689F-8963-6B2E4A1FAF10">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:21 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -299,7 +299,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_LightHunter" id="AC911A5E-4775-61DD-2D44-1A5B4D4B43B4">
+<Attribute name="EI LightHunter" id="AC911A5E-4775-61DD-2D44-1A5B4D4B43B4">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:33 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -313,7 +313,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_HeavyHunter" id="C45DC696-C370-BCC6-4636-4B0080D732B4">
+<Attribute name="EI HeavyHunter" id="C45DC696-C370-BCC6-4636-4B0080D732B4">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:45 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -327,7 +327,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_BattleShip" id="B845B067-8582-EEF7-F2A0-37FC581DA880">
+<Attribute name="EI BattleShip" id="B845B067-8582-EEF7-F2A0-37FC581DA880">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:46 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -341,7 +341,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_ArmoredShip" id="E158A1BA-427A-32E5-7DF2-7AE549C8ADC7">
+<Attribute name="EI ArmoredShip" id="E158A1BA-427A-32E5-7DF2-7AE549C8ADC7">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:46 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -355,7 +355,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_MissileLauncher" id="F0F80872-277F-CEC2-C47D-F0FF35C258F6">
+<Attribute name="EI MissileLauncher" id="F0F80872-277F-CEC2-C47D-F0FF35C258F6">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:46 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -369,7 +369,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_IonCannon" id="92DBE9AD-E9DF-F915-435A-AE458D386A47">
+<Attribute name="EI IonCannon" id="92DBE9AD-E9DF-F915-435A-AE458D386A47">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:47 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -383,7 +383,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EI_PlasmaCannon" id="9DCFA612-7B77-0DEB-24C9-24B4E8F60451">
+<Attribute name="EI PlasmaCannon" id="9DCFA612-7B77-0DEB-24C9-24B4E8F60451">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:47 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -397,7 +397,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_LightHunter" id="6299FF8B-9698-520B-992F-A89826AD2008">
+<Attribute name="EF LightHunter" id="6299FF8B-9698-520B-992F-A89826AD2008">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:29:51 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -411,7 +411,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_HeavyHunter" id="1980A86F-CD00-CA26-457B-4A94687BACA5">
+<Attribute name="EF HeavyHunter" id="1980A86F-CD00-CA26-457B-4A94687BACA5">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:30:22 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -425,7 +425,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_BattleShip" id="AD37A215-6B1D-261D-0482-633E1BD6966F">
+<Attribute name="EF BattleShip" id="AD37A215-6B1D-261D-0482-633E1BD6966F">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:30:23 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -439,7 +439,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_ArmoredShip" id="24E4399F-B11D-5900-F2AF-19A44ED3DA4F">
+<Attribute name="EF ArmoredShip" id="24E4399F-B11D-5900-F2AF-19A44ED3DA4F">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:30:23 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -453,7 +453,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_MissileLauncher" id="3924A12D-BB88-C061-8047-3B077D2C9E17">
+<Attribute name="EF MissileLauncher" id="3924A12D-BB88-C061-8047-3B077D2C9E17">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:30:23 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -467,7 +467,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_IonCannon" id="70252AEC-D0C9-BC63-82CB-1179E19BDB31">
+<Attribute name="EF IonCannon" id="70252AEC-D0C9-BC63-82CB-1179E19BDB31">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:30:24 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -481,7 +481,7 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EF_PlasmaCannon" id="EED0D885-23BB-3581-1166-CC8DE66C1AB4">
+<Attribute name="EF PlasmaCannon" id="EED0D885-23BB-3581-1166-CC8DE66C1AB4">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:30:25 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -495,9 +495,63 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="report StepbyStep" id="07721508-FECE-9EAF-42AA-0E97F39EBF54">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>0B095D5F-044F-F3F8-DBBE-3F117407E626</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID Winner" id="CE6A23F1-B9C0-7217-3F89-BB339C292C48">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>388BF1FD-2C84-1A89-C6C2-205593EB4C1E</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste Metal" id="F269B88F-F605-2712-C2F5-4523472EEFC4">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>9B145455-4F84-9D14-A5B9-38601781C12D</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste Deuterium" id="C58A3F7B-52C0-E47A-EE15-E199BBDC1EFE">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>CDE48CFE-8E8F-E07E-C7BD-AB4D30F2A4AD</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="E64BE4D1-4AB3-3C10-373D-288E8A529176" name="ID_Battle">
+<identifier id="E64BE4D1-4AB3-3C10-373D-288E8A529176" name="Battle_PK">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 11:39:26 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -506,7 +560,7 @@
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
-<newElementsIDs>3A5A2215-7F1A-8723-9C4F-1F75487237ED,6410BC16-8499-8734-2142-4F0583248BD3,76D3E3B5-2172-86E9-6D12-3B8646AAEE17</newElementsIDs>
+<newElementsIDs>3A5A2215-7F1A-8723-9C4F-1F75487237ED</newElementsIDs>
 <usedAttributes>
 <attributeRef>3A5A2215-7F1A-8723-9C4F-1F75487237ED</attributeRef>
 </usedAttributes>

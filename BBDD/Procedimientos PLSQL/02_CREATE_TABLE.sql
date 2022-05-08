@@ -1,145 +1,219 @@
 SET SERVEROUTPUT ON
 
-CREATE OR REPLACE PROCEDURE CREATE_TABLES
+CREATE OR REPLACE PROCEDURE CREATE_TABLE
 
 IS
 
-/*
-DECLARE
-num_Prueba NUMBER := 2;
+exists_Battle NUMBER(1);
+exists_Defense NUMBER(1);
+exists_Enemy NUMBER(1);
+exists_Planet NUMBER(1);
+exists_Ship NUMBER(1);
+exists_User NUMBER(1);
 
-flag_Users NUMBER(1);
-flag_Ship NUMBER(1);
-flag_Defense NUMBER(1); 
-flag_Planet NUMBER(1);
-flag_Registre NUMBER(1);*/
+/*Varchars con sentencias DDL para crear las tablas y añadirles restricciones,
+El orden de creación, asi como las restricciones y el orden en que se ejecutan es el
+mismo del DDL exportado a partir del SQL Data Modeler*/
 
-existe_Ships NUMBER(1);
-existe_Users NUMBER(1);
-existe_Defense NUMBER(1);
-existe_Planet NUMBER(1);
-existe_Registre NUMBER(1);
-
-create_Users VARCHAR(2000):= 'CREATE TABLE USERS(
-    User_ID number PRIMARY KEY,
-    username VARCHAR(30) unique,
-    birth_date date null,
-    password VARCHAR(30) not null
+create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
+    id_battle          INTEGER NOT NULL,
+    user_id_user       INTEGER NOT NULL,
+    enemy_id_enemy     INTEGER NOT NULL,
+    report_stepbystep  VARCHAR2(4000),
+    id_winner          INTEGER NOT NULL,
+    waste_metal        NUMBER NOT NULL,
+    waste_deuterium    NUMBER NOT NULL,
+    ui_lighthunter     INTEGER DEFAULT 0,
+    ui_heavyhunter     INTEGER DEFAULT 0,
+    ui_battleship      INTEGER DEFAULT 0,
+    ui_armoredship     INTEGER DEFAULT 0,
+    ui_missilelauncher INTEGER DEFAULT 0,
+    ui_ioncannon       INTEGER DEFAULT 0,
+    ui_plasmacannon    INTEGER DEFAULT 0,
+    uf_lighthunter     INTEGER DEFAULT 0,
+    uf_heavyhunter     INTEGER DEFAULT 0,
+    uf_battleship      INTEGER DEFAULT 0,
+    uf_armoredship     INTEGER DEFAULT 0,
+    uf_missilelauncher INTEGER DEFAULT 0,
+    uf_ioncannon       INTEGER DEFAULT 0,
+    uf_plasmacannon    INTEGER DEFAULT 0,
+    ei_lighthunter     INTEGER DEFAULT 0,
+    ei_heavyhunter     INTEGER DEFAULT 0,
+    ei_battleship      INTEGER DEFAULT 0,
+    ei_armoredship     INTEGER DEFAULT 0,
+    ei_missilelauncher INTEGER DEFAULT 0,
+    ei_ioncannon       INTEGER DEFAULT 0,
+    ei_plasmacannon    INTEGER DEFAULT 0,
+    ef_lighthunter     INTEGER DEFAULT 0,
+    ef_heavyhunter     INTEGER DEFAULT 0,
+    ef_battleship      INTEGER DEFAULT 0,
+    ef_armoredship     INTEGER DEFAULT 0,
+    ef_missilelauncher INTEGER DEFAULT 0,
+    ef_ioncannon       INTEGER DEFAULT 0,
+    ef_plasmacannon    INTEGER DEFAULT 0
 )';
+alter_Battle1 VARCHAR (1000) := 'ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle )';
 
-create_Ship VARCHAR(2000):= 'CREATE TABLE SHIP(
-    Id_Ship number not null,
-    Name varchar(30) not null, 
-    Metal_cost number,
-    Crystal_Cost number,
-    Deuterium_Crystal number,
-    Initial_Armor number,
-    Armor number null,
-    Base_Damage number, 
-    Speed number,
-    GenerateWastings number
+create_Defense VARCHAR(2000) := 'CREATE TABLE defense (
+    id_defense      INTEGER NOT NULL,
+    name            VARCHAR2(30) NOT NULL,
+    metal_cost      INTEGER NOT NULL,
+    crystal_cost    INTEGER NOT NULL,
+    deuterium_cost  INTEGER NOT NULL,
+    initialarmor    INTEGER NOT NULL,
+    armor           INTEGER,
+    basedamage      INTEGER NOT NULL,
+    speed           INTEGER NOT NULL,
+    generatewasting INTEGER NOT NULL
 )';
+alter_Defense1 VARCHAR (1000) := 'ALTER TABLE defense ADD CONSTRAINT defense_pk PRIMARY KEY ( id_defense )';
+alter_Defense2 VARCHAR (1000) := 'ALTER TABLE defense ADD CONSTRAINT defense_name_un UNIQUE ( name )';
 
-create_Defense VARCHAR(2000):='CREATE TABLE DEFENSE(
-    Id_Defense number not null,
-    Name varchar(30) not null, 
-    Metal_Cost number,
-    Crystal_Cost number,
-    Deuterium_Cost number,
-    Initial_Armor number,
-    Armor number null,
-    Base_Damage number, 
-    Speed number,
-    Generate_Warnings number
+create_Enemy VARCHAR(2000) := 'CREATE TABLE enemy (
+    id_enemy INTEGER NOT NULL
 )';
+alter_Enemy VARCHAR (1000) := 'ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy )';
 
-create_Planet VARCHAR(2000):= 'CREATE TABLE PLANET(
-    Id_Planet number,
-    Name VARCHAR(30) not null,
-    Id_Ship number,
-    Id_Defense number
+create_Planet VARCHAR(2000) := 'CREATE TABLE planet (
+    id_planet                      INTEGER NOT NULL,
+    user_id_user                   INTEGER NOT NULL,
+    technology_defense_id_leveldef INTEGER NOT NULL,
+    technology_attack_id_levelat   INTEGER NOT NULL,
+    planet_name                    VARCHAR2(30) NOT NULL,
+    quantity_metal                 INTEGER DEFAULT 0,
+    quantity_crystal               INTEGER DEFAULT 0,
+    quantity_deuterium             INTEGER DEFAULT 0,
+    num_lighthunter                INTEGER DEFAULT 0,
+    num_heavyhunter                INTEGER DEFAULT 0,
+    num_battleship                 INTEGER DEFAULT 0,
+    num_armoredship                INTEGER DEFAULT 0,
+    num_missilelauncher            INTEGER DEFAULT 0,
+    num_ioncannon                  INTEGER DEFAULT 0,
+    num_plasmacannon               INTEGER DEFAULT 0,
+    current_leveldefense           INTEGER NOT NULL,
+    cost_defenseup                 NUMBER NOT NULL,
+    current_levelattack            INTEGER NOT NULL,
+    cost_attackup                  NUMBER NOT NULL
 )';
+alter_planet1 VARCHAR (1000) := 'ALTER TABLE planet ADD CONSTRAINT planet_pk PRIMARY KEY ( id_planet )';
+alter_planet2 VARCHAR (1000) := 'ALTER TABLE planet ADD CONSTRAINT planet_planet_name_un UNIQUE ( planet_name )';
 
-create_Registre VARCHAR (2000):= 'CREATE TABLE REGISTRE(
-    Id_Battle number,
-    Id_User number
+create_Ship VARCHAR(2000) := 'CREATE TABLE ship (
+    id_ship         INTEGER NOT NULL,
+    name            VARCHAR2(30) NOT NULL,
+    metal_cost      INTEGER NOT NULL,
+    crystal_cost    INTEGER NOT NULL,
+    deuterium_cost  INTEGER NOT NULL,
+    initialarmor    INTEGER NOT NULL,
+    armor           INTEGER,
+    basedamage      INTEGER NOT NULL,
+    speed           INTEGER NOT NULL,
+    generatewasting INTEGER NOT NULL
 )';
+alter_Ship1 VARCHAR (1000) := 'ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( id_ship )';
+alter_Ship2 VARCHAR (1000) := 'ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name )';
 
-error_NumIntroducido EXCEPTION;
+create_User VARCHAR(2000) := 'CREATE TABLE "USER" (
+    id_user    INTEGER NOT NULL,
+    username   VARCHAR2(30) NOT NULL,
+    password   VARCHAR2(20) NOT NULL,
+    birth_date DATE NOT NULL
+)';
+alter_user1 VARCHAR (1000) := 'ALTER TABLE "USER" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user )';
+alter_user2 VARCHAR (1000) := 'ALTER TABLE "USER" ADD CONSTRAINT user_username_un UNIQUE ( username )';
+
+alter_Battle2 VARCHAR (1000) := 'ALTER TABLE battle
+    ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
+        REFERENCES enemy ( id_enemy )';
+alter_Battle3 VARCHAR (1000) := 'ALTER TABLE battle
+    ADD CONSTRAINT battle_user_fk FOREIGN KEY ( user_id_user )
+        REFERENCES "USER" ( id_user )';
+alter_planet3 VARCHAR (1000) := '
+ALTER TABLE planet
+    ADD CONSTRAINT planet_user_fk FOREIGN KEY ( user_id_user )
+        REFERENCES "USER" ( id_user )';
 
 BEGIN
-/*
-flag_Users := num_Prueba;
-flag_Ship := num_Prueba;
-flag_Defense := num_Prueba;
-flag_Planet := num_Prueba;
-flag_Registre := num_Prueba;
-*/
 
-SELECT COUNT(table_name) INTO existe_Users
+/*Comprovamos si las tablas existen antes d eintentar crearlas para que no nos salten mensajes de error
+aunque este procedimiento la idea es que se ejecute justo despues del borrado de tablas*/
+
+SELECT COUNT(table_name) INTO existS_Battle
 FROM user_tables
-WHERE table_name = 'USERS';
+WHERE table_name = 'BATTLE';
 
-SELECT COUNT(table_name) INTO existe_Ships
-FROM user_tables
-WHERE table_name = 'SHIP';
-
-SELECT COUNT(table_name) INTO existe_Defense
+SELECT COUNT(table_name) INTO exists_Defense
 FROM user_tables
 WHERE table_name = 'DEFENSE';
 
-SELECT COUNT(table_name) INTO existe_Planet
+SELECT COUNT(table_name) INTO exists_Enemy
+FROM user_tables
+WHERE table_name = 'ENEMY';
+
+SELECT COUNT(table_name) INTO exists_Planet
 FROM user_tables
 WHERE table_name = 'PLANET';
 
-SELECT COUNT(table_name) INTO existe_Registre
+SELECT COUNT(table_name) INTO exists_User
 FROM user_tables
-WHERE table_name = 'REGISTRE';
+WHERE table_name = 'USER';
 
-IF existe_Users = 0 THEN
-execute immediate create_Users;
-DBMS_OUTPUT.PUT_LINE('Tabla USERS creada');
-ELSIF existe_Users != 1 THEN
-raise error_NumIntroducido;
+SELECT COUNT(table_name) INTO exists_Ship
+FROM user_tables
+WHERE table_name = 'SHIP';
+
+/*Crea las tablas si no las ha encontrado*/
+
+IF exists_Battle = 0 THEN
+execute immediate create_Battle;
+DBMS_OUTPUT.PUT_LINE('Tabla BATTLE creada');
 END IF;
 
-IF existe_Ships = 0 THEN
-execute immediate create_Ship;
-DBMS_OUTPUT.PUT_LINE('Tabla SHIP creada');
-ELSIF existe_Ships != 1 THEN
-raise error_NumIntroducido;
-END IF;
-
-IF existe_Defense = 0 THEN
+IF exists_Defense = 0 THEN
 execute immediate create_Defense;
 DBMS_OUTPUT.PUT_LINE('Tabla DEFENSE creada');
-ELSIF existe_Defense != 1 THEN
-raise error_NumIntroducido;
 END IF;
 
-IF existe_Planet = 0 THEN
+IF exists_Enemy = 0 THEN
+execute immediate create_Enemy;
+DBMS_OUTPUT.PUT_LINE('Tabla ENEMY creada');
+END IF;
+
+IF exists_Planet = 0 THEN
 execute immediate create_Planet;
 DBMS_OUTPUT.PUT_LINE('Tabla PLANET creada');
-ELSIF existe_Planet != 1 THEN
-raise error_NumIntroducido;
 END IF;
 
-IF existe_Registre = 0 THEN
-execute immediate create_Registre;
-DBMS_OUTPUT.PUT_LINE('Tabla REGISTRE creada');
-ELSIF existe_Registre != 1 THEN
-raise error_NumIntroducido;
+IF exists_User = 0 THEN
+execute immediate create_User;
+DBMS_OUTPUT.PUT_LINE('Tabla USER creada');
 END IF;
 
+IF exists_Ship = 0 THEN
+execute immediate create_Ship;
+DBMS_OUTPUT.PUT_LINE('Tabla SHIP creada');
+END IF;
+
+COMMIT;
 
 EXCEPTION
-
-WHEN error_NumIntroducido THEN
-DBMS_OUTPUT.PUT_LINE('Uno de los numeros introducidos no es correcto, la funcion CREATE_TABLE debe recibir o ceros (no existe la tabla) o unos (existe la tabla)');
 
 WHEN OTHERS THEN
 DBMS_OUTPUT.PUT_LINE('ERROR en la creacion de las tablas');
 DBMS_OUTPUT.PUT_LINE('Descipcion del error; '||SQLERRM);
-
+ROLLBACK;
 
 END;
+
+/
+
+/*
+SET SERVEROUTPUT ON
+
+BEGIN
+
+DROP_TABLE;
+CREATE_TABLE;
+
+END;
+*/

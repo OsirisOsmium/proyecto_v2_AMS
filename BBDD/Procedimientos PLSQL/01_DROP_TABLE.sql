@@ -1,105 +1,102 @@
-CREATE OR REPLACE PROCEDURE DROP_TABLES
+CREATE OR REPLACE PROCEDURE DROP_TABLE
 
 IS
 
-/*
-DECLARE
+exists_Battle NUMBER(1);
+exists_Defense NUMBER(1);
+exists_Enemy NUMBER(1);
+exists_Planet NUMBER(1);
+exists_Ship NUMBER(1);
+exists_User NUMBER(1);
 
-num_Prueba NUMBER := 1;
+/*Varchars con las sentencias de DDL para borrar o crear tablas*/
 
-flag_Users NUMBER(1);
-flag_Ship NUMBER(1);
-flag_Defense NUMBER(1);
-flag_Planet NUMBER(1);
-flag_Registre NUMBER(1);
-*/
-
-existe_Ships NUMBER(1);
-existe_Users NUMBER(1);
-existe_Defense NUMBER(1);
-existe_Planet NUMBER(1);
-existe_Registre NUMBER(1);
-
-drop_Users VARCHAR(2000) := 'DROP TABLE SHIP';
-drop_Ship VARCHAR(2000) := 'DROP TABLE USERS';
-drop_Defense VARCHAR(2000) := 'DROP TABLE DEFENSE';
-drop_Planet VARCHAR(2000) := 'DROP TABLE PLANET';
-drop_Registre VARCHAR (2000) := 'DROP TABLE REGISTRE';
-
-error_NumIntroducido EXCEPTION;
+drop_Battle VARCHAR (2000) := 'DROP TABLE battle';
+drop_Defense VARCHAR(2000) := 'DROP TABLE defense';
+drop_Enemy VARCHAR(2000) := 'DROP TABLE enemy';
+drop_Planet VARCHAR(2000) := 'DROP TABLE planet';
+drop_User VARCHAR(2000) := 'DROP TABLE "USER"';
+drop_Ship VARCHAR(2000) := 'DROP TABLE ship';
 
 BEGIN
+/*Comprovamos si cada una de las 6 tablas existe*/
 
-/*
-flag_Users := num_Prueba;
-flag_Ship := num_Prueba;
-flag_Defense := num_Prueba;
-flag_Planet := num_Prueba;
-flag_Registre := num_Prueba;
-*/
-
-SELECT COUNT(table_name) INTO existe_Users
+SELECT COUNT(table_name) INTO existS_Battle
 FROM user_tables
-WHERE table_name = 'USERS';
+WHERE table_name = 'BATTLE';
 
-SELECT COUNT(table_name) INTO existe_Ships
-FROM user_tables
-WHERE table_name = 'SHIP';
-
-SELECT COUNT(table_name) INTO existe_Defense
+SELECT COUNT(table_name) INTO exists_Defense
 FROM user_tables
 WHERE table_name = 'DEFENSE';
 
-SELECT COUNT(table_name) INTO existe_Planet
+SELECT COUNT(table_name) INTO exists_Enemy
+FROM user_tables
+WHERE table_name = 'ENEMY';
+
+SELECT COUNT(table_name) INTO exists_Planet
 FROM user_tables
 WHERE table_name = 'PLANET';
 
-SELECT COUNT(table_name) INTO existe_Registre
+SELECT COUNT(table_name) INTO exists_User
 FROM user_tables
-WHERE table_name = 'REGISTRE';
+WHERE table_name = 'USER';
 
-IF existe_Users = 1 THEN
-execute immediate drop_Users;
-DBMS_OUTPUT.PUT_LINE('Tabla USERS eliminada');
-ELSIF existe_Users != 0 THEN
-raise error_NumIntroducido;
+SELECT COUNT(table_name) INTO exists_Ship
+FROM user_tables
+WHERE table_name = 'SHIP';
+
+/*Si la tabla existe, se borra, en caso de no existir no se intenta hacer un borrado que dara el error de que no existe la tabla*/
+
+IF exists_Battle = 1 THEN
+execute immediate drop_Battle;
+DBMS_OUTPUT.PUT_LINE('Tabla BATTLE eliminada');
 END IF;
 
-IF existe_Ships = 1 THEN
-execute immediate drop_Ship;
-DBMS_OUTPUT.PUT_LINE('Tabla SHIP eliminada');
-ELSIF existe_Ships != 0 THEN
-raise error_NumIntroducido;
-END IF;
-
-IF existe_Defense = 1 THEN
+IF exists_Defense = 1 THEN
 execute immediate drop_Defense;
 DBMS_OUTPUT.PUT_LINE('Tabla DEFENSE eliminada');
-ELSIF existe_Defense != 0 THEN
-raise error_NumIntroducido;
 END IF;
 
-IF existe_Planet = 1 THEN
+IF exists_Enemy = 1 THEN
+execute immediate drop_Enemy;
+DBMS_OUTPUT.PUT_LINE('Tabla ENEMY eliminada');
+END IF;
+
+IF exists_Planet = 1 THEN
 execute immediate drop_Planet;
 DBMS_OUTPUT.PUT_LINE('Tabla PLANET eliminada');
-ELSIF existe_Planet != 0 THEN
-raise error_NumIntroducido;
 END IF;
 
-IF existe_Registre = 1 THEN
-execute immediate drop_Registre;
-DBMS_OUTPUT.PUT_LINE('Tabla REGISTRE eliminada');
-ELSIF existe_Registre != 0 THEN
-raise error_NumIntroducido;
+IF exists_User = 1 THEN
+execute immediate drop_User;
+DBMS_OUTPUT.PUT_LINE('Tabla USER eliminada');
 END IF;
+
+IF exists_Ship = 1 THEN
+execute immediate drop_Ship;
+DBMS_OUTPUT.PUT_LINE('Tabla SHIP eliminada');
+END IF;
+
+COMMIT;
 
 EXCEPTION
-
-WHEN error_NumIntroducido THEN
-DBMS_OUTPUT.PUT_LINE('Uno de los numeros introducidos no es correcto, la funcion DROP_TABLE debe recibir o ceros (no existe la tabla) o unos (existe la tabla)');
 
 WHEN OTHERS THEN
 DBMS_OUTPUT.PUT_LINE('ERROR en el borrado de tablas');
 DBMS_OUTPUT.PUT_LINE('Descipcion del error; '||SQLERRM);
+ROLLBACK;
 
 END;
+
+
+/
+
+/*
+SET SERVEROUTPUT ON
+
+BEGIN
+
+DROP_TABLE;
+
+END;
+*/

@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_Enemy" id="CCDA6FDD-ADA3-EB30-A054-D0F8522E44E8">
+<Attribute name="ID Enemy" id="CCDA6FDD-ADA3-EB30-A054-D0F8522E44E8">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:41:24 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -29,7 +29,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="68D614D7-9532-ECE4-D1A3-DFC73EF3FB8B" name="ID_Enemy">
+<identifier id="68D614D7-9532-ECE4-D1A3-DFC73EF3FB8B" name="Enemy_PK">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:41:47 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -38,6 +38,9 @@
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>CCDA6FDD-ADA3-EB30-A054-D0F8522E44E8</newElementsIDs>
+<usedAttributes>
+<attributeRef>CCDA6FDD-ADA3-EB30-A054-D0F8522E44E8</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

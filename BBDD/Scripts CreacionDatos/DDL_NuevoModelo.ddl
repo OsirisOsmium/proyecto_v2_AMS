@@ -1,25 +1,4 @@
 -- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
---   en:        2022-05-08 14:15:32 CEST
---   sitio:      Oracle Database 11g
---   tipo:      Oracle Database 11g
-
--- predefined type, no DDL - MDSYS.SDO_GEOMETRY
-
--- predefined type, no DDL - XMLTYPE
-
-DROP TABLE battle;
-
-DROP TABLE defense;
-
-DROP TABLE enemy;
-
-DROP TABLE planet;
-
-DROP TABLE ship;
-
-DROP TABLE user;
-
--- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
 --   en:        2022-05-08 17:01:58 CEST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
@@ -136,16 +115,16 @@ ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( id_ship );
 
 ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name );
 
-CREATE TABLE "USER" (
+CREATE TABLE "User" (
     id_user    INTEGER NOT NULL,
     username   VARCHAR2(30) NOT NULL,
     password   VARCHAR2(20) NOT NULL,
     birth_date DATE NOT NULL
 );
 
-ALTER TABLE "USER" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
+ALTER TABLE "User" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
 
-ALTER TABLE "USER" ADD CONSTRAINT user_username_un UNIQUE ( username );
+ALTER TABLE "User" ADD CONSTRAINT user_username_un UNIQUE ( username );
 
 ALTER TABLE battle
     ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
@@ -153,25 +132,53 @@ ALTER TABLE battle
 
 ALTER TABLE battle
     ADD CONSTRAINT battle_user_fk FOREIGN KEY ( user_id_user )
-        REFERENCES "USER" ( id_user );
+        REFERENCES "User" ( id_user );
 
 ALTER TABLE planet
     ADD CONSTRAINT planet_user_fk FOREIGN KEY ( user_id_user )
-        REFERENCES "USER" ( id_user );
+        REFERENCES "User" ( id_user );
 
-/*
---cada batalla ha de ser de un usuario no de muchos
---
 
---insert into USER VALUES(1, 'prova', to_Date('04-05-2022','DD-MM-YYYY'), 'prova');
 
-INSERT INTO SHIP VALUES(1, 'Light Hunter', 3000, 0, 50, 400, null, 80, 3, 20);
-INSERT INTO SHIP VALUES(2, 'Heavy Hunter', 6500, 0, 50, 1000, null, 150, 7, 30);
-INSERT INTO SHIP VALUES(3, 'Battle Ship', 45000, 0, 7000, 6000, null, 1000, 45, 60);
-INSERT INTO SHIP VALUES(4, 'Armored Ship', 30000, 0, 15000, 8000, null, 700, 70, 75);
-
-INSERT INTO DEFENSE VALUES (1, 'Missile Launcher', 2000, 0, 0, 200, null, 80, 5, 10);
-INSERT INTO DEFENSE VALUES(2, 'Ion Cannon', 4000, 0, 500, 1200, null, 250, 12, 25);
-INSERT INTO DEFENSE VALUES(3, 'PLasma Cannon', 50000, 0, 5000, 7000, null, 2000, 30, 50);
-*/
-
+-- Informe de Resumen de Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                             6
+-- CREATE INDEX                             0
+-- ALTER TABLE                             13
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          0
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0

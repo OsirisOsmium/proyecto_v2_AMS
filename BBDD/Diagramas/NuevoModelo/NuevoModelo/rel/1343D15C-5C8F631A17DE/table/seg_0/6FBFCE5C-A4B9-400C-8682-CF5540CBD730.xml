@@ -27,7 +27,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="metal_Cost" id="5CDF7C63-6414-3457-740B-7F5AA7ADD5CA">
@@ -79,6 +80,7 @@
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>68204EB4-F9B4-EF61-5835-61D12A91918F</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

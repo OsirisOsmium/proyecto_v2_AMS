@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_User" id="464E4531-9CBD-FD74-FE6C-F8741911903E">
+<Attribute name="ID User" id="464E4531-9CBD-FD74-FE6C-F8741911903E">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 10:42:27 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -53,7 +53,7 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="birth_date" id="A0A0EAFC-5D7F-61E1-6762-4BFE6A9BCF2F">
+<Attribute name="birth date" id="A0A0EAFC-5D7F-61E1-6762-4BFE6A9BCF2F">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 10:46:09 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -67,7 +67,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="B40BB062-7342-E489-7658-D366815292D9" name="ID_User">
+<identifier id="B40BB062-7342-E489-7658-D366815292D9" name="User_PK">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 10:48:44 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -81,7 +81,7 @@
 <attributeRef>464E4531-9CBD-FD74-FE6C-F8741911903E</attributeRef>
 </usedAttributes>
 </identifier>
-<identifier id="75925457-D7F5-7FBE-8E30-29ADEB60C390" name="username">
+<identifier id="75925457-D7F5-7FBE-8E30-29ADEB60C390" name="User_username_UN">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 16:05:16 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
