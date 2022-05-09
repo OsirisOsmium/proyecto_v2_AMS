@@ -11,7 +11,7 @@ CREATE_TABLE;
 /*
 INSERT_DATA, este procedimiento funciona por separado, 
 pero salta un error (de integridad, por decirlo de algun modo) del paquete debido a que las tablas 
-con las que trabaja son eliminadas en la ejecución del proceso INITIALIZE, dentro del cual se ejecuta
+con las que trabaja son eliminadas en la ejecuciï¿½n del proceso INITIALIZE, dentro del cual se ejecuta
 INSER_DATA
 */
 /*
@@ -32,6 +32,6 @@ EXCEPTION
 WHEN OTHERS THEN
 DBMS_OUTPUT.PUT_LINE('Error en el proceso INITIALIZE:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
-*/
+
 
 END;
