@@ -49,11 +49,25 @@
 <colAssociation fkAssociation="D9694FA6-3CA1-7575-AF4E-A53D91C14AF6" referredColumn="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
 </associations>
 </Column>
+<Column name="Planet_ID_Planet" id="C562EE03-0EF5-FF80-F5DC-8495E2336A54">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>53705B6B-D4B5-BC16-4258-4E28E9682FEC</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7EF1888F-6E77-ECEC-0A3F-CC7FC4012CB4" referredColumn="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
+</associations>
+</Column>
 <Column name="report_StepbyStep" id="0B095D5F-044F-F3F8-DBBE-3F117407E626">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 17:38:24 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -489,6 +503,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="3A957B5B-8568-8106-EA1A-6829930036F2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16FC638E-68DD-9505-1D30-448544D68C6C" name="Battle_Planet_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>9FDD1FE9-7435-75C0-B458-5ED91DF6803A</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C562EE03-0EF5-FF80-F5DC-8495E2336A54"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

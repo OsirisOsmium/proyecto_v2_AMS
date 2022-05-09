@@ -3,6 +3,7 @@ CREATE OR REPLACE PROCEDURE DROP_TABLE
 IS
 
 exists_Battle NUMBER(1);
+exists_Constants NUMBER(1);
 exists_Defense NUMBER(1);
 exists_Enemy NUMBER(1);
 exists_Planet NUMBER(1);
@@ -12,6 +13,7 @@ exists_User NUMBER(1);
 /*Varchars con las sentencias de DDL para borrar o crear tablas*/
 
 drop_Battle VARCHAR (2000) := 'DROP TABLE battle';
+drop_Constants VARCHAR (2000) := 'DROP TABLE constants';
 drop_Defense VARCHAR(2000) := 'DROP TABLE defense';
 drop_Enemy VARCHAR(2000) := 'DROP TABLE enemy';
 drop_Planet VARCHAR(2000) := 'DROP TABLE planet';
@@ -21,9 +23,13 @@ drop_Ship VARCHAR(2000) := 'DROP TABLE ship';
 BEGIN
 /*Comprovamos si cada una de las 6 tablas existe*/
 
-SELECT COUNT(table_name) INTO existS_Battle
+SELECT COUNT(table_name) INTO exists_Battle
 FROM user_tables
 WHERE table_name = 'BATTLE';
+
+SELECT COUNT(table_name) INTO exists_Constants
+FROM user_tables
+WHERE table_name = 'CONSTANTS';
 
 SELECT COUNT(table_name) INTO exists_Defense
 FROM user_tables
@@ -50,6 +56,11 @@ WHERE table_name = 'SHIP';
 IF exists_Battle = 1 THEN
 execute immediate drop_Battle;
 DBMS_OUTPUT.PUT_LINE('Tabla BATTLE eliminada');
+END IF;
+
+IF exists_Constants = 1 THEN
+execute immediate drop_Constants;
+DBMS_OUTPUT.PUT_LINE('Tabla CONSTANTS eliminada');
 END IF;
 
 IF exists_Defense = 1 THEN

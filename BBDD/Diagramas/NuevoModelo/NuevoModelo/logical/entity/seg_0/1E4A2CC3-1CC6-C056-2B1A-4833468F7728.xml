@@ -55,9 +55,10 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="report StepbyStep2" id="80CF8B82-4696-5242-EB71-36821FA19FF4">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 19:52:49 UTC</createdTime>
+<Attribute name="report StepbyStep" id="07721508-FECE-9EAF-42AA-0E97F39EBF54">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>0B095D5F-044F-F3F8-DBBE-3F117407E626</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
@@ -65,11 +66,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID Winner2" id="79966B2E-2423-0BE2-8F46-8B97FBA6D0BF">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 19:53:14 UTC</createdTime>
+<Attribute name="ID Winner" id="CE6A23F1-B9C0-7217-3F89-BB339C292C48">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>388BF1FD-2C84-1A89-C6C2-205593EB4C1E</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
@@ -79,28 +82,30 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="waste Metal2" id="C52DEBA4-3613-A052-18D6-26616242A445">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 19:53:29 UTC</createdTime>
+<Attribute name="waste Metal" id="F269B88F-F605-2712-C2F5-4523472EEFC4">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>9B145455-4F84-9D14-A5B9-38601781C12D</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="waste Deuterium2" id="A0FCF053-4F07-8F37-5094-EBA89DD627DE">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 19:53:45 UTC</createdTime>
+<Attribute name="waste Deuterium" id="C58A3F7B-52C0-E47A-EE15-E199BBDC1EFE">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-08 11:17:16 UTC</createdTime>
+<generatorID>CDE48CFE-8E8F-E07E-C7BD-AB4D30F2A4AD</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="UI LightHunter" id="83902E15-D2C6-B832-7FA9-895195FFB400">
@@ -495,58 +500,18 @@
 <defaultValue>0</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="report StepbyStep" id="07721508-FECE-9EAF-42AA-0E97F39EBF54">
+<Attribute name="Planet ID Planet" id="53705B6B-D4B5-BC16-4258-4E28E9682FEC">
 <createdBy>alumne</createdBy>
-<createdTime>2022-05-08 11:17:16 UTC</createdTime>
-<generatorID>0B095D5F-044F-F3F8-DBBE-3F117407E626</generatorID>
+<createdTime>2022-05-09 15:40:08 UTC</createdTime>
+<generatorID>9FDD1FE9-7435-75C0-B458-5ED91DF6803A</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>4000</dataTypeSize>
-<ownDataTypeParameters>4000,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID Winner" id="CE6A23F1-B9C0-7217-3F89-BB339C292C48">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-08 11:17:16 UTC</createdTime>
-<generatorID>388BF1FD-2C84-1A89-C6C2-205593EB4C1E</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
-</engineerTo>
+<referedAttribute>64DF48F0-A271-B873-75B5-ADED0517DEA5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="waste Metal" id="F269B88F-F605-2712-C2F5-4523472EEFC4">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-08 11:17:16 UTC</createdTime>
-<generatorID>9B145455-4F84-9D14-A5B9-38601781C12D</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="waste Deuterium" id="C58A3F7B-52C0-E47A-EE15-E199BBDC1EFE">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-08 11:17:16 UTC</createdTime>
-<generatorID>CDE48CFE-8E8F-E07E-C7BD-AB4D30F2A4AD</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -560,6 +525,18 @@
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>3A5A2215-7F1A-8723-9C4F-1F75487237ED</newElementsIDs>
+<usedAttributes>
+<attributeRef>3A5A2215-7F1A-8723-9C4F-1F75487237ED</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="D1BB50A3-D8FF-FD15-0687-75522AFA3B9F" name="Battle_ID_Battle_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 17:56:55 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
 <newElementsIDs>3A5A2215-7F1A-8723-9C4F-1F75487237ED</newElementsIDs>
 <usedAttributes>
 <attributeRef>3A5A2215-7F1A-8723-9C4F-1F75487237ED</attributeRef>

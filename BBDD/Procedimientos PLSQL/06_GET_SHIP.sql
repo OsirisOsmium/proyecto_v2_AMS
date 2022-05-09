@@ -20,7 +20,7 @@ IS
 BEGIN
 SELECT name, metal_Cost, crystal_Cost, deuterium_Cost, initialArmor, armor, baseDamage, speed, generateWasting 
 INTO nombre, costeMetal, costeCristal, costeDeuterio, armaduraInicial, armadura, dañoBase, velocidad, residuos
-FROM defense
+FROM ship
 WHERE id_defense = id_Entrada;
 
 /*Estas variables son las que se entregarian a Java, se le entra id_Entrada y nos devolveria los valores, Java trabajaria con estos valores

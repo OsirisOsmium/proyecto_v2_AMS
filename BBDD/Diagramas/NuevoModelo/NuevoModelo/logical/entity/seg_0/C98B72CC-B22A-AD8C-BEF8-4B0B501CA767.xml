@@ -143,8 +143,9 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:44:49 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</newElementsIDs>
@@ -156,12 +157,25 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 16:05:35 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
 </engineerTo>
 <newElementsIDs>04CEEFDD-6D90-A60C-67F0-2535EA541C39</newElementsIDs>
 <usedAttributes>
 <attributeRef>04CEEFDD-6D90-A60C-67F0-2535EA541C39</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="E74C84CC-3E09-2371-6A69-D94959FB56A2" name="Ship_ID_Ship_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 17:57:29 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<newElementsIDs>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</newElementsIDs>
+<usedAttributes>
+<attributeRef>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

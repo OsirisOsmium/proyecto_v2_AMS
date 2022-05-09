@@ -1,26 +1,6 @@
--- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
---   en:        2022-05-08 14:15:32 CEST
---   sitio:      Oracle Database 11g
---   tipo:      Oracle Database 11g
-
--- predefined type, no DDL - MDSYS.SDO_GEOMETRY
-
--- predefined type, no DDL - XMLTYPE
-
-DROP TABLE battle;
-
-DROP TABLE defense;
-
-DROP TABLE enemy;
-
-DROP TABLE planet;
-
-DROP TABLE ship;
-
-DROP TABLE user;
 
 -- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
---   en:        2022-05-08 17:01:58 CEST
+--   en:        2022-05-09 18:13:07 CEST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -34,7 +14,8 @@ CREATE TABLE battle (
     id_battle          INTEGER NOT NULL,
     user_id_user       INTEGER NOT NULL,
     enemy_id_enemy     INTEGER NOT NULL,
-    report_stepbystep  VARCHAR2(4000),
+    planet_id_planet   INTEGER NOT NULL,
+    report_stepbystep  VARCHAR2(4000) NOT NULL,
     id_winner          INTEGER NOT NULL,
     waste_metal        NUMBER NOT NULL,
     waste_deuterium    NUMBER NOT NULL,
@@ -70,6 +51,14 @@ CREATE TABLE battle (
 
 ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle );
 
+CREATE TABLE constants (
+    id_constant INTEGER NOT NULL,
+    name        VARCHAR2(100),
+    value       INTEGER NOT NULL
+);
+
+ALTER TABLE constants ADD CONSTRAINT constants_pk PRIMARY KEY ( id_constant );
+
 CREATE TABLE defense (
     id_defense      INTEGER NOT NULL,
     name            VARCHAR2(30) NOT NULL,
@@ -88,16 +77,26 @@ ALTER TABLE defense ADD CONSTRAINT defense_pk PRIMARY KEY ( id_defense );
 ALTER TABLE defense ADD CONSTRAINT defense_name_un UNIQUE ( name );
 
 CREATE TABLE enemy (
-    id_enemy INTEGER NOT NULL
+    id_enemy             INTEGER NOT NULL,
+    name                 VARCHAR2(30) NOT NULL,
+    quantity_metal       INTEGER DEFAULT 0,
+    quantity_crystal     INTEGER DEFAULT 0,
+    quantity_deuterium   INTEGER DEFAULT 0,
+    num_lighthunter      INTEGER DEFAULT 0,
+    num_heavyhunter      INTEGER DEFAULT 0,
+    num_battleship       INTEGER DEFAULT 0,
+    num_armoredship      INTEGER DEFAULT 0,
+    current_leveldefense INTEGER NOT NULL,
+    current_levelattack  INTEGER NOT NULL
 );
 
 ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy );
 
+ALTER TABLE enemy ADD CONSTRAINT enemy_name_un UNIQUE ( name );
+
 CREATE TABLE planet (
     id_planet                      INTEGER NOT NULL,
     user_id_user                   INTEGER NOT NULL,
-    technology_defense_id_leveldef INTEGER NOT NULL,
-    technology_attack_id_levelat   INTEGER NOT NULL,
     planet_name                    VARCHAR2(30) NOT NULL,
     quantity_metal                 INTEGER DEFAULT 0,
     quantity_crystal               INTEGER DEFAULT 0,
@@ -112,7 +111,9 @@ CREATE TABLE planet (
     current_leveldefense           INTEGER NOT NULL,
     cost_defenseup                 NUMBER NOT NULL,
     current_levelattack            INTEGER NOT NULL,
-    cost_attackup                  NUMBER NOT NULL
+    cost_attackup                  NUMBER NOT NULL,
+    technology_defense_id_leveldef INTEGER NOT NULL,
+    technology_attack_id_levelat   INTEGER NOT NULL
 );
 
 ALTER TABLE planet ADD CONSTRAINT planet_pk PRIMARY KEY ( id_planet );
@@ -150,6 +151,10 @@ ALTER TABLE "USER" ADD CONSTRAINT user_username_un UNIQUE ( username );
 ALTER TABLE battle
     ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
         REFERENCES enemy ( id_enemy );
+
+ALTER TABLE battle
+    ADD CONSTRAINT battle_planet_fk FOREIGN KEY ( planet_id_planet )
+        REFERENCES planet ( id_planet );
 
 ALTER TABLE battle
     ADD CONSTRAINT battle_user_fk FOREIGN KEY ( user_id_user )

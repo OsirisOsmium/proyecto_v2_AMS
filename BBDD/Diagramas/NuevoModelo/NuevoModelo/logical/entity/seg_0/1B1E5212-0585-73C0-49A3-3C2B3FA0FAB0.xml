@@ -297,5 +297,17 @@
 <attributeRef>859CA4BF-9946-076D-7602-E849677EB269</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="3F417844-1351-E57F-2447-B40279DB9C7A" name="Planet_ID_Planet_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 17:57:11 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<newElementsIDs>64DF48F0-A271-B873-75B5-ADED0517DEA5</newElementsIDs>
+<usedAttributes>
+<attributeRef>64DF48F0-A271-B873-75B5-ADED0517DEA5</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>

@@ -5,6 +5,7 @@ CREATE OR REPLACE PROCEDURE CREATE_TABLE
 IS
 
 exists_Battle NUMBER(1);
+exists_Constants NUMBER(1);
 exists_Defense NUMBER(1);
 exists_Enemy NUMBER(1);
 exists_Planet NUMBER(1);
@@ -19,7 +20,8 @@ create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
     id_battle          INTEGER NOT NULL,
     user_id_user       INTEGER NOT NULL,
     enemy_id_enemy     INTEGER NOT NULL,
-    report_stepbystep  VARCHAR2(4000),
+    planet_id_planet   INTEGER NOT NULL,
+    report_stepbystep  VARCHAR2(4000) NOT NULL,
     id_winner          INTEGER NOT NULL,
     waste_metal        NUMBER NOT NULL,
     waste_deuterium    NUMBER NOT NULL,
@@ -52,7 +54,16 @@ create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
     ef_ioncannon       INTEGER DEFAULT 0,
     ef_plasmacannon    INTEGER DEFAULT 0
 )';
-alter_Battle1 VARCHAR (1000) := 'ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle )';
+
+alter_Battle1 VARCHAR(1000) := 'ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle )';
+
+create_Constants VARCHAR(1000) := 'CREATE TABLE constants (
+    id_constant INTEGER NOT NULL,
+    name        VARCHAR2(100),
+    value       INTEGER NOT NULL
+)';
+
+alter_Constants1 VARCHAR (1000) := 'ALTER TABLE constants ADD CONSTRAINT constants_pk PRIMARY KEY ( id_constant )';
 
 create_Defense VARCHAR(2000) := 'CREATE TABLE defense (
     id_defense      INTEGER NOT NULL,
@@ -70,9 +81,21 @@ alter_Defense1 VARCHAR (1000) := 'ALTER TABLE defense ADD CONSTRAINT defense_pk 
 alter_Defense2 VARCHAR (1000) := 'ALTER TABLE defense ADD CONSTRAINT defense_name_un UNIQUE ( name )';
 
 create_Enemy VARCHAR(2000) := 'CREATE TABLE enemy (
-    id_enemy INTEGER NOT NULL
+    id_enemy             INTEGER NOT NULL,
+    name                 VARCHAR2(30) NOT NULL,
+    quantity_metal       INTEGER DEFAULT 0,
+    quantity_crystal     INTEGER DEFAULT 0,
+    quantity_deuterium   INTEGER DEFAULT 0,
+    num_lighthunter      INTEGER DEFAULT 0,
+    num_heavyhunter      INTEGER DEFAULT 0,
+    num_battleship       INTEGER DEFAULT 0,
+    num_armoredship      INTEGER DEFAULT 0,
+    current_leveldefense INTEGER NOT NULL,
+    current_levelattack  INTEGER NOT NULL
 )';
-alter_Enemy VARCHAR (1000) := 'ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy )';
+
+alter_Enemy1 VARCHAR (1000) := 'ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy )';
+alter_Enemy2 VARCHAR (1000) := 'ALTER TABLE enemy ADD CONSTRAINT enemy_name_un UNIQUE ( name )';
 
 create_Planet VARCHAR(2000) := 'CREATE TABLE planet (
     id_planet                      INTEGER NOT NULL,
@@ -126,10 +149,12 @@ alter_Battle2 VARCHAR (1000) := 'ALTER TABLE battle
     ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
         REFERENCES enemy ( id_enemy )';
 alter_Battle3 VARCHAR (1000) := 'ALTER TABLE battle
+    ADD CONSTRAINT battle_planet_fk FOREIGN KEY ( planet_id_planet )
+        REFERENCES planet ( id_planet )';
+alter_Battle4 VARCHAR (1000) := 'ALTER TABLE battle
     ADD CONSTRAINT battle_user_fk FOREIGN KEY ( user_id_user )
-        REFERENCES "USER" ( id_user )';
-alter_planet3 VARCHAR (1000) := '
-ALTER TABLE planet
+        REFERENCES "USER" ( id_user )';        
+alter_planet3 VARCHAR (1000) := 'ALTER TABLE planet
     ADD CONSTRAINT planet_user_fk FOREIGN KEY ( user_id_user )
         REFERENCES "USER" ( id_user )';
 
@@ -138,9 +163,13 @@ BEGIN
 /*Comprovamos si las tablas existen antes d eintentar crearlas para que no nos salten mensajes de error
 aunque este procedimiento la idea es que se ejecute justo despues del borrado de tablas*/
 
-SELECT COUNT(table_name) INTO existS_Battle
+SELECT COUNT(table_name) INTO exists_Battle
 FROM user_tables
 WHERE table_name = 'BATTLE';
+
+SELECT COUNT(table_name) INTO exists_Constants
+FROM user_tables
+WHERE table_name = 'CONSTANTS';
 
 SELECT COUNT(table_name) INTO exists_Defense
 FROM user_tables
@@ -166,33 +195,55 @@ WHERE table_name = 'SHIP';
 
 IF exists_Battle = 0 THEN
 execute immediate create_Battle;
+execute immediate alter_Battle1;
 DBMS_OUTPUT.PUT_LINE('Tabla BATTLE creada');
+END IF;
+
+IF exists_Constants = 0 THEN
+execute immediate create_Constants;
+execute immediate alter_Constants1;
+DBMS_OUTPUT.PUT_LINE('Tabla CONSTANTS creada');
 END IF;
 
 IF exists_Defense = 0 THEN
 execute immediate create_Defense;
+execute immediate alter_Defense1;
+execute immediate alter_Defense2;
 DBMS_OUTPUT.PUT_LINE('Tabla DEFENSE creada');
 END IF;
 
 IF exists_Enemy = 0 THEN
 execute immediate create_Enemy;
+execute immediate alter_Enemy1;
+execute immediate alter_Enemy2;
 DBMS_OUTPUT.PUT_LINE('Tabla ENEMY creada');
 END IF;
 
 IF exists_Planet = 0 THEN
 execute immediate create_Planet;
+execute immediate alter_Planet1;
+execute immediate alter_Planet2;
 DBMS_OUTPUT.PUT_LINE('Tabla PLANET creada');
-END IF;
-
-IF exists_User = 0 THEN
-execute immediate create_User;
-DBMS_OUTPUT.PUT_LINE('Tabla USER creada');
 END IF;
 
 IF exists_Ship = 0 THEN
 execute immediate create_Ship;
+execute immediate alter_Ship1;
+execute immediate alter_Ship2;
 DBMS_OUTPUT.PUT_LINE('Tabla SHIP creada');
 END IF;
+
+IF exists_User = 0 THEN
+execute immediate create_User;
+execute immediate alter_User1;
+execute immediate alter_User2;
+DBMS_OUTPUT.PUT_LINE('Tabla USER creada');
+END IF;
+
+execute immediate alter_Battle2;
+execute immediate alter_Battle3;
+execute immediate alter_Battle4;
+execute immediate alter_planet3;
 
 COMMIT;
 

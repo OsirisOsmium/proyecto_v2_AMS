@@ -6,6 +6,8 @@ FROM user_tables;
 
 DROP TABLE battle;
 
+DROP TABLE constants;
+
 DROP TABLE defense;
 
 DROP TABLE enemy;

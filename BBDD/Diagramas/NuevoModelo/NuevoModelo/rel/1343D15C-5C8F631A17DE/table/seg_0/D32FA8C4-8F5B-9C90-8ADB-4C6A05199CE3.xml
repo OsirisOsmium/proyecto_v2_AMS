@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D32FA8C4-8F5B-9C90-8ADB-4C6A05199CE3" name="Constants">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>7DA01A13-2DFE-51D5-30F4-FBD420E8CA8E</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<ordsAlias>contants</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Constant" id="1D75458A-FB20-7A08-2CB6-9FC830363318">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>C5C9111E-A262-7D14-87E0-438E289824D6</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="113FE807-CBB1-BF37-4119-4DED04D9FB1D">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>B9D28B21-CE20-2837-7788-0AF4D9CBF3F4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="value" id="F87155EE-AD02-8BAF-AA95-2703E1C0BA04">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>C07F5430-25F6-A671-C172-B5433A483E01</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8D4590EC-3DF1-1836-D9B0-74436298A38E" name="Constants_PK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>28A551B8-8CD0-8ED3-BC4E-CB39B58909E0</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D75458A-FB20-7A08-2CB6-9FC830363318"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

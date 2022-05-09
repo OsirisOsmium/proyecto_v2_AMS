@@ -19,6 +19,131 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="name" id="A33735BA-5811-897B-8744-E59F50CC8531">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>CD614968-F277-33F3-7F80-D65F99F6E30B</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Metal" id="1279DF61-7143-4764-3A8F-D670401AAB9E">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 16:03:27 UTC</createdTime>
+<generatorID>7C1B9ECD-6DF8-D661-2C58-B0D1BD807B20</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Crystal" id="E6761FC9-6F1A-954C-80E7-6B81DC0084F4">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 16:03:27 UTC</createdTime>
+<generatorID>FCF469E4-91CB-CCBE-E3FE-771522DDD974</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Deuterium" id="12049ECD-34FA-E51D-8F24-E05EDBF6E5DA">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 16:03:27 UTC</createdTime>
+<generatorID>3B83B322-EE56-FFD5-F816-34551A17C2D5</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_LightHunter" id="DF3DEC13-FA95-FA55-930C-16C599828707">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>704B4B90-4590-95E9-13A0-43D8685CEAA3</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_HeavyHunter" id="ECE57573-8E97-61D2-1BE7-108A1F7EA8C0">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>4C87D6EF-47A4-5330-C746-87200584AAD4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_BattleShip" id="62D42D4E-A2E5-1932-38B2-8F21467B7A7F">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>8E420AE3-F41C-3EAE-9AFA-F905476179D6</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_ArmoredShip" id="11748AC0-DC4B-B2AE-0F95-A2D79E6E84E1">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>9EB915D3-DAA8-0F8F-CC2C-617A82BDCA35</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="current_LevelDefense" id="464E340A-2E0C-01B1-10A8-C4B37D6D5803">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>30CD5AC7-6787-A468-3175-B7EF4E479DC2</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="current_LevelAttack" id="2642A7DB-6FED-D30E-D16B-59866A9F4148">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>6CE62B8D-9C15-A648-5A7F-91120F0F6FB0</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7AD73C00-307D-8456-BAB3-789B184BA16A" name="Enemy_PK">
@@ -31,6 +156,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86C6D3AC-D038-3AB8-03B6-38350DAF75AD" name="Enemy_name_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 16:09:25 UTC</createdTime>
+<generatorID>507864B8-161A-5CE4-C57A-6836EEC9480B</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A33735BA-5811-897B-8744-E59F50CC8531"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
