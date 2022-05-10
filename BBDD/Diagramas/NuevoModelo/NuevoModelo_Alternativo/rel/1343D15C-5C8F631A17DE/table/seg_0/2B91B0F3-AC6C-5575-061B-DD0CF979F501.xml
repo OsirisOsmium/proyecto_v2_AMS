@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B91B0F3-AC6C-5575-061B-DD0CF979F501" name="Units_Battle">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>BF84E411-7FC6-4133-DB4B-1045F8CB8EC5</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Battle_ID_Battle" id="9E1C2717-07AC-DE84-6B52-5C4E419A0F05">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>7271048C-FD9B-1694-38A8-E9F23EF468B7</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE72701C-D355-46AD-6A3C-C5A1F6CDAC13" referredColumn="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
+</associations>
+</Column>
+<Column name="UNITS_ID_UNIT" id="5547A8B1-1CB4-7747-38E2-7785BD898BA3">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>FDB84631-AB50-5ACA-8F68-7B5540D3A7AF</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8FA9004-C6FB-9BC4-16BD-3CCED9867415" referredColumn="A564E293-53ED-CFFC-64AB-75D639C3C883"/>
+</associations>
+</Column>
+<Column name="destroyed" id="8840EA84-3C2D-1DCD-CED4-0301E5CA634C">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>76340B16-8B2D-527C-D471-FE61AB5B1CB5</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2281C407-A666-00C6-B502-C84006E609D9" name="UNITS_BATTLE_PK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>F2377569-238C-89F0-7716-BC2B8194A36C</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E1C2717-07AC-DE84-6B52-5C4E419A0F05"/>
+<colUsage columnID="5547A8B1-1CB4-7747-38E2-7785BD898BA3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF325139-8BB3-B213-6CCA-0100CCAE4F30" name="UNITS_BATTLE_Battle_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>FCFC5450-460E-A161-500D-5694B9254796</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E1C2717-07AC-DE84-6B52-5C4E419A0F05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6DA216D9-5F87-B972-E27E-A7F4417C4FF9" name="UNITS_BATTLE_UNITS_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:42:31 UTC</createdTime>
+<generatorID>4A855622-E807-4D9A-317F-E484B044169B</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5547A8B1-1CB4-7747-38E2-7785BD898BA3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

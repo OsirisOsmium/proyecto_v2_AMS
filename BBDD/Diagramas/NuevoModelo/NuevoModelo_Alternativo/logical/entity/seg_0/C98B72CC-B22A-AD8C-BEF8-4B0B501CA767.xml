@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C98B72CC-B22A-AD8C-BEF8-4B0B501CA767" name="Ship">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:21:28 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Ship" id="0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:21:53 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="04CEEFDD-6D90-A60C-67F0-2535EA541C39">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:22:12 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="metal Cost" id="30A09792-6FBD-06D9-71A2-5198CF800BA8">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:22:56 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="crystal Cost" id="973BD8BB-BAFE-9544-E489-4BBE697EED8F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:23:19 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="deuterium Cost" id="EE6CC089-3930-3D82-EECC-1CA1498CEFB3">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:23:19 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="initialArmor" id="44E201A7-5919-45BC-25AE-B01E88D9C31A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:25:40 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="armor" id="68204EB4-F9B4-EF61-5835-61D12A91918F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:25:41 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="baseDamage" id="DCC5FCA8-9D7E-4511-F6E9-621BFDD508C9">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:25:41 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="speed" id="B7C615A5-506E-AAD5-41F0-94A901D7B23A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:25:42 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="generateWasting" id="3D915CE4-5C02-A1B0-E58E-D6C83258DC38">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:26:22 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F9B607B0-ACF7-5F80-C6A1-75D6C38B54FF" name="Ship_PK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:44:49 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</newElementsIDs>
+<usedAttributes>
+<attributeRef>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="13509901-D719-B25C-FC6C-B53CA472BA01" name="Ship_name_UN">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:05:35 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
+</engineerTo>
+<newElementsIDs>04CEEFDD-6D90-A60C-67F0-2535EA541C39</newElementsIDs>
+<usedAttributes>
+<attributeRef>04CEEFDD-6D90-A60C-67F0-2535EA541C39</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="E74C84CC-3E09-2371-6A69-D94959FB56A2" name="Ship_ID_Ship_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 17:57:29 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<newElementsIDs>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</newElementsIDs>
+<usedAttributes>
+<attributeRef>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
---   en:        2022-05-09 20:17:38 CEST
+--   en:        2022-05-10 21:27:43 CEST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -60,6 +60,8 @@ CREATE TABLE constants (
 
 ALTER TABLE constants ADD CONSTRAINT constants_pk PRIMARY KEY ( id_constant );
 
+ALTER TABLE constants ADD CONSTRAINT constants_name_un UNIQUE ( name );
+
 ALTER TABLE constants ADD CONSTRAINT constants_id_constant_un UNIQUE ( id_constant );
 
 CREATE TABLE defense (
@@ -77,9 +79,9 @@ CREATE TABLE defense (
 
 ALTER TABLE defense ADD CONSTRAINT defense_pk PRIMARY KEY ( id_defense );
 
-ALTER TABLE defense ADD CONSTRAINT defense_id_defense_un UNIQUE ( id_defense );
-
 ALTER TABLE defense ADD CONSTRAINT defense_name_un UNIQUE ( name );
+
+ALTER TABLE defense ADD CONSTRAINT defense_id_defense_un UNIQUE ( id_defense );
 
 CREATE TABLE enemy (
     id_enemy             INTEGER NOT NULL,
@@ -97,9 +99,9 @@ CREATE TABLE enemy (
 
 ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy );
 
-ALTER TABLE enemy ADD CONSTRAINT enemy__un UNIQUE ( id_enemy );
-
 ALTER TABLE enemy ADD CONSTRAINT enemy_name_un UNIQUE ( name );
+
+ALTER TABLE enemy ADD CONSTRAINT enemy_id_enemy_un UNIQUE ( id_enemy );
 
 CREATE TABLE planet (
     id_planet                      INTEGER NOT NULL,
@@ -125,9 +127,9 @@ CREATE TABLE planet (
 
 ALTER TABLE planet ADD CONSTRAINT planet_pk PRIMARY KEY ( id_planet );
 
-ALTER TABLE planet ADD CONSTRAINT planet_id_planet_un UNIQUE ( id_planet );
-
 ALTER TABLE planet ADD CONSTRAINT planet_planet_name_un UNIQUE ( planet_name );
+
+ALTER TABLE planet ADD CONSTRAINT planet_id_planet_un UNIQUE ( id_planet );
 
 CREATE TABLE ship (
     id_ship         INTEGER NOT NULL,
@@ -144,9 +146,21 @@ CREATE TABLE ship (
 
 ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( id_ship );
 
+ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name );
+
 ALTER TABLE ship ADD CONSTRAINT ship_id_ship_un UNIQUE ( id_ship );
 
-ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name );
+CREATE TABLE units (
+    id_unit            INTEGER NOT NULL,
+    defense_level      INTEGER,
+    attack_level       INTEGER,
+    defense_id_defense INTEGER,
+    ship_id_ship       INTEGER,
+    enemy_id_enemy     INTEGER,
+    planet_id_planet   INTEGER
+);
+
+ALTER TABLE units ADD CONSTRAINT units_pk PRIMARY KEY ( id_unit );
 
 CREATE TABLE "User" (
     id_user    INTEGER NOT NULL,
@@ -157,9 +171,9 @@ CREATE TABLE "User" (
 
 ALTER TABLE "User" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
 
-ALTER TABLE "User" ADD CONSTRAINT user_id_user_un UNIQUE ( id_user );
-
 ALTER TABLE "User" ADD CONSTRAINT user_username_un UNIQUE ( username );
+
+ALTER TABLE "User" ADD CONSTRAINT user_id_user_un UNIQUE ( id_user );
 
 ALTER TABLE battle
     ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
@@ -177,13 +191,29 @@ ALTER TABLE planet
     ADD CONSTRAINT planet_user_fk FOREIGN KEY ( user_id_user )
         REFERENCES "User" ( id_user );
 
+ALTER TABLE units
+    ADD CONSTRAINT units_defense_fk FOREIGN KEY ( defense_id_defense )
+        REFERENCES defense ( id_defense );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_enemy_fk FOREIGN KEY ( enemy_id_enemy )
+        REFERENCES enemy ( id_enemy );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_planet_fk FOREIGN KEY ( planet_id_planet )
+        REFERENCES planet ( id_planet );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_ship_fk FOREIGN KEY ( ship_id_ship )
+        REFERENCES ship ( id_ship );
+
 
 
 -- Informe de Resumen de Oracle SQL Developer Data Modeler: 
 -- 
--- CREATE TABLE                             7
+-- CREATE TABLE                             8
 -- CREATE INDEX                             0
--- ALTER TABLE                             23
+-- ALTER TABLE                             29
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0

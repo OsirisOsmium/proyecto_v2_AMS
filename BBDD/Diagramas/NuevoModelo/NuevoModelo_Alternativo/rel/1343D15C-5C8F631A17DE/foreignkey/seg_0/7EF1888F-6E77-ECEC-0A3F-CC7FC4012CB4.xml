@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7EF1888F-6E77-ECEC-0A3F-CC7FC4012CB4" containerWithKeyObject="92303213-FD60-C72B-8147-6AB97049055B" localFKIndex="16FC638E-68DD-9505-1D30-448544D68C6C" name="Battle_Planet_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>9FDD1FE9-7435-75C0-B458-5ED91DF6803A</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<referredTableLongName>Planet</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>76B3D66A-39B8-5AF7-5EB9-DC6F9376A837</referredTableID>
+<keyObject>096E386B-3EEC-A21B-D963-3091095CFED3</keyObject>
+<referredKeyID>096E386B-3EEC-A21B-D963-3091095CFED3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Planet</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

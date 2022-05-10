@@ -169,5 +169,16 @@
 <colUsage columnID="A33735BA-5811-897B-8744-E59F50CC8531"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="7B6831A6-064A-F68A-E023-E37D6D931416" name="Enemy_ID_Enemy_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>915FB269-A96C-5D67-19E4-D11B824279B1</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

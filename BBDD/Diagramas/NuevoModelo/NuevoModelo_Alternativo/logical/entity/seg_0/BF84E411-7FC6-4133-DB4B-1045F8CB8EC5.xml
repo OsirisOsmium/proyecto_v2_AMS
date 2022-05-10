@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF84E411-7FC6-4133-DB4B-1045F8CB8EC5" name="UNITS_BATTLE">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:34:15 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Battle" id="7271048C-FD9B-1694-38A8-E9F23EF468B7">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:34:34 UTC</createdTime>
+<generatorID>FCFC5450-460E-A161-500D-5694B9254796</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<referedAttribute>3A5A2215-7F1A-8723-9C4F-1F75487237ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID UNIT" id="FDB84631-AB50-5ACA-8F68-7B5540D3A7AF">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:37:07 UTC</createdTime>
+<generatorID>4A855622-E807-4D9A-317F-E484B044169B</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<referedAttribute>A5C64ACD-87B9-F552-1316-CD30AA217F74</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="destroyed" id="76340B16-8B2D-527C-D471-FE61AB5B1CB5">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:38:01 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F2377569-238C-89F0-7716-BC2B8194A36C" name="UNITS_BATTLE PK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 20:34:34 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7271048C-FD9B-1694-38A8-E9F23EF468B7</attributeRef>
+<attributeRef>FDB84631-AB50-5ACA-8F68-7B5540D3A7AF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -81,5 +81,17 @@
 <attributeRef>C5C9111E-A262-7D14-87E0-438E289824D6</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="90BCE3AB-DC63-5B81-E91E-214A05641886" name="Constants  UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:08:56 UTC</createdTime>
+<generatorID>1894E331-D2E6-EE72-3A94-2A213D0A94C4</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>B9D28B21-CE20-2837-7788-0AF4D9CBF3F4</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>

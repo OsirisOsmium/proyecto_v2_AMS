@@ -483,6 +483,17 @@
 <colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="A33157B2-CF3E-F6D9-6D33-6833775E6FE0" name="Battle_ID_Battle_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>D1BB50A3-D8FF-FD15-0687-75522AFA3B9F</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="C5B2A1B0-E265-E09B-20E6-FF41AFB71027" name="Battle_User_FK">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>

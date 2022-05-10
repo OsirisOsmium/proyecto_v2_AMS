@@ -214,20 +214,20 @@ execute immediate update_script;
 
 DBMS_OUTPUT.PUT_LINE('Actualizada la entrada '||id_Entrada||' de la base de datos PLANET con estos nuevos valores:');
 DBMS_OUTPUT.PUT_LINE('Codigo Usuario: '||id_Usuario_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||metal_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cristal_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||deuterio_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cazadores_L_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cazadores_H_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||naves_Batalla_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||acorazados_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||lanzamisiles_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cañon_iones_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cañon_plasma_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||nivelDefensa_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||coste_SubirDefensa_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||nivelAtaque_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||coste_SubirAtaque_Insertar);
+DBMS_OUTPUT.PUT_LINE('Metal: '||metal_Insertar);
+DBMS_OUTPUT.PUT_LINE('Cristal: '||cristal_Insertar);
+DBMS_OUTPUT.PUT_LINE('Deuterio: '||deuterio_Insertar);
+DBMS_OUTPUT.PUT_LINE('Light Hunters: '||cazadores_L_Insertar);
+DBMS_OUTPUT.PUT_LINE('Heavy Hunters: '||cazadores_H_Insertar);
+DBMS_OUTPUT.PUT_LINE('BattleShips: '||naves_Batalla_Insertar);
+DBMS_OUTPUT.PUT_LINE('ArmoredShips: '||acorazados_Insertar);
+DBMS_OUTPUT.PUT_LINE('Missile Launchers: '||lanzamisiles_Insertar);
+DBMS_OUTPUT.PUT_LINE('Ion Cannons: '||cañon_iones_Insertar);
+DBMS_OUTPUT.PUT_LINE('Plasma Cannons: '||cañon_plasma_Insertar);
+DBMS_OUTPUT.PUT_LINE('Nivel de Defensa: '||nivelDefensa_Insertar);
+DBMS_OUTPUT.PUT_LINE('Coste Subir Defensa: '||coste_SubirDefensa_Insertar);
+DBMS_OUTPUT.PUT_LINE('Nivel de Ataque: '||nivelAtaque_Insertar);
+DBMS_OUTPUT.PUT_LINE('Coste Subir Ataque: '||coste_SubirAtaque_Insertar);
 
 
 COMMIT;

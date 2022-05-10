@@ -58,7 +58,7 @@
 <colUsage columnID="1D75458A-FB20-7A08-2CB6-9FC830363318"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="1894E331-D2E6-EE72-3A94-2A213D0A94C4" name="Constants__UN">
+<ind_PK_UK id="1894E331-D2E6-EE72-3A94-2A213D0A94C4" name="Constants_name_UN">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-10 10:50:26 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
@@ -66,6 +66,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="113FE807-CBB1-BF37-4119-4DED04D9FB1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1DBF6E60-97B7-1367-A04D-FCA19BEB1FCA" name="Constants_ID_Constant_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>AA380F5D-33BA-1C50-46A2-5606210154D7</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D75458A-FB20-7A08-2CB6-9FC830363318"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92303213-FD60-C72B-8147-6AB97049055B" name="Battle">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>1E4A2CC3-1CC6-C056-2B1A-4833468F7728</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Battle" id="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>3A5A2215-7F1A-8723-9C4F-1F75487237ED</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_ID_User" id="0751E043-FBAC-31A4-9451-2AFAA98EBCE9">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>FA833A99-5012-8F7F-30C0-B002DE77EDF5</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96950C32-300C-621C-16E7-6CC83A3C42C6" referredColumn="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</associations>
+</Column>
+<Column name="Enemy_ID_Enemy" id="3A957B5B-8568-8106-EA1A-6829930036F2">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:12:44 UTC</createdTime>
+<generatorID>6AE4DF2C-B1AF-4C59-C919-A0737EA35884</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9694FA6-3CA1-7575-AF4E-A53D91C14AF6" referredColumn="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
+</associations>
+</Column>
+<Column name="Planet_ID_Planet" id="C562EE03-0EF5-FF80-F5DC-8495E2336A54">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>53705B6B-D4B5-BC16-4258-4E28E9682FEC</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7EF1888F-6E77-ECEC-0A3F-CC7FC4012CB4" referredColumn="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
+</associations>
+</Column>
+<Column name="report_StepbyStep" id="0B095D5F-044F-F3F8-DBBE-3F117407E626">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:38:24 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:42:48 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_Metal" id="9B145455-4F84-9D14-A5B9-38601781C12D">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:44:31 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_Deuterium" id="CDE48CFE-8E8F-E07E-C7BD-AB4D30F2A4AD">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 17:44:31 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AA88E93E-CA8B-EC88-20EE-203937DBD281" name="Battle_PK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>E64BE4D1-4AB3-3C10-373D-288E8A529176</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A33157B2-CF3E-F6D9-6D33-6833775E6FE0" name="Battle_ID_Battle_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>D1BB50A3-D8FF-FD15-0687-75522AFA3B9F</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5B2A1B0-E265-E09B-20E6-FF41AFB71027" name="Battle_User_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>6410BC16-8499-8734-2142-4F0583248BD3</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0751E043-FBAC-31A4-9451-2AFAA98EBCE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B89C88D-C8AE-CE30-F7F7-0512DC68C4FC" name="Battle_Enemy_FK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>76D3E3B5-2172-86E9-6D12-3B8646AAEE17</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A957B5B-8568-8106-EA1A-6829930036F2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16FC638E-68DD-9505-1D30-448544D68C6C" name="Battle_Planet_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 15:51:31 UTC</createdTime>
+<generatorID>9FDD1FE9-7435-75C0-B458-5ED91DF6803A</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C562EE03-0EF5-FF80-F5DC-8495E2336A54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

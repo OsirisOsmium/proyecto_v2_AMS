@@ -145,5 +145,16 @@
 <colUsage columnID="434B5EF8-C27D-7074-E7B2-7D1BDAC516BB"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="F4E65269-DD9A-3F2A-32C3-B349BFC758CD" name="Ship_ID_Ship_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>E74C84CC-3E09-2371-6A69-D94959FB56A2</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4BEA7F9-EEBD-D443-A46D-DED442946D95"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

@@ -79,5 +79,16 @@
 <colUsage columnID="46E8A718-AF02-B362-2798-E8227DBE495D"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="8C2F2D99-4EDE-B341-53B2-590B0A8CDBB8" name="User_ID_User_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>951E2BAD-71BA-2B96-ED2A-F1E022825705</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

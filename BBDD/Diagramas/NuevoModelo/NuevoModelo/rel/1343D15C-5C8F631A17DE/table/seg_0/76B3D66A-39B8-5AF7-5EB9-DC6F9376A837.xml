@@ -30,6 +30,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA4356CD-520E-0EA7-ECBF-ED9B256E9022" referredColumn="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</associations>
 </Column>
 <Column name="planet_Name" id="8330722D-B429-0F00-24A2-E39992D94276">
 <createdBy>Albert</createdBy>
@@ -217,6 +220,28 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="technology_Defense_ID_LevelDef" id="18B36F1A-0E96-1A66-7AC5-89159F781379">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>60FF311B-2D3E-741C-93FE-313EB50C4F39</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="technology_Attack_ID_LevelAt" id="A61EF42B-DBF2-4A39-54E5-8A36E011E4D5">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>149FBFEF-D90B-6A72-B729-2289D8253530</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="096E386B-3EEC-A21B-D963-3091095CFED3" name="Planet_PK">
@@ -240,6 +265,27 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="8330722D-B429-0F00-24A2-E39992D94276"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E3CB3A5-6218-F39B-95E4-00A79980A8CA" name="Planet_ID_Planet_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:15:01 UTC</createdTime>
+<generatorID>3F417844-1351-E57F-2447-B40279DB9C7A</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DD9FA27-5F6C-EE78-778F-17522BC98CEA" name="Planet_User_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 15:25:17 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

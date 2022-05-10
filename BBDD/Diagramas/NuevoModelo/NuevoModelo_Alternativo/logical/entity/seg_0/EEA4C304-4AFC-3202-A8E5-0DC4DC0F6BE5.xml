@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EEA4C304-4AFC-3202-A8E5-0DC4DC0F6BE5" name="User">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 10:41:45 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID User" id="464E4531-9CBD-FD74-FE6C-F8741911903E">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 10:42:27 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="username" id="1A0B96ED-5CBE-BD54-A7FA-01DE398BBAEB">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 10:44:11 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="DD80DE5C-8FBF-2C39-4C82-32BC12D4F26A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 10:45:46 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="birth date" id="A0A0EAFC-5D7F-61E1-6762-4BFE6A9BCF2F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 10:46:09 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B40BB062-7342-E489-7658-D366815292D9" name="User_PK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 10:48:44 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>464E4531-9CBD-FD74-FE6C-F8741911903E</newElementsIDs>
+<usedAttributes>
+<attributeRef>464E4531-9CBD-FD74-FE6C-F8741911903E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="75925457-D7F5-7FBE-8E30-29ADEB60C390" name="User_username_UN">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 16:05:16 UTC</createdTime>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="false"/>
+</engineerTo>
+<newElementsIDs>1A0B96ED-5CBE-BD54-A7FA-01DE398BBAEB</newElementsIDs>
+<usedAttributes>
+<attributeRef>1A0B96ED-5CBE-BD54-A7FA-01DE398BBAEB</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="951E2BAD-71BA-2B96-ED2A-F1E022825705" name="User_ID_User_UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-09 17:55:44 UTC</createdTime>
+<generatorID>7EE931F6-CCD0-209F-DCD4-1739B99D9CAB</generatorID>
+<ownerDesignName>NuevoModelo_Alternativo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>464E4531-9CBD-FD74-FE6C-F8741911903E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
