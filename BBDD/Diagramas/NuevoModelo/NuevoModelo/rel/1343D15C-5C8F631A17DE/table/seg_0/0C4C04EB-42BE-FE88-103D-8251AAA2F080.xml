@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C4C04EB-42BE-FE88-103D-8251AAA2F080" name="UNITS">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:12:55 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_UNIT" id="A564E293-53ED-CFFC-64AB-75D639C3C883">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:30 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Planet" id="2BACE1D9-BD44-792B-E4DE-A51662B699BD">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:30 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Enemy" id="CD6E6184-D236-3063-6605-5EAEBEF24CBA">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:30 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Type" id="A73AB32E-6511-9DA4-0777-1992DB16FDEC">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:30 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="defense_Level" id="E55C3DED-51C0-E2D0-4810-11AD82638B9C">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:30 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="attack_Level" id="E6B37C35-96E8-A5C5-14C5-738240245FED">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:30 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C775C58E-5FAF-61A1-FB44-5E4B13420E16" name="UNITS_PK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 11:15:46 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A564E293-53ED-CFFC-64AB-75D639C3C883"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

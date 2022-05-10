@@ -58,5 +58,15 @@
 <colUsage columnID="1D75458A-FB20-7A08-2CB6-9FC830363318"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="1894E331-D2E6-EE72-3A94-2A213D0A94C4" name="Constants__UN">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 10:50:26 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="113FE807-CBB1-BF37-4119-4DED04D9FB1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

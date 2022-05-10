@@ -100,8 +100,6 @@ alter_Enemy2 VARCHAR (1000) := 'ALTER TABLE enemy ADD CONSTRAINT enemy_name_un U
 create_Planet VARCHAR(2000) := 'CREATE TABLE planet (
     id_planet                      INTEGER NOT NULL,
     user_id_user                   INTEGER NOT NULL,
-    technology_defense_id_leveldef INTEGER NOT NULL,
-    technology_attack_id_levelat   INTEGER NOT NULL,
     planet_name                    VARCHAR2(30) NOT NULL,
     quantity_metal                 INTEGER DEFAULT 0,
     quantity_crystal               INTEGER DEFAULT 0,
