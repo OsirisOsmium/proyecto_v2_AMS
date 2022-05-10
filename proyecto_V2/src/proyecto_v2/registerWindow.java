@@ -6,7 +6,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Image;
 
@@ -20,8 +24,12 @@ import java.awt.event.ActionListener;
 public class registerWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JTextField txtUsername, txtDate, txtPassword, txtRPassword;
+	private JTextField txtUsername, txtDate, txtPassword;
 	private JButton btnBack, btnSingIn;
+	
+	private String url="jdbc:oracle:thin:@localhost:1521:xe";
+	private String user="PLANET_WARS_V2";
+	private String password="PLANET_WARS_V2";
 
 	/**
 	 * Launch the application.
@@ -35,7 +43,7 @@ public class registerWindow extends JFrame implements ActionListener{
 	 */
 	public registerWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
@@ -53,43 +61,34 @@ public class registerWindow extends JFrame implements ActionListener{
 		
 		JLabel lblUsername = new JLabel("Username");
 		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblUsername.setBounds(301, 26, 109, 35);
+		lblUsername.setBounds(299, 64, 109, 35);
 		contentPane.add(lblUsername);
 		
 		txtUsername = new JTextField();
-		txtUsername.setBounds(301, 60, 297, 35);
+		txtUsername.setBounds(299, 98, 297, 35);
 		contentPane.add(txtUsername);
 		txtUsername.setColumns(10);
 		
 		JLabel lblBirthDate = new JLabel("Birthn Date");
 		lblBirthDate.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblBirthDate.setBounds(301, 105, 109, 35);
+		lblBirthDate.setBounds(299, 143, 109, 35);
 		contentPane.add(lblBirthDate);
 		
 		txtDate = new JTextField();
 		txtDate.setColumns(10);
-		txtDate.setBounds(301, 139, 297, 35);
+		txtDate.setBounds(299, 177, 297, 35);
 		contentPane.add(txtDate);
 		
 		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPassword.setBounds(301, 184, 109, 35);
+		lblPassword.setBounds(299, 222, 109, 35);
 		contentPane.add(lblPassword);
 		
 		txtPassword = new JTextField();
+		txtPassword.setToolTipText("");
 		txtPassword.setColumns(10);
-		txtPassword.setBounds(301, 218, 297, 35);
+		txtPassword.setBounds(299, 256, 297, 35);
 		contentPane.add(txtPassword);
-		
-		JLabel lblRepeatPassword = new JLabel("Repeat Password");
-		lblRepeatPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblRepeatPassword.setBounds(301, 263, 134, 35);
-		contentPane.add(lblRepeatPassword);
-		
-		txtRPassword = new JTextField();
-		txtRPassword.setColumns(10);
-		txtRPassword.setBounds(301, 297, 297, 35);
-		contentPane.add(txtRPassword);
 		
 		btnBack = new JButton("Back");
 		btnBack.setBounds(301, 382, 115, 35);
@@ -114,9 +113,24 @@ public class registerWindow extends JFrame implements ActionListener{
 			logIn.setVisible(true);
 		}
 		if (btnSingIn==e.getSource()) {
+			connectionOracle conn=new connectionOracle(url, user, password);
+
+			String username=txtUsername.getText();
+			
+			String password=txtPassword.getText();
+
+			String date=txtDate.getText();
+			
+			conn.SingIn(username, password, date);
+			
+			JOptionPane.showMessageDialog(null, "EXITO: Se ha registrado al usuario  "+username);
+			
+			
+			
 			logInWindow logIn=new logInWindow();
 			this.setVisible(false);
 			logIn.setVisible(true);
+			
 		}
 		
 	}

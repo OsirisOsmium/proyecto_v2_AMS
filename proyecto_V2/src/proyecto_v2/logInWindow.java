@@ -7,7 +7,20 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Color;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,12 +30,23 @@ import java.awt.Image;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class logInWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JTextField textField, textField_1, textField_2;
+	private JTextField txtUsername, txtPassword;
 	private JButton btnLogIn, btnSingIn;
+	
+	private String url="jdbc:oracle:thin:@localhost:1521:xe";
+	private String user="PLANET_WARS_V2";
+	private String password="PLANET_WARS_V2";
+	
+	Connection conn;
 	
 
 	/**
@@ -37,7 +61,7 @@ public class logInWindow extends JFrame implements ActionListener{
 	 */
 	public logInWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
@@ -65,38 +89,27 @@ public class logInWindow extends JFrame implements ActionListener{
 		btnSingIn.addActionListener(this);
 		contentPane.add(btnSingIn);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textField.setBounds(290, 110, 320, 35);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtUsername.setBounds(290, 153, 320, 35);
+		contentPane.add(txtUsername);
+		txtUsername.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("Username");
 		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblUsername.setBounds(290, 65, 115, 35);
+		lblUsername.setBounds(290, 108, 115, 35);
 		contentPane.add(lblUsername);
 		
 		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPassword.setBounds(290, 155, 115, 35);
+		lblPassword.setBounds(290, 198, 115, 35);
 		contentPane.add(lblPassword);
 		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textField_1.setColumns(10);
-		textField_1.setBounds(290, 200, 320, 35);
-		contentPane.add(textField_1);
-		
-		JLabel lblRepeatPassword = new JLabel("Repeat Password");
-		lblRepeatPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblRepeatPassword.setBounds(290, 245, 115, 35);
-		contentPane.add(lblRepeatPassword);
-		
-		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textField_2.setColumns(10);
-		textField_2.setBounds(290, 290, 320, 35);
-		contentPane.add(textField_2);
+		txtPassword = new JTextField();
+		txtPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtPassword.setColumns(10);
+		txtPassword.setBounds(290, 243, 320, 35);
+		contentPane.add(txtPassword);
 		
 		
 		setVisible(true);
@@ -105,9 +118,50 @@ public class logInWindow extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (btnLogIn==e.getSource()) {
+			String username=txtUsername.getText();
+			String pass=txtPassword.getText();
+			
+			
+			
+			//////////////////////
+			
+			try {
+				connectionOracle conn=new connectionOracle(url, user, password);
+				
+				String query = "select * from user where username='"+username+"'"+"and password='"+pass+"'" ;
+				Statement stmnt=((Connection) conn).createStatement();
+				ResultSet rs=stmnt.executeQuery(query);
+				while (rs.next()) { 
+					String uss=rs.getString(2);
+					String pas=rs.getString(3);
+					if (username==uss && pass==pas) {
+						mainWindow main=new mainWindow();
+						this.setVisible(false);
+						main.setVisible(true);
+					}
+					else {
+						System.out.println("asdasdasdasd");
+					}
+				}
+				
+				
+				
+			} 
+			catch (SQLException e1) {
+				e1.printStackTrace();
+				System.out.println("ERROR: El uruario ya existe");
+				System.out.println("ERROR GENERAL: Ha havido algun error");
+			}
+			
+			/////////////////////
+			
+			
+			
+			
 			mainWindow main=new mainWindow();
 			this.setVisible(false);
 			main.setVisible(true);
+			
 		}
 		if (btnSingIn==e.getSource()) {
 			registerWindow singIn=new registerWindow();

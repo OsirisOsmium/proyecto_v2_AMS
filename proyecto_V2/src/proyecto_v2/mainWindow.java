@@ -41,12 +41,14 @@ public class mainWindow extends JFrame implements ActionListener{
 	 */
 	public mainWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
+		
+		////////////////////////////
 		
 		btnViewPlanetStat = new JButton("View Stats");
 		btnViewPlanetStat.addActionListener(this);
@@ -97,6 +99,8 @@ public class mainWindow extends JFrame implements ActionListener{
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//añadimos el label
 		
+		////////////////////////////
+		
 		lblTitle = new JLabel("PLANET WARS");
 		lblTitle.setEnabled(false);
 		lblTitle.setBorder(null);
@@ -105,9 +109,18 @@ public class mainWindow extends JFrame implements ActionListener{
 		lblTitle.setBounds(170, 46, 403, 79);
 		contentPane.add(lblTitle);
 		
+		JLabel lblBackground = new JLabel("");
+		lblBackground.setBounds(110, 0, 699, 482);
+		contentPane.add(lblBackground);
+		ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\war_star.png");
+		ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lblBackground. setIcon(icono2);//establece el ImageIcon en el label
+		contentPane.add(lblBackground);//añadimos el label
+		/*
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(""));
 		lblNewLabel_1.setBounds(0, 0, 706, 482);
+		*/
 		//lblNewLabel_1.setBackground(getForeground());
 		
 		

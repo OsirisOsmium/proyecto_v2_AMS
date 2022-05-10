@@ -17,6 +17,7 @@ import java.awt.Font;
 import java.awt.Image;
 
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class comingWindow extends JFrame implements ActionListener{
 
@@ -37,7 +38,7 @@ public class comingWindow extends JFrame implements ActionListener{
 	 */
 	public comingWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
 		setLocationRelativeTo(null);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -111,56 +112,68 @@ public class comingWindow extends JFrame implements ActionListener{
 		contentPane.add(btnBack);
 		
 		JLabel lblTitle = new JLabel("NEW THREAD COMMING");
+		lblTitle.setForeground(Color.WHITE);
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		lblTitle.setBounds(94, 14, 612, 66);
+		lblTitle.setBounds(153, 14, 612, 66);
 		contentPane.add(lblTitle);
 		
 		JLabel lblShip_1 = new JLabel("Ligth Hunter");
+		lblShip_1.setForeground(Color.WHITE);
 		lblShip_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1.setBounds(237, 127, 101, 35);
+		lblShip_1.setBounds(270, 127, 101, 35);
 		contentPane.add(lblShip_1);
 		
 		JLabel lblShip_1_1 = new JLabel("x");
+		lblShip_1_1.setForeground(Color.WHITE);
 		lblShip_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_1.setBounds(417, 127, 175, 35);
+		lblShip_1_1.setBounds(450, 127, 175, 35);
 		contentPane.add(lblShip_1_1);
 		
 		JLabel lblShip_1_2 = new JLabel("Heavy Hunter");
+		lblShip_1_2.setForeground(Color.WHITE);
 		lblShip_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_2.setBounds(237, 172, 101, 35);
+		lblShip_1_2.setBounds(270, 172, 101, 35);
 		contentPane.add(lblShip_1_2);
 		
 		JLabel lblShip_1_1_1 = new JLabel("xx");
+		lblShip_1_1_1.setForeground(Color.WHITE);
 		lblShip_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_1_1.setBounds(417, 172, 175, 35);
+		lblShip_1_1_1.setBounds(450, 172, 175, 35);
 		contentPane.add(lblShip_1_1_1);
 		
 		JLabel lblShip_1_3 = new JLabel("Battle Ship");
+		lblShip_1_3.setForeground(Color.WHITE);
 		lblShip_1_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_3.setBounds(237, 222, 101, 35);
+		lblShip_1_3.setBounds(270, 222, 101, 35);
 		contentPane.add(lblShip_1_3);
 		
 		JLabel lblShip_1_1_2 = new JLabel("xxx");
+		lblShip_1_1_2.setForeground(Color.WHITE);
 		lblShip_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_1_2.setBounds(417, 222, 175, 35);
+		lblShip_1_1_2.setBounds(450, 222, 175, 35);
 		contentPane.add(lblShip_1_1_2);
 		
 		JLabel lblShip_1_4 = new JLabel("Armored Ship");
+		lblShip_1_4.setForeground(Color.WHITE);
 		lblShip_1_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_4.setBounds(237, 267, 101, 35);
+		lblShip_1_4.setBounds(270, 267, 101, 35);
 		contentPane.add(lblShip_1_4);
 		
 		JLabel lblShip_1_1_3 = new JLabel("xxxx");
+		lblShip_1_1_3.setForeground(Color.WHITE);
 		lblShip_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblShip_1_1_3.setBounds(417, 267, 175, 35);
+		lblShip_1_1_3.setBounds(450, 267, 175, 35);
 		contentPane.add(lblShip_1_1_3);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(SystemColor.activeCaption);
 		lblNewLabel.setOpaque(true);
-		lblNewLabel.setBounds(0, 0, 706, 482);
-		contentPane.add(lblNewLabel);
+		lblNewLabel.setBounds(0, 0, 809, 482);
+		ImageIcon imagen4= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_fondo.jpeg");
+		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lblNewLabel.getWidth(),lblNewLabel.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lblNewLabel. setIcon(icono4);//establece el ImageIcon en el label
+		contentPane.add(lblNewLabel);//añadimos el label
 		
 		
 		setVisible(true);

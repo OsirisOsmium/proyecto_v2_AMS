@@ -10,24 +10,35 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.SystemColor;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
-public class buildWindow extends JFrame implements ActionListener{
+public class buildWindow extends JFrame implements ActionListener, ItemListener{
 
 	private JPanel contentPane;
 	private ImageIcon img;
 	private JButton btnBack;
-	private JLabel lblNewLabel;
+	private JLabel lblImage, lblNewLabel_2;
 	private JTextField textField;
-	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel_2;
+	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain, btnBuildDefenses, btnBuildTrops, btnAdd;
+	private JComboBox comboBox;
+	
+	private String url="jdbc:oracle:thin:@localhost:1521:xe";
+	private String user="PLANET_WARS_V2";
+	private String password="PLANET_WARS_V2";
+	private JTextArea txtDescription;
+	private JLabel lblBackground;
 
 	/**
 	 * Launch the application.
@@ -41,7 +52,7 @@ public class buildWindow extends JFrame implements ActionListener{
 	 */
 	public buildWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
 		setLocationRelativeTo(null);
@@ -102,72 +113,118 @@ public class buildWindow extends JFrame implements ActionListener{
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//añadimos el label
-		contentPane.add(lblNewLabel_2);
 		
 		////////////////////////////
 		
 		
-		/*
-		btnBack = new JButton("BACK");
-		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnBack.setBounds(257, 394, 150, 35);
-		btnBack.addActionListener(this);
-		contentPane.add(btnBack);
-		*/
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setOpaque(true);
-		lblNewLabel.setBounds(140, 46, 166, 245);
-		contentPane.add(lblNewLabel);
+		lblImage = new JLabel("");
+		lblImage.setBounds(139, 29, 282, 174);
+		contentPane.add(lblImage);
 		
-		JButton btnAdd = new JButton("ADD");
+		btnAdd = new JButton("ADD");
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnAdd.setBounds(468, 404, 150, 35);
+		btnAdd.setBounds(198, 361, 150, 35);
+		btnAdd.addActionListener(this);
 		contentPane.add(btnAdd);
 		
-		JRadioButton rdbTrops = new JRadioButton("Build Trops");
-		rdbTrops.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		rdbTrops.setBounds(140, 309, 115, 35);
-		contentPane.add(rdbTrops);
-		
-		JRadioButton rdbDefense = new JRadioButton("Build Defenses");
-		rdbDefense.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		rdbDefense.setBounds(140, 346, 115, 35);
-		contentPane.add(rdbDefense);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(140, 406, 150, 35);
+		comboBox = new JComboBox();
+		comboBox.setBounds(163, 267, 150, 35);
 		contentPane.add(comboBox);
 		
+		
 		JLabel lblUnit = new JLabel("Unidades a a\u00F1adir: ");
+		lblUnit.setForeground(Color.WHITE);
 		lblUnit.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblUnit.setBounds(518, 82, 150, 35);
+		lblUnit.setBounds(163, 313, 150, 35);
 		contentPane.add(lblUnit);
 		
 		textField = new JTextField();
-		textField.setBounds(518, 112, 100, 35);
+		textField.setBounds(312, 315, 100, 35);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBackground(Color.GRAY);
-		lblNewLabel_1.setBounds(315, 46, 166, 245);
-		lblNewLabel_1.setOpaque(true);
-		contentPane.add(lblNewLabel_1);
+		btnBuildTrops = new JButton("Build Trops");
+		btnBuildTrops.setBounds(163, 233, 110, 23);
+		btnBuildTrops.addActionListener(this);
+		contentPane.add(btnBuildTrops);
 		
+		btnBuildDefenses = new JButton("Build Defenses");
+		btnBuildDefenses.setBounds(290, 233, 110, 23);
+		btnBuildDefenses.addActionListener(this);
+		contentPane.add(btnBuildDefenses);
 		
+		txtDescription = new JTextArea("");
+		txtDescription.setEditable(false);
+		txtDescription.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtDescription.setBounds(468, 29, 282, 174);
+		txtDescription.setColumns(10);
+		txtDescription.setRows(5);
+		contentPane.add(txtDescription);
 		
-		
-		
-		
-		
+		lblBackground = new JLabel("");
+		lblBackground.setBounds(0, 0, 809, 482);
+		ImageIcon imagen4= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_fondo.jpeg");
+		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lblBackground. setIcon(icono4);//establece el ImageIcon en el label
+		contentPane.add(lblBackground);//añadimos el label
 		
 		
 		setVisible(true);
 	}
-
-	@Override
+	
+	
 	public void actionPerformed(ActionEvent e) {
+		if (btnBuildTrops==e.getSource()) {
+			String Ship[]= {"" ,"Light Hunter", "Heavy Hunter", "Battle Shipm" ,"Armored Ship"};
+			DefaultComboBoxModel comboTrops = new DefaultComboBoxModel(Ship);
+			comboBox.setModel(comboTrops);
+			comboBox.addItemListener(this);
+
+		}
+		if(btnBuildDefenses==e.getSource()) {			
+			String Defense[]= {"" ,"Missile Launcher", "Ion Cannon", "Plasma Cannon"};
+			DefaultComboBoxModel comboDefense = new DefaultComboBoxModel(Defense);
+			comboBox.setModel(comboDefense);
+			comboBox.addItemListener(this);
+
+		}
+		
+//////////////////////////
+		
+//en cada se ha de añadir una accion para que modifique las interfaces
+		
+		
+		if (btnAdd==e.getSource()) {
+			int Trops= comboBox.getSelectedIndex();
+			if (Trops==1) {
+				System.out.println("Accion de add del TROPS con seleccion 1");
+			}
+			if (Trops==2) {
+				System.out.println("Accion de add del TROPS con seleccion 2");
+			}
+			if (Trops==3) {
+				System.out.println("Accion de add del TROPS con seleccion 3");
+			}
+			if (Trops==4) {
+				System.out.println("Accion de add del TROPS con seleccion 4");
+			}
+			
+			
+			int Defense=comboBox.getSelectedIndex();
+			if (Defense==1) {
+				System.out.println("Accion de add del DEFENSE con seleccion 1");
+			}
+			if (Defense==2) {
+				System.out.println("Accion de add del DEFENSE con seleccion 2");
+			}
+			if (Defense==3) {
+				System.out.println("Accion de add del DEFENSE con seleccion 3");
+			}
+		}
+//////////////////////////
+		
+		
+
 		if (btnViewPlanetStat==e.getSource()){
 			viewWindow view=new viewWindow();
 			this.setVisible(false);
@@ -206,6 +263,81 @@ public class buildWindow extends JFrame implements ActionListener{
 			mainWindow main=new mainWindow();
 			this.setVisible(false);
 			main.setVisible(true);
+		}
+		
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		
+		int Trops= comboBox.getSelectedIndex(); //si el combo box seleccionado (item 1, 2, 3, 4, ...) ==x num haz eso
+		if (Trops==1) {
+			
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\ship\\cazaLigero.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewTrops("Light Hunter"));
+			//txtDescription.setText(conn.get_ship(1));
+			System.out.println("Light Hunter");
+		}
+		if (Trops==2) {
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\cazaPesado.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewTrops("Heavy Hunter"));
+			
+			System.out.println("Heavy Hunter");
+		}
+		if (Trops==3) {
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\battleShip.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewTrops("Battle Ship"));
+			
+			System.out.println("Battle Ship");
+		}
+		if (Trops==4) {
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\acorazado.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewTrops("Armored Ship"));
+			
+			System.out.println("Armored Ship");
+		}
+		
+		int Defense=comboBox.getSelectedIndex();
+		
+		if (Defense==1) {
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\misil.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewDefense("Missile Launcher"));
+		}
+		if (Defense==2) {
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\cañonIon.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewDefense("Ion Cannon"));
+		}
+		if (Defense==3) {
+			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\plasmaCannon.jpg");
+			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+			lblImage. setIcon(icono2);//establece el ImageIcon en el label
+			
+			connectionOracle conn=new connectionOracle(url, user, password);
+			txtDescription.setText(conn.viewDefense("PLasma Cannon"));
 		}
 		
 	}

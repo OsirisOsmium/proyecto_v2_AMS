@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class upgradeWindow extends JFrame implements ActionListener{
 
@@ -22,6 +23,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	private JButton btnUpDef, btnUpAtack, btnBack;
 	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
 	private JLabel lblNewLabel_2;
+	private JLabel lblBackground;
 
 	/**
 	 * Launch the application.
@@ -37,6 +39,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 720, 519);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.activeCaption);
 		setLocationRelativeTo(null);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -103,6 +106,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		
 		
 		JLabel lblNewLabel = new JLabel("UPGRADE TECHNOLOGY");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		lblNewLabel.setBounds(138, 46, 550, 61);
 		contentPane.add(lblNewLabel);
@@ -128,44 +132,59 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		*/
 		
 		JLabel lblNewLabel_1 = new JLabel("Update Defense Technology.      Cost: ");
+		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_1.setBounds(138, 183, 261, 45);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Update Attack Technology.      Cost: ");
+		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_2.setBounds(138, 236, 261, 45);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("x");
+		lblNewLabel_3.setForeground(Color.WHITE);
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_3.setBounds(434, 183, 80, 45);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_3_1 = new JLabel("xx");
+		lblNewLabel_3_1.setForeground(Color.WHITE);
 		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_3_1.setBounds(434, 236, 80, 45);
 		contentPane.add(lblNewLabel_3_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Actual Defense Technology");
+		lblNewLabel_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_1_1.setBounds(144, 322, 197, 45);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Actual Attack Technology");
+		lblNewLabel_2_1.setForeground(Color.WHITE);
 		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_2_1.setBounds(144, 375, 197, 45);
 		contentPane.add(lblNewLabel_2_1);
 		
 		JLabel lblActDefTech = new JLabel("xxx");
+		lblActDefTech.setForeground(Color.WHITE);
 		lblActDefTech.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblActDefTech.setBounds(351, 322, 80, 45);
 		contentPane.add(lblActDefTech);
 		
 		JLabel lblActAtaTech = new JLabel("xxxx");
+		lblActAtaTech.setForeground(Color.WHITE);
 		lblActAtaTech.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblActAtaTech.setBounds(351, 375, 80, 45);
 		contentPane.add(lblActAtaTech);
+		
+		lblBackground = new JLabel("");
+		lblBackground.setBounds(0, 0, 704, 480);
+		ImageIcon imagen4= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_fondo.jpeg");
+		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lblBackground. setIcon(icono4);//establece el ImageIcon en el label
+		contentPane.add(lblBackground);//añadimos el label
 		
 		setVisible(true);
 	}

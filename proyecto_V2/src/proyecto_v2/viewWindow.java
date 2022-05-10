@@ -15,12 +15,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JLabel;
+import java.awt.Color;
 
 public class viewWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel, lblNewLabel_2;
 
 	/**
 	 * Launch the application.
@@ -34,7 +35,7 @@ public class viewWindow extends JFrame implements ActionListener{
 	 */
 	public viewWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLocationRelativeTo(null);
@@ -106,141 +107,181 @@ public class viewWindow extends JFrame implements ActionListener{
 		contentPane.add(btnBack);
 		*/
 		JLabel lblTitle = new JLabel("VIEW PLANET STATS");
+		lblTitle.setForeground(Color.WHITE);
 		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		lblTitle.setBounds(140, 50, 500, 45);
 		lblTitle.setBorder(null);
 		contentPane.add(lblTitle);
 		
 		JLabel lblMetal = new JLabel("Metal");
+		lblMetal.setForeground(Color.WHITE);
 		lblMetal.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblMetal.setBounds(231, 392, 80, 20);
+		lblMetal.setBounds(140, 358, 80, 20);
 		contentPane.add(lblMetal);
 		
 		JLabel lblDeuterium = new JLabel("Deuterium");
+		lblDeuterium.setForeground(Color.WHITE);
 		lblDeuterium.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblDeuterium.setBounds(231, 432, 80, 20);
+		lblDeuterium.setBounds(140, 398, 80, 20);
 		contentPane.add(lblDeuterium);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("x");
+		lblNewLabel_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1.setBounds(343, 396, 80, 20);
+		lblNewLabel_1_1.setBounds(252, 362, 80, 20);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("xx");
+		lblNewLabel_1_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1_1.setBounds(343, 436, 80, 20);
+		lblNewLabel_1_1_1.setBounds(252, 402, 80, 20);
 		contentPane.add(lblNewLabel_1_1_1);
 		
 		JLabel lblTechnology = new JLabel("TECHNOLOGY");
+		lblTechnology.setForeground(Color.WHITE);
 		lblTechnology.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblTechnology.setBounds(140, 151, 80, 20);
+		lblTechnology.setBounds(342, 310, 80, 20);
 		contentPane.add(lblTechnology);
 		
 		JLabel lblDefenses = new JLabel("DEFENSES");
+		lblDefenses.setForeground(Color.WHITE);
 		lblDefenses.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblDefenses.setBounds(315, 151, 80, 20);
+		lblDefenses.setBounds(341, 135, 80, 20);
 		contentPane.add(lblDefenses);
 		
 		JLabel lblMisileLaun = new JLabel("Missili Launcher: ");
+		lblMisileLaun.setForeground(Color.WHITE);
 		lblMisileLaun.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblMisileLaun.setBounds(315, 196, 101, 20);
+		lblMisileLaun.setBounds(341, 180, 101, 20);
 		contentPane.add(lblMisileLaun);
 		
 		JLabel lblIonCannon = new JLabel("Ion Cannon: ");
+		lblIonCannon.setForeground(Color.WHITE);
 		lblIonCannon.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblIonCannon.setBounds(315, 231, 80, 20);
+		lblIonCannon.setBounds(341, 215, 80, 20);
 		contentPane.add(lblIonCannon);
 		
 		JLabel lblPlasmaCannon = new JLabel("Plasma Cannon: ");
+		lblPlasmaCannon.setForeground(Color.WHITE);
 		lblPlasmaCannon.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasmaCannon.setBounds(315, 272, 108, 20);
+		lblPlasmaCannon.setBounds(341, 256, 108, 20);
 		contentPane.add(lblPlasmaCannon);
 		
 		JLabel lblAttackTech = new JLabel("Attack Technology:");
+		lblAttackTech.setForeground(Color.WHITE);
 		lblAttackTech.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblAttackTech.setBounds(140, 200, 109, 20);
+		lblAttackTech.setBounds(342, 359, 109, 20);
 		contentPane.add(lblAttackTech);
 		
 		JLabel lblDefenseTech = new JLabel("Defense Technology: ");
+		lblDefenseTech.setForeground(Color.WHITE);
 		lblDefenseTech.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblDefenseTech.setBounds(140, 239, 120, 20);
+		lblDefenseTech.setBounds(342, 398, 120, 20);
 		contentPane.add(lblDefenseTech);
 		
 		JLabel lblAttack = new JLabel("x");
+		lblAttack.setForeground(Color.WHITE);
 		lblAttack.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblAttack.setBounds(259, 200, 47, 20);
+		lblAttack.setBounds(461, 359, 47, 20);
 		contentPane.add(lblAttack);
 		
 		JLabel lblDefense = new JLabel("xx");
+		lblDefense.setForeground(Color.WHITE);
 		lblDefense.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblDefense.setBounds(264, 239, 47, 20);
+		lblDefense.setBounds(466, 398, 47, 20);
 		contentPane.add(lblDefense);
 		
 		JLabel lblMisile = new JLabel("x");
+		lblMisile.setForeground(Color.WHITE);
 		lblMisile.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblMisile.setBounds(426, 196, 47, 20);
+		lblMisile.setBounds(452, 180, 47, 20);
 		contentPane.add(lblMisile);
 		
 		JLabel lblIon = new JLabel("xx");
+		lblIon.setForeground(Color.WHITE);
 		lblIon.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblIon.setBounds(426, 235, 47, 20);
+		lblIon.setBounds(452, 219, 47, 20);
 		contentPane.add(lblIon);
 		
 		JLabel lblPlasma = new JLabel("xxx");
+		lblPlasma.setForeground(Color.WHITE);
 		lblPlasma.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasma.setBounds(426, 276, 47, 20);
+		lblPlasma.setBounds(452, 260, 47, 20);
 		contentPane.add(lblPlasma);
 		
 		JLabel lblFleet = new JLabel("FLEET");
+		lblFleet.setForeground(Color.WHITE);
 		lblFleet.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblFleet.setBounds(486, 151, 80, 20);
+		lblFleet.setBounds(512, 135, 80, 20);
 		contentPane.add(lblFleet);
 		
 		JLabel lblLigthHuntter = new JLabel("Ligth Huntter: ");
+		lblLigthHuntter.setForeground(Color.WHITE);
 		lblLigthHuntter.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblLigthHuntter.setBounds(486, 196, 80, 20);
+		lblLigthHuntter.setBounds(512, 180, 80, 20);
 		contentPane.add(lblLigthHuntter);
 		
 		JLabel lblHeavyhunter = new JLabel("HeavyHunter: ");
+		lblHeavyhunter.setForeground(Color.WHITE);
 		lblHeavyhunter.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblHeavyhunter.setBounds(486, 231, 80, 20);
+		lblHeavyhunter.setBounds(512, 215, 80, 20);
 		contentPane.add(lblHeavyhunter);
 		
 		JLabel lblArmoredShip = new JLabel("Battle Ship: ");
+		lblArmoredShip.setForeground(Color.WHITE);
 		lblArmoredShip.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblArmoredShip.setBounds(486, 272, 80, 20);
+		lblArmoredShip.setBounds(512, 256, 80, 20);
 		contentPane.add(lblArmoredShip);
 		
 		JLabel lblIon_1 = new JLabel("xx");
+		lblIon_1.setForeground(Color.WHITE);
 		lblIon_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblIon_1.setBounds(597, 235, 47, 20);
+		lblIon_1.setBounds(623, 219, 47, 20);
 		contentPane.add(lblIon_1);
 		
 		JLabel lblMisile_1 = new JLabel("x");
+		lblMisile_1.setForeground(Color.WHITE);
 		lblMisile_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblMisile_1.setBounds(597, 196, 47, 20);
+		lblMisile_1.setBounds(623, 180, 47, 20);
 		contentPane.add(lblMisile_1);
 		
 		JLabel lblPlasma_1 = new JLabel("xxx");
+		lblPlasma_1.setForeground(Color.WHITE);
 		lblPlasma_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasma_1.setBounds(597, 276, 47, 20);
+		lblPlasma_1.setBounds(623, 260, 47, 20);
 		contentPane.add(lblPlasma_1);
 		
 		JLabel lblArmoredShip_1 = new JLabel("Armored Ship: ");
+		lblArmoredShip_1.setForeground(Color.WHITE);
 		lblArmoredShip_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblArmoredShip_1.setBounds(486, 310, 80, 20);
+		lblArmoredShip_1.setBounds(512, 294, 80, 20);
 		contentPane.add(lblArmoredShip_1);
 		
 		JLabel lblPlasma_1_1 = new JLabel("xxxx");
+		lblPlasma_1_1.setForeground(Color.WHITE);
 		lblPlasma_1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasma_1_1.setBounds(597, 314, 47, 20);
+		lblPlasma_1_1.setBounds(623, 298, 47, 20);
 		contentPane.add(lblPlasma_1_1);
+		
+		JLabel lblPlaneta = new JLabel("");
+		lblPlaneta.setIcon(new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png"));
+		lblPlaneta.setBounds(132, 141, 173, 148);
+		ImageIcon imagen3= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png");
+		ImageIcon icono3= new ImageIcon(imagen3.getImage().getScaledInstance(lblPlaneta.getWidth(),lblPlaneta.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lblPlaneta. setIcon(icono3);//establece el ImageIcon en el label
+		contentPane.add(lblPlaneta);//añadimos el label
+		
 		
 		JLabel lbBackGround = new JLabel("");
 		lbBackGround.setBackground(SystemColor.activeCaption);
-		lbBackGround.setBounds(0, 0, 706, 482);
+		lbBackGround.setBounds(0, 0, 809, 482);
 		lbBackGround.setOpaque(true);
-		contentPane.add(lbBackGround);
+		ImageIcon imagen4= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_fondo.jpeg");
+		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lbBackGround.getWidth(),lbBackGround.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
+		lbBackGround. setIcon(icono4);//establece el ImageIcon en el label
+		contentPane.add(lbBackGround);//añadimos el label
+		
+		
 		
 		setVisible(true);
 	}
@@ -288,5 +329,4 @@ public class viewWindow extends JFrame implements ActionListener{
 		}
 		
 	}
-
 }
