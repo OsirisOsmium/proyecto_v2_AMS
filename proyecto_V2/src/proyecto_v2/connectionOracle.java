@@ -33,22 +33,49 @@ public class connectionOracle {
 		}
 	}
 	
-	public void SingIn(String username, String password, String date) {
-		try {
-			String query = "SELECT max(user_id)+1 FROM users";
+	
+	public boolean LogIn(String username, String password) {
+		boolean validar=false;
+		try {			
+			String query = "select * from usr where username='"+username+"'";
 			Statement stmnt=conn.createStatement();
 			ResultSet rs=stmnt.executeQuery(query);
-			
-			int user_id=rs.getInt(1);
-			//falla aqui con 
-			PreparedStatement pstm = conn.prepareStatement("INSERT INTO user values(id_user, username, password, to_Date(birth_date,'DD-MM-YYYY')) VALUES (?,?,?,?,?)");
-			pstm.setInt(1, user_id);
-			pstm.setString(2, "'"+username+"'");
-			pstm.setString(4, "'"+password+"'");
+			while (rs.next()) { 
+				String uss=rs.getString("username");
+				String pas=rs.getString("password");
+				
+//////////////////////se ha cambiado la validacion para deje asar falta revisar
+				
+				if (username==uss && password==pas) {
+					validar=false;
+					System.out.println("else false");
+				}
+				else {
+					validar=true;
+					System.out.println("else true");
+				}
+			}	
+		} 
+		catch (SQLException e1) {
+			e1.printStackTrace();
+			System.out.println("ERROR: El usuario no existe");
+			System.out.println("ERROR GENERAL: Ha havido algun error");
+		}
+		return validar;
+	}
+	
+	public void SingIn(String username, String password, String date) {
+		try {	
+			PreparedStatement pstm = conn.prepareStatement("INSERT INTO usr values((select max(id_user)+1 from usr), username, password, to_Date(birth_date,'DD-MM-YYYY')) VALUES ((select max(id_user)+1 from usr),?,?,?)");
+
+			pstm.setString(1, "'"+username+"'");
+			pstm.setString(2, "'"+password+"'");
 			pstm.setString(3, "'"+date+"'");
 			
-			pstm.executeUpdate();
-		} 
+			pstm.executeUpdate();	
+		}
+			
+		
 		catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("ERROR: El uruario ya existe");
@@ -56,19 +83,6 @@ public class connectionOracle {
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	public String viewStatPlanet() {
-		String txt="";
-			
-		return txt;
-	}
 	
 	
 	
@@ -179,5 +193,63 @@ public class connectionOracle {
         }
 		return text;
 	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	public void viewStats() {
+		try {
+			System.out.println("Conexion correcta");
+			String query = "select * from planet where id_planet = 1";
+			PreparedStatement consulta = conn.prepareStatement(query);
+			//consulta.setString(1, reciboPalabraUsuario);
+			ResultSet resultado = consulta.executeQuery();
+			
+			while(resultado.next()) {
+				int Quantity_metal=resultado.getInt("quantity_metal");
+				int Quantity_deuterium=resultado.getInt("quantity_deuterium");
+				
+				int LvlTechnology=resultado.getInt("current_leveldefense");
+				int LvlDefense=resultado.getInt("current_leveldefense");
+				
+				
+				int LightH=resultado.getInt("num_lighthunter");
+				int HeavyH=resultado.getInt("num_heavyhunter");
+				int BattleShip=resultado.getInt("num_battleship");
+				int ArmoredShip=resultado.getInt("num_armoredship");
+				
+				int MissileLauncher=resultado.getInt("num_missilelauncher");
+				int IonCannon=resultado.getInt("num_ioncannon");
+				int PlasmaCannon=resultado.getInt("num_plasmacannon");				
+			}
+		}
+		catch(SQLException e) {
+		System.out.println("ERROR: Ha havido algun error");
+		}	
+	}
+	
+	
+	public void addTrops(String tipo, int cant, int numMetal, int numDeuterium) {
+		String texto="";
+		try {
+			String query = "update planet values("+tipo+", quantity_metal, quantity_deuterium) values (?,?,?) where id_planet = 1";
+			PreparedStatement pstmnt=conn.prepareStatement(query);
+			ResultSet rs=pstmnt.executeQuery(query);
+			while (rs.next()){
+				pstmnt
+				
+			}
+			
+			System.out.println("EXITO: El ship existe");
+		} catch (SQLException e) {
+			System.out.println("ERROR: El ship no existe");
+		}
+		return texto;
+		
+	}
+	 
 }

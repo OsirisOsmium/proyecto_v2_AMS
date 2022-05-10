@@ -13,6 +13,11 @@ import java.awt.Image;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.swing.JLabel;
 import java.awt.Color;
@@ -21,7 +26,11 @@ public class viewWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel, lblNewLabel_2;
+	private JLabel lblNewLabel, lblNewLabel_2, lblNumMetal, lblNumDeuterium, lblLvlAtack, lblLvlDefense, lblnumMissile, lblNumIon, lblNumPlasma, lblNumLight, lblNumHeavy, lblNumBattle, lblNumArmored;
+	
+	private String url="jdbc:oracle:thin:@localhost:1521:xe";
+	private String user="PLANET_WARS_V2";
+	private String password="PLANET_WARS_V2";
 
 	/**
 	 * Launch the application.
@@ -99,13 +108,7 @@ public class viewWindow extends JFrame implements ActionListener{
 		////////////////////////////
 		
 		
-		/*
-		btnBack = new JButton("Back");
-		btnBack.addActionListener(this);
-		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnBack.setBounds(65, 404, 115, 45);
-		contentPane.add(btnBack);
-		*/
+		
 		JLabel lblTitle = new JLabel("VIEW PLANET STATS");
 		lblTitle.setForeground(Color.WHITE);
 		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 50));
@@ -125,22 +128,10 @@ public class viewWindow extends JFrame implements ActionListener{
 		lblDeuterium.setBounds(140, 398, 80, 20);
 		contentPane.add(lblDeuterium);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("x");
-		lblNewLabel_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1.setBounds(252, 362, 80, 20);
-		contentPane.add(lblNewLabel_1_1);
-		
-		JLabel lblNewLabel_1_1_1 = new JLabel("xx");
-		lblNewLabel_1_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1_1.setBounds(252, 402, 80, 20);
-		contentPane.add(lblNewLabel_1_1_1);
-		
-		JLabel lblTechnology = new JLabel("TECHNOLOGY");
+		JLabel lblTechnology = new JLabel("TECHNOLOGY LEVEL");
 		lblTechnology.setForeground(Color.WHITE);
 		lblTechnology.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblTechnology.setBounds(342, 310, 80, 20);
+		lblTechnology.setBounds(342, 310, 120, 20);
 		contentPane.add(lblTechnology);
 		
 		JLabel lblDefenses = new JLabel("DEFENSES");
@@ -179,36 +170,6 @@ public class viewWindow extends JFrame implements ActionListener{
 		lblDefenseTech.setBounds(342, 398, 120, 20);
 		contentPane.add(lblDefenseTech);
 		
-		JLabel lblAttack = new JLabel("x");
-		lblAttack.setForeground(Color.WHITE);
-		lblAttack.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblAttack.setBounds(461, 359, 47, 20);
-		contentPane.add(lblAttack);
-		
-		JLabel lblDefense = new JLabel("xx");
-		lblDefense.setForeground(Color.WHITE);
-		lblDefense.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblDefense.setBounds(466, 398, 47, 20);
-		contentPane.add(lblDefense);
-		
-		JLabel lblMisile = new JLabel("x");
-		lblMisile.setForeground(Color.WHITE);
-		lblMisile.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblMisile.setBounds(452, 180, 47, 20);
-		contentPane.add(lblMisile);
-		
-		JLabel lblIon = new JLabel("xx");
-		lblIon.setForeground(Color.WHITE);
-		lblIon.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblIon.setBounds(452, 219, 47, 20);
-		contentPane.add(lblIon);
-		
-		JLabel lblPlasma = new JLabel("xxx");
-		lblPlasma.setForeground(Color.WHITE);
-		lblPlasma.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasma.setBounds(452, 260, 47, 20);
-		contentPane.add(lblPlasma);
-		
 		JLabel lblFleet = new JLabel("FLEET");
 		lblFleet.setForeground(Color.WHITE);
 		lblFleet.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -233,35 +194,87 @@ public class viewWindow extends JFrame implements ActionListener{
 		lblArmoredShip.setBounds(512, 256, 80, 20);
 		contentPane.add(lblArmoredShip);
 		
-		JLabel lblIon_1 = new JLabel("xx");
-		lblIon_1.setForeground(Color.WHITE);
-		lblIon_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblIon_1.setBounds(623, 219, 47, 20);
-		contentPane.add(lblIon_1);
 		
-		JLabel lblMisile_1 = new JLabel("x");
-		lblMisile_1.setForeground(Color.WHITE);
-		lblMisile_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblMisile_1.setBounds(623, 180, 47, 20);
-		contentPane.add(lblMisile_1);
+		///////////////////////////////////
+			
+		///////////////////////////////////
+//////////////////////////////////
+//DATOS
+		lblNumMetal = new JLabel("x");
+		lblNumMetal.setForeground(Color.WHITE);
+		lblNumMetal.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNumMetal.setBounds(252, 362, 80, 20);
+		//lblNumMetal.setText(Q_metal);
+		contentPane.add(lblNumMetal);
 		
-		JLabel lblPlasma_1 = new JLabel("xxx");
-		lblPlasma_1.setForeground(Color.WHITE);
-		lblPlasma_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasma_1.setBounds(623, 260, 47, 20);
-		contentPane.add(lblPlasma_1);
+		lblNumDeuterium = new JLabel("xx");
+		lblNumDeuterium.setForeground(Color.WHITE);
+		lblNumDeuterium.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNumDeuterium.setBounds(252, 402, 80, 20);
+		//lblNumDeuterium.setText(Q_Deuterium);
+		contentPane.add(lblNumDeuterium);
 		
+		
+		lblLvlAtack = new JLabel("x");
+		lblLvlAtack.setForeground(Color.WHITE);
+		lblLvlAtack.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblLvlAtack.setBounds(461, 359, 47, 20);
+		contentPane.add(lblLvlAtack);
+		
+		lblLvlDefense = new JLabel("xx");
+		lblLvlDefense.setForeground(Color.WHITE);
+		lblLvlDefense.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblLvlDefense.setBounds(466, 398, 47, 20);
+		contentPane.add(lblLvlDefense);
+		
+		lblnumMissile = new JLabel("x");
+		lblnumMissile.setForeground(Color.WHITE);
+		lblnumMissile.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblnumMissile.setBounds(452, 180, 47, 20);
+		contentPane.add(lblnumMissile);
+		
+		lblNumIon = new JLabel("xx");
+		lblNumIon.setForeground(Color.WHITE);
+		lblNumIon.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNumIon.setBounds(452, 219, 47, 20);
+		contentPane.add(lblNumIon);
+		
+		lblNumPlasma = new JLabel("xxx");
+		lblNumPlasma.setForeground(Color.WHITE);
+		lblNumPlasma.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNumPlasma.setBounds(452, 260, 47, 20);
+		contentPane.add(lblNumPlasma);
+		
+		lblNumHeavy = new JLabel("xx");
+		lblNumHeavy.setForeground(Color.WHITE);
+		lblNumHeavy.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNumHeavy.setBounds(623, 219, 47, 20);
+		contentPane.add(lblNumHeavy);
+		
+		lblNumLight = new JLabel("x");
+		lblNumLight.setForeground(Color.WHITE);
+		lblNumLight.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNumLight.setBounds(623, 180, 47, 20);
+		contentPane.add(lblNumLight);
+		
+		lblNumBattle = new JLabel("xxx");
+		lblNumBattle.setForeground(Color.WHITE);
+		lblNumBattle.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNumBattle.setBounds(623, 260, 47, 20);
+		contentPane.add(lblNumBattle);
+		
+		lblNumArmored = new JLabel("xxxx");
+		lblNumArmored.setForeground(Color.WHITE);
+		lblNumArmored.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNumArmored.setBounds(623, 298, 47, 20);
+		contentPane.add(lblNumArmored);
+//////////////////////////////////
 		JLabel lblArmoredShip_1 = new JLabel("Armored Ship: ");
 		lblArmoredShip_1.setForeground(Color.WHITE);
 		lblArmoredShip_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblArmoredShip_1.setBounds(512, 294, 80, 20);
 		contentPane.add(lblArmoredShip_1);
 		
-		JLabel lblPlasma_1_1 = new JLabel("xxxx");
-		lblPlasma_1_1.setForeground(Color.WHITE);
-		lblPlasma_1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblPlasma_1_1.setBounds(623, 298, 47, 20);
-		contentPane.add(lblPlasma_1_1);
 		
 		JLabel lblPlaneta = new JLabel("");
 		lblPlaneta.setIcon(new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png"));
@@ -280,7 +293,6 @@ public class viewWindow extends JFrame implements ActionListener{
 		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lbBackGround.getWidth(),lbBackGround.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lbBackGround. setIcon(icono4);//establece el ImageIcon en el label
 		contentPane.add(lbBackGround);//añadimos el label
-		
 		
 		
 		setVisible(true);

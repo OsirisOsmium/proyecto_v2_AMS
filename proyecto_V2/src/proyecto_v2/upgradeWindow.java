@@ -22,8 +22,11 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JButton btnUpDef, btnUpAtack, btnBack;
 	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel_2;
-	private JLabel lblBackground;
+	private JLabel lblNewLabel_2, lblBackground;
+	
+	private String url="jdbc:oracle:thin:@localhost:1521:xe";
+	private String user="PLANET_WARS_V2";
+	private String password="PLANET_WARS_V2";
 
 	/**
 	 * Launch the application.
@@ -192,11 +195,24 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (btnUpDef==e.getSource()) {
+			connectionOracle conn=new connectionOracle(url, user, password);
 			
+			
+
 		}
 		if (btnUpAtack==e.getSource()) {
+			connectionOracle conn=new connectionOracle(url, user, password);
 			
+			
+
 		}
+		
+		
+		
+		
+		
+		
+		
 		if (btnViewPlanetStat==e.getSource()){
 			viewWindow view=new viewWindow();
 			this.setVisible(false);

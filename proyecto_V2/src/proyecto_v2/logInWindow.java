@@ -120,47 +120,18 @@ public class logInWindow extends JFrame implements ActionListener{
 		if (btnLogIn==e.getSource()) {
 			String username=txtUsername.getText();
 			String pass=txtPassword.getText();
+			connectionOracle conn=new connectionOracle(url, user, password);
 			
+			if (conn.LogIn(username, pass)==true) {
+				mainWindow main=new mainWindow();
+				this.setVisible(false);
+				main.setVisible(true);
 			
-			
-			//////////////////////
-			
-			try {
-				connectionOracle conn=new connectionOracle(url, user, password);
-				
-				String query = "select * from user where username='"+username+"'"+"and password='"+pass+"'" ;
-				Statement stmnt=((Connection) conn).createStatement();
-				ResultSet rs=stmnt.executeQuery(query);
-				while (rs.next()) { 
-					String uss=rs.getString(2);
-					String pas=rs.getString(3);
-					if (username==uss && pass==pas) {
-						mainWindow main=new mainWindow();
-						this.setVisible(false);
-						main.setVisible(true);
-					}
-					else {
-						System.out.println("asdasdasdasd");
-					}
-				}
-				
-				
-				
-			} 
-			catch (SQLException e1) {
-				e1.printStackTrace();
-				System.out.println("ERROR: El uruario ya existe");
-				System.out.println("ERROR GENERAL: Ha havido algun error");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "ERROR: El usuario o la contraseña son incorrectos");
 			}
 			
-			/////////////////////
-			
-			
-			
-			
-			mainWindow main=new mainWindow();
-			this.setVisible(false);
-			main.setVisible(true);
 			
 		}
 		if (btnSingIn==e.getSource()) {

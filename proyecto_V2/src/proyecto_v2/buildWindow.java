@@ -30,7 +30,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	private ImageIcon img;
 	private JButton btnBack;
 	private JLabel lblImage, lblNewLabel_2;
-	private JTextField textField;
+	private JTextField txtNumAñadir;
 	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain, btnBuildDefenses, btnBuildTrops, btnAdd;
 	private JComboBox comboBox;
 	
@@ -138,10 +138,10 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		lblUnit.setBounds(163, 313, 150, 35);
 		contentPane.add(lblUnit);
 		
-		textField = new JTextField();
-		textField.setBounds(312, 315, 100, 35);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtNumAñadir = new JTextField();
+		txtNumAñadir.setBounds(312, 315, 100, 35);
+		contentPane.add(txtNumAñadir);
+		txtNumAñadir.setColumns(10);
 		
 		btnBuildTrops = new JButton("Build Trops");
 		btnBuildTrops.setBounds(163, 233, 110, 23);
@@ -175,9 +175,16 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		if (btnBuildTrops==e.getSource()) {
-			String Ship[]= {"" ,"Light Hunter", "Heavy Hunter", "Battle Shipm" ,"Armored Ship"};
+			String Ship[]= {"" ,"Light Hunter", "Heavy Hunter", "Battle Ship" ,"Armored Ship"};
 			DefaultComboBoxModel comboTrops = new DefaultComboBoxModel(Ship);
 			comboBox.setModel(comboTrops);
+			/*
+			btnBuildTrops.addItemListener(new ItemListener() {
+				public void itemStateChanged(ItemEvent e) {
+					
+					
+				}
+			});*/
 			comboBox.addItemListener(this);
 
 		}
@@ -195,30 +202,29 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		
 		
 		if (btnAdd==e.getSource()) {
-			int Trops= comboBox.getSelectedIndex();
-			if (Trops==1) {
-				System.out.println("Accion de add del TROPS con seleccion 1");
+			String Trops=(String) comboBox.getSelectedItem();
+			if (Trops.equalsIgnoreCase("Light Hunter")) {
+				System.out.println("Accion de add del TROPS con Light Hunter");
 			}
-			if (Trops==2) {
-				System.out.println("Accion de add del TROPS con seleccion 2");
+			if (Trops.equalsIgnoreCase("Heavy Hunter")) {
+				System.out.println("Accion de add del TROPS con Heavy Hunter");
 			}
-			if (Trops==3) {
-				System.out.println("Accion de add del TROPS con seleccion 3");
+			if (Trops.equalsIgnoreCase("Battle Ship")) {
+				System.out.println("Accion de add del TROPS con Battle Ship");
 			}
-			if (Trops==4) {
-				System.out.println("Accion de add del TROPS con seleccion 4");
+			if (Trops.equalsIgnoreCase("Armored Ship")) {
+				System.out.println("Accion de add del TROPS con Armored Ship");
 			}
 			
 			
-			int Defense=comboBox.getSelectedIndex();
-			if (Defense==1) {
-				System.out.println("Accion de add del DEFENSE con seleccion 1");
+			if (Trops.equalsIgnoreCase("Missile Launcher")) {
+				System.out.println("Accion de add del DEFENSE con Missile Launcher");
 			}
-			if (Defense==2) {
-				System.out.println("Accion de add del DEFENSE con seleccion 2");
+			if (Trops.equalsIgnoreCase("Ion Cannon")) {
+				System.out.println("Accion de add del DEFENSE con Ion Cannon");
 			}
-			if (Defense==3) {
-				System.out.println("Accion de add del DEFENSE con seleccion 3");
+			if (Trops.equalsIgnoreCase("PLasma Cannon")) {
+				System.out.println("Accion de add del DEFENSE con PLasma Cannon");
 			}
 		}
 //////////////////////////
@@ -270,19 +276,19 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		
-		int Trops= comboBox.getSelectedIndex(); //si el combo box seleccionado (item 1, 2, 3, 4, ...) ==x num haz eso
-		if (Trops==1) {
-			
+		String Trops=(String) comboBox.getSelectedItem(); //si el combo box seleccionado (item 1, 2, 3, 4, ...) ==x num haz eso
+		
+		if (Trops.equalsIgnoreCase("Light Hunter")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\ship\\cazaLigero.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
 			txtDescription.setText(conn.viewTrops("Light Hunter"));
-			//txtDescription.setText(conn.get_ship(1));
+
 			System.out.println("Light Hunter");
 		}
-		if (Trops==2) {
+		if (Trops.equalsIgnoreCase("Heavy Hunter")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\cazaPesado.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
@@ -292,7 +298,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			
 			System.out.println("Heavy Hunter");
 		}
-		if (Trops==3) {
+		if (Trops.equalsIgnoreCase("Battle Ship")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\battleShip.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
@@ -302,7 +308,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			
 			System.out.println("Battle Ship");
 		}
-		if (Trops==4) {
+		if (Trops.equalsIgnoreCase("Armored Ship")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\acorazado.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
@@ -313,9 +319,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			System.out.println("Armored Ship");
 		}
 		
-		int Defense=comboBox.getSelectedIndex();
-		
-		if (Defense==1) {
+		if (Trops.equalsIgnoreCase("Missile Launcher")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\misil.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
@@ -323,7 +327,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			connectionOracle conn=new connectionOracle(url, user, password);
 			txtDescription.setText(conn.viewDefense("Missile Launcher"));
 		}
-		if (Defense==2) {
+		if (Trops.equalsIgnoreCase("Ion Cannon")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\cañonIon.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
@@ -331,7 +335,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			connectionOracle conn=new connectionOracle(url, user, password);
 			txtDescription.setText(conn.viewDefense("Ion Cannon"));
 		}
-		if (Defense==3) {
+		if (Trops.equalsIgnoreCase("PLasma Cannon")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\plasmaCannon.jpg");
 			ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblImage.getWidth(),lblImage.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
