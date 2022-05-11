@@ -10,6 +10,7 @@ exists_Defense NUMBER(1);
 exists_Enemy NUMBER(1);
 exists_Planet NUMBER(1);
 exists_Ship NUMBER(1);
+exists_Units NUMBER(1);
 exists_User NUMBER(1);
 
 /*Varchars con sentencias DDL para crear las tablas y añadirles restricciones,
@@ -21,7 +22,7 @@ create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
     user_id_user       INTEGER NOT NULL,
     enemy_id_enemy     INTEGER NOT NULL,
     planet_id_planet   INTEGER NOT NULL,
-    report_stepbystep  VARCHAR2(4000) NOT NULL,
+    report_stepbystep  LONG NOT NULL,
     id_winner          INTEGER NOT NULL,
     waste_metal        NUMBER NOT NULL,
     waste_deuterium    NUMBER NOT NULL,
@@ -43,16 +44,10 @@ create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
     ei_heavyhunter     INTEGER DEFAULT 0,
     ei_battleship      INTEGER DEFAULT 0,
     ei_armoredship     INTEGER DEFAULT 0,
-    ei_missilelauncher INTEGER DEFAULT 0,
-    ei_ioncannon       INTEGER DEFAULT 0,
-    ei_plasmacannon    INTEGER DEFAULT 0,
     ef_lighthunter     INTEGER DEFAULT 0,
     ef_heavyhunter     INTEGER DEFAULT 0,
     ef_battleship      INTEGER DEFAULT 0,
-    ef_armoredship     INTEGER DEFAULT 0,
-    ef_missilelauncher INTEGER DEFAULT 0,
-    ef_ioncannon       INTEGER DEFAULT 0,
-    ef_plasmacannon    INTEGER DEFAULT 0
+    ef_armoredship     INTEGER DEFAULT 0
 )';
 
 alter_Battle1 VARCHAR(1000) := 'ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle )';
@@ -64,6 +59,7 @@ create_Constants VARCHAR(1000) := 'CREATE TABLE constants (
 )';
 
 alter_Constants1 VARCHAR (1000) := 'ALTER TABLE constants ADD CONSTRAINT constants_pk PRIMARY KEY ( id_constant )';
+alter_Constants2 VARCHAR (1000) := 'ALTER TABLE constants ADD CONSTRAINT constants_name_un UNIQUE ( name )';
 
 create_Defense VARCHAR(2000) := 'CREATE TABLE defense (
     id_defense      INTEGER NOT NULL,
@@ -134,6 +130,20 @@ create_Ship VARCHAR(2000) := 'CREATE TABLE ship (
 alter_Ship1 VARCHAR (1000) := 'ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( id_ship )';
 alter_Ship2 VARCHAR (1000) := 'ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name )';
 
+create_units VARCHAR(1000) :='CREATE TABLE units (
+    id_unit            INTEGER NOT NULL,
+    defense_level      INTEGER,
+    attack_level       INTEGER,
+    defense_id_defense INTEGER,
+    ship_id_ship       INTEGER,
+    enemy_id_enemy     INTEGER,
+    planet_id_planet   INTEGER
+)';
+
+alter_Units VARCHAR(1000) := 'ALTER TABLE units ADD CONSTRAINT units_pk PRIMARY KEY ( id_unit )';
+
+alter_Units1 VARCHAR(1000) := 'ALTER TABLE units ADD CONSTRAINT units_pk PRIMARY KEY ( id_unit )';
+
 create_User VARCHAR(2000) := 'CREATE TABLE "USER" (
     id_user    INTEGER NOT NULL,
     username   VARCHAR2(30) NOT NULL,
@@ -155,6 +165,19 @@ alter_Battle4 VARCHAR (1000) := 'ALTER TABLE battle
 alter_planet3 VARCHAR (1000) := 'ALTER TABLE planet
     ADD CONSTRAINT planet_user_fk FOREIGN KEY ( user_id_user )
         REFERENCES "USER" ( id_user )';
+        
+alter_Units2 VARCHAR(1000) := 'ALTER TABLE units
+    ADD CONSTRAINT units_defense_fk FOREIGN KEY ( defense_id_defense )
+        REFERENCES defense ( id_defense )';
+alter_Units3 VARCHAR(1000) := 'ALTER TABLE units
+    ADD CONSTRAINT units_enemy_fk FOREIGN KEY ( enemy_id_enemy )
+        REFERENCES enemy ( id_enemy )';
+alter_Units4 VARCHAR(1000) := 'ALTER TABLE units
+    ADD CONSTRAINT units_planet_fk FOREIGN KEY ( planet_id_planet )
+        REFERENCES planet ( id_planet )';
+alter_Units5 VARCHAR(1000) := 'ALTER TABLE units
+    ADD CONSTRAINT units_ship_fk FOREIGN KEY ( ship_id_ship )
+        REFERENCES ship ( id_ship )';
 
 BEGIN
 
@@ -183,7 +206,11 @@ WHERE table_name = 'PLANET';
 
 SELECT COUNT(table_name) INTO exists_User
 FROM user_tables
-WHERE table_name = 'USER';
+WHERE table_name = '"USER"';
+
+SELECT COUNT(table_name) INTO exists_Units
+FROM user_tables
+WHERE table_name = 'UNITS';
 
 SELECT COUNT(table_name) INTO exists_Ship
 FROM user_tables
@@ -229,6 +256,16 @@ execute immediate create_Ship;
 execute immediate alter_Ship1;
 execute immediate alter_Ship2;
 DBMS_OUTPUT.PUT_LINE('Tabla SHIP creada');
+END IF;
+
+IF exists_Units = 0 THEN
+execute immediate create_Units;
+execute immediate alter_Units1;
+execute immediate alter_Units2;
+execute immediate alter_Units3;
+execute immediate alter_Units4;
+execute immediate alter_Units5;
+DBMS_OUTPUT.PUT_LINE('Tabla UNITS creada');
 END IF;
 
 IF exists_User = 0 THEN

@@ -26,6 +26,7 @@ id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
 update_Script VARCHAR(1000);
+
 BEGIN
 SELECT COUNT(id_enemy) INTO id_Encontrada
 FROM ENEMY

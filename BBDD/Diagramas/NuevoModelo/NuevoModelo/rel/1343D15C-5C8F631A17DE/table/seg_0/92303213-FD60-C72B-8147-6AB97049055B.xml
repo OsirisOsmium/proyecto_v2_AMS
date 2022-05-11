@@ -70,9 +70,8 @@
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>4000</dataTypeSize>
-<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<logicalDatatype>LogDes-1768A872-F385-FDBA-D95E-0CB63F5908E2@LOGDT10045</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="ID_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">

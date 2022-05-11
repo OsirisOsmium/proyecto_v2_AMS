@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
---   en:        2022-05-10 21:27:43 CEST
+--   en:        2022-05-11 12:49:14 CEST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -14,7 +14,7 @@ CREATE TABLE battle (
     user_id_user       INTEGER NOT NULL,
     enemy_id_enemy     INTEGER NOT NULL,
     planet_id_planet   INTEGER NOT NULL,
-    report_stepbystep  VARCHAR2(4000) NOT NULL,
+    report_stepbystep  LONG NOT NULL,
     id_winner          INTEGER NOT NULL,
     waste_metal        NUMBER NOT NULL,
     waste_deuterium    NUMBER NOT NULL,
@@ -36,21 +36,13 @@ CREATE TABLE battle (
     ei_heavyhunter     INTEGER DEFAULT 0,
     ei_battleship      INTEGER DEFAULT 0,
     ei_armoredship     INTEGER DEFAULT 0,
-    ei_missilelauncher INTEGER DEFAULT 0,
-    ei_ioncannon       INTEGER DEFAULT 0,
-    ei_plasmacannon    INTEGER DEFAULT 0,
     ef_lighthunter     INTEGER DEFAULT 0,
     ef_heavyhunter     INTEGER DEFAULT 0,
     ef_battleship      INTEGER DEFAULT 0,
-    ef_armoredship     INTEGER DEFAULT 0,
-    ef_missilelauncher INTEGER DEFAULT 0,
-    ef_ioncannon       INTEGER DEFAULT 0,
-    ef_plasmacannon    INTEGER DEFAULT 0
+    ef_armoredship     INTEGER DEFAULT 0
 );
 
 ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle );
-
-ALTER TABLE battle ADD CONSTRAINT battle_id_battle_un UNIQUE ( id_battle );
 
 CREATE TABLE constants (
     id_constant INTEGER NOT NULL,
@@ -61,8 +53,6 @@ CREATE TABLE constants (
 ALTER TABLE constants ADD CONSTRAINT constants_pk PRIMARY KEY ( id_constant );
 
 ALTER TABLE constants ADD CONSTRAINT constants_name_un UNIQUE ( name );
-
-ALTER TABLE constants ADD CONSTRAINT constants_id_constant_un UNIQUE ( id_constant );
 
 CREATE TABLE defense (
     id_defense      INTEGER NOT NULL,
@@ -81,8 +71,6 @@ ALTER TABLE defense ADD CONSTRAINT defense_pk PRIMARY KEY ( id_defense );
 
 ALTER TABLE defense ADD CONSTRAINT defense_name_un UNIQUE ( name );
 
-ALTER TABLE defense ADD CONSTRAINT defense_id_defense_un UNIQUE ( id_defense );
-
 CREATE TABLE enemy (
     id_enemy             INTEGER NOT NULL,
     name                 VARCHAR2(30) NOT NULL,
@@ -100,8 +88,6 @@ CREATE TABLE enemy (
 ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy );
 
 ALTER TABLE enemy ADD CONSTRAINT enemy_name_un UNIQUE ( name );
-
-ALTER TABLE enemy ADD CONSTRAINT enemy_id_enemy_un UNIQUE ( id_enemy );
 
 CREATE TABLE planet (
     id_planet                      INTEGER NOT NULL,
@@ -125,11 +111,14 @@ CREATE TABLE planet (
     technology_attack_id_levelat   INTEGER NOT NULL
 );
 
+CREATE INDEX planet_user_fk ON
+    planet (
+        user_id_user
+    ASC );
+
 ALTER TABLE planet ADD CONSTRAINT planet_pk PRIMARY KEY ( id_planet );
 
 ALTER TABLE planet ADD CONSTRAINT planet_planet_name_un UNIQUE ( planet_name );
-
-ALTER TABLE planet ADD CONSTRAINT planet_id_planet_un UNIQUE ( id_planet );
 
 CREATE TABLE ship (
     id_ship         INTEGER NOT NULL,
@@ -147,8 +136,6 @@ CREATE TABLE ship (
 ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( id_ship );
 
 ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name );
-
-ALTER TABLE ship ADD CONSTRAINT ship_id_ship_un UNIQUE ( id_ship );
 
 CREATE TABLE units (
     id_unit            INTEGER NOT NULL,
@@ -172,8 +159,6 @@ CREATE TABLE "User" (
 ALTER TABLE "User" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
 
 ALTER TABLE "User" ADD CONSTRAINT user_username_un UNIQUE ( username );
-
-ALTER TABLE "User" ADD CONSTRAINT user_id_user_un UNIQUE ( id_user );
 
 ALTER TABLE battle
     ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
@@ -212,8 +197,8 @@ ALTER TABLE units
 -- Informe de Resumen de Oracle SQL Developer Data Modeler: 
 -- 
 -- CREATE TABLE                             8
--- CREATE INDEX                             0
--- ALTER TABLE                             29
+-- CREATE INDEX                             1
+-- ALTER TABLE                             22
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0

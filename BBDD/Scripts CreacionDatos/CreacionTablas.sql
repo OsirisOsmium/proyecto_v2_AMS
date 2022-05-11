@@ -1,6 +1,5 @@
-
 -- Generado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
---   en:        2022-05-09 18:13:07 CEST
+--   en:        2022-05-11 11:50:28 CEST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -15,7 +14,7 @@ CREATE TABLE battle (
     user_id_user       INTEGER NOT NULL,
     enemy_id_enemy     INTEGER NOT NULL,
     planet_id_planet   INTEGER NOT NULL,
-    report_stepbystep  VARCHAR2(4000) NOT NULL,
+    report_stepbystep  LONG NOT NULL,
     id_winner          INTEGER NOT NULL,
     waste_metal        NUMBER NOT NULL,
     waste_deuterium    NUMBER NOT NULL,
@@ -51,6 +50,8 @@ CREATE TABLE battle (
 
 ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle );
 
+ALTER TABLE battle ADD CONSTRAINT battle_id_battle_un UNIQUE ( id_battle );
+
 CREATE TABLE constants (
     id_constant INTEGER NOT NULL,
     name        VARCHAR2(100),
@@ -58,6 +59,10 @@ CREATE TABLE constants (
 );
 
 ALTER TABLE constants ADD CONSTRAINT constants_pk PRIMARY KEY ( id_constant );
+
+ALTER TABLE constants ADD CONSTRAINT constants_name_un UNIQUE ( name );
+
+ALTER TABLE constants ADD CONSTRAINT constants_id_constant_un UNIQUE ( id_constant );
 
 CREATE TABLE defense (
     id_defense      INTEGER NOT NULL,
@@ -76,6 +81,8 @@ ALTER TABLE defense ADD CONSTRAINT defense_pk PRIMARY KEY ( id_defense );
 
 ALTER TABLE defense ADD CONSTRAINT defense_name_un UNIQUE ( name );
 
+ALTER TABLE defense ADD CONSTRAINT defense_id_defense_un UNIQUE ( id_defense );
+
 CREATE TABLE enemy (
     id_enemy             INTEGER NOT NULL,
     name                 VARCHAR2(30) NOT NULL,
@@ -93,6 +100,8 @@ CREATE TABLE enemy (
 ALTER TABLE enemy ADD CONSTRAINT enemy_pk PRIMARY KEY ( id_enemy );
 
 ALTER TABLE enemy ADD CONSTRAINT enemy_name_un UNIQUE ( name );
+
+ALTER TABLE enemy ADD CONSTRAINT enemy_id_enemy_un UNIQUE ( id_enemy );
 
 CREATE TABLE planet (
     id_planet                      INTEGER NOT NULL,
@@ -116,9 +125,16 @@ CREATE TABLE planet (
     technology_attack_id_levelat   INTEGER NOT NULL
 );
 
+CREATE INDEX planet_user_fk ON
+    planet (
+        user_id_user
+    ASC );
+
 ALTER TABLE planet ADD CONSTRAINT planet_pk PRIMARY KEY ( id_planet );
 
 ALTER TABLE planet ADD CONSTRAINT planet_planet_name_un UNIQUE ( planet_name );
+
+ALTER TABLE planet ADD CONSTRAINT planet_id_planet_un UNIQUE ( id_planet );
 
 CREATE TABLE ship (
     id_ship         INTEGER NOT NULL,
@@ -137,6 +153,20 @@ ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( id_ship );
 
 ALTER TABLE ship ADD CONSTRAINT ship_name_un UNIQUE ( name );
 
+ALTER TABLE ship ADD CONSTRAINT ship_id_ship_un UNIQUE ( id_ship );
+
+CREATE TABLE units (
+    id_unit            INTEGER NOT NULL,
+    defense_level      INTEGER,
+    attack_level       INTEGER,
+    defense_id_defense INTEGER,
+    ship_id_ship       INTEGER,
+    enemy_id_enemy     INTEGER,
+    planet_id_planet   INTEGER
+);
+
+ALTER TABLE units ADD CONSTRAINT units_pk PRIMARY KEY ( id_unit );
+
 CREATE TABLE "USER" (
     id_user    INTEGER NOT NULL,
     username   VARCHAR2(30) NOT NULL,
@@ -147,6 +177,8 @@ CREATE TABLE "USER" (
 ALTER TABLE "USER" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
 
 ALTER TABLE "USER" ADD CONSTRAINT user_username_un UNIQUE ( username );
+
+ALTER TABLE "USER" ADD CONSTRAINT user_id_user_un UNIQUE ( id_user );
 
 ALTER TABLE battle
     ADD CONSTRAINT battle_enemy_fk FOREIGN KEY ( enemy_id_enemy )
@@ -163,6 +195,23 @@ ALTER TABLE battle
 ALTER TABLE planet
     ADD CONSTRAINT planet_user_fk FOREIGN KEY ( user_id_user )
         REFERENCES "USER" ( id_user );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_defense_fk FOREIGN KEY ( defense_id_defense )
+        REFERENCES defense ( id_defense );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_enemy_fk FOREIGN KEY ( enemy_id_enemy )
+        REFERENCES enemy ( id_enemy );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_planet_fk FOREIGN KEY ( planet_id_planet )
+        REFERENCES planet ( id_planet );
+
+ALTER TABLE units
+    ADD CONSTRAINT units_ship_fk FOREIGN KEY ( ship_id_ship )
+        REFERENCES ship ( id_ship );
+
 
 /*
 --cada batalla ha de ser de un usuario no de muchos
