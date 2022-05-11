@@ -21,6 +21,9 @@ public class reportsWindow extends JFrame implements ActionListener{
 	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
 	private JLabel lblNewLabel_2;
 
+	private String url="jdbc:oracle:thin:@localhost:1521:xe";
+	private String user="PLANET_WARS_V2";
+	private String password="PLANET_WARS_V2";
 	/**
 	 * Launch the application.
 	 */
@@ -106,16 +109,20 @@ public class reportsWindow extends JFrame implements ActionListener{
 		setVisible(true);
 	}
 	public void actionPerformed(ActionEvent e) {
+		connectionOracle conn=new connectionOracle(url, user, password);
+
 		if (btnViewPlanetStat==e.getSource()){
-			viewWindow view=new viewWindow();
+			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			view.setVisible(true);
+			conn.viewStats();
+			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
-			upgradeWindow upgrade=new upgradeWindow();
+			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			upgrade.setVisible(true);
+			conn.viewUpgrade();
+			//upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

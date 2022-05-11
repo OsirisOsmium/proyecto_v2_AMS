@@ -69,9 +69,9 @@ public class registerWindow extends JFrame implements ActionListener{
 		contentPane.add(txtUsername);
 		txtUsername.setColumns(10);
 		
-		JLabel lblBirthDate = new JLabel("Birthn Date");
+		JLabel lblBirthDate = new JLabel("Birthn Date (DD-MM-YYYY)");
 		lblBirthDate.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblBirthDate.setBounds(299, 143, 109, 35);
+		lblBirthDate.setBounds(299, 143, 214, 35);
 		contentPane.add(lblBirthDate);
 		
 		txtDate = new JTextField();
@@ -121,16 +121,16 @@ public class registerWindow extends JFrame implements ActionListener{
 
 			String date=txtDate.getText();
 			
-			conn.SingIn(username, password, date);
 			
-			JOptionPane.showMessageDialog(null, "EXITO: Se ha registrado al usuario  "+username);
-			
-			
-			
-			logInWindow logIn=new logInWindow();
-			this.setVisible(false);
-			logIn.setVisible(true);
-			
+			if (conn.SingIn(username, password, date) == true) {
+				JOptionPane.showMessageDialog(null, "EXITO: Se ha registrado el usuario  "+username);
+				logInWindow logIn=new logInWindow();
+				this.setVisible(false);
+				logIn.setVisible(true);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "ERROR: No se ha podido registrar el usuario "+username);
+			}			
 		}
 		
 	}

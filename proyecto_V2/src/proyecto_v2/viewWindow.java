@@ -32,17 +32,22 @@ public class viewWindow extends JFrame implements ActionListener{
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
 	
+	//connectionOracle conn=new connectionOracle(url, user, password);
+
+	
 	
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		//new viewWindow();
+		
 		String url="jdbc:oracle:thin:@localhost:1521:xe";
 		String user="PLANET_WARS_V2";
 		String password="PLANET_WARS_V2";
 		connectionOracle conn=new connectionOracle(url, user, password);
 		conn.viewStats();
+		
 	}
 
 	/**
@@ -119,7 +124,7 @@ public class viewWindow extends JFrame implements ActionListener{
 		JLabel lblTitle = new JLabel("VIEW PLANET STATS");
 		lblTitle.setForeground(Color.WHITE);
 		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		lblTitle.setBounds(140, 50, 500, 45);
+		lblTitle.setBounds(210, 46, 500, 45);
 		lblTitle.setBorder(null);
 		contentPane.add(lblTitle);
 		
@@ -321,20 +326,22 @@ public class viewWindow extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		connectionOracle conn=new connectionOracle(url, user, password);
+
 		if (btnViewPlanetStat==e.getSource()){
-			/*
-			connectionOracle conn=new connectionOracle(url, user, password);
-			conn.viewStats();*/
-			
-			viewWindow view=new viewWindow();
+			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			view.setVisible(true);
+			//view.setVisible(true);
+			
+			
+			conn.viewStats();
 		}
 		
 		if (btnUpgrade==e.getSource()){
-			upgradeWindow upgrade=new upgradeWindow();
+			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			upgrade.setVisible(true);
+			conn.viewUpgrade();
+			//upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

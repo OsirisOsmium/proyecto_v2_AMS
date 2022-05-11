@@ -38,6 +38,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	 */
 	public static void main(String[] args) {
 		//new upgradeWindow();
+		
 		String url="jdbc:oracle:thin:@localhost:1521:xe";
 		String user="PLANET_WARS_V2";
 		String password="PLANET_WARS_V2";
@@ -51,8 +52,9 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public upgradeWindow() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 720, 519);
+		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
 		setLocationRelativeTo(null);
@@ -114,7 +116,6 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//añadimos el label
-		contentPane.add(lblNewLabel_2);
 		
 		////////////////////////////
 		
@@ -123,7 +124,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		JLabel lblNewLabel = new JLabel("UPGRADE TECHNOLOGY");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		lblNewLabel.setBounds(138, 46, 550, 61);
+		lblNewLabel.setBounds(185, 46, 550, 61);
 		contentPane.add(lblNewLabel);
 		
 		btnUpDef = new JButton(" UPDATE DEFENSE");
@@ -195,11 +196,13 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		contentPane.add(lblActualAttack);
 		
 		lblBackground = new JLabel("");
-		lblBackground.setBounds(0, 0, 704, 480);
+		lblBackground.setBounds(0, 0, 811, 480);
 		ImageIcon imagen4= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_fondo.jpeg");
 		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblBackground. setIcon(icono4);//establece el ImageIcon en el label
 		contentPane.add(lblBackground);//añadimos el label
+		
+		
 		
 		setVisible(true);
 	}
@@ -214,6 +217,8 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		connectionOracle conn=new connectionOracle(url, user, password);
+
 		if (btnUpDef==e.getSource()) {
 			//connectionOracle conn=new connectionOracle(url, user, password);
 			
@@ -223,15 +228,17 @@ public class upgradeWindow extends JFrame implements ActionListener{
 
 		}
 		if (btnViewPlanetStat==e.getSource()){
-			viewWindow view=new viewWindow();
+			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			view.setVisible(true);
+			conn.viewStats();
+			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
-			upgradeWindow upgrade=new upgradeWindow();
+			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			upgrade.setVisible(true);
+			conn.viewUpgrade();
+			//upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

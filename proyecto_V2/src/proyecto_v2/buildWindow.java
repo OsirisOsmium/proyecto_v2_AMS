@@ -174,6 +174,8 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	
 	
 	public void actionPerformed(ActionEvent e) {
+		connectionOracle conn=new connectionOracle(url, user, password);
+
 		if (btnBuildTrops==e.getSource()) {
 			String Ship[]= {"" ,"Light Hunter", "Heavy Hunter", "Battle Ship" ,"Armored Ship"};
 			DefaultComboBoxModel comboTrops = new DefaultComboBoxModel(Ship);
@@ -195,7 +197,6 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		
 		
 		if (btnAdd==e.getSource()) {
-			connectionOracle conn=new connectionOracle(url, user, password);
 			String Trops=(String) comboBox.getSelectedItem();
 			if (Trops.equalsIgnoreCase("Light Hunter")) {
 				System.out.println("Accion de add del TROPS con Light Hunter");
@@ -228,15 +229,17 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		
 
 		if (btnViewPlanetStat==e.getSource()){
-			viewWindow view=new viewWindow();
+			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			view.setVisible(true);
+			conn.viewStats();
+			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
-			upgradeWindow upgrade=new upgradeWindow();
+			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			upgrade.setVisible(true);
+			conn.viewUpgrade();
+			//upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

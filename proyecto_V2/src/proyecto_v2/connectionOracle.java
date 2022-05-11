@@ -16,7 +16,10 @@ import javax.swing.JOptionPane;
 public class connectionOracle /*extends viewWindow*/{
 	
 	Connection conn;
-	
+	/*
+	viewWindow view=new viewWindow();
+	upgradeWindow up=new upgradeWindow();
+	*/
 	public connectionOracle(String url, String user, String password){
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -66,23 +69,28 @@ public class connectionOracle /*extends viewWindow*/{
 		return validar;
 	}
 	
-	public void SingIn(String username, String password, String date) {
+	public boolean SingIn(String username, String password, String date) {
+		boolean action=false;
 		try {	
-			PreparedStatement pstm = conn.prepareStatement("INSERT INTO usr values((select max(id_user)+1 from usr), username, password, to_Date(birth_date,'DD-MM-YYYY')) VALUES ((select max(id_user)+1 from usr),?,?,?)");
+			PreparedStatement pstm = conn.prepareStatement("INSERT INTO usr values((select max(id_user)+1 from usr), username, password, to_Date(birth_date,'DD-MM-YYYY')) VALUES ((select max(?)+1 from usr),?,?,to_Date(?,'DD-MM-YYYY'))");
 
 			pstm.setString(1, "'"+username+"'");
 			pstm.setString(2, "'"+password+"'");
 			pstm.setString(3, "'"+date+"'");
 			
 			pstm.executeUpdate();	
+			action=true;
 		}
 			
 		
 		catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("ERROR: El uruario ya existe");
+			action=false;
+			/*e.printStackTrace();
+			*/System.out.println("ERROR: El uruario ya existe");
 			System.out.println("ERROR GENERAL: Ha havido algun error");
+			
 		}
+		return action;
 	}
 	
 	
@@ -240,6 +248,7 @@ public class connectionOracle /*extends viewWindow*/{
 	public void viewUpgrade() {
 		try {
 			upgradeWindow up=new upgradeWindow();
+			
 			String query = "select * from planet where id_planet = 1";
 			Statement stmnt=conn.createStatement();
 			ResultSet rs=stmnt.executeQuery(query);
