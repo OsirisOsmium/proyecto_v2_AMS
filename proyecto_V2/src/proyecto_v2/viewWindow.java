@@ -26,23 +26,30 @@ public class viewWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel, lblNewLabel_2, lblNumMetal, lblNumDeuterium, lblLvlAtack, lblLvlDefense, lblnumMissile, lblNumIon, lblNumPlasma, lblNumLight, lblNumHeavy, lblNumBattle, lblNumArmored;
+	public JLabel lblNewLabel, lblNewLabel_2, lblNumMetal, lblNumDeuterium, lblLvlAtack, lblLvlDefense, lblnumMissile, lblNumIon, lblNumPlasma, lblNumLight, lblNumHeavy, lblNumBattle, lblNumArmored;
 	
 	private String url="jdbc:oracle:thin:@localhost:1521:xe";
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
-
+	
+	
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		new viewWindow();
+		//new viewWindow();
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="PLANET_WARS_V2";
+		String password="PLANET_WARS_V2";
+		connectionOracle conn=new connectionOracle(url, user, password);
+		conn.viewStats();
 	}
 
 	/**
 	 * Create the frame.
 	 */
 	public viewWindow() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
@@ -204,7 +211,7 @@ public class viewWindow extends JFrame implements ActionListener{
 		lblNumMetal.setForeground(Color.WHITE);
 		lblNumMetal.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNumMetal.setBounds(252, 362, 80, 20);
-		//lblNumMetal.setText(Q_metal);
+		//lblNumMetal.setText("Q_metal");
 		contentPane.add(lblNumMetal);
 		
 		lblNumDeuterium = new JLabel("xx");
@@ -297,10 +304,28 @@ public class viewWindow extends JFrame implements ActionListener{
 		
 		setVisible(true);
 	}
+	
+	
+	
+	/*
+	public static void update() {
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="PLANET_WARS_V2";
+		String password="PLANET_WARS_V2";
+		connectionOracle conn=new connectionOracle(url, user, password);
+		conn.viewStats();
+	}
+	*/
+	
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (btnViewPlanetStat==e.getSource()){
+			/*
+			connectionOracle conn=new connectionOracle(url, user, password);
+			conn.viewStats();*/
+			
 			viewWindow view=new viewWindow();
 			this.setVisible(false);
 			view.setVisible(true);

@@ -178,13 +178,6 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			String Ship[]= {"" ,"Light Hunter", "Heavy Hunter", "Battle Ship" ,"Armored Ship"};
 			DefaultComboBoxModel comboTrops = new DefaultComboBoxModel(Ship);
 			comboBox.setModel(comboTrops);
-			/*
-			btnBuildTrops.addItemListener(new ItemListener() {
-				public void itemStateChanged(ItemEvent e) {
-					
-					
-				}
-			});*/
 			comboBox.addItemListener(this);
 
 		}
@@ -202,9 +195,12 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		
 		
 		if (btnAdd==e.getSource()) {
+			connectionOracle conn=new connectionOracle(url, user, password);
 			String Trops=(String) comboBox.getSelectedItem();
 			if (Trops.equalsIgnoreCase("Light Hunter")) {
 				System.out.println("Accion de add del TROPS con Light Hunter");
+				int cant=Integer.parseInt(txtNumAñadir.getText());
+				conn.addTrops("Light Hunter", cant, 0, 0);
 			}
 			if (Trops.equalsIgnoreCase("Heavy Hunter")) {
 				System.out.println("Accion de add del TROPS con Heavy Hunter");

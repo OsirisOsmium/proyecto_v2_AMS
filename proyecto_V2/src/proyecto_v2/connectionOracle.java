@@ -11,7 +11,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class connectionOracle {
+import javax.swing.JOptionPane;
+
+public class connectionOracle /*extends viewWindow*/{
 	
 	Connection conn;
 	
@@ -127,18 +129,6 @@ public class connectionOracle {
 		return texto;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public String get_ship(int id) {
 		String text="";
 		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
@@ -203,53 +193,107 @@ public class connectionOracle {
 	
 	public void viewStats() {
 		try {
-			System.out.println("Conexion correcta");
-			String query = "select * from planet where id_planet = 1";
-			PreparedStatement consulta = conn.prepareStatement(query);
-			//consulta.setString(1, reciboPalabraUsuario);
-			ResultSet resultado = consulta.executeQuery();
+			viewWindow view=new viewWindow();
 			
-			while(resultado.next()) {
-				int Quantity_metal=resultado.getInt("quantity_metal");
-				int Quantity_deuterium=resultado.getInt("quantity_deuterium");
+			String query = "select * from planet where id_planet = 1";
+			Statement stmnt=conn.createStatement();
+			ResultSet rs=stmnt.executeQuery(query);
+			while(rs.next()) {
+				int Quantity_metal=rs.getInt("quantity_metal");
+				int Quantity_deuterium=rs.getInt("quantity_deuterium");
 				
-				int LvlTechnology=resultado.getInt("current_leveldefense");
-				int LvlDefense=resultado.getInt("current_leveldefense");
+				int LvlAttack=rs.getInt("current_levelattack");
+				int LvlDefense=rs.getInt("current_leveldefense");
 				
 				
-				int LightH=resultado.getInt("num_lighthunter");
-				int HeavyH=resultado.getInt("num_heavyhunter");
-				int BattleShip=resultado.getInt("num_battleship");
-				int ArmoredShip=resultado.getInt("num_armoredship");
+				int LightH=rs.getInt("num_lighthunter");
+				int HeavyH=rs.getInt("num_heavyhunter");
+				int BattleShip=rs.getInt("num_battleship");
+				int ArmoredShip=rs.getInt("num_armoredship");
 				
-				int MissileLauncher=resultado.getInt("num_missilelauncher");
-				int IonCannon=resultado.getInt("num_ioncannon");
-				int PlasmaCannon=resultado.getInt("num_plasmacannon");				
+				int MissileLauncher=rs.getInt("num_missilelauncher");
+				int IonCannon=rs.getInt("num_ioncannon");
+				int PlasmaCannon=rs.getInt("num_plasmacannon");	
+				
+				view.lblNumMetal.setText(String.valueOf(Quantity_metal));
+				view.lblNumDeuterium.setText(String.valueOf(Quantity_deuterium));
+				
+				view.lblLvlAtack.setText(String.valueOf(LvlAttack));
+				view.lblLvlDefense.setText(String.valueOf(LvlDefense));
+				
+				view.lblNumLight.setText(String.valueOf(LightH));
+				view.lblNumHeavy.setText(String.valueOf(HeavyH));
+				view.lblNumBattle.setText(String.valueOf(BattleShip));
+				view.lblNumArmored.setText(String.valueOf(ArmoredShip));
+				
+				view.lblnumMissile.setText(String.valueOf(MissileLauncher));
+				view.lblNumIon.setText(String.valueOf(IonCannon));
+				view.lblNumPlasma.setText(String.valueOf(PlasmaCannon));
 			}
 		}
 		catch(SQLException e) {
+		System.out.println("ERROR: El ship no existe");	
 		System.out.println("ERROR: Ha havido algun error");
-		}	
+		}
+	}
+	
+	public void viewUpgrade() {
+		try {
+			upgradeWindow up=new upgradeWindow();
+			String query = "select * from planet where id_planet = 1";
+			Statement stmnt=conn.createStatement();
+			ResultSet rs=stmnt.executeQuery(query);
+			while(rs.next()) {
+				int costDefenseUP=rs.getInt("cost_defenseup");
+				int CostAttackUP=rs.getInt("cost_attackup");
+				
+				int LvlAttack=rs.getInt("current_levelattack");
+				int LvlDefense=rs.getInt("current_leveldefense");
+				
+				up.lblCostDefense.setText(String.valueOf(costDefenseUP));
+				up.lblCostAttack.setText(String.valueOf(CostAttackUP));				
+				up.lblActualAttack.setText(String.valueOf(LvlAttack));
+				up.lblActualDefense.setText(String.valueOf(LvlDefense));
+				System.out.println("ha devuelto los valores de el update");
+			}
+		}
+		catch(SQLException e) {
+			System.out.println("ERROR: Ha havido algun error");
+		}
 	}
 	
 	
 	public void addTrops(String tipo, int cant, int numMetal, int numDeuterium) {
-		String texto="";
-		try {
-			String query = "update planet values("+tipo+", quantity_metal, quantity_deuterium) values (?,?,?) where id_planet = 1";
-			PreparedStatement pstmnt=conn.prepareStatement(query);
-			ResultSet rs=pstmnt.executeQuery(query);
-			while (rs.next()){
-				pstmnt
-				
-			}
-			
-			System.out.println("EXITO: El ship existe");
-		} catch (SQLException e) {
-			System.out.println("ERROR: El ship no existe");
-		}
-		return texto;
 		
+		if (tipo=="Light Hunter") {
+			tipo="NUM_LIGHTHUNTER";
+		}
+		else if(tipo=="Heavy Hunter") {
+			tipo="NUM_HEAVYHUNTER";
+		}
+		else if (tipo=="Battle Ship") {
+			tipo="NUM_BATTLESHIP";
+		}
+		else if (tipo=="Armored Ship") {
+			tipo="NUM_ARMOREDSHIP";
+		}
+		else if (tipo=="Missile Launcher") {
+			tipo="NUM_MISSILELAUNCHER";
+		}
+		else if (tipo=="Ion Cannon") {
+			tipo="NUM_IONCANNON";
+		}
+		else if (tipo=="PLasma Cannon") {
+			tipo="NUM_PLASMACANNON";
+		}
+		try {
+		       String sqlactualizar="UPDATE planet SET NUM_LIGHTHUNTER="+cant;
+		       PreparedStatement psta=conn.prepareStatement(sqlactualizar);
+		       psta.execute();
+		       JOptionPane.showMessageDialog(null, "Añadido correctamente");
+		    }catch (Exception e){
+		        System.out.println(e.getCause());
+
+		    }
 	}
-	 
 }

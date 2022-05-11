@@ -12,6 +12,10 @@ import java.awt.Image;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -22,17 +26,25 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JButton btnUpDef, btnUpAtack, btnBack;
 	private JButton  btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel_2, lblBackground;
+	public JLabel lblNewLabel_2, lblBackground, lblCostDefense, lblCostAttack, lblActualDefense, lblActualAttack;
 	
 	private String url="jdbc:oracle:thin:@localhost:1521:xe";
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
+	
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		new upgradeWindow();
+		//new upgradeWindow();
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="PLANET_WARS_V2";
+		String password="PLANET_WARS_V2";
+		connectionOracle conn=new connectionOracle(url, user, password);
+		conn.viewUpgrade();
+		
+		
 	}
 
 	/**
@@ -146,17 +158,17 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		lblNewLabel_2.setBounds(138, 236, 261, 45);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("x");
-		lblNewLabel_3.setForeground(Color.WHITE);
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_3.setBounds(434, 183, 80, 45);
-		contentPane.add(lblNewLabel_3);
+		lblCostDefense = new JLabel("x");
+		lblCostDefense.setForeground(Color.WHITE);
+		lblCostDefense.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCostDefense.setBounds(434, 183, 80, 45);
+		contentPane.add(lblCostDefense);
 		
-		JLabel lblNewLabel_3_1 = new JLabel("xx");
-		lblNewLabel_3_1.setForeground(Color.WHITE);
-		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_3_1.setBounds(434, 236, 80, 45);
-		contentPane.add(lblNewLabel_3_1);
+		lblCostAttack = new JLabel("xx");
+		lblCostAttack.setForeground(Color.WHITE);
+		lblCostAttack.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCostAttack.setBounds(434, 236, 80, 45);
+		contentPane.add(lblCostAttack);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Actual Defense Technology");
 		lblNewLabel_1_1.setForeground(Color.WHITE);
@@ -170,17 +182,17 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		lblNewLabel_2_1.setBounds(144, 375, 197, 45);
 		contentPane.add(lblNewLabel_2_1);
 		
-		JLabel lblActDefTech = new JLabel("xxx");
-		lblActDefTech.setForeground(Color.WHITE);
-		lblActDefTech.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblActDefTech.setBounds(351, 322, 80, 45);
-		contentPane.add(lblActDefTech);
+		lblActualDefense = new JLabel("xxx");
+		lblActualDefense.setForeground(Color.WHITE);
+		lblActualDefense.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblActualDefense.setBounds(351, 322, 80, 45);
+		contentPane.add(lblActualDefense);
 		
-		JLabel lblActAtaTech = new JLabel("xxxx");
-		lblActAtaTech.setForeground(Color.WHITE);
-		lblActAtaTech.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblActAtaTech.setBounds(351, 375, 80, 45);
-		contentPane.add(lblActAtaTech);
+		lblActualAttack = new JLabel("xxxx");
+		lblActualAttack.setForeground(Color.WHITE);
+		lblActualAttack.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblActualAttack.setBounds(351, 375, 80, 45);
+		contentPane.add(lblActualAttack);
 		
 		lblBackground = new JLabel("");
 		lblBackground.setBounds(0, 0, 704, 480);
@@ -191,28 +203,25 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		
 		setVisible(true);
 	}
-
+	/*
+	public static void viewUpdate() {
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="PLANET_WARS_V2";
+		String password="PLANET_WARS_V2";
+		connectionOracle2 conn=new connectionOracle2(url, user, password);
+		conn.viewUpgrade();
+	}
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (btnUpDef==e.getSource()) {
-			connectionOracle conn=new connectionOracle(url, user, password);
+			//connectionOracle conn=new connectionOracle(url, user, password);
 			
-			
-
 		}
 		if (btnUpAtack==e.getSource()) {
-			connectionOracle conn=new connectionOracle(url, user, password);
-			
-			
+			//connectionOracle conn=new connectionOracle(url, user, password);
 
 		}
-		
-		
-		
-		
-		
-		
-		
 		if (btnViewPlanetStat==e.getSource()){
 			viewWindow view=new viewWindow();
 			this.setVisible(false);
