@@ -19,7 +19,7 @@ delete_Script := 'DELETE FROM CONSTANT
 WHERE id_User = '||id_Entrada||'';
 
 execute immediate delete_Script;
-DBMS_OUTPUT.PUT_LINE('Se ha borrado el usuario con id '||id_Entrada||' de la base de datos USER');
+DBMS_OUTPUT.PUT_LINE('Se ha borrado el usuario con id '||id_Entrada||' de la base de datos CONSTANTS');
 COMMIT;
 
 EXCEPTION

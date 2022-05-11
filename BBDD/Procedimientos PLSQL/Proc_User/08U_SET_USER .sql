@@ -1,5 +1,7 @@
-CREATE OR REPLACE PROCEDURE SET_USER(id_Entrada IN NUMBER, nombre IN VARCHAR, 
-contras IN VARCHAR, fecha_Nac IN DATE )
+CREATE OR REPLACE PROCEDURE SET_USER(id_Entrada IN NUMBER, 
+nombre IN VARCHAR, 
+contras IN VARCHAR, 
+fecha_Nac IN DATE)
 
 IS
 nombre_Insertar VARCHAR (30);
@@ -45,7 +47,9 @@ fecha_Nac_Insertar :=fecha_Nac;
 END IF;
 
 update_Script:= 'UPDATE "USER"
-SET username = '''||nombre_Insertar||''', password = '''||contras_Insertar||''', birth_date ='''||fecha_Nac_Insertar||'''
+SET username = '''||nombre_Insertar||''', 
+password = '''||contras_Insertar||''', 
+birth_date ='''||fecha_Nac_Insertar||'''
 WHERE id_user = '||id_Entrada||'';
 
 execute immediate update_Script;

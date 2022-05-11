@@ -1,5 +1,6 @@
 CREATE OR REPLACE PROCEDURE INSERT_CONSTANTS(id_Entrada IN constants.id_Constant%TYPE, 
-nombre IN constants.name%TYPE, valor IN constants.value%TYPE)
+nombre IN constants.name%TYPE, 
+valor IN constants.value%TYPE)
 
 IS
 id_Encontrada NUMBER(1);
@@ -17,8 +18,17 @@ RAISE excepcion_Id;
 END IF;
 
 insert_Script:= 'INSERT INTO CONSTANTS
-VALUES ('''||id_Entrada||''', '''||nombre||''', '''||valor||''')';
+VALUES ('''||id_Entrada||''', 
+'''||nombre||''', 
+'''||valor||''')';
 execute immediate insert_Script;
+
+DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla CONSTANT');
+DBMS_OUTPUT.PUT_LINE('ID Constante: '||id_Entrada);
+DBMS_OUTPUT.PUT_LINE('Nombre Constante: '||nombre);
+DBMS_OUTPUT.PUT_LINE('Valor: '||valor);
+
+COMMIT;
 
 EXCEPTION
 

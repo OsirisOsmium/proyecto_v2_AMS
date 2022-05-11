@@ -15,6 +15,14 @@ id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
 BEGIN
+SELECT COUNT(id_enemy) INTO id_Encontrada
+FROM ENEMY
+WHERE id_Enemy = id_Entrada;
+
+IF id_Encontrada =0 THEN 
+RAISE excepcion_Id;
+END IF;
+
 SELECT name, quantity_Metal, quantity_Crystal, quantity_Deuterium, num_LightHunter, num_HeavyHunter, num_BattleShip, num_ArmoredShip, current_LevelDefense, current_LevelAttack
 INTO nombre, metal, cristal, deuterio, cazadores_L, cazadores_H, naves_Batalla, acorazados, nivelDefensa, nivelAtaque
 FROM ENEMY

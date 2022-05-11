@@ -25,7 +25,7 @@ delete_Script := 'DELETE FROM PLANET
 WHERE id_Planet = '||id_Entrada||'';
 
 execute immediate delete_Script;
-DBMS_OUTPUT.PUT_LINE('Se ha borrado el planeta, con id '||id_Entrada||' y llamado '||nombre_Borrado||', de la base de datos PLANET');
+DBMS_OUTPUT.PUT_LINE('Se ha borrado el planeta, con id '||id_Entrada||', llamado '||nombre_Borrado||', de la base de datos PLANET');
 COMMIT;
 
 EXCEPTION

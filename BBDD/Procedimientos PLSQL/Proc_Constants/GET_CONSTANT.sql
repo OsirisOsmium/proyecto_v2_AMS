@@ -6,9 +6,9 @@ id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
 BEGIN
-SELECT COUNT(id_user) INTO id_Encontrada
-FROM "USER"
-WHERE id_User = id_Entrada;
+SELECT COUNT(id_constant) INTO id_Encontrada
+FROM CONSTANTS
+WHERE id_Constant = id_Entrada;
 
 IF id_Encontrada =0 THEN 
 RAISE excepcion_Id;

@@ -1,5 +1,7 @@
 CREATE OR REPLACE PROCEDURE INSERT_USER(id_Entrada NUMBER,
-nombre VARCHAR, contras VARCHAR, fecha_Nac DATE)
+nombre VARCHAR, 
+contras VARCHAR, 
+fecha_Nac DATE)
 
 IS
 id_Encontrada NUMBER(1);
@@ -17,7 +19,10 @@ RAISE excepcion_Id;
 END IF;
 
 insert_Script := 'INSERT INTO "USER"
-VALUES('''||id_Entrada||''', '''||nombre||''', '''||contras||''', '''||fecha_Nac||''')';
+VALUES('''||id_Entrada||''', 
+'''||nombre||''', 
+'''||contras||''', 
+'''||fecha_Nac||''')';
 
 execute immediate insert_Script;
 DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla USER');

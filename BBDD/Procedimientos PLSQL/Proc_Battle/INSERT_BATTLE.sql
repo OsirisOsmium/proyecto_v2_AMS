@@ -4,7 +4,8 @@ usuario IN battle.user_ID_User%TYPE,
 enemigo IN battle.enemy_ID_Enemy%TYPE,
 planeta IN battle.planet_ID_planet%TYPE,
 reporte_Pasos IN battle.report_StepByStep%TYPE,
-ganador IN battle.ID_Winner%TYPE,
+ganador_Usuario IN battle.User_Winner%TYPE,
+ganador_Enemigo IN battle.enemy_Winner%TYPE,
 residuos_Metal IN battle.waste_Metal%TYPE,
 residuos_Deuterio IN battle.waste_Deuterium%TYPE,
 
@@ -56,7 +57,8 @@ VALUES('''||id_Entrada||''',
 '''||enemigo||''',
 '''||planeta||''',
 '''||reporte_Pasos||''',
-'''||ganador||''',
+'''||ganador_Usuario||''',
+'''||ganador_Enemigo||''',
 '''||residuos_Metal||''',
 '''||residuos_Deuterio||''',
 
@@ -89,41 +91,41 @@ VALUES('''||id_Entrada||''',
 
 execute immediate insert_script;
 
-DBMS_OUTPUT.PUT_LINE('Insertados los datos de id '||id_Entrada||' de la base de datos BATTLE con estos nuevos valores:');
-DBMS_OUTPUT.PUT_LINE(': '||id_Entrada);
-DBMS_OUTPUT.PUT_LINE(': '||usuario);
-DBMS_OUTPUT.PUT_LINE(': '||enemigo);
-DBMS_OUTPUT.PUT_LINE(': '||planeta);
-DBMS_OUTPUT.PUT_LINE(': '||reporte_Pasos);
-DBMS_OUTPUT.PUT_LINE(': '||ganador);
-DBMS_OUTPUT.PUT_LINE(': '||residuos_Metal);
-DBMS_OUTPUT.PUT_LINE(': '||residuos_Deuterio);
+DBMS_OUTPUT.PUT_LINE('Insertada la nueva id '||id_Entrada||' en la tabla BATTLE con estos valores:');
+DBMS_OUTPUT.PUT_LINE('Usuario Participante: '||usuario);
+DBMS_OUTPUT.PUT_LINE('Enemigo Participante: '||enemigo);
+DBMS_OUTPUT.PUT_LINE('Planeta: '||planeta);
+DBMS_OUTPUT.PUT_LINE('Reporte Batalla: '||reporte_Pasos);
+DBMS_OUTPUT.PUT_LINE('Usuario es Ganador: '||ganador_Usuario);
+DBMS_OUTPUT.PUT_LINE('Enemigo es Ganador: '||ganador_Usuario);
+DBMS_OUTPUT.PUT_LINE('Residuos de Metal: '||residuos_Metal);
+DBMS_OUTPUT.PUT_LINE('Residuos de Deuterio: '||residuos_Deuterio);
 
-DBMS_OUTPUT.PUT_LINE(': '||UI_CazadoresL);
-DBMS_OUTPUT.PUT_LINE(': '||UI_CazadoresH);
-DBMS_OUTPUT.PUT_LINE(': '||UI_NavesBatalla);
-DBMS_OUTPUT.PUT_LINE(': '||UI_Acorazados);
-DBMS_OUTPUT.PUT_LINE(': '||UI_Lanzamisiles);
-DBMS_OUTPUT.PUT_LINE(': '||UI_CañonIones);
-DBMS_OUTPUT.PUT_LINE(': '||UI_CañonPlasma);
+DBMS_OUTPUT.PUT_LINE('Light Hunters Iniciales Usuario: '||UI_CazadoresL);
+DBMS_OUTPUT.PUT_LINE('Heavy Hunters Iniciales Usuario: '||UI_CazadoresH);
+DBMS_OUTPUT.PUT_LINE('Naves Batalla Iniciales Usuario: '||UI_NavesBatalla);
+DBMS_OUTPUT.PUT_LINE('Acorazados Iniciales Usuario: '||UI_Acorazados);
+DBMS_OUTPUT.PUT_LINE('Lanzamisiles Iniciales Usuario: '||UI_Lanzamisiles);
+DBMS_OUTPUT.PUT_LINE('Cañones Iones Iniciales Usuario: '||UI_CañonIones);
+DBMS_OUTPUT.PUT_LINE('Cañones Plasma Iniciales Usuario: '||UI_CañonPlasma);
 
-DBMS_OUTPUT.PUT_LINE(': '||UF_CazadoresL);
-DBMS_OUTPUT.PUT_LINE(': '||UF_CazadoresH);
-DBMS_OUTPUT.PUT_LINE(': '||UF_NavesBatalla);
-DBMS_OUTPUT.PUT_LINE(': '||UF_Acorazados);
-DBMS_OUTPUT.PUT_LINE(': '||UF_Lanzamisiles);
-DBMS_OUTPUT.PUT_LINE(': '||UF_CañonIones);
-DBMS_OUTPUT.PUT_LINE(': '||UF_CañonPlasma);
+DBMS_OUTPUT.PUT_LINE('Light Hunters Iniciales Usuario: '||UF_CazadoresL);
+DBMS_OUTPUT.PUT_LINE('Heavy Hunters Iniciales Usuario: '||UF_CazadoresH);
+DBMS_OUTPUT.PUT_LINE('Naves Batalla Iniciales Usuario: '||UF_NavesBatalla);
+DBMS_OUTPUT.PUT_LINE('Acorazados Iniciales Usuario: '||UF_Acorazados);
+DBMS_OUTPUT.PUT_LINE('Lanzamisiles Iniciales Usuario: '||UF_Lanzamisiles);
+DBMS_OUTPUT.PUT_LINE('Cañones Iones Iniciales Usuario: '||UF_CañonIones);
+DBMS_OUTPUT.PUT_LINE('Cañones Plasma Iniciales Usuario: '||UF_CañonPlasma);
 
-DBMS_OUTPUT.PUT_LINE(': '||EI_CazadoresL);
-DBMS_OUTPUT.PUT_LINE(': '||EI_CazadoresH);
-DBMS_OUTPUT.PUT_LINE(': '||EI_NavesBatalla);
-DBMS_OUTPUT.PUT_LINE(': '||EI_Acorazados);
+DBMS_OUTPUT.PUT_LINE('Light Hunters Iniciales Enemigo: '||EI_CazadoresL);
+DBMS_OUTPUT.PUT_LINE('Heavy Hunters Iniciales Eenmigo: '||EI_CazadoresH);
+DBMS_OUTPUT.PUT_LINE('Naves Batalla Iniciales Enemigo: '||EI_NavesBatalla);
+DBMS_OUTPUT.PUT_LINE('Acorazados Hunters Iniciales Enemigo: '||EI_Acorazados);
 
-DBMS_OUTPUT.PUT_LINE(': '||EF_CazadoresL);
-DBMS_OUTPUT.PUT_LINE(': '||EF_CazadoresH);
-DBMS_OUTPUT.PUT_LINE(': '||EF_NavesBatalla);
-DBMS_OUTPUT.PUT_LINE(': '||EF_Acorazados);
+DBMS_OUTPUT.PUT_LINE('Light Hunters Finales Enemigo: '||EF_CazadoresL);
+DBMS_OUTPUT.PUT_LINE('Heavy Hunters Finales Enemigo: '||EF_CazadoresH);
+DBMS_OUTPUT.PUT_LINE('Naves Batalla Finales Enemigo: '||EF_NavesBatalla);
+DBMS_OUTPUT.PUT_LINE('Acorazados Finales Enemigo: '||EF_Acorazados);
 
 COMMIT;
 
@@ -133,7 +135,7 @@ DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs
 ROLLBACK;
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_PLANET:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_BATTLE:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 ROLLBACK;
 

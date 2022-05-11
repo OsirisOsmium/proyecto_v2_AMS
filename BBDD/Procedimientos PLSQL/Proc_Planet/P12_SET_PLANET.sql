@@ -1,7 +1,7 @@
-CREATE OR REPLACE PROCEDURE SET_PLANET(
-id_Entrada IN planet.id_planet%TYPE, 
+CREATE OR REPLACE PROCEDURE SET_PLANET(id_Entrada IN planet.id_planet%TYPE, 
 id_usuario IN planet.user_id_user%TYPE, 
 nombre IN planet.planet_Name%TYPE, 
+
 metal IN planet.quantity_metal%TYPE, 
 cristal IN planet.quantity_crystal%TYPE,
 deuterio IN planet.quantity_deuterium%TYPE, 
@@ -208,7 +208,8 @@ num_PlasmaCannon = '''||cañon_Plasma_Insertar||''',
 current_LevelDefense = '''||nivelDefensa_Insertar||''', 
 cost_AttackUp ='''||coste_SubirDefensa_Insertar||''',
 current_LevelAttack = '''||nivelAtaque_Insertar||''',
-cost_DefenseUp ='''||coste_SubirAtaque_Insertar||'''';
+cost_DefenseUp ='''||coste_SubirAtaque_Insertar||'''
+WHERE id_user = '||id_Entrada||'';
 
 execute immediate update_script;
 
@@ -243,7 +244,7 @@ DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID de usuario en la base de datos
 ROLLBACK;
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso SET_USER:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso SET_PLANET:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 ROLLBACK;
 

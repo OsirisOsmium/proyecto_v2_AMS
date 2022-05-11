@@ -1,5 +1,6 @@
-CREATE OR REPLACE PROCEDURE INSERT_CONSTANTS(id_Entrada IN constants.id_Constant%TYPE, 
-nombre IN constants.name%TYPE, valor IN constants.value%TYPE)
+CREATE OR REPLACE PROCEDURE SET_CONSTANTS(id_Entrada IN constants.id_Constant%TYPE, 
+nombre IN constants.name%TYPE, 
+valor IN constants.value%TYPE)
 
 IS
 nombre_insertar constants.name%TYPE;
@@ -36,7 +37,8 @@ valor_Insertar := valor;
 END IF;
 
 update_Script:= 'UPDATE CONSTANTS
-SET name = '''||nombre_Insertar||''', valor = '''||valor_Insertar||'''
+SET name = '''||nombre_Insertar||''', 
+valor = '''||valor_Insertar||'''
 WHERE id_Constant = '||id_Entrada||'';
 
 execute immediate update_Script;

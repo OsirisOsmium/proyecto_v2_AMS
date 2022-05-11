@@ -15,7 +15,6 @@ IF id_Encontrada =0 THEN
 RAISE excepcion_Id;
 END IF;
 
-
 delete_Script := 'DELETE FROM BATTLE
 WHERE id_Battle = '||id_Entrada||'';
 

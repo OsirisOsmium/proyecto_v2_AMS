@@ -36,7 +36,20 @@ VALUES('''||id_Entrada||''',
 '''||naves_Batalla||''',
 '''||acorazados||''',
 '''||nivelDefensa||''',
-'''||nivelAtaque||''')';
+'''||nivelAtaque||''')
+';
+
+DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla ENEMY');
+DBMS_OUTPUT.PUT_LINE('ID Constante: '||id_Entrada);
+DBMS_OUTPUT.PUT_LINE(': '||nombre);
+DBMS_OUTPUT.PUT_LINE(': '||cristal);
+DBMS_OUTPUT.PUT_LINE(': '||deuterio);
+DBMS_OUTPUT.PUT_LINE(': '||cazadores_L);
+DBMS_OUTPUT.PUT_LINE(': '||cazadores_H);
+DBMS_OUTPUT.PUT_LINE(': '||naves_Batalla);
+DBMS_OUTPUT.PUT_LINE(': '||acorazados);
+DBMS_OUTPUT.PUT_LINE(': '||nivelDefensa);
+DBMS_OUTPUT.PUT_LINE(': '||nivelAtaque);
 
 COMMIT;
 
@@ -47,7 +60,7 @@ DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs
 ROLLBACK;
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_USER:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_ENEMY:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 ROLLBACK;
 

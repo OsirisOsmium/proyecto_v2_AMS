@@ -1,7 +1,7 @@
 CREATE OR REPLACE PROCEDURE GET_DEFENSE(id_Entrada IN defense.id_defense%TYPE, nombre OUT defense.name%TYPE, 
 costeMetal OUT defense.metal_cost%TYPE, costeDeuterio OUT defense.deuterium_cost%TYPE, 
 costeCristal OUT defense.crystal_cost%TYPE, armaduraInicial OUT defense.initialArmor%TYPE, 
-armadura OUT defense.armor%TYPE, dañoBase OUT defense.baseDamage%TYPE, 
+armadura OUT defense.armor%TYPE, danoBase OUT defense.baseDamage%TYPE, 
 velocidad OUT defense.speed%TYPE, residuos OUT defense.generateWasting%TYPE)
 
 /*
@@ -9,26 +9,26 @@ Id_entrada es la variable que se entrara a partir de la cual se haran las busque
 El resto son las variables que nos devolvera
 */
 
-/*
-SET SERVEROUTPUT ON
-
-DECLARE
-*/
 IS
-
+id_Encontrada NUMBER(1);
+excepcion_Id EXCEPTION;
 
 BEGIN
+SELECT COUNT(id_Defense) INTO id_Encontrada
+FROM DEFENSE
+WHERE id_Defense = id_Entrada;
+
+IF id_Encontrada =0 THEN 
+RAISE excepcion_Id;
+END IF;
+
 SELECT name, metal_Cost, crystal_Cost, deuterium_Cost, initialArmor, armor, baseDamage, speed, generateWasting 
-INTO nombre, costeMetal, costeCristal, costeDeuterio, armaduraInicial, armadura, dañoBase, velocidad, residuos
+INTO nombre, costeMetal, costeCristal, costeDeuterio, armaduraInicial, armadura, danoBase, velocidad, residuos
 FROM defense
 WHERE id_defense = id_Entrada;
 
-/*Estas variables son las que se entregarian a Java, se le entra id_Entrada y nos devolveria los valores, Java trabajaria con estos valores
-El tema es como devolverlos o recogerlos 
-
-Primero aseguremonos de poder recoger las variables una por una, si sobra tiempo, podriamos probar de trabajar con rowtype*/
-
-/*Estos prints son de prueba
+/*
+Estos prints son de prueba
 DBMS_OUTPUT.PUT_LINE('ID Defensa: '||id_Entrada);
 DBMS_OUTPUT.PUT_LINE('Nombre Defensa: '||nombre);
 DBMS_OUTPUT.PUT_LINE('Coste Metal: '||costeMetal);
@@ -42,9 +42,11 @@ DBMS_OUTPUT.PUT_LINE('Residuos: '||residuos);
 */
 
 EXCEPTION
+WHEN excepcion_Id THEN
+DBMS_OUTPUT.PUT_LINE('No se ha encontrado esta ID en la base de datos');
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso INITIALIZE:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso GET_DEFENSE:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 
 END;

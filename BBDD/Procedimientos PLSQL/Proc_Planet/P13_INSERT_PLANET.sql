@@ -59,26 +59,27 @@ VALUES('''||id_Entrada||''',
 '''||nivelDefensa||''', 
 '''||coste_SubirDefensa||''', 
 '''||nivelAtaque||''', 
-'''||coste_SubirAtaque||''')';
+'''||coste_SubirAtaque||''')
+';
 
 execute immediate insert_Script;
-DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla USER');
+DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla PLANET');
 DBMS_OUTPUT.PUT_LINE('ID_Usuario: '||id_Entrada);
 DBMS_OUTPUT.PUT_LINE('Nombre Planeta: '||nombre);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||metal);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cristal);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||deuterio);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cazadores_L);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cazadores_H);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||naves_Batalla);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||acorazados);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||lanzamisiles);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cañon_iones);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||cañon_plasma);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||nivelDefensa);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||coste_SubirDefensa);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||nivelAtaque);
-DBMS_OUTPUT.PUT_LINE('Nombre: '||coste_SubirAtaque);
+DBMS_OUTPUT.PUT_LINE(': '||metal);
+DBMS_OUTPUT.PUT_LINE(': '||cristal);
+DBMS_OUTPUT.PUT_LINE(': '||deuterio);
+DBMS_OUTPUT.PUT_LINE(': '||cazadores_L);
+DBMS_OUTPUT.PUT_LINE(': '||cazadores_H);
+DBMS_OUTPUT.PUT_LINE(': '||naves_Batalla);
+DBMS_OUTPUT.PUT_LINE(': '||acorazados);
+DBMS_OUTPUT.PUT_LINE(': '||lanzamisiles);
+DBMS_OUTPUT.PUT_LINE(': '||cañon_iones);
+DBMS_OUTPUT.PUT_LINE(': '||cañon_plasma);
+DBMS_OUTPUT.PUT_LINE(': '||nivelDefensa);
+DBMS_OUTPUT.PUT_LINE(': '||coste_SubirDefensa);
+DBMS_OUTPUT.PUT_LINE(': '||nivelAtaque);
+DBMS_OUTPUT.PUT_LINE(': '||coste_SubirAtaque);
 COMMIT;
 
 EXCEPTION
@@ -88,7 +89,7 @@ DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs
 ROLLBACK;
 
 WHEN excepcion_IdUser THEN
-DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID de usuario en la base de datos y no se puede asignar al planeta');
+DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID de usuario en la base de datos y no se le puede asignar al planeta');
 ROLLBACK;
 
 WHEN OTHERS THEN

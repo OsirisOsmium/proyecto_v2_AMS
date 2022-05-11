@@ -17,13 +17,15 @@ exists_User NUMBER(1);
 El orden de creación, asi como las restricciones y el orden en que se ejecutan es el
 mismo del DDL exportado a partir del SQL Data Modeler*/
 
-create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
+create_Battle VARCHAR (2000) := '
+CREATE TABLE battle (
     id_battle          INTEGER NOT NULL,
     user_id_user       INTEGER NOT NULL,
     enemy_id_enemy     INTEGER NOT NULL,
     planet_id_planet   INTEGER NOT NULL,
     report_stepbystep  LONG NOT NULL,
-    id_winner          INTEGER NOT NULL,
+    user_winner        CHAR(1) NOT NULL,
+    enemy_winner       CHAR(1) NOT NULL,
     waste_metal        NUMBER NOT NULL,
     waste_deuterium    NUMBER NOT NULL,
     ui_lighthunter     INTEGER DEFAULT 0,
@@ -44,10 +46,16 @@ create_Battle VARCHAR (2000) := 'CREATE TABLE battle (
     ei_heavyhunter     INTEGER DEFAULT 0,
     ei_battleship      INTEGER DEFAULT 0,
     ei_armoredship     INTEGER DEFAULT 0,
+    ei_missilelauncher INTEGER DEFAULT 0,
+    ei_ioncannon       INTEGER DEFAULT 0,
+    ei_plasmacannon    INTEGER DEFAULT 0,
     ef_lighthunter     INTEGER DEFAULT 0,
     ef_heavyhunter     INTEGER DEFAULT 0,
     ef_battleship      INTEGER DEFAULT 0,
-    ef_armoredship     INTEGER DEFAULT 0
+    ef_armoredship     INTEGER DEFAULT 0,
+    ef_missilelauncher INTEGER DEFAULT 0,
+    ef_ioncannon       INTEGER DEFAULT 0,
+    ef_plasmacannon    INTEGER DEFAULT 0
 )';
 
 alter_Battle1 VARCHAR(1000) := 'ALTER TABLE battle ADD CONSTRAINT battle_pk PRIMARY KEY ( id_battle )';
@@ -139,8 +147,6 @@ create_units VARCHAR(1000) :='CREATE TABLE units (
     enemy_id_enemy     INTEGER,
     planet_id_planet   INTEGER
 )';
-
-alter_Units VARCHAR(1000) := 'ALTER TABLE units ADD CONSTRAINT units_pk PRIMARY KEY ( id_unit )';
 
 alter_Units1 VARCHAR(1000) := 'ALTER TABLE units ADD CONSTRAINT units_pk PRIMARY KEY ( id_unit )';
 

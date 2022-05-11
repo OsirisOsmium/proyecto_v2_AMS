@@ -145,16 +145,5 @@
 <colUsage columnID="3C5DD1A2-32FB-4182-3295-BE6D218C52B6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="1471DD98-6239-EAE0-AD58-F5AB55A3D38B" name="Defense_ID_Defense_UN">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-10 19:15:01 UTC</createdTime>
-<generatorID>75E67D48-C0D0-2621-22BD-BEE2EC8A9DF8</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<indexState>Unique Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="7AF317E2-BE07-85C1-0A93-1A22B20AE5DF"/>
-</indexColumnUsage>
-</ind_PK_UK>
 </indexes>
 </Table>

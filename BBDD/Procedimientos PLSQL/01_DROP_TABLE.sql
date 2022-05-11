@@ -15,11 +15,11 @@ exists_User NUMBER(1);
 
 drop_Battle VARCHAR (2000) := 'DROP TABLE battle';
 drop_Constants VARCHAR (2000) := 'DROP TABLE constants';
+drop_Units VARCHAR(2000) := 'DROP TABLE units';
 drop_Defense VARCHAR(2000) := 'DROP TABLE defense';
 drop_Enemy VARCHAR(2000) := 'DROP TABLE enemy';
 drop_Planet VARCHAR(2000) := 'DROP TABLE planet';
 drop_User VARCHAR(2000) := 'DROP TABLE "USER"';
-drop_Units VARCHAR(2000) := 'DROP TABLE units';
 drop_Ship VARCHAR(2000) := 'DROP TABLE ship';
 
 BEGIN
@@ -69,6 +69,11 @@ execute immediate drop_Constants;
 DBMS_OUTPUT.PUT_LINE('Tabla CONSTANTS eliminada');
 END IF;
 
+IF exists_Units = 1 THEN
+execute immediate drop_Units;
+DBMS_OUTPUT.PUT_LINE('Tabla UNITS eliminada');
+END IF;
+
 IF exists_Defense = 1 THEN
 execute immediate drop_Defense;
 DBMS_OUTPUT.PUT_LINE('Tabla DEFENSE eliminada');
@@ -87,11 +92,6 @@ END IF;
 IF exists_Ship = 1 THEN
 execute immediate drop_Ship;
 DBMS_OUTPUT.PUT_LINE('Tabla SHIP eliminada');
-END IF;
-
-IF exists_Units = 1 THEN
-execute immediate drop_Units;
-DBMS_OUTPUT.PUT_LINE('Tabla UNITS eliminada');
 END IF;
 
 IF exists_User = 1 THEN
@@ -113,7 +113,7 @@ END;
 
 /
 
-/*
+
 SET SERVEROUTPUT ON
 
 BEGIN
@@ -121,4 +121,3 @@ BEGIN
 DROP_TABLE;
 
 END;
-*/

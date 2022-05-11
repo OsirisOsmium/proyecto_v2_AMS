@@ -267,20 +267,9 @@
 <colUsage columnID="8330722D-B429-0F00-24A2-E39992D94276"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="1E3CB3A5-6218-F39B-95E4-00A79980A8CA" name="Planet_ID_Planet_UN">
+<ind_PK_UK id="D57FBF71-6B18-91E7-8CF5-39B76DA449DF" name="Planet_User_FK">
 <createdBy>alumne</createdBy>
-<createdTime>2022-05-10 19:15:01 UTC</createdTime>
-<generatorID>3F417844-1351-E57F-2447-B40279DB9C7A</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<indexState>Unique Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="0DD9FA27-5F6C-EE78-778F-17522BC98CEA" name="Planet_User_FK">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-10 15:25:17 UTC</createdTime>
+<createdTime>2022-05-11 15:12:11 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>

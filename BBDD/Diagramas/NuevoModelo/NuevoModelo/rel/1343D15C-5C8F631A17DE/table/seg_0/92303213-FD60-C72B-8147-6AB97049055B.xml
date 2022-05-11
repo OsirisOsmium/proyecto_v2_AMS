@@ -74,14 +74,26 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ID_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
+<Column name="user_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 17:42:48 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="enemy_Winner" id="C4305175-B4D0-4094-E395-85643D55A1FB">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-11 16:12:14 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="waste_Metal" id="9B145455-4F84-9D14-A5B9-38601781C12D">
@@ -477,17 +489,6 @@
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="A33157B2-CF3E-F6D9-6D33-6833775E6FE0" name="Battle_ID_Battle_UN">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-10 19:15:01 UTC</createdTime>
-<generatorID>D1BB50A3-D8FF-FD15-0687-75522AFA3B9F</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<indexState>Unique Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>

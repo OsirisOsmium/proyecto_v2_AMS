@@ -1,4 +1,10 @@
-CREATE OR REPLACE PROCEDURE SET_UNITS(ID_Entrada IN units.ID_unit%TYPE, defensa IN units.defense_Level%TYPE, ataque IN units.attack_Level%TYPE, unidadDefensiva IN units.defense_ID_Defense%TYPE, unidadNave IN units.ship_ID_Ship%TYPE, enemigo IN units.enemy_ID_Enemy%TYPE, planeta IN units.planet_ID_planet%TYPE)
+CREATE OR REPLACE PROCEDURE SET_UNITS(ID_Entrada IN units.ID_unit%TYPE, 
+defensa IN units.defense_Level%TYPE, 
+ataque IN units.attack_Level%TYPE, 
+unidadDefensiva IN units.defense_ID_Defense%TYPE, 
+unidadNave IN units.ship_ID_Ship%TYPE, 
+enemigo IN units.enemy_ID_Enemy%TYPE, 
+planeta IN units.planet_ID_planet%TYPE)
 
 IS
 defensa_Insertar units.defense_Level%TYPE;
@@ -76,16 +82,17 @@ SET attack_Level = '''||ataque_insertar||''',
 SET defense_ID_Defense= '''||unidadDefensiva_insertar||''',
 SET ship_ID_Ship = '''||unidadNave_insertar||''',
 SET enemy_ID_Enemy= '''||enemigo_Insertar||''',
-SET planet_ID_Planet= '''||planeta_insertar||'''';
+SET planet_ID_Planet= '''||planeta_insertar||'''
+WHERE id_user = '||id_Entrada||'';
 
 execute immediate update_Script;
 DBMS_OUTPUT.PUT_LINE('Actualizada la entrada '||id_Entrada||' de la base de datos UNITS con estos nuevos valores:');
-DBMS_OUTPUT.PUT_LINE(': '||Defensa_Insertar);
-DBMS_OUTPUT.PUT_LINE(': '||Ataque_Insertar);
-DBMS_OUTPUT.PUT_LINE(': '||unidadDefensiva_Insertar);
-DBMS_OUTPUT.PUT_LINE(': '||unidadNave_Insertar);
-DBMS_OUTPUT.PUT_LINE(': '||enemigo_Insertar);
-DBMS_OUTPUT.PUT_LINE(': '||planeta_Insertar);
+DBMS_OUTPUT.PUT_LINE('Nivel Tecnologico Defensa: '||Defensa_Insertar);
+DBMS_OUTPUT.PUT_LINE('Nivel Tecnologico Ataque: '||Ataque_Insertar);
+DBMS_OUTPUT.PUT_LINE('ID Estructura defensiva: '||unidadDefensiva_Insertar);
+DBMS_OUTPUT.PUT_LINE('ID Nave: '||unidadNave_Insertar);
+DBMS_OUTPUT.PUT_LINE('ID Enemigo: '||enemigo_Insertar);
+DBMS_OUTPUT.PUT_LINE('ID Planeta: '||planeta_Insertar);
 
 COMMIT;
 
@@ -95,7 +102,7 @@ DBMS_OUTPUT.PUT_LINE('No se ha encontrado esta ID en la base de datos');
 ROLLBACK;
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_ENEMY:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso SET_UNIT:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 ROLLBACK;
 

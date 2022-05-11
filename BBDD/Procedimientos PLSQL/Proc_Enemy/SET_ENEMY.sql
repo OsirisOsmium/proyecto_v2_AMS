@@ -126,7 +126,8 @@ SET num_HeavyHunter = '''||cazadores_H_Insertar||''',
 SET num_BattleShip = '''||naves_Batalla_Insertar||''',
 SET num_ArmoredShip = '''||acorazados_Insertar||''',
 SET current_LevelDefense = '''||nivelDefensa_insertar||''',
-SET current_LevelAttack= '''||nivelAtaque_insertar||'''';
+SET current_LevelAttack= '''||nivelAtaque_insertar||'''
+WHERE id_user = '||id_Entrada||'';
 
 execute immediate update_Script;
 
@@ -135,12 +136,12 @@ DBMS_OUTPUT.PUT_LINE('Nombre: '||nombre_Insertar);
 DBMS_OUTPUT.PUT_LINE('Metal: '||metal_insertar);
 DBMS_OUTPUT.PUT_LINE('Cristal: '||cristal_insertar);
 DBMS_OUTPUT.PUT_LINE('Deuterio: '||deuterio_insertar);
-DBMS_OUTPUT.PUT_LINE('Light Hunters'||cazadores_L_Insertar);
-DBMS_OUTPUT.PUT_LINE('Heavy Hunters'||cazadores_H_Insertar);
-DBMS_OUTPUT.PUT_LINE('BattleShip'||naves_Batalla_Insertar);
-DBMS_OUTPUT.PUT_LINE('ArmoredShip'||acorazados_Insertar);
-DBMS_OUTPUT.PUT_LINE('Level'||nivelDefensa_insertar);
-DBMS_OUTPUT.PUT_LINE(''||nivelAtaque_insertar);
+DBMS_OUTPUT.PUT_LINE('Light Hunters: '||cazadores_L_Insertar);
+DBMS_OUTPUT.PUT_LINE('Heavy Hunters: '||cazadores_H_Insertar);
+DBMS_OUTPUT.PUT_LINE('BattleShips: '||naves_Batalla_Insertar);
+DBMS_OUTPUT.PUT_LINE('ArmoredShip: '||acorazados_Insertar);
+DBMS_OUTPUT.PUT_LINE('Nivel Tecnologico Defensa:'||nivelDefensa_insertar);
+DBMS_OUTPUT.PUT_LINE('Nivel Tecnologico Ataque'||nivelAtaque_insertar);
 
 COMMIT;
 
@@ -150,7 +151,7 @@ DBMS_OUTPUT.PUT_LINE('No se ha encontrado esta ID en la base de datos');
 ROLLBACK;
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_ENEMY:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso SET_ENEMY:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 ROLLBACK;
 
