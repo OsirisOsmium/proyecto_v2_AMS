@@ -455,7 +455,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="report_StepbyStep2" id="549055AD-7569-C556-C0E3-D37212AB6645">
+<Column name="report_StepbyStep1" id="549055AD-7569-C556-C0E3-D37212AB6645">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 21:38:58 UTC</createdTime>
 <generatorID>80CF8B82-4696-5242-EB71-36821FA19FF4</generatorID>
@@ -466,7 +466,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ID_Winner2" id="EAD2ACF8-601D-0EA4-1890-442BFA815970">
+<Column name="ID_Winner1" id="EAD2ACF8-601D-0EA4-1890-442BFA815970">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 21:38:58 UTC</createdTime>
 <generatorID>79966B2E-2423-0BE2-8F46-8B97FBA6D0BF</generatorID>
@@ -477,7 +477,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="waste_Metal2" id="07970220-10D6-F718-BBBA-97B62ECEFC3C">
+<Column name="waste_Metal1" id="07970220-10D6-F718-BBBA-97B62ECEFC3C">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 21:38:58 UTC</createdTime>
 <generatorID>C52DEBA4-3613-A052-18D6-26616242A445</generatorID>
@@ -488,7 +488,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="waste_Deuterium2" id="1DAC118F-CDB1-75C9-7276-162D2B13642D">
+<Column name="waste_Deuterium1" id="1DAC118F-CDB1-75C9-7276-162D2B13642D">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 21:38:58 UTC</createdTime>
 <generatorID>A0FCF053-4F07-8F37-5094-EBA89DD627DE</generatorID>

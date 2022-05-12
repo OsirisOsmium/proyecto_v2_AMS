@@ -769,7 +769,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ID_Configuration2" id="058BDAFF-914C-179C-0A31-85F355E6D92A">
+<Column name="ID_Configuration1" id="058BDAFF-914C-179C-0A31-85F355E6D92A">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 21:38:58 UTC</createdTime>
 <generatorID>72B38B54-2EB9-80DF-E4A1-8A590C39410A</generatorID>

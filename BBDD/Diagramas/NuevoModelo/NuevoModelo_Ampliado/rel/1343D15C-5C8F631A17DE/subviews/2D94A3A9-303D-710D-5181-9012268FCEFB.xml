@@ -16,7 +16,7 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="23B1FE16-CA98-6A43-7663-041887D1F7CD" otype="Table" vid="1B165AA2-3115-D810-3B14-4509B167E2CC">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="1295" y="151" width="330" height="1068"/>
+<bounds x="1291" y="134" width="330" height="1040"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="588E0192-CDFD-60D6-981E-0A5552AAE3C7" otype="Table" vid="49F52C07-984F-1F7F-BABC-7B69FC903666">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -32,7 +32,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="92303213-FD60-C72B-8147-6AB97049055B" otype="Table" vid="86BCB952-FF2A-9BF0-5643-AAE1B61BFB0F">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="577" y="144" width="195" height="648"/>
+<bounds x="577" y="144" width="195" height="658"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="95DCE8C5-4CD7-F105-548D-944F6A6D7C49" otype="Table" vid="49CE79DD-47CB-4D2B-C6E6-66275E856BE7">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -66,8 +66,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="834" y="232"/>
-<point x="772" y="232"/>
+<point x="834" y="262"/>
+<point x="772" y="262"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="D9694FA6-3CA1-7575-AF4E-A53D91C14AF6" otype="FKIndexAssociation" vid_source="49CE79DD-47CB-4D2B-C6E6-66275E856BE7" vid_target="86BCB952-FF2A-9BF0-5643-AAE1B61BFB0F">
@@ -75,8 +75,8 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="526" y="195"/>
-<point x="577" y="195"/>
+<point x="526" y="210"/>
+<point x="577" y="210"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="EA4356CD-520E-0EA7-ECBF-ED9B256E9022" otype="FKIndexAssociation" vid_source="FBE20FE0-2665-6070-E245-4CD9648C7298" vid_target="E5A1E727-C50E-EE52-041B-C3F38A9E43EE">
