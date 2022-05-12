@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE GET_CONSTANTS(id_Entrada IN constants.id_Constant%TYPE, 
+CREATE OR REPLACE PROCEDURE GET_CONSTANT(id_Entrada IN constants.id_Constant%TYPE, 
 nombre OUT constants.name%TYPE, valor OUT constants.value%TYPE)
 
 IS
