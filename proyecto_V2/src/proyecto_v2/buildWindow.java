@@ -200,8 +200,10 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			String Trops=(String) comboBox.getSelectedItem();
 			if (Trops.equalsIgnoreCase("Light Hunter")) {
 				System.out.println("Accion de add del TROPS con Light Hunter");
+				/*
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				conn.addTrops("Light Hunter", cant, 0, 0);
+				*/
 			}
 			if (Trops.equalsIgnoreCase("Heavy Hunter")) {
 				System.out.println("Accion de add del TROPS con Heavy Hunter");
@@ -231,14 +233,14 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			conn.viewStats();
+			conn.viewStats(1);
 			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			conn.viewUpgrade();
+			conn.viewUpgrade(1);
 			//upgrade.setVisible(true);
 		}
 		
@@ -283,8 +285,8 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewTrops("Light Hunter"));
-
+			
+			txtDescription.setText(conn.get_ship(1));
 			System.out.println("Light Hunter");
 		}
 		if (Trops.equalsIgnoreCase("Heavy Hunter")) {
@@ -293,7 +295,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewTrops("Heavy Hunter"));
+			txtDescription.setText(conn.get_ship(2));
 			
 			System.out.println("Heavy Hunter");
 		}
@@ -303,7 +305,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewTrops("Battle Ship"));
+			txtDescription.setText(conn.get_ship(3));
 			
 			System.out.println("Battle Ship");
 		}
@@ -313,7 +315,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewTrops("Armored Ship"));
+			txtDescription.setText(conn.get_ship(4));
 			
 			System.out.println("Armored Ship");
 		}
@@ -324,7 +326,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewDefense("Missile Launcher"));
+			txtDescription.setText(conn.get_defense(1));
 		}
 		if (Trops.equalsIgnoreCase("Ion Cannon")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\cañonIon.jpg");
@@ -332,7 +334,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewDefense("Ion Cannon"));
+			txtDescription.setText(conn.get_defense(2));
 		}
 		if (Trops.equalsIgnoreCase("PLasma Cannon")) {
 			ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\plasmaCannon.jpg");
@@ -340,7 +342,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			lblImage. setIcon(icono2);//establece el ImageIcon en el label
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			txtDescription.setText(conn.viewDefense("PLasma Cannon"));
+			txtDescription.setText(conn.get_defense(3));
 		}
 		
 	}

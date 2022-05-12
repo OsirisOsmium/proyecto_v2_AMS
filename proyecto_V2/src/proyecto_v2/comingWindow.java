@@ -190,14 +190,14 @@ public class comingWindow extends JFrame implements ActionListener{
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			conn.viewStats();
+			conn.viewStats(1);
 			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			conn.viewUpgrade();
+			conn.viewUpgrade(1);
 			//upgrade.setVisible(true);
 		}
 		

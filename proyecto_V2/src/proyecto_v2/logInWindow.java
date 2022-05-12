@@ -118,11 +118,14 @@ public class logInWindow extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (btnLogIn==e.getSource()) {
+			
 			String username=txtUsername.getText();
 			String pass=txtPassword.getText();
-			connectionOracle conn=new connectionOracle(url, user, password);
 			
-			if (conn.LogIn(username, pass)==true) {
+			connectionOracle conn=new connectionOracle(url, user, password);
+			//System.out.println(conn.LogIn(username, pass));
+			boolean retorno=conn.LogIn(username, pass);
+			if (retorno==true) {
 				mainWindow main=new mainWindow();
 				this.setVisible(false);
 				main.setVisible(true);
@@ -132,8 +135,8 @@ public class logInWindow extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(null, "ERROR: El usuario o la contraseña son incorrectos");
 			}
 			
-			
 		}
+		
 		if (btnSingIn==e.getSource()) {
 			registerWindow singIn=new registerWindow();
 			this.setVisible(false);

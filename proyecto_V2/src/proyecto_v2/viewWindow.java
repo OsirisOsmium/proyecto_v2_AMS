@@ -32,7 +32,6 @@ public class viewWindow extends JFrame implements ActionListener{
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
 	
-	//connectionOracle conn=new connectionOracle(url, user, password);
 
 	
 	
@@ -46,7 +45,7 @@ public class viewWindow extends JFrame implements ActionListener{
 		String user="PLANET_WARS_V2";
 		String password="PLANET_WARS_V2";
 		connectionOracle conn=new connectionOracle(url, user, password);
-		conn.viewStats();
+		conn.viewStats(1);
 		
 	}
 
@@ -332,15 +331,13 @@ public class viewWindow extends JFrame implements ActionListener{
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);
 			//view.setVisible(true);
-			
-			
-			conn.viewStats();
+			conn.viewStats(1);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			conn.viewUpgrade();
+			conn.viewUpgrade(1);
 			//upgrade.setVisible(true);
 		}
 		

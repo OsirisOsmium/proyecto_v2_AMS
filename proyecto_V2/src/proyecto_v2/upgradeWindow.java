@@ -43,7 +43,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		String user="PLANET_WARS_V2";
 		String password="PLANET_WARS_V2";
 		connectionOracle conn=new connectionOracle(url, user, password);
-		conn.viewUpgrade();
+		conn.viewUpgrade(1);
 		
 		
 	}
@@ -139,14 +139,6 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		btnUpAtack.setBounds(493, 236, 168, 45);
 		contentPane.add(btnUpAtack);
 		
-		/*
-		btnBack = new JButton("BACK");
-		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnBack.addActionListener(this);
-		btnBack.setBounds(499, 376, 150, 45);
-		contentPane.add(btnBack);
-		*/
-		
 		JLabel lblNewLabel_1 = new JLabel("Update Defense Technology.      Cost: ");
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -202,19 +194,9 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		lblBackground. setIcon(icono4);//establece el ImageIcon en el label
 		contentPane.add(lblBackground);//añadimos el label
 		
-		
-		
 		setVisible(true);
 	}
-	/*
-	public static void viewUpdate() {
-		String url="jdbc:oracle:thin:@localhost:1521:xe";
-		String user="PLANET_WARS_V2";
-		String password="PLANET_WARS_V2";
-		connectionOracle2 conn=new connectionOracle2(url, user, password);
-		conn.viewUpgrade();
-	}
-	 */
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		connectionOracle conn=new connectionOracle(url, user, password);
@@ -230,14 +212,14 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			conn.viewStats();
+			conn.viewStats(1);
 			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			conn.viewUpgrade();
+			conn.viewUpgrade(1);
 			//upgrade.setVisible(true);
 		}
 		

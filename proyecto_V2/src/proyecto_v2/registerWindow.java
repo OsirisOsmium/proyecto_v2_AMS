@@ -122,11 +122,13 @@ public class registerWindow extends JFrame implements ActionListener{
 			String date=txtDate.getText();
 			
 			
-			if (conn.SingIn(username, password, date) == true) {
+			if (conn.SignIn(username, password, date) == true) {
 				JOptionPane.showMessageDialog(null, "EXITO: Se ha registrado el usuario  "+username);
+				
 				logInWindow logIn=new logInWindow();
 				this.setVisible(false);
 				logIn.setVisible(true);
+				
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "ERROR: No se ha podido registrar el usuario "+username);

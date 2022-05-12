@@ -119,14 +119,7 @@ public class mainWindow extends JFrame implements ActionListener{
 		ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\war_star.png");
 		ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblBackground. setIcon(icono2);//establece el ImageIcon en el label
-		contentPane.add(lblBackground);//añadimos el label
-		/*
-		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(""));
-		lblNewLabel_1.setBounds(0, 0, 706, 482);
-		*/
-		//lblNewLabel_1.setBackground(getForeground());
-		
+		contentPane.add(lblBackground);//añadimos el label		
 		
 		setVisible(true);
 	}
@@ -138,14 +131,14 @@ public class mainWindow extends JFrame implements ActionListener{
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);
-			conn.viewStats();
+			conn.viewStats(1);
 			//view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			//upgradeWindow upgrade=new upgradeWindow();
 			this.setVisible(false);
-			conn.viewUpgrade();
+			conn.viewUpgrade(1);
 			//upgrade.setVisible(true);
 		}
 		

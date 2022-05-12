@@ -13,13 +13,10 @@ import java.sql.Statement;
 
 import javax.swing.JOptionPane;
 
-public class connectionOracle /*extends viewWindow*/{
+public class connectionOracle {
 	
 	Connection conn;
-	/*
-	viewWindow view=new viewWindow();
-	upgradeWindow up=new upgradeWindow();
-	*/
+	
 	public connectionOracle(String url, String user, String password){
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -37,10 +34,10 @@ public class connectionOracle /*extends viewWindow*/{
 			System.out.println("ERROR: El driver NO se ha cargado");
 		}
 	}
-	
-	
+	/*
 	public boolean LogIn(String username, String password) {
 		boolean validar=false;
+		String txt="";
 		try {			
 			String query = "select * from usr where username='"+username+"'";
 			Statement stmnt=conn.createStatement();
@@ -51,11 +48,17 @@ public class connectionOracle /*extends viewWindow*/{
 				
 //////////////////////se ha cambiado la validacion para deje asar falta revisar
 				
-				if (username==uss && password==pas) {
+				if (username!=uss && password!=pas) {
+					txt=txt+
+							"username: "+uss+
+							"\npassword: "+pas;
 					validar=false;
 					System.out.println("else false");
 				}
 				else {
+					txt=txt+
+							"username: "+uss+
+							"\npassword: "+pas;
 					validar=true;
 					System.out.println("else true");
 				}
@@ -66,87 +69,110 @@ public class connectionOracle /*extends viewWindow*/{
 			System.out.println("ERROR: El usuario no existe");
 			System.out.println("ERROR GENERAL: Ha havido algun error");
 		}
+		//return txt;
 		return validar;
 	}
+	*/
 	
-	public boolean SingIn(String username, String password, String date) {
-		boolean action=false;
-		try {	
-			PreparedStatement pstm = conn.prepareStatement("INSERT INTO usr values((select max(id_user)+1 from usr), username, password, to_Date(birth_date,'DD-MM-YYYY')) VALUES ((select max(?)+1 from usr),?,?,to_Date(?,'DD-MM-YYYY'))");
+	public boolean LogIn(String username, String password) {
+		String txt="";
+		boolean action=true;
+			try {
+				CallableStatement cst = conn.prepareCall("{call GET_USER_ (?,?,?,?)}");
+				//int id = -1;
+				System.out.println("llama al procedimiento get_user_");
+				//do {
+		            cst.setString(1, username);
+		            
+		            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
+		            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
+		            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	
+		            cst.execute();
+		            String us=cst.getString(2);
+		            String pas=cst.getString(3);
+		            String ides=cst.getString(4);
+		            
+		            /*if (username!="null" || username!="null"){
+		            	txt=txt+"nada insertado";
+		            	System.out.println("null");
+		            }*/
+		            
+		            
+		            if (username.equals(us) && password.equals(pas)) {
+		            	txt=txt+
+								"username: "+us+
+								"\npassword: "+pas+
+								"\nId: "+ides;
+		            	action=true;
+		            	System.out.println("Correcto usuario");
+		            	System.out.println(action);
 
-			pstm.setString(1, "'"+username+"'");
-			pstm.setString(2, "'"+password+"'");
-			pstm.setString(3, "'"+date+"'");
-			
-			pstm.executeUpdate();	
-			action=true;
-		}
-			
+		            }
+		            else {
+		            	txt=txt+
+								"username: "+us+
+								"\npassword: "+pas;
+		            	action=false;
+		            	System.out.println("Mal usuario");
+		            	System.out.println(action);
+
+		            }
+				//}while (id>0);
+
+			}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+            action=false;
+        }
+		//return txt;
+		return action;
+	}
+	
+	public boolean SignIn(String username, String password, String date) {
+		boolean action=false;
 		
-		catch (SQLException e) {
-			action=false;
-			/*e.printStackTrace();
-			*/System.out.println("ERROR: El uruario ya existe");
-			System.out.println("ERROR GENERAL: Ha havido algun error");
+		try {
+			CallableStatement cst = conn.prepareCall("{call INSERT_USER (?,?,?,?)}");
 			
+			System.out.println("llama al procedimiento insert_user");
+			cst.setString(1, "(select max(id_user) from usr)");
+            cst.setString(2,username);
+            cst.setString(3, password);
+            cst.setString(4, date); 
+            
+            // Ejecuta el procedimiento almacenado
+            cst.execute();
+            
+            action=true;
+		
 		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+            action=false;
+        }
+		
 		return action;
 	}
 	
 	
 	
 	
-	public String viewDefense(String nom) {
-		String texto="";
-		try {
-			String query = "select * from defense where name ='"+nom+"'";
-			Statement stmnt=conn.createStatement();
-			ResultSet rs=stmnt.executeQuery(query);
-			while (rs.next()){
-				texto=texto+"Nombre: "+rs.getString(2)+"\nMetal Cost: "+rs.getInt(3)
-				+"\nCrystal Cost: "+rs.getInt(4)+"\nDeuterium Cost: "+rs.getInt(5)
-				+"\nInitial Armor: "+rs.getInt(6)+"\nArmor: "+rs.getInt(7)
-				+"\nBase Damage: "+rs.getInt(8)+"\nSpeed: "+rs.getInt(9)
-				+"\nGenerate Warnings: "+rs.getInt(10);
-			}
-			
-			System.out.println("EXITO: El registro existe");
-		} catch (SQLException e) {
-			System.out.println("ERROR: El granjero no existe");
-		}
-		return texto;
-	}
-	public String viewTrops(String nom) {
-		String texto="";
-		try {
-			String query = "select * from ship where name ='"+nom+"'";
-			Statement stmnt=conn.createStatement();
-			ResultSet rs=stmnt.executeQuery(query);
-			while (rs.next()){
-				texto=texto+"Nombre: "+rs.getString(2)+"\nMetal Cost: "+rs.getInt(3)
-				+"\nCrystal Cost: "+rs.getInt(4)+"\nDeuterium Cost: "+rs.getInt(5)
-				+"\nInitial Armor: "+rs.getInt(6)+"\nArmor: "+rs.getInt(7)
-				+"\nBase Damage: "+rs.getInt(8)+"\nSpeed: "+rs.getInt(9)
-				+"\nGenerate Warnings: "+rs.getInt(10);
-			}
-			
-			System.out.println("EXITO: El ship existe");
-		} catch (SQLException e) {
-			System.out.println("ERROR: El ship no existe");
-		}
-		return texto;
-	}
 	
-	public String get_ship(int id) {
+	
+	public String get_ship(int ids) {
 		String text="";
-		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-		
+		//BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 		
 		try {
-			CallableStatement cst = conn.prepareCall("{call  (?,?,?,?,?,?,?,?,?,?)}");
+			CallableStatement cst = conn.prepareCall("{call GET_SHIP (?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento");
 			do {
 	            // Parametro 1 del procedimiento almacenado
-	            cst.setInt(1, id);
+	            cst.setInt(1, ids);
 	            
 	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
 	            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
@@ -174,14 +200,14 @@ public class connectionOracle /*extends viewWindow*/{
 	            int generateWasting=cst.getInt(10);
 	            text=text+
 	            		"Name: "+nom+
-	            		"Cost Metal: "+metal_cost+
-	            		"Cost Deuterium: "+deuterium_cost+
-	            		"Cost Crystal: "+crystal_cost+
-	            		"Initial Armor: "+initialArmor+
-	            		"Armor: "+armor+
-	            		"Base Damage: "+baseDamage+
-	            		"Speed: "+speed+
-	            		"Wasting: "+generateWasting;
+	            		"\nCost Metal: "+metal_cost+
+	            		"\nCost Deuterium: "+deuterium_cost+
+	            		"\nCost Crystal: "+crystal_cost+
+	            		"\nInitial Armor: "+initialArmor+
+	            		"\nArmor: "+armor+
+	            		"\nBase Damage: "+baseDamage+
+	            		"\nSpeed: "+speed+
+	            		"\nWasting: "+generateWasting;
 	            
 	        }while (id>0);
 		}
@@ -192,83 +218,177 @@ public class connectionOracle /*extends viewWindow*/{
 		return text;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	public void viewStats() {
+	public String get_defense(int ids) {
+		String text="";
+		//BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+		
+		try {
+			CallableStatement cst = conn.prepareCall("{call GET_DEFENSE (?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento");
+			do {
+	            // Parametro 1 del procedimiento almacenado
+	            cst.setInt(1, ids);
+	            
+	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
+	            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
+	            cst.registerOutParameter(3, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
+	            
+	            // Ejecuta el procedimiento almacenado
+	            cst.execute();
+	            
+	            // Se obtienen la salida del procedimineto almacenado
+	            String nom=cst.getString(2);
+	            int metal_cost=cst.getInt(3);
+	            int deuterium_cost=cst.getInt(4);
+	            int crystal_cost=cst.getInt(5);
+	            int initialArmor=cst.getInt(6);
+	            int armor=cst.getInt(7);
+	            int baseDamage=cst.getInt(8);
+	            int speed=cst.getInt(9);
+	            int generateWasting=cst.getInt(10);
+	            text=text+
+	            		"Name: "+nom+
+	            		"\nCost Metal: "+metal_cost+
+	            		"\nCost Deuterium: "+deuterium_cost+
+	            		"\nCost Crystal: "+crystal_cost+
+	            		"\nInitial Armor: "+initialArmor+
+	            		"\nArmor: "+armor+
+	            		"\nBase Damage: "+baseDamage+
+	            		"\nSpeed: "+speed+
+	            		"\nWasting: "+generateWasting;
+	            
+	        }while (id>0);
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
+		return text;
+	}
+
+	public void viewStats(int ids) {
 		try {
 			viewWindow view=new viewWindow();
-			
-			String query = "select * from planet where id_planet = 1";
-			Statement stmnt=conn.createStatement();
-			ResultSet rs=stmnt.executeQuery(query);
-			while(rs.next()) {
-				int Quantity_metal=rs.getInt("quantity_metal");
-				int Quantity_deuterium=rs.getInt("quantity_deuterium");
+			CallableStatement cst = conn.prepareCall("{call GET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento");
+			do {
+	            // Parametro 1 del procedimiento almacenado
+	            cst.setInt(1, ids);
+	            
+	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
+	            cst.registerOutParameter(2, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(11, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(12, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(13, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(14, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(15, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(16, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(17, java.sql.Types.INTEGER);
+	            
+	            // Ejecuta el procedimiento almacenado
+	            cst.execute();
+	            String numMetal=cst.getString(4);
+	            String numDeuterium=cst.getString(6);
+	            
+	            String lvlAttack=cst.getString(16);
+	            String lvlDefense=cst.getString(14);
+	            
+	            String numLight=cst.getString(7);
+	            String numHeavy=cst.getString(8);
+	            String numBattle=cst.getString(9);
+	            String numArmored=cst.getString(10);
+	            
+	            String numMissile=cst.getString(11);
+	            String numIon=cst.getString(12);
+	            String numPlasma=cst.getString(13);
+	            
+	            view.lblNumMetal.setText(String.valueOf(numMetal));
+				view.lblNumDeuterium.setText(String.valueOf(numDeuterium));
 				
-				int LvlAttack=rs.getInt("current_levelattack");
-				int LvlDefense=rs.getInt("current_leveldefense");
+				view.lblLvlAtack.setText(String.valueOf(lvlAttack));
+				view.lblLvlDefense.setText(String.valueOf(lvlDefense));
 				
+				view.lblNumLight.setText(String.valueOf(numLight));
+				view.lblNumHeavy.setText(String.valueOf(numHeavy));
+				view.lblNumBattle.setText(String.valueOf(numBattle));
+				view.lblNumArmored.setText(String.valueOf(numArmored));
 				
-				int LightH=rs.getInt("num_lighthunter");
-				int HeavyH=rs.getInt("num_heavyhunter");
-				int BattleShip=rs.getInt("num_battleship");
-				int ArmoredShip=rs.getInt("num_armoredship");
-				
-				int MissileLauncher=rs.getInt("num_missilelauncher");
-				int IonCannon=rs.getInt("num_ioncannon");
-				int PlasmaCannon=rs.getInt("num_plasmacannon");	
-				
-				view.lblNumMetal.setText(String.valueOf(Quantity_metal));
-				view.lblNumDeuterium.setText(String.valueOf(Quantity_deuterium));
-				
-				view.lblLvlAtack.setText(String.valueOf(LvlAttack));
-				view.lblLvlDefense.setText(String.valueOf(LvlDefense));
-				
-				view.lblNumLight.setText(String.valueOf(LightH));
-				view.lblNumHeavy.setText(String.valueOf(HeavyH));
-				view.lblNumBattle.setText(String.valueOf(BattleShip));
-				view.lblNumArmored.setText(String.valueOf(ArmoredShip));
-				
-				view.lblnumMissile.setText(String.valueOf(MissileLauncher));
-				view.lblNumIon.setText(String.valueOf(IonCannon));
-				view.lblNumPlasma.setText(String.valueOf(PlasmaCannon));
-			}
+				view.lblnumMissile.setText(String.valueOf(numMissile));
+				view.lblNumIon.setText(String.valueOf(numIon));
+				view.lblNumPlasma.setText(String.valueOf(numPlasma));         
+	            
+	        }while (id>0);
 		}
-		catch(SQLException e) {
-		System.out.println("ERROR: El ship no existe");	
-		System.out.println("ERROR: Ha havido algun error");
-		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
 	}
 	
-	public void viewUpgrade() {
+	public void viewUpgrade(int ids) {
 		try {
 			upgradeWindow up=new upgradeWindow();
-			
-			String query = "select * from planet where id_planet = 1";
-			Statement stmnt=conn.createStatement();
-			ResultSet rs=stmnt.executeQuery(query);
-			while(rs.next()) {
-				int costDefenseUP=rs.getInt("cost_defenseup");
-				int CostAttackUP=rs.getInt("cost_attackup");
-				
-				int LvlAttack=rs.getInt("current_levelattack");
-				int LvlDefense=rs.getInt("current_leveldefense");
-				
-				up.lblCostDefense.setText(String.valueOf(costDefenseUP));
+			CallableStatement cst = conn.prepareCall("{call GET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento get_upgrade");
+			do {
+	            // Parametro 1 del procedimiento almacenado
+	            cst.setInt(1, ids);
+	            
+	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
+	            cst.registerOutParameter(2, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(11, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(12, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(13, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(14, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(15, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(16, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(17, java.sql.Types.INTEGER);
+	            
+	            // Ejecuta el procedimiento almacenado
+	            cst.execute();
+	            String costDefenseUP=cst.getString(15);
+	            String CostAttackUP=cst.getString(17);
+	            String LvlAttack=cst.getString(16);
+	            String LvlDefense=cst.getString(14);
+	            
+	            up.lblCostDefense.setText(String.valueOf(costDefenseUP));
 				up.lblCostAttack.setText(String.valueOf(CostAttackUP));				
 				up.lblActualAttack.setText(String.valueOf(LvlAttack));
 				up.lblActualDefense.setText(String.valueOf(LvlDefense));
-				System.out.println("ha devuelto los valores de el update");
-			}
+				System.out.println("ha devuelto los valores de el update");        
+	            
+	        }while (id>0);
 		}
-		catch(SQLException e) {
-			System.out.println("ERROR: Ha havido algun error");
-		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
 	}
 	
 	
