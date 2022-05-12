@@ -181,9 +181,11 @@
 <createdTime>2022-05-07 21:49:23 UTC</createdTime>
 <generatorID>6CB806A1-81BB-004F-F8E7-71558603FF94</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>1</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -203,9 +205,11 @@
 <createdTime>2022-05-07 21:49:23 UTC</createdTime>
 <generatorID>F228AC4B-3A37-FE02-CA31-5EDD6A3A7CEE</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>1</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -217,28 +221,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="technology_Defense_ID_LevelDef" id="18B36F1A-0E96-1A66-7AC5-89159F781379">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-10 19:15:01 UTC</createdTime>
-<generatorID>60FF311B-2D3E-741C-93FE-313EB50C4F39</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="technology_Attack_ID_LevelAt" id="A61EF42B-DBF2-4A39-54E5-8A36E011E4D5">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-10 19:15:01 UTC</createdTime>
-<generatorID>149FBFEF-D90B-6A72-B729-2289D8253530</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -270,6 +252,16 @@
 <ind_PK_UK id="D57FBF71-6B18-91E7-8CF5-39B76DA449DF" name="Planet_User_FK">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-11 15:12:11 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="349A409F-50A6-43F6-A0AF-74ABD89387F8" name="Planet_User_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-12 06:41:45 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>

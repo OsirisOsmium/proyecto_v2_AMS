@@ -28,7 +28,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="76B3D66A-39B8-5AF7-5EB9-DC6F9376A837" otype="Table" vid="E5A1E727-C50E-EE52-041B-C3F38A9E43EE">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="791" y="156" width="184" height="362"/>
+<bounds x="791" y="156" width="214" height="362"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="92303213-FD60-C72B-8147-6AB97049055B" otype="Table" vid="86BCB952-FF2A-9BF0-5643-AAE1B61BFB0F">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>

@@ -1,10 +1,10 @@
-CREATE OR REPLACE PROCEDURE SET_CONSTANTS(id_Entrada IN constants.id_Constant%TYPE, 
+CREATE OR REPLACE PROCEDURE SET_CONSTANT(id_Entrada IN constants.id_Constant%TYPE, 
 nombre IN constants.name%TYPE, 
 valor IN constants.value%TYPE)
 
 IS
 nombre_insertar constants.name%TYPE;
-valor_insertat constants.value%TYPE;
+valor_insertar constants.value%TYPE;
 
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
@@ -12,9 +12,9 @@ excepcion_Id EXCEPTION;
 update_Script VARCHAR(300);
 
 BEGIN
-SELECT COUNT(id_user) INTO id_Encontrada
+SELECT COUNT(id_constant) INTO id_Encontrada
 FROM CONSTANTS
-WHERE id_User = id_Entrada;
+WHERE id_constant = id_Entrada;
 
 IF id_Encontrada =0 THEN 
 RAISE excepcion_Id;
@@ -29,7 +29,7 @@ nombre_Insertar := nombre;
 END IF;
 
 IF valor IS NULL THEN
-SELECT value INTO value_Insertar
+SELECT value INTO valor_Insertar
 FROM CONSTANTS
 WHERE id_Constant = id_Entrada;
 ELSE 
