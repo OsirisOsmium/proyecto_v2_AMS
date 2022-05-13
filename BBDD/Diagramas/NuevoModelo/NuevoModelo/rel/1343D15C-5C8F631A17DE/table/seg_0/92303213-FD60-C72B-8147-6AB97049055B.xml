@@ -80,9 +80,8 @@
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="enemy_Winner" id="C4305175-B4D0-4094-E395-85643D55A1FB">
@@ -91,9 +90,8 @@
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="waste_Metal" id="9B145455-4F84-9D14-A5B9-38601781C12D">
@@ -350,45 +348,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="EI_MissileLauncher" id="50B9B71B-3B19-95C3-B771-F11FC048678C">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>F0F80872-277F-CEC2-C47D-F0FF35C258F6</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<defaultValue>0</defaultValue>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="EI_IonCannon" id="9BDD16F1-6C34-A08F-FEAC-CB6DC9A41128">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>92DBE9AD-E9DF-F915-435A-AE458D386A47</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<defaultValue>0</defaultValue>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="EI_PlasmaCannon" id="D4475414-FAB8-ACD1-3301-04C4B18AF0C8">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>9DCFA612-7B77-0DEB-24C9-24B4E8F60451</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<defaultValue>0</defaultValue>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="EF_LightHunter" id="ACDFC4E1-9DC5-4FDA-1FB2-B3813A7D12BF">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
@@ -432,45 +391,6 @@
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>24E4399F-B11D-5900-F2AF-19A44ED3DA4F</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<defaultValue>0</defaultValue>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="EF_MissileLauncher" id="757827EB-4052-3930-0941-2E3000D54F1A">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>3924A12D-BB88-C061-8047-3B077D2C9E17</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<defaultValue>0</defaultValue>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="EF_IonCannon" id="50F516E2-4B70-9186-3B40-10B251EA8F50">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>70252AEC-D0C9-BC63-82CB-1179E19BDB31</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<defaultValue>0</defaultValue>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="EF_PlasmaCannon" id="575AC5C3-E5BB-D436-1D92-DDF441A432F0">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>EED0D885-23BB-3581-1166-CC8DE66C1AB4</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>

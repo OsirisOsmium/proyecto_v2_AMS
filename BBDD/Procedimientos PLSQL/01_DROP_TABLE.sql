@@ -23,7 +23,7 @@ drop_User VARCHAR(2000) := 'DROP TABLE "USER"';
 drop_Ship VARCHAR(2000) := 'DROP TABLE ship';
 
 BEGIN
-/*Comprovamos si cada una de las 6 tablas existe*/
+/*Comprovamos si cada una de las tablas existe*/
 
 SELECT COUNT(table_name) INTO exists_Battle
 FROM user_tables
