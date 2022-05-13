@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 
 public class Planet {
@@ -15,8 +17,21 @@ public class Planet {
 	public Planet() {
 		this.technologyDefense=1;
 		this.technologyAtack=1;
-		this.metal=1000000000;
+		this.metal=100000000;
 		this.deuterium=1000000000;
+		Defense ship=new MissileLauncher();
+		this.upgradeDefenseTechnologyDeuteriumCost=ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
+		this.upgradeAttackTechnologyDeuteriumCost=ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_ATTACK_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
+		
+		for (int i=0;i<7;i++) {
+            this.army[i]= new ArrayList<MilitaryUnit>();
+        }
+	}
+	public Planet(int metal,int deuterium) {
+		this.technologyDefense=1;
+		this.technologyAtack=1;
+		this.metal=metal;
+		this.deuterium=deuterium;
 		Defense ship=new MissileLauncher();
 		this.upgradeDefenseTechnologyDeuteriumCost=ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
 		this.upgradeAttackTechnologyDeuteriumCost=ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_ATTACK_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
@@ -136,7 +151,12 @@ public class Planet {
 			this.technologyDefense=this.technologyDefense+1;
 		}
 		else {
-			new ResourceException();
+			try {
+				throw new ResourceException(2);
+				}
+				catch(ResourceException ex) {
+					System.out.println(ex.getMessage());
+				}
 		}
 	}
 	
@@ -148,7 +168,13 @@ public class Planet {
 			this.technologyAtack=this.technologyAtack+1;
 		}
 		else {
-			new ResourceException();
+			try {
+			throw new ResourceException(1);
+			}
+			catch(ResourceException ex) {
+				System.out.println(ex.getMessage());
+			}
+			
 		}
 	}
 	
@@ -199,7 +225,7 @@ public class Planet {
 			this.deuterium=this.deuterium-ship.DEUTERIUM_COST_ARMOREDSHIP*n;
 			this.metal=this.metal-ship.METAL_COST_ARMOREDSHIP*n;
 			for(int i=0;i<n;i++) {
-				this.army[2].add(new ArmoredShip(armadura,ataque));
+				this.army[3].add(new ArmoredShip(armadura,ataque));
 			}
 		}
 	}

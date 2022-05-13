@@ -1,8 +1,8 @@
-package Projecto2;
+
 
 public interface MilitaryUnit {
 	abstract int attack();
-	abstract void tekeDamage(int receivedDamage);
+	abstract void takeDamage(int receivedDamage);
 	abstract int getActualArmor();
 	abstract int getMetalCost();
 	abstract int getDeuteriumCost();

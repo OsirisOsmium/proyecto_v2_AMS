@@ -1,4 +1,4 @@
-package Projecto2;
+
 
 public class BattleShip extends Ship{
 
