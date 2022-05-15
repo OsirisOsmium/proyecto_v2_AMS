@@ -17,6 +17,8 @@ nivelAtaque IN planet.current_LevelAttack%TYPE,
 coste_SubirAtaque IN planet.cost_DefenseUp%TYPE)
 
 IS
+max_Id NUMBER(6) := 0;
+id_Entrada_Insertar NUMBER(6);
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
@@ -42,8 +44,20 @@ IF idUser_Encontrada =0 THEN
 RAISE excepcion_IdUser;
 END IF;
 
+IF id_Entrada IS NULL THEN
+SELECT MAX(id_planet) INTO max_Id
+FROM PLANET;
+IF max_Id IS NULL THEN
+id_Entrada_Insertar := 1;
+ELSE
+id_Entrada_Insertar := max_Id +1;
+END IF;
+ELSE
+id_Entrada_Insertar := id_Entrada;
+END IF;
+
 insert_Script := 'INSERT INTO PLANET
-VALUES('''||id_Entrada||''', 
+VALUES('''||id_Entrada_Insertar||''', 
 '''||id_Usuario||''', 
 '''||nombre||''', 
 '''||metal||''', 
@@ -64,7 +78,7 @@ VALUES('''||id_Entrada||''',
 
 execute immediate insert_Script;
 DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla PLANET');
-DBMS_OUTPUT.PUT_LINE('ID_Usuario: '||id_Entrada);
+DBMS_OUTPUT.PUT_LINE('ID_Usuario: '||id_Entrada_Insertar);
 DBMS_OUTPUT.PUT_LINE('Nombre Planeta: '||nombre);
 DBMS_OUTPUT.PUT_LINE(': '||metal);
 DBMS_OUTPUT.PUT_LINE(': '||cristal);

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2E3880DD-343F-6228-385D-852520AE0EE9" name="Step">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-14 21:01:38 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Step" id="0BDFF482-DF1C-9D14-0797-520069AAA8F0">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:08:10 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Battle_ID_Battle" id="10A2B0E4-E090-D19C-4F04-A0FDCA69AB48">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>0E49FDED-5B73-3E4B-7FC3-F8773967333D</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41FD1447-63F6-08AB-99B2-3FB527D85DD9" referredColumn="FFD3548E-88A2-D657-BDAF-DAF1CA7C6B42"/>
+</associations>
+</Column>
+<Column name="Order_Position" id="D43069DC-59BF-E74D-C27F-1A38A6D205C5">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:08:10 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="C7BB135B-A9D5-D4DC-CD75-D5E09985476E">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:08:10 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2FB10EF7-8660-E3A2-4227-828F26B2BC78" name="Setps_Battle_PK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>CA73FD11-6096-E2F7-DB1A-128D117AC910</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BDFF482-DF1C-9D14-0797-520069AAA8F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="531EE089-884F-4280-E07A-167D2DE6BE1B" name="Setps_Battle_Battle_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>410EC851-6632-58BE-9C3E-900554E48C42</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10A2B0E4-E090-D19C-4F04-A0FDCA69AB48"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

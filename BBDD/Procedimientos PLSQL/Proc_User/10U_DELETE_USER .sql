@@ -25,11 +25,11 @@ COMMIT;
 EXCEPTION
 
 WHEN excepcion_Id THEN
-DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs repetidas');
+DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID en la base de datos');
 ROLLBACK;
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_USER:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso DELETE_USER:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 ROLLBACK;
 

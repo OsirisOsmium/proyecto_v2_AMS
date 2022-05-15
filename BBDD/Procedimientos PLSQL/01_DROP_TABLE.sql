@@ -10,6 +10,7 @@ exists_Planet NUMBER(1);
 exists_Ship NUMBER(1);
 exists_Units NUMBER(1);
 exists_User NUMBER(1);
+exists_Step NUMBER(1);
 
 /*Varchars con las sentencias de DDL para borrar o crear tablas*/
 
@@ -21,6 +22,7 @@ drop_Enemy VARCHAR(2000) := 'DROP TABLE enemy';
 drop_Planet VARCHAR(2000) := 'DROP TABLE planet';
 drop_User VARCHAR(2000) := 'DROP TABLE "USER"';
 drop_Ship VARCHAR(2000) := 'DROP TABLE ship';
+drop_Step VARCHAR(2000) := 'DROP TABLE step';
 
 BEGIN
 /*Comprovamos si cada una de las tablas existe*/
@@ -59,10 +61,9 @@ WHERE table_name = 'USER';
 
 /*Si la tabla existe, se borra, en caso de no existir no se intenta hacer un borrado que dara el error de que no existe la tabla*/
 
-IF exists_Battle = 1 THEN
-execute immediate drop_Battle;
-DBMS_OUTPUT.PUT_LINE('Tabla BATTLE eliminada');
-END IF;
+SELECT COUNT(table_name) INTO exists_Step
+FROM user_tables
+WHERE table_name = 'STEP';
 
 IF exists_Constants = 1 THEN
 execute immediate drop_Constants;
@@ -79,6 +80,21 @@ execute immediate drop_Defense;
 DBMS_OUTPUT.PUT_LINE('Tabla DEFENSE eliminada');
 END IF;
 
+IF exists_Ship = 1 THEN
+execute immediate drop_Ship;
+DBMS_OUTPUT.PUT_LINE('Tabla SHIP eliminada');
+END IF;
+
+IF exists_Step = 1 THEN
+execute immediate drop_Step;
+DBMS_OUTPUT.PUT_LINE('Tabla STEP eliminada');
+END IF;
+
+IF exists_Battle = 1 THEN
+execute immediate drop_Battle;
+DBMS_OUTPUT.PUT_LINE('Tabla BATTLE eliminada');
+END IF;
+
 IF exists_Enemy = 1 THEN
 execute immediate drop_Enemy;
 DBMS_OUTPUT.PUT_LINE('Tabla ENEMY eliminada');
@@ -87,11 +103,6 @@ END IF;
 IF exists_Planet = 1 THEN
 execute immediate drop_Planet;
 DBMS_OUTPUT.PUT_LINE('Tabla PLANET eliminada');
-END IF;
-
-IF exists_Ship = 1 THEN
-execute immediate drop_Ship;
-DBMS_OUTPUT.PUT_LINE('Tabla SHIP eliminada');
 END IF;
 
 IF exists_User = 1 THEN
@@ -112,7 +123,6 @@ END;
 
 
 /
-
 /*
 SET SERVEROUTPUT ON
 

@@ -65,11 +65,10 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>4000</dataTypeSize>
-<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<logicalDatatype>LogDes-1768A872-F385-FDBA-D95E-0CB63F5908E2@LOGDT10045</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID Winner" id="CE6A23F1-B9C0-7217-3F89-BB339C292C48">
+<Attribute name="user Winner" id="CE6A23F1-B9C0-7217-3F89-BB339C292C48">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-08 11:17:16 UTC</createdTime>
 <generatorID>388BF1FD-2C84-1A89-C6C2-205593EB4C1E</generatorID>
@@ -509,6 +508,19 @@
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
 <referedAttribute>64DF48F0-A271-B873-75B5-ADED0517DEA5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="enemy Winner" id="236625EA-3A97-721A-DF05-134C4B9AD08B">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-14 21:03:39 UTC</createdTime>
+<generatorID>C4305175-B4D0-4094-E395-85643D55A1FB</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

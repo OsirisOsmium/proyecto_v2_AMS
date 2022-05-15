@@ -3,7 +3,6 @@ id_Entrada IN battle.ID_Battle%TYPE,
 usuario IN battle.user_ID_User%TYPE,
 enemigo IN battle.enemy_ID_Enemy%TYPE,
 planeta IN battle.planet_ID_planet%TYPE,
-reporte_Pasos IN battle.report_StepByStep%TYPE,
 ganador_Usuario IN battle.User_Winner%TYPE,
 ganador_Enemigo IN battle.enemy_Winner%TYPE,
 residuos_Metal IN battle.waste_Metal%TYPE,
@@ -37,6 +36,8 @@ EF_Acorazados IN battle.EF_ArmoredShip%TYPE
 )
 
 IS
+max_Id NUMBER(6) := 0;
+id_Entrada_Insertar NUMBER(6);
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
@@ -51,12 +52,23 @@ IF id_Encontrada =1 THEN
 RAISE excepcion_Id;
 END IF;
 
+IF id_Entrada IS NULL THEN
+SELECT MAX(id_battle) INTO max_Id
+FROM BATTLE;
+IF max_Id IS NULL THEN
+id_Entrada_Insertar := 1;
+ELSE
+id_Entrada_Insertar := max_Id +1;
+END IF;
+ELSE
+id_Entrada_Insertar := id_Entrada;
+END IF;
+
 insert_Script := 'INSERT INTO BATTLE
-VALUES('''||id_Entrada||''',
+VALUES('''||id_Entrada_Insertar||''',
 '''||usuario||''',
 '''||enemigo||''',
 '''||planeta||''',
-'''||reporte_Pasos||''',
 '''||ganador_Usuario||''',
 '''||ganador_Enemigo||''',
 '''||residuos_Metal||''',
@@ -91,11 +103,10 @@ VALUES('''||id_Entrada||''',
 
 execute immediate insert_script;
 
-DBMS_OUTPUT.PUT_LINE('Insertada la nueva id '||id_Entrada||' en la tabla BATTLE con estos valores:');
+DBMS_OUTPUT.PUT_LINE('Insertada la nueva id '||id_Entrada_Insertar||' en la tabla BATTLE con estos valores:');
 DBMS_OUTPUT.PUT_LINE('Usuario Participante: '||usuario);
 DBMS_OUTPUT.PUT_LINE('Enemigo Participante: '||enemigo);
 DBMS_OUTPUT.PUT_LINE('Planeta: '||planeta);
-DBMS_OUTPUT.PUT_LINE('Reporte Batalla: '||reporte_Pasos);
 DBMS_OUTPUT.PUT_LINE('Usuario es Ganador: '||ganador_Usuario);
 DBMS_OUTPUT.PUT_LINE('Enemigo es Ganador: '||ganador_Usuario);
 DBMS_OUTPUT.PUT_LINE('Residuos de Metal: '||residuos_Metal);

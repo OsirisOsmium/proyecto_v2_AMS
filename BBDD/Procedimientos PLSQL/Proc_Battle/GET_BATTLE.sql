@@ -3,7 +3,6 @@ id_Entrada IN battle.ID_Battle%TYPE,
 usuario OUT battle.user_ID_User%TYPE,
 enemigo OUT battle.enemy_ID_Enemy%TYPE,
 planeta OUT battle.planet_ID_planet%TYPE,
-reporte_Pasos OUT battle.report_StepByStep%TYPE,
 ganador_Usuario OUT battle.User_Winner%TYPE,
 ganador_Enemigo OUT battle.enemy_Winner%TYPE,
 residuos_Metal OUT battle.waste_Metal%TYPE,
@@ -49,13 +48,13 @@ IF id_Encontrada =0 THEN
 RAISE excepcion_Id;
 END IF;
 
-SELECT user_ID_user, enemy_ID_enemy, planet_ID_planet, report_StepByStep, user_Winner, enemy_Winner, waste_Metal, waste_Deuterium,
+SELECT user_ID_user, enemy_ID_enemy, planet_ID_planet, user_Winner, enemy_Winner, waste_Metal, waste_Deuterium,
 UI_LightHunter, UI_HeavyHunter, UI_BattleShip, UI_ArmoredShip, UI_MissileLauncher, UI_IonCannon, UI_PlasmaCannon, 
 UF_LightHunter, UF_HeavyHunter, UF_BattleShip, UF_ArmoredShip, UF_MissileLauncher, UF_IonCannon, UF_PlasmaCannon,
 EI_LightHunter, EI_HeavyHunter, EI_BattleShip, EI_ArmoredShip, 
 EF_LightHunter, EF_HeavyHunter, EF_BattleShip, EF_ArmoredShip 
 INTO
-usuario, enemigo, planeta, reporte_Pasos, ganador_Usuario, ganador_Enemigo, residuos_Metal, residuos_Deuterio,
+usuario, enemigo, planeta, ganador_Usuario, ganador_Enemigo, residuos_Metal, residuos_Deuterio,
 UI_CazadoresL, UI_CazadoresH, UI_NavesBatalla, UI_Acorazados, UI_Lanzamisiles, UI_CañonIones, UI_CañonPlasma,
 UF_CazadoresL, UF_CazadoresH, UF_NavesBatalla, UF_Acorazados, UF_Lanzamisiles, UF_CañonIones, UF_CañonPlasma,
 EI_CazadoresL, EI_CazadoresH, EI_NavesBatalla, EI_Acorazados, 

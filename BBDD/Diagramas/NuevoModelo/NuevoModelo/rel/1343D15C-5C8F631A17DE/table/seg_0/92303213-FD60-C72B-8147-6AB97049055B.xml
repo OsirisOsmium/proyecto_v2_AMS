@@ -64,16 +64,6 @@
 <colAssociation fkAssociation="7EF1888F-6E77-ECEC-0A3F-CC7FC4012CB4" referredColumn="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
 </associations>
 </Column>
-<Column name="report_StepbyStep" id="0B095D5F-044F-F3F8-DBBE-3F117407E626">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 17:38:24 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LogDes-1768A872-F385-FDBA-D95E-0CB63F5908E2@LOGDT10045</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="user_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 17:42:48 UTC</createdTime>

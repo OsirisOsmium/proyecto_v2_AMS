@@ -224,6 +224,28 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="technology_Defense_ID_LevelDef" id="D227C431-B434-8E38-D281-462F6D0C68C4">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>60FF311B-2D3E-741C-93FE-313EB50C4F39</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="technology_Attack_ID_LevelAt" id="AF7F53C1-7391-0EB3-4E17-23BE3A7B7D57">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>149FBFEF-D90B-6A72-B729-2289D8253530</generatorID>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="096E386B-3EEC-A21B-D963-3091095CFED3" name="Planet_PK">
@@ -249,19 +271,9 @@
 <colUsage columnID="8330722D-B429-0F00-24A2-E39992D94276"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D57FBF71-6B18-91E7-8CF5-39B76DA449DF" name="Planet_User_FK">
+<ind_PK_UK id="0287F668-19D3-4AF2-3F20-D00E35D15F91" name="Planet_User_FK">
 <createdBy>alumne</createdBy>
-<createdTime>2022-05-11 15:12:11 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="349A409F-50A6-43F6-A0AF-74ABD89387F8" name="Planet_User_FK">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-12 06:41:45 UTC</createdTime>
+<createdTime>2022-05-15 15:07:03 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>

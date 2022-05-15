@@ -3,7 +3,6 @@ id_Entrada IN battle.ID_Battle%TYPE,
 usuario IN battle.user_ID_User%TYPE,
 enemigo IN battle.enemy_ID_Enemy%TYPE,
 planeta IN battle.planet_ID_planet%TYPE,
-reporte_Pasos IN battle.report_StepByStep%TYPE,
 ganador_Usuario IN battle.User_Winner%TYPE,
 ganador_Enemigo IN battle.enemy_Winner%TYPE,
 residuos_Metal IN battle.waste_Metal%TYPE,
@@ -42,7 +41,6 @@ id_Entrada_Insertar  battle.ID_Battle%TYPE;
 usuario_Insertar  battle.user_ID_User%TYPE;
 enemigo_Insertar  battle.enemy_ID_Enemy%TYPE;
 planeta_Insertar  battle.planet_ID_planet%TYPE;
-reporte_Pasos_Insertar  battle.report_StepByStep%TYPE;
 ganador_Usuario_Insertar  battle.user_Winner%TYPE;
 ganador_Enemigo_Insertar  battle.enemy_Winner%TYPE;
 residuos_Metal_Insertar  battle.waste_Metal%TYPE;
@@ -110,14 +108,6 @@ FROM BATTLE
 WHERE id_Battle = id_Entrada;
 ELSE
 planeta_Insertar := planeta;
-END IF;
-
-IF reporte_Pasos IS NULL THEN
-SELECT report_StepByStep INTO reporte_Pasos_Insertar
-FROM BATTLE
-WHERE id_Battle = id_Entrada;
-ELSE
-reporte_Pasos_Insertar := reporte_Pasos;
 END IF;
 
 IF ganador_Usuario IS NULL THEN
@@ -332,7 +322,6 @@ update_Script := 'UPDATE BATTLE
 SET user_id_user = '''||usuario_Insertar||''',
 SET enemy_id_enemy = '''||enemigo_Insertar||''',
 SET planet_id_planet = '''||planeta_Insertar||''',
-SET report_StebByStep = '''||reporte_Pasos_Insertar||''',
 SET winner_User = '''||ganador_Usuario_Insertar||''',
 SET winner_Enemy = '''||ganador_Enemigo_Insertar||''',
 SET waste_Metal = '''||residuos_Metal_Insertar||''',
@@ -371,7 +360,6 @@ DBMS_OUTPUT.PUT_LINE('Actualizada la entrada '||id_Entrada||' de la base de dato
 DBMS_OUTPUT.PUT_LINE('Usuario: '||usuario_Insertar);
 DBMS_OUTPUT.PUT_LINE('Enemigo: '||enemigo_Insertar);
 DBMS_OUTPUT.PUT_LINE('Planeta: '||planeta_Insertar);
-DBMS_OUTPUT.PUT_LINE('Reporte: '||reporte_Pasos_Insertar);
 DBMS_OUTPUT.PUT_LINE('Usuario ha Ganado: '||ganador_Usuario_Insertar);
 DBMS_OUTPUT.PUT_LINE('Enemigo ha Ganado: '||ganador_Enemigo_Insertar);
 DBMS_OUTPUT.PUT_LINE('Residuos Metal: '||residuos_Metal_Insertar);

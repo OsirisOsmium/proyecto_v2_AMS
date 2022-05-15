@@ -11,6 +11,8 @@ nivelDefensa IN planet.current_LevelDefense%TYPE,
 nivelAtaque IN planet.current_LevelAttack%TYPE)
 
 IS
+max_Id NUMBER(6) := 0;
+id_Entrada_Insertar NUMBER(6);
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
@@ -25,8 +27,20 @@ IF id_Encontrada =1 THEN
 RAISE excepcion_Id;
 END IF;
 
+IF id_Entrada IS NULL THEN
+SELECT MAX(id_enemy) INTO max_Id
+FROM ENEMY;
+IF max_Id IS NULL THEN
+id_Entrada_Insertar := 1;
+ELSE
+id_Entrada_Insertar := max_Id +1;
+END IF;
+ELSE
+id_Entrada_Insertar := id_Entrada;
+END IF;
+
 insert_Script := 'INSERT INTO ENEMY
-VALUES('''||id_Entrada||''', 
+VALUES('''||id_Entrada_Insertar||''', 
 '''||nombre||''', 
 '''||metal||''', 
 '''||cristal||''',
@@ -40,7 +54,7 @@ VALUES('''||id_Entrada||''',
 ';
 
 DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla ENEMY');
-DBMS_OUTPUT.PUT_LINE('ID Constante: '||id_Entrada);
+DBMS_OUTPUT.PUT_LINE('ID Constante: '||id_Entrada_Insertar);
 DBMS_OUTPUT.PUT_LINE(': '||nombre);
 DBMS_OUTPUT.PUT_LINE(': '||cristal);
 DBMS_OUTPUT.PUT_LINE(': '||deuterio);

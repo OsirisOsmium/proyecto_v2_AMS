@@ -7,6 +7,8 @@ enemigo IN units.enemy_ID_Enemy%TYPE,
 planeta IN units.planet_ID_planet%TYPE)
 
 IS
+max_Id NUMBER(6) := 0;
+id_Entrada_Insertar NUMBER(6);
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
@@ -19,6 +21,18 @@ WHERE id_Unit = id_Entrada;
 
 IF id_Encontrada =1 THEN 
 RAISE excepcion_Id;
+END IF;
+
+IF id_Entrada IS NULL THEN
+SELECT MAX(id_unit) INTO max_Id
+FROM UNITS;
+IF max_Id IS NULL THEN
+id_Entrada_Insertar := 1;
+ELSE
+id_Entrada_Insertar := max_Id +1;
+END IF;
+ELSE
+id_Entrada_Insertar := id_Entrada;
 END IF;
 
 insert_Script := 'INSERT INTO UNITS

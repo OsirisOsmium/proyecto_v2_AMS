@@ -57,7 +57,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID Defense" id="5BC86D19-13A7-0B12-A90F-081B5A2233FB">
+<Attribute name="Defense ID Defense" id="5BC86D19-13A7-0B12-A90F-081B5A2233FB">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-10 19:13:31 UTC</createdTime>
 <generatorID>CBFEF3A3-4C2E-A288-55C6-CE933435667E</generatorID>
@@ -65,13 +65,14 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>B6AA93E1-33B4-4E0E-4A83-1DCBD002CFC4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID Ship" id="BFA732D8-8AC7-657F-D38B-ED32C1CF0DDB">
+<Attribute name="Ship ID Ship" id="BFA732D8-8AC7-657F-D38B-ED32C1CF0DDB">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-10 19:13:35 UTC</createdTime>
 <generatorID>21B1CD13-AE32-411F-6852-0B8C1A788F04</generatorID>
@@ -79,13 +80,14 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>0842C1ED-CA7F-35CC-B89B-F8A84FB7C5BD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID Enemy" id="D99615DA-679A-8076-B3DD-D79C7F24D3BA">
+<Attribute name="Enemy ID Enemy" id="D99615DA-679A-8076-B3DD-D79C7F24D3BA">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-10 19:13:40 UTC</createdTime>
 <generatorID>05999AD3-E329-1801-7F3C-5BC216F5A790</generatorID>
@@ -93,13 +95,14 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>CCDA6FDD-ADA3-EB30-A054-D0F8522E44E8</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID Planet" id="8DBC2B64-1767-89AD-A51C-55769916CF4A">
+<Attribute name="Planet ID Planet" id="8DBC2B64-1767-89AD-A51C-55769916CF4A">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-10 19:13:56 UTC</createdTime>
 <generatorID>30CC493C-E43F-2E50-F1FD-744998217615</generatorID>
@@ -107,6 +110,7 @@
 <engineerTo>
 <item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>64DF48F0-A271-B873-75B5-ADED0517DEA5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -126,10 +130,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>A5C64ACD-87B9-F552-1316-CD30AA217F74</attributeRef>
-<attributeRef>5BC86D19-13A7-0B12-A90F-081B5A2233FB</attributeRef>
-<attributeRef>BFA732D8-8AC7-657F-D38B-ED32C1CF0DDB</attributeRef>
-<attributeRef>D99615DA-679A-8076-B3DD-D79C7F24D3BA</attributeRef>
-<attributeRef>8DBC2B64-1767-89AD-A51C-55769916CF4A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

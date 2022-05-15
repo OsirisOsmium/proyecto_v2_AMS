@@ -13,7 +13,7 @@ lanzamisiles OUT planet.num_MissileLauncher%TYPE,
 cañon_Iones OUT planet.num_IonCannon%TYPE, 
 cañon_Plasma OUT planet.num_PlasmaCannon%TYPE,
 nivelDefensa OUT planet.current_LevelDefense%TYPe, 
-coste_SubirDefensa OUT planet.cost_DeffenseUp%TYPE,
+coste_SubirDefensa OUT planet.cost_DefenseUp%TYPE,
 nivelAtaque OUT planet.current_LevelAttack%TYPE, 
 coste_SubirAtaque OUT planet.cost_AttackUp%TYPE)
 
