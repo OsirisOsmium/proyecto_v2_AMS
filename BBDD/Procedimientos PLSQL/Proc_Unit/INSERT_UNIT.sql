@@ -12,6 +12,11 @@ id_Entrada_Insertar NUMBER(6);
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
+excepcion_DefensaNave1 EXCEPTION;
+excepcion_DefensaNave2 EXCEPTION;
+excepcion_planetaEnemigo1 EXCEPTION;
+excepcion_planetaEnemigo2 EXCEPTION;
+
 insert_Script VARCHAR(1000);
 
 BEGIN
@@ -33,6 +38,22 @@ id_Entrada_Insertar := max_Id +1;
 END IF;
 ELSE
 id_Entrada_Insertar := id_Entrada;
+END IF;
+
+IF unidadDefensiva IS NOT NULL AND unidadNave IS NOT NULL THEN
+RAISE excepcion_DefensaNave1;
+END IF;
+
+IF unidadDefensiva IS NULL AND unidadNave IS NULL THEN
+RAISE excepcion_DefensaNave2;
+END IF;
+
+IF planeta IS NOT NULL AND enemigo IS NOT NULL THEN
+RAISE excepcion_planetaEnemigo1;
+END IF;
+
+IF planeta IS NULL AND enemigo IS NULL THEN
+RAISE excepcion_planetaEnemigo2;
 END IF;
 
 insert_Script := 'INSERT INTO UNITS
@@ -62,6 +83,24 @@ EXCEPTION
 WHEN excepcion_Id THEN
 DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs repetidas');
 ROLLBACK;
+
+WHEN excepcion_DefensaNave1 THEN
+DBMS_OUTPUT.PUT_LINE('La unidad no puede tener simultaneamente una id de nave y una de defensa');
+ROLLBACK;
+
+WHEN excepcion_DefensaNave2 THEN
+DBMS_OUTPUT.PUT_LINE('La unidad debe tener al menos un id de defensa o una de nave');
+ROLLBACK;
+
+WHEN excepcion_planetaEnemigo1 THEN
+DBMS_OUTPUT.PUT_LINE('La unidad no puede pertenecer simultaneamente a un planeta y un enemigo');
+ROLLBACK;
+
+WHEN excepcion_planetaEnemigo2 THEN
+DBMS_OUTPUT.PUT_LINE('La unidad debe pertenecer al menos a un planeta o un enemigo');
+ROLLBACK;
+
+
 
 WHEN OTHERS THEN
 DBMS_OUTPUT.PUT_LINE('Error en el proceso INSERT_UNIT:');
