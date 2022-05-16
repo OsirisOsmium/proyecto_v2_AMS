@@ -9,7 +9,7 @@ exists_Enemy NUMBER(1);
 exists_Planet NUMBER(1);
 exists_Ship NUMBER(1);
 exists_Units NUMBER(1);
-exists_User NUMBER(1);
+exists_player NUMBER(1);
 exists_Step NUMBER(1);
 
 /*Varchars con las sentencias de DDL para borrar o crear tablas*/
@@ -20,7 +20,7 @@ drop_Units VARCHAR(2000) := 'DROP TABLE units';
 drop_Defense VARCHAR(2000) := 'DROP TABLE defense';
 drop_Enemy VARCHAR(2000) := 'DROP TABLE enemy';
 drop_Planet VARCHAR(2000) := 'DROP TABLE planet';
-drop_User VARCHAR(2000) := 'DROP TABLE "USER"';
+drop_player VARCHAR(2000) := 'DROP TABLE PLAYER';
 drop_Ship VARCHAR(2000) := 'DROP TABLE ship';
 drop_Step VARCHAR(2000) := 'DROP TABLE step';
 
@@ -55,9 +55,9 @@ SELECT COUNT(table_name) INTO exists_Units
 FROM user_tables
 WHERE table_name = 'UNITS';
 
-SELECT COUNT(table_name) INTO exists_User
+SELECT COUNT(table_name) INTO exists_player
 FROM user_tables
-WHERE table_name = 'USER';
+WHERE table_name = 'PLAYER';
 
 /*Si la tabla existe, se borra, en caso de no existir no se intenta hacer un borrado que dara el error de que no existe la tabla*/
 
@@ -105,9 +105,9 @@ execute immediate drop_Planet;
 DBMS_OUTPUT.PUT_LINE('Tabla PLANET eliminada');
 END IF;
 
-IF exists_User = 1 THEN
-execute immediate drop_User;
-DBMS_OUTPUT.PUT_LINE('Tabla USER eliminada');
+IF exists_player = 1 THEN
+execute immediate drop_player;
+DBMS_OUTPUT.PUT_LINE('Tabla player eliminada');
 END IF;
 
 COMMIT;
@@ -123,7 +123,7 @@ END;
 
 
 /
-/*
+
 SET SERVEROUTPUT ON
 
 BEGIN
@@ -131,4 +131,3 @@ BEGIN
 DROP_TABLE;
 
 END;
-*/

@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE INSERT_PLANET(id_Entrada IN planet.id_planet%TYPE, 
+CREATE OR REPLACE PROCEDURE INSERT_PLANET( 
 id_usuario IN planet.user_id_user%TYPE, 
 nombre IN planet.planet_Name%TYPE, 
 metal IN planet.quantity_metal%TYPE, 
@@ -19,8 +19,6 @@ coste_SubirAtaque IN planet.cost_DefenseUp%TYPE)
 IS
 max_Id NUMBER(6) := 0;
 id_Entrada_Insertar NUMBER(6);
-id_Encontrada NUMBER(1);
-excepcion_Id EXCEPTION;
 
 idUser_Encontrada NUMBER(1);
 excepcion_IdUser EXCEPTION;
@@ -28,13 +26,6 @@ excepcion_IdUser EXCEPTION;
 insert_Script VARCHAR(1000);
 
 BEGIN
-SELECT COUNT(id_Planet) INTO id_Encontrada
-FROM PLANET
-WHERE id_Planet = id_Entrada;
-
-IF id_Encontrada =1 THEN 
-RAISE excepcion_Id;
-END IF;
 
 SELECT COUNT(id_User) INTO idUser_Encontrada
 FROM "USER"
@@ -44,16 +35,12 @@ IF idUser_Encontrada =0 THEN
 RAISE excepcion_IdUser;
 END IF;
 
-IF id_Entrada IS NULL THEN
 SELECT MAX(id_planet) INTO max_Id
 FROM PLANET;
 IF max_Id IS NULL THEN
 id_Entrada_Insertar := 1;
 ELSE
 id_Entrada_Insertar := max_Id +1;
-END IF;
-ELSE
-id_Entrada_Insertar := id_Entrada;
 END IF;
 
 insert_Script := 'INSERT INTO PLANET
@@ -97,10 +84,6 @@ DBMS_OUTPUT.PUT_LINE(': '||coste_SubirAtaque);
 COMMIT;
 
 EXCEPTION
-
-WHEN excepcion_Id THEN
-DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs repetidas');
-ROLLBACK;
 
 WHEN excepcion_IdUser THEN
 DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID de usuario en la base de datos y no se le puede asignar al planeta');

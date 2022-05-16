@@ -6,9 +6,7 @@ deuterio IN enemy.quantity_deuterium%TYPE,
 cazadores_L IN enemy.num_LightHunter%TYPE, 
 cazadores_H IN enemy.num_heavyHunter%TYPE, 
 naves_Batalla IN enemy.num_battleship%TYPE, 
-acorazados IN enemy.num_armoredShip%TYPE,
-nivelDefensa IN planet.current_LevelDefense%TYPE, 
-nivelAtaque IN planet.current_LevelAttack%TYPE)
+acorazados IN enemy.num_armoredShip%TYPE)
 
 IS
 nombre_Insertar enemy.name%TYPE; 
@@ -19,8 +17,6 @@ cazadores_L_Insertar enemy.num_LightHunter%TYPE;
 cazadores_H_Insertar enemy.num_heavyHunter%TYPE;
 naves_Batalla_Insertar enemy.num_battleship%TYPE;
 acorazados_Insertar enemy.num_armoredShip%TYPE;
-nivelDefensa_Insertar planet.current_LevelDefense%TYPE;
-nivelAtaque_Insertar planet.current_LevelAttack%TYPE;
 
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
@@ -124,9 +120,7 @@ SET quantity_Deuterium = '''||deuterio_insertar||''',
 SET num_LightHunter= '''||cazadores_L_Insertar||''',
 SET num_HeavyHunter = '''||cazadores_H_Insertar||''',
 SET num_BattleShip = '''||naves_Batalla_Insertar||''',
-SET num_ArmoredShip = '''||acorazados_Insertar||''',
-SET current_LevelDefense = '''||nivelDefensa_insertar||''',
-SET current_LevelAttack= '''||nivelAtaque_insertar||'''
+SET num_ArmoredShip = '''||acorazados_Insertar||'''
 WHERE id_user = '||id_Entrada||'';
 
 execute immediate update_Script;
@@ -140,8 +134,6 @@ DBMS_OUTPUT.PUT_LINE('Light Hunters: '||cazadores_L_Insertar);
 DBMS_OUTPUT.PUT_LINE('Heavy Hunters: '||cazadores_H_Insertar);
 DBMS_OUTPUT.PUT_LINE('BattleShips: '||naves_Batalla_Insertar);
 DBMS_OUTPUT.PUT_LINE('ArmoredShip: '||acorazados_Insertar);
-DBMS_OUTPUT.PUT_LINE('Nivel Tecnologico Defensa:'||nivelDefensa_insertar);
-DBMS_OUTPUT.PUT_LINE('Nivel Tecnologico Ataque'||nivelAtaque_insertar);
 
 COMMIT;
 

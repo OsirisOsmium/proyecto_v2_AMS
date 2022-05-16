@@ -6,9 +6,7 @@ deuterio OUT enemy.quantity_deuterium%TYPE,
 cazadores_L OUT enemy.num_LightHunter%TYPE, 
 cazadores_H OUT enemy.num_heavyHunter%TYPE, 
 naves_Batalla OUT enemy.num_battleship%TYPE, 
-acorazados OUT enemy.num_armoredShip%TYPE,
-nivelDefensa OUT planet.current_LevelDefense%TYPE, 
-nivelAtaque OUT planet.current_LevelAttack%TYPE)
+acorazados OUT enemy.num_armoredShip%TYPE)
 
 IS
 id_Encontrada NUMBER(1);

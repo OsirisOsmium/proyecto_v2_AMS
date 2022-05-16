@@ -9,8 +9,6 @@ planeta IN units.planet_ID_planet%TYPE)
 IS
 max_Id NUMBER(6) := 0;
 id_Entrada_Insertar NUMBER(6);
-id_Encontrada NUMBER(1);
-excepcion_Id EXCEPTION;
 
 excepcion_DefensaNave1 EXCEPTION;
 excepcion_DefensaNave2 EXCEPTION;
@@ -20,24 +18,13 @@ excepcion_planetaEnemigo2 EXCEPTION;
 insert_Script VARCHAR(1000);
 
 BEGIN
-SELECT COUNT(id_unit) INTO id_Encontrada
-FROM UNITS
-WHERE id_Unit = id_Entrada;
 
-IF id_Encontrada =1 THEN 
-RAISE excepcion_Id;
-END IF;
-
-IF id_Entrada IS NULL THEN
 SELECT MAX(id_unit) INTO max_Id
 FROM UNITS;
 IF max_Id IS NULL THEN
 id_Entrada_Insertar := 1;
 ELSE
 id_Entrada_Insertar := max_Id +1;
-END IF;
-ELSE
-id_Entrada_Insertar := id_Entrada;
 END IF;
 
 IF unidadDefensiva IS NOT NULL AND unidadNave IS NOT NULL THEN
@@ -80,10 +67,6 @@ COMMIT;
 
 EXCEPTION
 
-WHEN excepcion_Id THEN
-DBMS_OUTPUT.PUT_LINE('Esta ID ya existe en la base de datos, no pueden haber IDs repetidas');
-ROLLBACK;
-
 WHEN excepcion_DefensaNave1 THEN
 DBMS_OUTPUT.PUT_LINE('La unidad no puede tener simultaneamente una id de nave y una de defensa');
 ROLLBACK;
@@ -99,7 +82,6 @@ ROLLBACK;
 WHEN excepcion_planetaEnemigo2 THEN
 DBMS_OUTPUT.PUT_LINE('La unidad debe pertenecer al menos a un planeta o un enemigo');
 ROLLBACK;
-
 
 
 WHEN OTHERS THEN

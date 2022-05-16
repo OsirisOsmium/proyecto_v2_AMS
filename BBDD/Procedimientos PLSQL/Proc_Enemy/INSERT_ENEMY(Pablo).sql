@@ -6,7 +6,9 @@ deuterio IN enemy.quantity_deuterium%TYPE,
 cazadores_L IN enemy.num_LightHunter%TYPE, 
 cazadores_H IN enemy.num_heavyHunter%TYPE, 
 naves_Batalla IN enemy.num_battleship%TYPE, 
-acorazados IN enemy.num_armoredShip%TYPE)
+acorazados IN enemy.num_armoredShip%TYPE,
+nivelDefensa IN planet.current_LevelDefense%TYPE, 
+nivelAtaque IN planet.current_LevelAttack%TYPE)
 
 IS
 max_Id NUMBER(6) := 0;
@@ -27,26 +29,30 @@ id_Entrada_Insertar := max_Id +1;
 END IF;
 
 insert_Script := 'INSERT INTO ENEMY
-VALUES('''||id_Entrada_Insertar||''', 
-'''||nombre||''', 
-'''||metal||''', 
-'''||cristal||''',
-'''||deuterio||''',
-'''||cazadores_L||''',
-'''||cazadores_H||''',
-'''||naves_Batalla||''',
-'''||acorazados||''')
+VALUES('''id_Entrada_Insertar''', 
+'''nombre''', 
+'''metal''', 
+'''cristal''',
+'''deuterio''',
+'''cazadores_L''',
+'''cazadores_H''',
+'''naves_Batalla''',
+'''acorazados''',
+'''nivelDefensa''',
+'''nivelAtaque''')
 ';
 execute Immediate insert_Script;
 DBMS_OUTPUT.PUT_LINE('Insertado un nuevo registro en la tabla ENEMY');
-DBMS_OUTPUT.PUT_LINE('ID Constante: '||id_Entrada_Insertar);
-DBMS_OUTPUT.PUT_LINE(': '||nombre);
-DBMS_OUTPUT.PUT_LINE(': '||cristal);
-DBMS_OUTPUT.PUT_LINE(': '||deuterio);
-DBMS_OUTPUT.PUT_LINE(': '||cazadores_L);
-DBMS_OUTPUT.PUT_LINE(': '||cazadores_H);
-DBMS_OUTPUT.PUT_LINE(': '||naves_Batalla);
-DBMS_OUTPUT.PUT_LINE(': '||acorazados);
+DBMS_OUTPUT.PUT_LINE('ID Constante: 'id_Entrada_Insertar);
+DBMS_OUTPUT.PUT_LINE(': 'nombre);
+DBMS_OUTPUT.PUT_LINE(': 'cristal);
+DBMS_OUTPUT.PUT_LINE(': 'deuterio);
+DBMS_OUTPUT.PUT_LINE(': 'cazadores_L);
+DBMS_OUTPUT.PUT_LINE(': 'cazadores_H);
+DBMS_OUTPUT.PUT_LINE(': 'naves_Batalla);
+DBMS_OUTPUT.PUT_LINE(': 'acorazados);
+DBMS_OUTPUT.PUT_LINE(': 'nivelDefensa);
+DBMS_OUTPUT.PUT_LINE(': 'nivelAtaque);
 
 COMMIT;
 
