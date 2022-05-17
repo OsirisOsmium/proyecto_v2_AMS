@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public interface Variables {
 	
 	// resources available to create the first enemy fleet
-	public final int DEUTERIUM_BASE_ENEMY_ARMY = conseguirValor("DEUTERIUM_BASE_ENEMY_ARMY");
+	public final int DEUTERIUM_BASE_ENEMY_ARMY = 26000;
 	public final int METAL_BASE_ENEMY_ARMY = 180000;
 	
 	// percentage increase of resources available to create enemy fleet
@@ -130,18 +130,10 @@ public interface Variables {
 	// percentage of waste that will be generated with respect to the cost of the units
 	public final int PERCENTATGE_WASTE = 70;
 	
-	public static int conseguirValor(String constante) {
+	public static int conseguirValor(String constante,Connection cn) {
 		 BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-	     int id = 1;
-	     Connection cn = null;
 	
 	     try {
-	         // Carga el driver de oracle
-	        DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
-	         
-	         // Conecta con la base de datos orcl con el usuario system y la contrase�a password
-	
-	         cn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.40.2:1521:orcl", "alumnoAMS17", "alumnoAMS17");
 	         
 	         // Llamada al procedimiento almacenado
 	         CallableStatement cst = cn.prepareCall("{call GET_CONSVAL_BYNAME (?,?)}");
