@@ -110,7 +110,7 @@ public class mainWindow extends JFrame implements ActionListener{
 		lblTitle.setBorder(null);
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		lblTitle.setBounds(170, 46, 403, 79);
+		lblTitle.setBounds(396, 8, 403, 79);
 		contentPane.add(lblTitle);
 		
 		JLabel lblBackground = new JLabel("");

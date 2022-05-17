@@ -57,7 +57,7 @@ RAISE excepcion_Id;
 END IF;
 
 SELECT COUNT(id_User) INTO idUser_Encontrada
-FROM "USER"
+FROM USR
 WHERE id_User = id_Usuario;
 
 IF idUser_Encontrada =0 THEN 

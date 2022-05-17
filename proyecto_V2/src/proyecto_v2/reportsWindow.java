@@ -14,16 +14,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
 
 public class reportsWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
+	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain, btn;
 	private JLabel lblNewLabel_2;
 
 	private String url="jdbc:oracle:thin:@localhost:1521:xe";
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
+	private JTextArea textArea;
 	/**
 	 * Launch the application.
 	 */
@@ -41,8 +43,6 @@ public class reportsWindow extends JFrame implements ActionListener{
 		setLocationRelativeTo(null);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
-		////////////////////////////
 				
 		btnViewPlanetStat = new JButton("View Stats");
 		btnViewPlanetStat.addActionListener(this);
@@ -94,7 +94,12 @@ public class reportsWindow extends JFrame implements ActionListener{
 		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
-		contentPane.add(lblNewLabel_2);//añadimos el label
+		contentPane.add(lblNewLabel_2);
+		
+		
+		
+		
+		
 		
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setBounds(0, 0, 809, 482);
@@ -102,6 +107,8 @@ public class reportsWindow extends JFrame implements ActionListener{
 		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblBackground. setIcon(icono4);//establece el ImageIcon en el label
 		contentPane.add(lblBackground);//añadimos el label
+		
+		
 		
 		////////////////////////////
 		
@@ -111,6 +118,8 @@ public class reportsWindow extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		connectionOracle conn=new connectionOracle(url, user, password);
 
+		
+		
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);
@@ -134,6 +143,7 @@ public class reportsWindow extends JFrame implements ActionListener{
 		if (btnReports==e.getSource()){
 			reportsWindow report=new reportsWindow();
 			this.setVisible(false);
+			//conn.viewStep();
 			report.setVisible(true);
 		}
 		

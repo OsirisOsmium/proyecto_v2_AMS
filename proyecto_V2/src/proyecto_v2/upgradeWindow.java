@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import planetWars.Planet;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
@@ -31,6 +34,10 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	private String url="jdbc:oracle:thin:@localhost:1521:xe";
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
+	
+	connectionOracle conn=new connectionOracle(url, user, password);
+	Planet classPlanet=new Planet();
+
 	
 
 	/**
@@ -202,13 +209,19 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		connectionOracle conn=new connectionOracle(url, user, password);
 
 		if (btnUpDef==e.getSource()) {
-			//connectionOracle conn=new connectionOracle(url, user, password);
-			
+			classPlanet.upgradeTechnologyDefense();
 		}
 		if (btnUpAtack==e.getSource()) {
-			//connectionOracle conn=new connectionOracle(url, user, password);
+			classPlanet.upgradeTechnologyAttack();
 
 		}
+		
+		
+		
+		
+		
+		
+		
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();
 			this.setVisible(false);

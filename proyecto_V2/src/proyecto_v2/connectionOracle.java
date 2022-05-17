@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -34,78 +35,35 @@ public class connectionOracle {
 			System.out.println("ERROR: El driver NO se ha cargado");
 		}
 	}
-	/*
-	public boolean LogIn(String username, String password) {
-		boolean validar=false;
-		String txt="";
-		try {			
-			String query = "select * from usr where username='"+username+"'";
-			Statement stmnt=conn.createStatement();
-			ResultSet rs=stmnt.executeQuery(query);
-			while (rs.next()) { 
-				String uss=rs.getString("username");
-				String pas=rs.getString("password");
-				
-//////////////////////se ha cambiado la validacion para deje asar falta revisar
-				
-				if (username!=uss && password!=pas) {
-					txt=txt+
-							"username: "+uss+
-							"\npassword: "+pas;
-					validar=false;
-					System.out.println("else false");
-				}
-				else {
-					txt=txt+
-							"username: "+uss+
-							"\npassword: "+pas;
-					validar=true;
-					System.out.println("else true");
-				}
-			}	
-		} 
-		catch (SQLException e1) {
-			e1.printStackTrace();
-			System.out.println("ERROR: El usuario no existe");
-			System.out.println("ERROR GENERAL: Ha havido algun error");
-		}
-		//return txt;
-		return validar;
-	}
-	*/
 	
 	public boolean LogIn(String username, String password) {
 		String txt="";
 		boolean action=true;
 			try {
-				CallableStatement cst = conn.prepareCall("{call GET_USER_ (?,?,?,?)}");
+				CallableStatement cst = conn.prepareCall("{call GET_PLAYER_ (?,?,?,?,?)}");
 				//int id = -1;
-				System.out.println("llama al procedimiento get_user_");
+				System.out.println("llama al procedimiento GET_PLAYER_");
 				//do {
 		            cst.setString(1, username);
 		            
 		            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
 		            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
 		            cst.registerOutParameter(4, java.sql.Types.INTEGER);
-	
+		            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+
 		            cst.execute();
 		            String us=cst.getString(2);
 		            String pas=cst.getString(3);
 		            String ides=cst.getString(4);
-		            
-		            /*if (username!="null" || username!="null"){
-		            	txt=txt+"nada insertado";
-		            	System.out.println("null");
-		            }*/
-		            
-		            
+		            String date=cst.getString(5);
+
 		            if (username.equals(us) && password.equals(pas)) {
 		            	txt=txt+
 								"username: "+us+
 								"\npassword: "+pas+
 								"\nId: "+ides;
 		            	action=true;
-		            	System.out.println("Correcto usuario");
+		            	System.out.println("Correcto usuario, "+us+" "+pas+" "+ides+" "+date);
 		            	System.out.println(action);
 
 		            }
@@ -114,7 +72,7 @@ public class connectionOracle {
 								"username: "+us+
 								"\npassword: "+pas;
 		            	action=false;
-		            	System.out.println("Mal usuario");
+		            	System.out.println("Mal usuario, "+us+" "+pas+" "+ides+" "+date);
 		            	System.out.println(action);
 
 		            }
@@ -134,24 +92,29 @@ public class connectionOracle {
 		boolean action=false;
 		
 		try {
-			CallableStatement cst = conn.prepareCall("{call INSERT_USER (?,?,?,?)}");
+			CallableStatement cst = conn.prepareCall("{call INSERT_PLAYER (?,?,?)}");
 			
 			System.out.println("llama al procedimiento insert_user");
-			cst.setString(1, "(select max(id_user) from usr)");
-            cst.setString(2,username);
-            cst.setString(3, password);
-            cst.setString(4, date); 
-            
+            cst.setString(1,username);
+            cst.setString(2, password); 
+            cst.setString(3, date);
+                        
             // Ejecuta el procedimiento almacenado
             cst.execute();
             
             action=true;
+            System.out.println(username+" "+password+" "+date);
+            System.out.println(action);
 		
 		}
 		catch (SQLException ex) {
+            action=false;
+            
+            System.out.println(username+" "+password+" "+date);
+            System.out.println(action);
+
 			System.out.println("ERROR: ha havido algun error");
             System.out.println("Error: " + ex.getMessage());
-            action=false;
         }
 		
 		return action;
@@ -342,6 +305,8 @@ public class connectionOracle {
         }
 	}
 	
+	
+	
 	public void viewUpgrade(int ids) {
 		try {
 			upgradeWindow up=new upgradeWindow();
@@ -391,38 +356,78 @@ public class connectionOracle {
         }
 	}
 	
-	
-	public void addTrops(String tipo, int cant, int numMetal, int numDeuterium) {
-		
-		if (tipo=="Light Hunter") {
-			tipo="NUM_LIGHTHUNTER";
-		}
-		else if(tipo=="Heavy Hunter") {
-			tipo="NUM_HEAVYHUNTER";
-		}
-		else if (tipo=="Battle Ship") {
-			tipo="NUM_BATTLESHIP";
-		}
-		else if (tipo=="Armored Ship") {
-			tipo="NUM_ARMOREDSHIP";
-		}
-		else if (tipo=="Missile Launcher") {
-			tipo="NUM_MISSILELAUNCHER";
-		}
-		else if (tipo=="Ion Cannon") {
-			tipo="NUM_IONCANNON";
-		}
-		else if (tipo=="PLasma Cannon") {
-			tipo="NUM_PLASMACANNON";
-		}
+	public String viewStep() {
+		String text="";
 		try {
-		       String sqlactualizar="UPDATE planet SET NUM_LIGHTHUNTER="+cant;
-		       PreparedStatement psta=conn.prepareStatement(sqlactualizar);
-		       psta.execute();
-		       JOptionPane.showMessageDialog(null, "Añadido correctamente");
-		    }catch (Exception e){
-		        System.out.println(e.getCause());
-
-		    }
+			String query="select * from step";
+			Statement stmnt =conn.createStatement();
+			ResultSet rs=stmnt.executeQuery(query);
+			while(rs.next()) {
+				
+				text=text+rs.getInt("id_ship")+"	"+rs.getString("name")+"		"+rs.getInt("basedamage");
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("No se ha connectado con SQL");
+		}
+		return text;
 	}
+	
+	
+	
+	
+	
+	
+	/*
+	public void addTrops(int id_user, int id_planet, String nom_planet, String tipo, int cant, int numMetal, int numDeuterium) {
+		try {
+			CallableStatement cst = conn.prepareCall("{call SET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			System.out.println("llama al procedimiento setPlanet");
+
+				cst.setInt(1, id_user);//id_user
+	            cst.setInt(2, id_planet);//i_planet
+	            cst.setString(3, nom_planet);//nom_planet
+	            if (tipo.equals("Light Hunter")) {
+	    			tipo="NUM_LIGHTHUNTER";
+	    			cst.setInt(7, cant);
+	    		}
+	    		else if(tipo.equals("Heavy Hunter")) {
+	    			tipo="NUM_HEAVYHUNTER";
+	    			cst.setInt(8, cant);
+	    		}
+	    		else if (tipo.equals("Battle Ship")) {
+	    			tipo="NUM_BATTLESHIP";
+	    			cst.setInt(9, cant);
+	    		}
+	    		else if (tipo.equals("Armored Ship")) {
+	    			tipo="NUM_ARMOREDSHIP";
+	    			cst.setInt(10, cant);
+	    		}
+	    		else if (tipo.equals("Missile Launcher")) {
+	    			tipo="NUM_MISSILELAUNCHER";
+	    			cst.setInt(11, cant);
+	    		}
+	    		else if (tipo.equals("Ion Cannon")) {
+	    			tipo="NUM_IONCANNON";
+	    			cst.setInt(12, cant);
+	    		}
+	    		else if (tipo.equals("PLasma Cannon")) {
+	    			tipo="NUM_PLASMACANNON";
+	    			cst.setInt(13, cant);
+	    		}	          
+	            
+	            cst.execute();				
+	            
+	              
+	            
+	         
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+	        System.out.println("Error: " + ex.getMessage());
+	    }
+	}
+	*/
 }

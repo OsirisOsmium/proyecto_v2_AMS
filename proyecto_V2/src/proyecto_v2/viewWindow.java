@@ -288,9 +288,9 @@ public class viewWindow extends JFrame implements ActionListener{
 		
 		
 		JLabel lblPlaneta = new JLabel("");
-		lblPlaneta.setIcon(new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png"));
+		lblPlaneta.setIcon(new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\planrt_gif.gif"));
 		lblPlaneta.setBounds(132, 141, 173, 148);
-		ImageIcon imagen3= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png");
+		ImageIcon imagen3= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\planrt_gif.gif");
 		ImageIcon icono3= new ImageIcon(imagen3.getImage().getScaledInstance(lblPlaneta.getWidth(),lblPlaneta.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblPlaneta. setIcon(icono3);//establece el ImageIcon en el label
 		contentPane.add(lblPlaneta);//añadimos el label
@@ -307,20 +307,7 @@ public class viewWindow extends JFrame implements ActionListener{
 		
 		
 		setVisible(true);
-	}
-	
-	
-	
-	/*
-	public static void update() {
-		String url="jdbc:oracle:thin:@localhost:1521:xe";
-		String user="PLANET_WARS_V2";
-		String password="PLANET_WARS_V2";
-		connectionOracle conn=new connectionOracle(url, user, password);
-		conn.viewStats();
-	}
-	*/
-	
+	}	
 	
 
 	@Override

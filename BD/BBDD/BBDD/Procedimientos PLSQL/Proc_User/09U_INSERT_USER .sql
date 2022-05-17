@@ -1,7 +1,8 @@
-CREATE OR REPLACE PROCEDURE INSERT_USER(id_Entrada in VARCHAR,
-nombre in VARCHAR, 
-contras in VARCHAR, 
-fecha_Nac in DATE)
+
+CREATE OR REPLACE PROCEDURE INSERT_USER(id_Entrada NUMBER,
+nombre VARCHAR, 
+contras VARCHAR, 
+fecha_Nac DATE)
 
 IS
 id_Encontrada NUMBER(1);
@@ -19,8 +20,7 @@ RAISE excepcion_Id;
 END IF;
 
 insert_Script := 'INSERT INTO USR
-VALUES('
-||id_Entrada||', 
+VALUES('''||id_Entrada||''', 
 '''||nombre||''', 
 '''||contras||''', 
 '''||fecha_Nac||''')';

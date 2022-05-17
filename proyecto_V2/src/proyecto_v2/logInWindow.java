@@ -123,7 +123,6 @@ public class logInWindow extends JFrame implements ActionListener{
 			String pass=txtPassword.getText();
 			
 			connectionOracle conn=new connectionOracle(url, user, password);
-			//System.out.println(conn.LogIn(username, pass));
 			boolean retorno=conn.LogIn(username, pass);
 			if (retorno==true) {
 				mainWindow main=new mainWindow();

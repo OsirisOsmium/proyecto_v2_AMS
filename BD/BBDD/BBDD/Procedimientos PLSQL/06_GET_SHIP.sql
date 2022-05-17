@@ -1,8 +1,13 @@
-CREATE OR REPLACE PROCEDURE GET_SHIP(id_Entrada IN ship.id_Ship%TYPE, nombre OUT ship.name%TYPE, 
-costeMetal OUT ship.metal_cost%TYPE, costeDeuterio OUT ship.deuterium_cost%TYPE, 
-costeCristal OUT ship.crystal_cost%TYPE, armaduraInicial OUT ship.initialArmor%TYPE, 
-armadura OUT ship.armor%TYPE, danoBase OUT ship.baseDamage%TYPE, 
-velocidad OUT ship.speed%TYPE, residuos OUT ship.generateWasting%TYPE)
+CREATE OR REPLACE PROCEDURE GET_SHIP(id_Entrada IN ship.id_Ship%TYPE, 
+nombre OUT ship.name%TYPE, 
+costeMetal OUT ship.metal_cost%TYPE, 
+costeDeuterio OUT ship.deuterium_cost%TYPE, 
+costeCristal OUT ship.crystal_cost%TYPE, 
+armaduraInicial OUT ship.initialArmor%TYPE, 
+armadura OUT ship.armor%TYPE, 
+danoBase OUT ship.baseDamage%TYPE, 
+velocidad OUT ship.speed%TYPE, 
+residuos OUT ship.generateWasting%TYPE)
 
 /*
 Id_entrada es la variable que se entrara a partir de la cual se haran las busquedas, es de salida

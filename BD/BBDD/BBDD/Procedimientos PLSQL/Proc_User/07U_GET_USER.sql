@@ -1,7 +1,8 @@
 CREATE OR REPLACE PROCEDURE GET_USER_ (nom IN VARCHAR,
 nombre OUT VARCHAR, 
 contras OUT VARCHAR, 
-ids OUT NUMBER)
+ids OUT NUMBER,
+dat OUT VARCHAR)
 
 /*El nombre GET_USER tal como esta no lo admite, da el error de que ya hay un objeto usando este nombre, 
 añadiendole la barra baja ya nos funciona (Gracias PLSQL por hacerme la vida tan facil con la palabras reservadas) */
@@ -19,7 +20,7 @@ IF id_Encontrada =0 THEN
 RAISE excepcion_Id;
 END IF;
 
-SELECT username, password, id_user INTO nombre, contras, ids
+SELECT username, password, id_user, birth_date INTO nombre, contras, ids, dat
 FROM USR
 WHERE username=nom ;
 
