@@ -1,10 +1,11 @@
-CREATE OR REPLACE PROCEDURE GET_PLAYER_ (id_Entrada IN NUMBER, 
+CREATE OR REPLACE PROCEDURE GET_PLAYER (nom IN VARCHAR, 
 nombre OUT VARCHAR, 
 contras OUT VARCHAR, 
+ids OUT NUMBER, 
 fecha_Nac OUT DATE)
 
-/*El nombre GET_PLAYER tal como esta no lo admite, da el error de que ya hay un objeto usando este nombre, 
-añadiendole la barra baja ya nos funciona (Gracias PLSQL por hacerme la vida tan facil con la palabras reservadas) */
+/El nombre GET_PLAYER tal como esta no lo admite, da el error de que ya hay un objeto usando este nombre, 
+añadiendole la barra baja ya nos funciona (Gracias PLSQL por hacerme la vida tan facil con la palabras reservadas)/
 
 IS
 id_Encontrada NUMBER(1);
@@ -13,15 +14,16 @@ excepcion_Id EXCEPTION;
 BEGIN
 SELECT COUNT(id_PLAYER) INTO id_Encontrada
 FROM PLAYER
-WHERE id_PLAYER = id_Entrada;
+WHERE PLAYERname = nom;
 
 IF id_Encontrada =0 THEN 
 RAISE excepcion_Id;
 END IF;
 
-SELECT PLAYERname, password, birth_date INTO nombre, contras, fecha_Nac
+SELECT id_player, PLAYERname, password, birth_date INTO ids, nombre, contras, fecha_Nac
 FROM PLAYER
-WHERE id_PLAYER = id_Entrada;
+WHERE PLAYERname = nom;
+
 
 EXCEPTION
 

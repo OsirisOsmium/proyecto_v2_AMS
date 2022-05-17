@@ -19,37 +19,37 @@ BEGIN
 SELECT COUNT(*) INTO cant_LightHunter
 FROM UNITS
 JOIN ship ON ship.ID_Ship = units.Ship_ID_Ship
-WHERE units.Planet_ID_Planet = planeta AND Ship_ID_Ship = 'Light Hunter';
+WHERE units.Planet_ID_Planet = planeta AND ship.name ='Light Hunter';
 
 SELECT COUNT(*) INTO cant_HeavyHunter
 FROM UNITS
 JOIN ship ON ship.ID_Ship = units.Ship_ID_Ship
-WHERE units.Planet_ID_Planet = planeta AND Ship_ID_Ship = 'Heavy Hunter';
+WHERE units.Planet_ID_Planet = planeta AND ship.name ='Heavy Hunter';
 
 SELECT COUNT(*) INTO cant_BattleShip
 FROM UNITS
 JOIN ship ON ship.ID_Ship = units.Ship_ID_Ship
-WHERE units.Planet_ID_Planet = planeta AND Ship_ID_Ship = 'Battle Ship';
+WHERE units.Planet_ID_Planet = planeta AND ship.name ='Battle Ship';
 
 SELECT COUNT(*) INTO cant_ArmoredShip
 FROM UNITS
 JOIN ship ON ship.ID_Ship = units.Ship_ID_Ship
-WHERE units.Planet_ID_Planet = planeta AND Ship_ID_Ship = 'Armored Ship';
+WHERE units.Planet_ID_Planet = planeta AND ship.name ='Armored Ship';
 
 SELECT COUNT(*) INTO cant_MissileLauncher
 FROM UNITS
 JOIN defense ON defense.ID_Defense = units.Defense_ID_Defense
-WHERE units.Planet_ID_Planet = planeta AND Defense_ID_Defense = 'Missile Launcher';
+WHERE units.Planet_ID_Planet = planeta AND defense.name ='Missile Launcher';
 
 SELECT COUNT(*) INTO cant_IonCannon
 FROM UNITS
 JOIN defense ON defense.ID_Defense = units.Defense_ID_Defense
-WHERE units.Planet_ID_Planet = planeta AND Defense_ID_Defense = 'Ion Cannon';
+WHERE units.Planet_ID_Planet = planeta AND defense.name ='Missile Launcher';
 
 SELECT COUNT(*) INTO cant_PlasmaCannon
 FROM UNITS
 JOIN defense ON defense.ID_Defense = units.Defense_ID_Defense
-WHERE units.Planet_ID_Planet = planeta AND Defense_ID_Defense = 'Plasma Cannon';
+WHERE units.Planet_ID_Planet = planeta AND defense.name ='Missile Launcher';
 
 update_Script := 'UPDATE PLANET 
 num_LightHunter = '''||cant_LightHunter||''', 
