@@ -10,8 +10,8 @@ cazadores_H IN planet.num_HeavyHunter%TYPE,
 naves_Batalla IN planet.num_BattleShip%TYPE, 
 acorazados IN planet.num_ArmoredShip%TYPE, 
 lanzamisiles IN planet.num_MissileLauncher%TYPE, 
-cañon_Iones IN planet.num_IonCannon%TYPE, 
-cañon_Plasma IN planet.num_PlasmaCannon%TYPE,
+canon_Iones IN planet.num_IonCannon%TYPE, 
+canon_Plasma IN planet.num_PlasmaCannon%TYPE,
 nivelDefensa IN planet.current_LevelDefense%TYPe, 
 coste_SubirDefensa IN planet.cost_AttackUp%TYPE,
 nivelAtaque IN planet.current_LevelAttack%TYPE, 
@@ -31,8 +31,8 @@ cazadores_H_Insertar planet.num_HeavyHunter%TYPE;
 naves_Batalla_Insertar planet.num_BattleShip%TYPE;
 acorazados_Insertar planet.num_ArmoredShip%TYPE;
 lanzamisiles_Insertar planet.num_MissileLauncher%TYPE;
-cañon_Iones_Insertar planet.num_IonCannon%TYPE;
-cañon_Plasma_Insertar planet.num_PlasmaCannon%TYPE;
+canon_Iones_Insertar planet.num_IonCannon%TYPE;
+canon_Plasma_Insertar planet.num_PlasmaCannon%TYPE;
 
 nivelDefensa_Insertar planet.current_LevelDefense%TYPE;
 coste_SubirDefensa_Insertar planet.cost_DefenseUp%TYPE;
@@ -144,20 +144,20 @@ ELSE
 lanzamisiles_Insertar := lanzamisiles;
 END IF;
 
-IF cañon_Iones IS NULL THEN
-SELECT num_IonCannon INTO cañon_Iones_Insertar
+IF canon_Iones IS NULL THEN
+SELECT num_IonCannon INTO canon_Iones_Insertar
 FROM PLANET
 WHERE id_Planet = id_Entrada;
 ELSE
-cañon_Iones_Insertar := cañon_Iones;
+canon_Iones_Insertar := canon_Iones;
 END IF;
 
-IF cañon_Plasma IS NULL THEN
-SELECT num_PlasmaCannon INTO cañon_Plasma_Insertar
+IF canon_Plasma IS NULL THEN
+SELECT num_PlasmaCannon INTO canon_Plasma_Insertar
 FROM PLANET
 WHERE id_Planet = id_Entrada;
 ELSE
-cañon_Plasma_Insertar := cañon_Plasma;
+canon_Plasma_Insertar := canon_Plasma;
 END IF;
 
 IF nivelDefensa IS NULL THEN
@@ -203,8 +203,8 @@ num_HeavyHunter = '''||cazadores_H_Insertar||''',
 num_BattleShip = '''||naves_Batalla_Insertar||''', 
 num_ArmoredShip = '''||acorazados_Insertar||''', 
 num_MissileLauncher = '''||lanzamisiles_Insertar||''', 
-num_IonCannon = '''||cañon_Iones_Insertar||''', 
-num_PlasmaCannon = '''||cañon_Plasma_Insertar||''', 
+num_IonCannon = '''||canon_Iones_Insertar||''', 
+num_PlasmaCannon = '''||canon_Plasma_Insertar||''', 
 current_LevelDefense = '''||nivelDefensa_Insertar||''', 
 cost_AttackUp ='''||coste_SubirDefensa_Insertar||''',
 current_LevelAttack = '''||nivelAtaque_Insertar||''',
@@ -223,8 +223,8 @@ DBMS_OUTPUT.PUT_LINE('Heavy Hunters: '||cazadores_H_Insertar);
 DBMS_OUTPUT.PUT_LINE('BattleShips: '||naves_Batalla_Insertar);
 DBMS_OUTPUT.PUT_LINE('ArmoredShips: '||acorazados_Insertar);
 DBMS_OUTPUT.PUT_LINE('Missile Launchers: '||lanzamisiles_Insertar);
-DBMS_OUTPUT.PUT_LINE('Ion Cannons: '||cañon_iones_Insertar);
-DBMS_OUTPUT.PUT_LINE('Plasma Cannons: '||cañon_plasma_Insertar);
+DBMS_OUTPUT.PUT_LINE('Ion Cannons: '||canon_iones_Insertar);
+DBMS_OUTPUT.PUT_LINE('Plasma Cannons: '||canon_plasma_Insertar);
 DBMS_OUTPUT.PUT_LINE('Nivel de Defensa: '||nivelDefensa_Insertar);
 DBMS_OUTPUT.PUT_LINE('Coste Subir Defensa: '||coste_SubirDefensa_Insertar);
 DBMS_OUTPUT.PUT_LINE('Nivel de Ataque: '||nivelAtaque_Insertar);

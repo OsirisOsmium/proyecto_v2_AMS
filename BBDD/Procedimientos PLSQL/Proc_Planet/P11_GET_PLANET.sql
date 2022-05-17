@@ -10,8 +10,8 @@ cazadores_H OUT planet.num_HeavyHunter%TYPE,
 naves_Batalla OUT planet.num_BattleShip%TYPE, 
 acorazados OUT planet.num_ArmoredShip%TYPE, 
 lanzamisiles OUT planet.num_MissileLauncher%TYPE, 
-cañon_Iones OUT planet.num_IonCannon%TYPE, 
-cañon_Plasma OUT planet.num_PlasmaCannon%TYPE,
+canon_Iones OUT planet.num_IonCannon%TYPE, 
+canon_Plasma OUT planet.num_PlasmaCannon%TYPE,
 nivelDefensa OUT planet.current_LevelDefense%TYPe, 
 coste_SubirDefensa OUT planet.cost_DefenseUp%TYPE,
 nivelAtaque OUT planet.current_LevelAttack%TYPE, 
@@ -37,7 +37,7 @@ num_MissileLauncher, num_IonCannon, num_PlasmaCannon, current_LevelDefense,
 cost_AttackUp, current_LevelAttack, cost_DefenseUp
 INTO
 id_usuario, nombre, metal, cristal, deuterio, cazadores_L, cazadores_H,
-naves_Batalla, acorazados, lanzamisiles, cañon_Iones, cañon_Plasma, nivelDefensa, 
+naves_Batalla, acorazados, lanzamisiles, canon_Iones, canon_Plasma, nivelDefensa, 
 coste_SubirDefensa, nivelAtaque, coste_SubirAtaque 
 FROM PLANET
 WHERE id_Planet = id_Entrada;
@@ -66,8 +66,8 @@ cazadores_H planet.num_HeavyHunter%TYPE;
 naves_Batalla planet.num_BattleShip%TYPE;
 acorazados planet.num_ArmoredShip%TYPE;
 lanzamisiles planet.num_MissileLauncher%TYPE;
-cañon_Iones planet.num_IonCannon%TYPE;
-cañon_Plasma planet.num_PlasmasCannon%TYPE;
+canon_Iones planet.num_IonCannon%TYPE;
+canon_Plasma planet.num_PlasmasCannon%TYPE;
 
 nivelDefensa planet.current_LevelDefense%TYPE;
 coste_SubirDefensa planet.cost_AttackUp%TYPE;

@@ -9,8 +9,8 @@ cazadores_H IN planet.num_HeavyHunter%TYPE,
 naves_Batalla IN planet.num_BattleShip%TYPE, 
 acorazados IN planet.num_ArmoredShip%TYPE, 
 lanzamisiles IN planet.num_MissileLauncher%TYPE, 
-cañon_Iones IN planet.num_IonCannon%TYPE, 
-cañon_Plasma IN planet.num_PlasmaCannon%TYPE,
+canon_Iones IN planet.num_IonCannon%TYPE, 
+canon_Plasma IN planet.num_PlasmaCannon%TYPE,
 nivelDefensa IN planet.current_LevelDefense%TYPe, 
 coste_SubirDefensa IN planet.cost_AttackUp%TYPE,
 nivelAtaque IN planet.current_LevelAttack%TYPE, 
@@ -55,8 +55,8 @@ VALUES('''||id_Entrada_Insertar||''',
 '''||naves_Batalla||''', 
 '''||acorazados||''', 
 '''||lanzamisiles||''', 
-'''||cañon_iones||''', 
-'''||cañon_plasma||''', 
+'''||canon_iones||''', 
+'''||canon_plasma||''', 
 '''||nivelDefensa||''', 
 '''||coste_SubirDefensa||''', 
 '''||nivelAtaque||''', 
@@ -75,8 +75,8 @@ DBMS_OUTPUT.PUT_LINE(': '||cazadores_H);
 DBMS_OUTPUT.PUT_LINE(': '||naves_Batalla);
 DBMS_OUTPUT.PUT_LINE(': '||acorazados);
 DBMS_OUTPUT.PUT_LINE(': '||lanzamisiles);
-DBMS_OUTPUT.PUT_LINE(': '||cañon_iones);
-DBMS_OUTPUT.PUT_LINE(': '||cañon_plasma);
+DBMS_OUTPUT.PUT_LINE(': '||canon_iones);
+DBMS_OUTPUT.PUT_LINE(': '||canon_plasma);
 DBMS_OUTPUT.PUT_LINE(': '||nivelDefensa);
 DBMS_OUTPUT.PUT_LINE(': '||coste_SubirDefensa);
 DBMS_OUTPUT.PUT_LINE(': '||nivelAtaque);

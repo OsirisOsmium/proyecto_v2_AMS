@@ -13,16 +13,16 @@ UI_CazadoresH OUT battle.UI_HeavyHunter%TYPE,
 UI_navesBatalla OUT battle.UI_BattleShip%TYPE,
 UI_Acorazados OUT battle.UI_ArmoredShip%TYPE,
 UI_Lanzamisiles OUT battle.UI_MissileLauncher%TYPE,
-UI_CañonIones OUT battle.UI_IonCannon%TYPE,
-UI_CañonPlasma OUT battle.UI_PlasmaCannon%TYPE,
+UI_CanonIones OUT battle.UI_IonCannon%TYPE,
+UI_CanonPlasma OUT battle.UI_PlasmaCannon%TYPE,
 
 UF_CazadoresL OUT battle.UF_LightHunter%TYPE,
 UF_CazadoresH OUT battle.UF_HeavyHunter%TYPE,
 UF_navesBatalla OUT battle.UF_BattleShip%TYPE,
 UF_Acorazados OUT battle.UF_ArmoredShip%TYPE,
 UF_Lanzamisiles OUT battle.UF_MissileLauncher%TYPE,
-UF_CañonIones OUT battle.UF_IonCannon%TYPE,
-UF_CañonPlasma OUT battle.UF_PlasmaCannon%TYPE,
+UF_CanonIones OUT battle.UF_IonCannon%TYPE,
+UF_CanonPlasma OUT battle.UF_PlasmaCannon%TYPE,
 
 EI_CazadoresL OUT battle.EI_LightHunter%TYPE,
 EI_CazadoresH OUT battle.EI_HeavyHunter%TYPE,
@@ -55,8 +55,8 @@ EI_LightHunter, EI_HeavyHunter, EI_BattleShip, EI_ArmoredShip,
 EF_LightHunter, EF_HeavyHunter, EF_BattleShip, EF_ArmoredShip 
 INTO
 usuario, enemigo, planeta, ganador_Usuario, ganador_Enemigo, residuos_Metal, residuos_Deuterio,
-UI_CazadoresL, UI_CazadoresH, UI_NavesBatalla, UI_Acorazados, UI_Lanzamisiles, UI_CañonIones, UI_CañonPlasma,
-UF_CazadoresL, UF_CazadoresH, UF_NavesBatalla, UF_Acorazados, UF_Lanzamisiles, UF_CañonIones, UF_CañonPlasma,
+UI_CazadoresL, UI_CazadoresH, UI_NavesBatalla, UI_Acorazados, UI_Lanzamisiles, UI_CanonIones, UI_CanonPlasma,
+UF_CazadoresL, UF_CazadoresH, UF_NavesBatalla, UF_Acorazados, UF_Lanzamisiles, UF_CanonIones, UF_CanonPlasma,
 EI_CazadoresL, EI_CazadoresH, EI_NavesBatalla, EI_Acorazados, 
 EI_CazadoresL, EI_CazadoresH, EI_NavesBatalla, EI_Acorazados
 FROM BATTLE

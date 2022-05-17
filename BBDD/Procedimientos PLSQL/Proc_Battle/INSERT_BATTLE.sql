@@ -13,16 +13,16 @@ UI_CazadoresH IN battle.UI_HeavyHunter%TYPE,
 UI_navesBatalla IN battle.UI_BattleShip%TYPE,
 UI_Acorazados IN battle.UI_ArmoredShip%TYPE,
 UI_Lanzamisiles IN battle.UI_MissileLauncher%TYPE,
-UI_CañonIones IN battle.UI_IonCannon%TYPE,
-UI_CañonPlasma IN battle.UI_PlasmaCannon%TYPE,
+UI_CanonIones IN battle.UI_IonCannon%TYPE,
+UI_CanonPlasma IN battle.UI_PlasmaCannon%TYPE,
 
 UF_CazadoresL IN battle.UF_LightHunter%TYPE,
 UF_CazadoresH IN battle.UF_HeavyHunter%TYPE,
 UF_navesBatalla IN battle.UF_BattleShip%TYPE,
 UF_Acorazados IN battle.UF_ArmoredShip%TYPE,
 UF_Lanzamisiles IN battle.UF_MissileLauncher%TYPE,
-UF_CañonIones IN battle.UF_IonCannon%TYPE,
-UF_CañonPlasma IN battle.UF_PlasmaCannon%TYPE,
+UF_CanonIones IN battle.UF_IonCannon%TYPE,
+UF_CanonPlasma IN battle.UF_PlasmaCannon%TYPE,
 
 EI_CazadoresL IN battle.EI_LightHunter%TYPE,
 EI_CazadoresH IN battle.EI_HeavyHunter%TYPE,
@@ -66,16 +66,16 @@ VALUES('''||id_Entrada_Insertar||''',
 '''||UI_navesBatalla||''',
 '''||UI_acorazados||''',
 '''||UI_Lanzamisiles||''',
-'''||UI_CañonIones||''',
-'''||UI_CañonPlasma||''',
+'''||UI_CanonIones||''',
+'''||UI_CanonPlasma||''',
 
 '''||UF_CazadoresL||''',
 '''||UF_CazadoresH||''',
 '''||UF_navesBatalla||''',
 '''||UF_acorazados||''',
 '''||UF_Lanzamisiles||''',
-'''||UF_CañonIones||''',
-'''||UF_CañonPlasma||''',
+'''||UF_CanonIones||''',
+'''||UF_CanonPlasma||''',
 
 '''||EI_CazadoresL||''',
 '''||EI_CazadoresH||''',
@@ -104,16 +104,16 @@ DBMS_OUTPUT.PUT_LINE('Heavy Hunters Iniciales Usuario: '||UI_CazadoresH);
 DBMS_OUTPUT.PUT_LINE('Naves Batalla Iniciales Usuario: '||UI_NavesBatalla);
 DBMS_OUTPUT.PUT_LINE('Acorazados Iniciales Usuario: '||UI_Acorazados);
 DBMS_OUTPUT.PUT_LINE('Lanzamisiles Iniciales Usuario: '||UI_Lanzamisiles);
-DBMS_OUTPUT.PUT_LINE('Cañones Iones Iniciales Usuario: '||UI_CañonIones);
-DBMS_OUTPUT.PUT_LINE('Cañones Plasma Iniciales Usuario: '||UI_CañonPlasma);
+DBMS_OUTPUT.PUT_LINE('Canones Iones Iniciales Usuario: '||UI_CanonIones);
+DBMS_OUTPUT.PUT_LINE('Canones Plasma Iniciales Usuario: '||UI_CanonPlasma);
 
 DBMS_OUTPUT.PUT_LINE('Light Hunters Iniciales Usuario: '||UF_CazadoresL);
 DBMS_OUTPUT.PUT_LINE('Heavy Hunters Iniciales Usuario: '||UF_CazadoresH);
 DBMS_OUTPUT.PUT_LINE('Naves Batalla Iniciales Usuario: '||UF_NavesBatalla);
 DBMS_OUTPUT.PUT_LINE('Acorazados Iniciales Usuario: '||UF_Acorazados);
 DBMS_OUTPUT.PUT_LINE('Lanzamisiles Iniciales Usuario: '||UF_Lanzamisiles);
-DBMS_OUTPUT.PUT_LINE('Cañones Iones Iniciales Usuario: '||UF_CañonIones);
-DBMS_OUTPUT.PUT_LINE('Cañones Plasma Iniciales Usuario: '||UF_CañonPlasma);
+DBMS_OUTPUT.PUT_LINE('Canones Iones Iniciales Usuario: '||UF_CanonIones);
+DBMS_OUTPUT.PUT_LINE('Canones Plasma Iniciales Usuario: '||UF_CanonPlasma);
 
 DBMS_OUTPUT.PUT_LINE('Light Hunters Iniciales Enemigo: '||EI_CazadoresL);
 DBMS_OUTPUT.PUT_LINE('Heavy Hunters Iniciales Eenmigo: '||EI_CazadoresH);
