@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="User_ID_User" id="0751E043-FBAC-31A4-9451-2AFAA98EBCE9">
+<Column name="Player_ID_Player" id="0751E043-FBAC-31A4-9451-2AFAA98EBCE9">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>FA833A99-5012-8F7F-30C0-B002DE77EDF5</generatorID>
@@ -64,7 +64,7 @@
 <colAssociation fkAssociation="7EF1888F-6E77-ECEC-0A3F-CC7FC4012CB4" referredColumn="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
 </associations>
 </Column>
-<Column name="user_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
+<Column name="player_Winner" id="388BF1FD-2C84-1A89-C6C2-205593EB4C1E">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 17:42:48 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>

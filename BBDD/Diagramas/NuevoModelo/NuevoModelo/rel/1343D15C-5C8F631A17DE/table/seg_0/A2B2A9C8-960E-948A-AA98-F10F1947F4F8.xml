@@ -1,14 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A2B2A9C8-960E-948A-AA98-F10F1947F4F8" name="User">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A2B2A9C8-960E-948A-AA98-F10F1947F4F8" name="Player">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>EEA4C304-4AFC-3202-A8E5-0DC4DC0F6BE5</generatorID>
 <ownerDesignName>NuevoModelo</ownerDesignName>
+<ordsAlias>user</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ID_User" id="7BCD10A2-87DD-1247-5AAE-0605CE31AC53">
+<Column name="ID_Player" id="7BCD10A2-87DD-1247-5AAE-0605CE31AC53">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>464E4531-9CBD-FD74-FE6C-F8741911903E</generatorID>
@@ -19,7 +20,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="username" id="46E8A718-AF02-B362-2798-E8227DBE495D">
+<Column name="playername" id="46E8A718-AF02-B362-2798-E8227DBE495D">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>1A0B96ED-5CBE-BD54-A7FA-01DE398BBAEB</generatorID>

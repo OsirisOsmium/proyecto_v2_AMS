@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="User_ID_User" id="3960A7B9-CC8C-0699-2C96-3E72040A12C2">
+<Column name="Player_ID_Player" id="3960A7B9-CC8C-0699-2C96-3E72040A12C2">
 <createdBy>Albert</createdBy>
 <createdTime>2022-05-07 12:27:55 UTC</createdTime>
 <generatorID>F9F761BE-59B1-328B-0AC3-27AC30BA8A0B</generatorID>
@@ -260,20 +260,19 @@
 <colUsage columnID="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="29CE6345-C951-610C-D9BA-25E5177A9A64" name="Planet_planet_Name_UN">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 12:27:55 UTC</createdTime>
-<generatorID>3071BC30-D439-6CFA-9E26-B98D4EC58B3A</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<indexState>Unique Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="8330722D-B429-0F00-24A2-E39992D94276"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="0287F668-19D3-4AF2-3F20-D00E35D15F91" name="Planet_User_FK">
 <createdBy>alumne</createdBy>
 <createdTime>2022-05-15 15:07:03 UTC</createdTime>
+<ownerDesignName>NuevoModelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C624726-CDAE-295A-ED79-D7E45CBBD963" name="Planet_User_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-17 07:12:14 UTC</createdTime>
 <ownerDesignName>NuevoModelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>

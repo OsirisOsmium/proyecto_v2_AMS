@@ -122,28 +122,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="current_LevelDefense" id="464E340A-2E0C-01B1-10A8-C4B37D6D5803">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-09 15:51:31 UTC</createdTime>
-<generatorID>30CD5AC7-6787-A468-3175-B7EF4E479DC2</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="current_LevelAttack" id="2642A7DB-6FED-D30E-D16B-59866A9F4148">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-09 15:51:31 UTC</createdTime>
-<generatorID>6CE62B8D-9C15-A648-5A7F-91120F0F6FB0</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7AD73C00-307D-8456-BAB3-789B184BA16A" name="Enemy_PK">
@@ -156,17 +134,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="3C56CD47-0D26-C2AD-3DD6-7239E864F4DA"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="86C6D3AC-D038-3AB8-03B6-38350DAF75AD" name="Enemy_name_UN">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-09 16:09:25 UTC</createdTime>
-<generatorID>507864B8-161A-5CE4-C57A-6836EEC9480B</generatorID>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<indexState>Unique Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="A33735BA-5811-897B-8744-E59F50CC8531"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
