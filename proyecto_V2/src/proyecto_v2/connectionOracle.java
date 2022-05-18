@@ -35,6 +35,16 @@ public class connectionOracle {
 			System.out.println("ERROR: El driver NO se ha cargado");
 		}
 	}
+	public void iniciar() {
+		try {
+			CallableStatement cst=conn.prepareCall("");
+			cst.execute();
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
+	}
 	
 	public boolean LogIn(String username, String password) {
 		String txt="";
@@ -379,7 +389,7 @@ public class connectionOracle {
 	
 	
 	
-	/*
+	
 	public void addTrops(int id_user, int id_planet, String nom_planet, String tipo, int cant, int numMetal, int numDeuterium) {
 		try {
 			CallableStatement cst = conn.prepareCall("{call SET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
@@ -428,5 +438,5 @@ public class connectionOracle {
 	        System.out.println("Error: " + ex.getMessage());
 	    }
 	}
-	*/
+	
 }

@@ -98,7 +98,7 @@ public class mainWindow extends JFrame implements ActionListener{
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(0, 0, 110, 482);
-		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_space.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//añadimos el label
@@ -116,7 +116,7 @@ public class mainWindow extends JFrame implements ActionListener{
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setBounds(110, 0, 699, 482);
 		contentPane.add(lblBackground);
-		ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\war_star.png");
+		ImageIcon imagen2= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_gif.gif");
 		ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblBackground. setIcon(icono2);//establece el ImageIcon en el label
 		contentPane.add(lblBackground);//añadimos el label		

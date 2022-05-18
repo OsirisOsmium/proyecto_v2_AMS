@@ -113,7 +113,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		lblNewLabel_2.setBackground(SystemColor.inactiveCaption);
 		lblNewLabel_2.setBounds(0, 0, 110, 482);
 		lblNewLabel_2.setOpaque(true);
-		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_space.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//añadimos el label
@@ -233,25 +233,25 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			String Trops=(String) comboBox.getSelectedItem();
 			if (Trops.equalsIgnoreCase("Light Hunter")) {
 				System.out.println("Accion de add del TROPS con Light Hunter");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 				
 			}
 			if (Trops.equalsIgnoreCase("Heavy Hunter")) {
 				System.out.println("Accion de add del TROPS con Heavy Hunter");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 
 			}
 			if (Trops.equalsIgnoreCase("Battle Ship")) {
 				System.out.println("Accion de add del TROPS con Battle Ship");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 
 			}
 			if (Trops.equalsIgnoreCase("Armored Ship")) {
 				System.out.println("Accion de add del TROPS con Armored Ship");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 
 			}
@@ -259,19 +259,19 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 			
 			if (Trops.equalsIgnoreCase("Missile Launcher")) {
 				System.out.println("Accion de add del DEFENSE con Missile Launcher");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 
 			}
 			if (Trops.equalsIgnoreCase("Ion Cannon")) {
 				System.out.println("Accion de add del DEFENSE con Ion Cannon");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 
 			}
 			if (Trops.equalsIgnoreCase("PLasma Cannon")) {
 				System.out.println("Accion de add del DEFENSE con PLasma Cannon");
-				int cant=Integer.parseInt(txtNumAñadir.getText());
+				//int cant=Integer.parseInt(txtNumAñadir.getText());
 				
 
 			}

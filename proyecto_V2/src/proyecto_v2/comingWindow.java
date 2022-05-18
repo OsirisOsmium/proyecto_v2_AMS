@@ -99,7 +99,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		lblNewLabel_2.setBackground(SystemColor.inactiveCaption);
 		lblNewLabel_2.setBounds(0, 0, 110, 482);
 		lblNewLabel_2.setOpaque(true);
-		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_space.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tamaño del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//añadimos el label
