@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.DefaultComboBoxModel;
@@ -23,6 +24,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import java.awt.Toolkit;
 
 public class reportsWindow extends JFrame implements ActionListener, ItemListener{
 
@@ -48,6 +50,7 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 	 * Create the frame.
 	 */
 	public reportsWindow() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
@@ -109,14 +112,14 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 		
 		
 		textArea_1 = new JTextArea();
-		textArea_1.setFont(new Font("Monospaced", Font.PLAIN, 15));
+		textArea_1.setFont(new Font("Monospaced", Font.PLAIN, 12));
 		textArea_1.setEditable(false);
 		textArea_1.setBounds(209, 29, 449, 371);
 		contentPane.add(textArea_1);
 		
 		
 		JScrollPane sb=new JScrollPane(textArea_1);
-        sb.setBounds(298, 27, 487, 433);
+        sb.setBounds(138, 84, 647, 376);
 
         sb.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         sb.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -125,14 +128,23 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 		////////////////////////////
 		
 		comboBox = new JComboBox();
-		comboBox.setBounds(138, 72, 150, 35);
-		contentPane.add(comboBox);
+		comboBox.setBounds(138, 26, 150, 35);
+		comboBox.addItem("");
+		connectionOracle conn=new connectionOracle(url, user, password);
+		ArrayList<Integer> ideses=conn.extraeId();
 		
+		for(int i = 0; i < ideses.size(); i++) {
+			comboBox.addItem(ideses.get(i).toString());
+		}
+		comboBox.addItemListener(this);
+		contentPane.add(comboBox);
+
+		/*
 		String battleRep[]= {"" ,"Battle 1", "Battle 2", "Battle 3" ,"Battle 4"}; //Se ha de modificar para que no s muestre las batallas tin tener en cuanta la cantidad de batallas
 		DefaultComboBoxModel comboTrops = new DefaultComboBoxModel(battleRep);
 		comboBox.setModel(comboTrops);
 		comboBox.addItemListener(this);
-
+		 */
 		
 		
 		JLabel lblBackground = new JLabel("");
@@ -197,95 +209,105 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 		
 		
 		String BattleRep=(String) comboBox.getSelectedItem();
+		connectionOracle conn=new connectionOracle(url, user, password);
 		
-		if (BattleRep.equalsIgnoreCase("Battle 1")) {
+		
+		//ArrayList<Integer> ArrayStat=conn.Stats(1);
+		//ArrayList<Integer> ArrayEnemy=conn.viewEnemy(1);
+		
+		
+		int 
+		/*Costes de las unidades para calcular los costes totales y perdidas SE EXTRAE metal_Cost y Deuterium_Cost Where name = 'LightHunter'*/
+		metal_LightHunter, metal_HeavyHunter, metal_BattleShip, metal_ArmoredShip,
+		metal_MissileLauncher, metal_IonCannon, metal_PlasmaCannon,
+		deuterium_LightHunter, deuterium_HeavyHunter, deuterium_BattleShip, deuterium_ArmoredShip,
+		deuterium_MissileLauncher, deuterium_IonCannon, deuterium_PlasmaCannon,
+		/*Unidades iniciales Planeta SE EXTRAE UI_LightHunter, UI_HeavyHunter etc*/
+		planet_LightHunters, planet_HeavyHunters, 
+		planet_BattleShips, planet_ArmoredShips, 
+		planet_MissileLauncher, planet_IonCannon, 
+		planet_PlasmaCannon,
+		/*Unidades iniciales enemigo EI_LightHunter, EI_HeavyHunter etc*/
+		enemy_LightHunters, enemy_HeavyHunters,
+		enemy_BattleShips, enemy_ArmoredShips,
+		/*Unidades finales Planeta SE EXTRAE UF_LightHunter, UF_HeavyHunter etc*/
+		planet_LightHunters_F, planet_HeavyHunters_F, 
+		planet_BattleShips_F, planet_ArmoredShips_F, 
+		planet_MissileLauncher_F, planet_IonCannon_F, 
+		planet_PlasmaCannon_F,
+		/*Unidades finales enemigo SE EXTRAE EF_LightHunter, EF_HeavyHunter etc*/
+		enemy_LightHunters_F, enemy_HeavyHunters_F,
+		enemy_BattleShips_F, enemy_ArmoredShips_F,
+		/*Los costes de los ejercitos del planeta y del enemigo SE CALCULAN*/
+		cost_Metal_Planet, cost_Deuterium_Planet, 
+		cost_Metal_Enemy, cost_Deuterium_Enemy,
+		/*Las perdidas en recursos del planeta y del enemigo*/
+		losses_Metal_Planet, losses_Deuterium_Planet, losses_Weighted_Planet,
+		losses_Metal_Enemy, losses_Deuterium_Enemy, losses_Weighted_Enemy,
+		/*Residuos generades SE EXTRAE waste_Metal, waste_Deuterium*/
+		waste_Metal, waste_Deuterium;
+		
+		/*Quien ha ganado y perdido, o winner 1 o enemy 1*/
+		int winner_Planet, winner_Enemy; 
+		
+		String respuesta;
+		boolean view_Battle;
+		
+		/*Mensaje que saldra segun gane el planeta/jugador o el enemigo*/
+		String message_Winner;
+		
+		String full_Report;
+		
+		//se puede sacar de la base de datos o en local
+		/*BBDD*/metal_LightHunter= 3000;
+		/*BBDD*/metal_HeavyHunter= 6500;
+		/*BBDD*/metal_BattleShip= 45000;
+		/*BBDD*/metal_ArmoredShip= 30000;
+		/*BBDD*/metal_MissileLauncher= 2000;
+		/*BBDD*/metal_IonCannon= 4000;
+		/*BBDD*/metal_PlasmaCannon= 50000;
+		
+		/*BBDD*/deuterium_LightHunter= 50;
+		/*BBDD*/deuterium_HeavyHunter= 50;
+		/*BBDD*/deuterium_BattleShip= 7000;
+		/*BBDD*/deuterium_ArmoredShip= 15000;
+		/*BBDD*/deuterium_MissileLauncher= 0;
+		/*BBDD*/deuterium_IonCannon= 500;
+		/*BBDD*/deuterium_PlasmaCannon= 5000;
+		
+		
+		
+		if (BattleRep.equalsIgnoreCase("1")) {
+			ArrayList<Integer> arrayWasteMaterial=conn.viewWasteMaterial(1);
 				/*Estas dos variables id_Batalla y la conexión, se deberian entrar desde fuera*/
 				int id_Batalla =1;
+		
+				/*BBDD*/planet_LightHunters= arrayWasteMaterial.get(2); 
+				/*BBDD*/planet_HeavyHunters= arrayWasteMaterial.get(3); 
+				/*BBDD*/planet_BattleShips= arrayWasteMaterial.get(4); 
+				/*BBDD*/planet_ArmoredShips= arrayWasteMaterial.get(5);
+				/*BBDD*/planet_MissileLauncher= arrayWasteMaterial.get(6); 
+				/*BBDD*/planet_IonCannon= arrayWasteMaterial.get(7);
+				/*BBDD*/planet_PlasmaCannon= arrayWasteMaterial.get(8);
+				
+				/*BBDD*/enemy_LightHunters= arrayWasteMaterial.get(16); 
+				/*BBDD*/enemy_HeavyHunters= arrayWasteMaterial.get(17);
+				/*BBDD*/enemy_BattleShips= arrayWasteMaterial.get(18);
+				/*BBDD*/enemy_ArmoredShips= arrayWasteMaterial.get(19);
 				
 				
-				int 
-				/*Costes de las unidades para calcular los costes totales y perdidas SE EXTRAE metal_Cost y Deuterium_Cost Where name = 'LightHunter'*/
-				metal_LightHunter, metal_HeavyHunter, metal_BattleShip, metal_ArmoredShip,
-				metal_MissileLauncher, metal_IonCannon, metal_PlasmaCannon,
-				deuterium_LightHunter, deuterium_HeavyHunter, deuterium_BattleShip, deuterium_ArmoredShip,
-				deuterium_MissileLauncher, deuterium_IonCannon, deuterium_PlasmaCannon,
-				/*Unidades iniciales Planeta SE EXTRAE UI_LightHunter, UI_HeavyHunter etc*/
-				planet_LightHunters, planet_HeavyHunters, 
-				planet_BattleShips, planet_ArmoredShips, 
-				planet_MissileLauncher, planet_IonCannon, 
-				planet_PlasmaCannon,
-				/*Unidades iniciales enemigo EI_LightHunter, EI_HeavyHunter etc*/
-				enemy_LightHunters, enemy_HeavyHunters,
-				enemy_BattleShips, enemy_ArmoredShips,
-				/*Unidades finales Planeta SE EXTRAE UF_LightHunter, UF_HeavyHunter etc*/
-				planet_LightHunters_F, planet_HeavyHunters_F, 
-				planet_BattleShips_F, planet_ArmoredShips_F, 
-				planet_MissileLauncher_F, planet_IonCannon_F, 
-				planet_PlasmaCannon_F,
-				/*Unidades finales enemigo SE EXTRAE EF_LightHunter, EF_HeavyHunter etc*/
-				enemy_LightHunters_F, enemy_HeavyHunters_F,
-				enemy_BattleShips_F, enemy_ArmoredShips_F,
-				/*Los costes de los ejercitos del planeta y del enemigo SE CALCULAN*/
-				cost_Metal_Planet, cost_Deuterium_Planet, 
-				cost_Metal_Enemy, cost_Deuterium_Enemy,
-				/*Las perdidas en recursos del planeta y del enemigo*/
-				losses_Metal_Planet, losses_Deuterium_Planet, losses_Weighted_Planet,
-				losses_Metal_Enemy, losses_Deuterium_Enemy, losses_Weighted_Enemy,
-				/*Residuos generades SE EXTRAE waste_Metal, waste_Deuterium*/
-				waste_Metal, waste_Deuterium;
+				/*BBDD*/planet_LightHunters_F= arrayWasteMaterial.get(9); 
+				/*BBDD*/planet_HeavyHunters_F= arrayWasteMaterial.get(10); 
+				/*BBDD*/planet_BattleShips_F= arrayWasteMaterial.get(11); 
+				/*BBDD*/planet_ArmoredShips_F= arrayWasteMaterial.get(12);
+				/*BBDD*/planet_MissileLauncher_F= arrayWasteMaterial.get(13); 
+				/*BBDD*/planet_IonCannon_F= arrayWasteMaterial.get(14);
+				/*BBDD*/planet_PlasmaCannon_F= arrayWasteMaterial.get(15);
 				
-				/*Quien ha ganado y perdido, o winner 1 o enemy 1*/
-				int winner_Planet, winner_Enemy; 
-				
-				String respuesta;
-				boolean view_Battle;
-				
-				/*Mensaje que saldra segun gane el planeta/jugador o el enemigo*/
-				String message_Winner;
-				
-				String full_Report;
-				
-				
-				/*BBDD*/metal_LightHunter= 3000;
-				/*BBDD*/metal_HeavyHunter= 6500;
-				/*BBDD*/metal_BattleShip= 45000;
-				/*BBDD*/metal_ArmoredShip= 30000;
-				/*BBDD*/metal_MissileLauncher= 2000;
-				/*BBDD*/metal_IonCannon= 4000;
-				/*BBDD*/metal_PlasmaCannon= 50000;
-				/*BBDD*/deuterium_LightHunter= 50;
-				/*BBDD*/deuterium_HeavyHunter= 50;
-				/*BBDD*/deuterium_BattleShip= 7000;
-				/*BBDD*/deuterium_ArmoredShip= 15000;
-				/*BBDD*/deuterium_MissileLauncher= 0;
-				/*BBDD*/deuterium_IonCannon= 500;
-				/*BBDD*/deuterium_PlasmaCannon= 5000;
-				
-				/*BBDD*/planet_LightHunters= 11; 
-				/*BBDD*/planet_HeavyHunters= 3; 
-				/*BBDD*/planet_BattleShips= 1; 
-				/*BBDD*/planet_ArmoredShips= 1;
-				/*BBDD*/planet_MissileLauncher= 11; 
-				/*BBDD*/planet_IonCannon= 1;
-				/*BBDD*/planet_PlasmaCannon= 1;
-				
-				/*BBDD*/enemy_LightHunters= 19; 
-				/*BBDD*/enemy_HeavyHunters= 7;
-				/*BBDD*/enemy_BattleShips= 1;
-				/*BBDD*/enemy_ArmoredShips= 1;
-				
-				/*BBDD*/planet_LightHunters_F= 3; 
-				/*BBDD*/planet_HeavyHunters_F= 2; 
-				/*BBDD*/planet_BattleShips_F= 1; 
-				/*BBDD*/planet_ArmoredShips_F= 1;
-				/*BBDD*/planet_MissileLauncher_F= 2; 
-				/*BBDD*/planet_IonCannon_F= 0;
-				/*BBDD*/planet_PlasmaCannon_F= 1;
-				
-				/*BBDD*/enemy_LightHunters_F= 2; 
-				/*BBDD*/enemy_HeavyHunters_F= 2;
-				/*BBDD*/enemy_BattleShips_F= 0;
-				/*BBDD*/enemy_ArmoredShips_F= 1;
+				/*BBDD*/enemy_LightHunters_F= arrayWasteMaterial.get(20); 
+				/*BBDD*/enemy_HeavyHunters_F= arrayWasteMaterial.get(21);
+				/*BBDD*/enemy_BattleShips_F= arrayWasteMaterial.get(22);
+				/*BBDD*/enemy_ArmoredShips_F= arrayWasteMaterial.get(23);
 				
 				cost_Metal_Planet= (
 						(metal_LightHunter*  planet_LightHunters) +
@@ -317,6 +339,8 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 						(deuterium_BattleShip * enemy_BattleShips) +
 						(deuterium_ArmoredShip * enemy_ArmoredShips) 
 						);
+				
+				
 				
 				losses_Metal_Planet= (
 						(metal_LightHunter*  (planet_LightHunters -planet_LightHunters_F)) +
@@ -351,8 +375,8 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 						);
 				losses_Weighted_Enemy= (losses_Metal_Enemy + (losses_Deuterium_Enemy*5));
 
-				/*BBDD*/waste_Metal= 52150; 
-				/*BBDD*/waste_Deuterium= 910;
+				/*BBDD*/waste_Metal=arrayWasteMaterial.get(0); 
+				/*BBDD*/waste_Deuterium=arrayWasteMaterial.get(1);
 				
 				/*BBDD*/winner_Planet= 1;
 				/*BBDD*/winner_Enemy= 0;
@@ -369,7 +393,7 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 						"\nBATTLE STATISTICS"
 						+ "\n" +
 						"\nArmy planet"+("         ")+"Units"+("        ")+"Drops"+("        ")+"Initial Army Enemy"+("        ")+"Units"+("         ")+"Drops"+
-						"\nLight Hunter"+("        ")+planet_LightHunters+("            ")+(planet_LightHunters - planet_LightHunters_F)+("            ")+"Light Hunter"+("              ")+enemy_LightHunters+("             ")+(enemy_LightHunters - enemy_LightHunters_F)+
+						"\nLight Hunter"+("        ")+planet_LightHunters+("           ")+(planet_LightHunters - planet_LightHunters_F)+("            ")+"Light Hunter"+("              ")+enemy_LightHunters+("             ")+(enemy_LightHunters - enemy_LightHunters_F)+
 						"\nHeavy Hunter"+("        ")+planet_HeavyHunters+("            ")+(planet_HeavyHunters - planet_HeavyHunters_F)+("            ")+"Heavy Hunter"+("              ")+enemy_HeavyHunters+("             ")+(enemy_HeavyHunters - enemy_HeavyHunters_F)+
 						"\nBattle Ship"+("         ")+planet_BattleShips+("            ")+(planet_BattleShips - planet_BattleShips_F)+("            ")+"Battle Ship"+("               ")+enemy_BattleShips+("             ")+(enemy_BattleShips - enemy_BattleShips_F)+
 						"\nArmored Ship"+("        ")+planet_ArmoredShips+("            ")+(planet_ArmoredShips - planet_ArmoredShips_F)+("            ")+"ArmoredShips"+("              ")+enemy_ArmoredShips+("             ")+(enemy_ArmoredShips - enemy_ArmoredShips_F)+
@@ -379,14 +403,14 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 						"\n"+
 						"\n**************************************************************************************"+
 						"\nCost Army Planet"+("                ")+"Cost Army Enemy"+
-						"\nMetal:"+("  ")+cost_Metal_Planet+("                     ")+"Metal:"+("  ")+cost_Metal_Enemy+
+						"\nMetal:"+("  ")+cost_Metal_Planet+("                    ")+"Metal:"+("  ")+cost_Metal_Enemy+
 						"\nDeuterium:"+("  ")+cost_Deuterium_Planet+("                 ")+"Metal:"+("  ")+cost_Deuterium_Enemy+
 						"\n"+
 						"\n**************************************************************************************"+
-						"\nLosses Army Planet"+("           ")+"Losses Army Enemy"+
-						"\nMetal:"+("  ")+losses_Metal_Planet+("                  ")+"Metal:"+("  ")+losses_Metal_Enemy+
-						"\nDeuterium:"+("  ")+losses_Deuterium_Planet+("              ")+"Metal:"+("  ")+losses_Deuterium_Enemy+
-						"\nWeighted:"+("  ")+losses_Weighted_Planet+("               ")+"Metal:"+("  ")+losses_Weighted_Enemy+
+						"\nLosses Army Planet"+("              ")+"Losses Army Enemy"+
+						"\nMetal:"+("  ")+losses_Metal_Planet+("                    ")+"Metal:"+("  ")+losses_Metal_Enemy+
+						"\nDeuterium:"+("  ")+losses_Deuterium_Planet+("                 ")+"Metal:"+("  ")+losses_Deuterium_Enemy+
+						"\nWeighted:"+("  ")+losses_Weighted_Planet+("                 ")+"Metal:"+("  ")+losses_Weighted_Enemy+
 						"\n"+
 						"\n**************************************************************************************"+
 						"\nWaste Generated:"+
@@ -395,17 +419,14 @@ public class reportsWindow extends JFrame implements ActionListener, ItemListene
 						"\n"+
 						"\n"+message_Winner+
 						"\n"+
-						"\n######################################################################################"+
-						"\nView Battle Development?(S/N)"
-						;
+						"\n######################################################################################";
 
-				
-				
-				
-				
 			
 			textArea_1.setText(full_Report);
-			System.out.println("Battle 1 seleccionado");
+			System.out.println(arrayWasteMaterial);
+		}
+		if (BattleRep.equalsIgnoreCase("")) {
+			System.out.println("asdasfasd");
 		}
 		
 	}

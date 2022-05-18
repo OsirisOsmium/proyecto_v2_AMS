@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -35,6 +36,7 @@ public class connectionOracle {
 			System.out.println("ERROR: El driver NO se ha cargado");
 		}
 	}
+	
 	public void iniciar() {
 		try {
 			CallableStatement cst=conn.prepareCall("");
@@ -46,6 +48,27 @@ public class connectionOracle {
             System.out.println("Error: " + ex.getMessage());
         }
 	}
+	
+	
+	public ArrayList<Integer> extraeId() {
+        ArrayList<Integer> ides = new ArrayList<Integer>();
+        try {
+			String query = "select * from battle";
+			Statement stmnt=conn.createStatement();
+			ResultSet rs=stmnt.executeQuery(query);
+			while (rs.next()){
+				ides.add(rs.getInt(1));
+			}
+			System.out.println("Guardado");
+		}catch(SQLException e) {
+			System.out.println("Ha habido algun error");
+			e.getStackTrace();
+		}
+        
+        
+		return (ides);
+	}
+	
 	
 	public boolean LogIn(String username, String password) {
 		String txt="";
@@ -315,6 +338,219 @@ public class connectionOracle {
             System.out.println("Error: " + ex.getMessage());
         }
 	}
+	
+	public ArrayList<Integer> Stats(int ids) {
+		ArrayList<Integer> stat = new ArrayList<Integer>();
+		try {
+			CallableStatement cst = conn.prepareCall("{call GET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento");
+			do {
+	            cst.setInt(1, ids);
+	            
+	            cst.registerOutParameter(2, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(11, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(12, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(13, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(14, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(15, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(16, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(17, java.sql.Types.INTEGER);
+	            
+	            cst.execute();
+	            int numMetal, numDeuterium, lvlAttack, lvlDefense, numLight, numHeavy, numBattle, numArmored, numMissile, numIon, numPlasma;
+	            stat.add(numMetal=cst.getInt(4));
+	            stat.add(numDeuterium=cst.getInt(6));
+	            
+	            stat.add(lvlAttack=cst.getInt(16));
+	            stat.add(lvlDefense=cst.getInt(14));
+	            
+	            stat.add(numLight=cst.getInt(7));
+	            stat.add(numHeavy=cst.getInt(8));
+	            stat.add(numBattle=cst.getInt(9));
+	            stat.add(numArmored=cst.getInt(10));
+	            
+	            stat.add(numMissile=cst.getInt(11));
+	            stat.add(numIon=cst.getInt(12));
+	            stat.add(numPlasma=cst.getInt(13));
+	            
+	        }while (id>0);
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
+		return stat;
+	}
+	
+	
+	
+	
+	
+	public ArrayList<Integer> viewEnemy(int ids){
+		ArrayList<Integer> ene = new ArrayList<Integer>();
+		try {
+			CallableStatement cst = conn.prepareCall("{call GET_ENEMY (?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento get_enemy");
+			do {
+	            cst.setInt(1, ids);
+	            
+	            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
+	            cst.registerOutParameter(3, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            
+	            
+	            cst.execute();
+	            int numMetal, numCristal, numDeuterium, numLight, numHeavy, numBattle, numArmored;
+	            ene.add(numMetal=cst.getInt(4));
+	            ene.add(numDeuterium=cst.getInt(6));
+	
+	            ene.add(numLight=cst.getInt(7));
+	            ene.add(numHeavy=cst.getInt(8));
+	            ene.add(numBattle=cst.getInt(9));
+	            ene.add(numArmored=cst.getInt(10));
+        
+	        }while (id>0);
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
+		
+		return ene;
+	}
+	
+	public ArrayList<Integer> viewWasteMaterial(int ids){
+		ArrayList<Integer> mat = new ArrayList<Integer>();
+		try {
+			CallableStatement cst = conn.prepareCall("{call GET_BATTLE (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento GET_GATTLE");
+			do {
+	            cst.setInt(1, ids);
+	            
+	            cst.registerOutParameter(2, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(3, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            
+	            //waste_material
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            
+	            //unit_in
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(11, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(12, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(13, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(14, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(15, java.sql.Types.INTEGER);
+	            //unit_fall
+	            cst.registerOutParameter(16, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(17, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(18, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(19, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(20, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(21, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(22, java.sql.Types.INTEGER);
+	            
+	            
+	            //enemy_in
+	            cst.registerOutParameter(23, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(24, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(25, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(26, java.sql.Types.INTEGER);
+	            //enemy_fall
+	            cst.registerOutParameter(27, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(28, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(29, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(30, java.sql.Types.INTEGER);
+	            
+	            cst.execute();
+	            
+	            int wasteMetal, wasteDeuterium, lightU, heavyU, battleU, armoredU, missileU, ionU, plasmaU, lightF, heavyF, battleF, armoredF, 
+	            missileF, ionF, plasmaF,lightE, heavyE, battleE, armoredE, lightEF, heavyEF, battleEF, armoredEF;
+	            
+	            mat.add(wasteMetal=cst.getInt(7));
+	            mat.add(wasteDeuterium=cst.getInt(8));
+	            
+	            mat.add(lightU=cst.getInt(9));
+	            mat.add(heavyU=cst.getInt(10));
+	            mat.add(battleU=cst.getInt(11));
+	            mat.add(armoredU=cst.getInt(12));
+	            mat.add(missileU=cst.getInt(13));
+	            mat.add(ionU=cst.getInt(14));
+	            mat.add(plasmaU=cst.getInt(15));
+
+	            mat.add(lightF=cst.getInt(16));
+	            mat.add(heavyF=cst.getInt(17));
+	            mat.add(battleF=cst.getInt(18));
+	            mat.add(armoredF=cst.getInt(19));
+	            mat.add(missileF=cst.getInt(20));
+	            mat.add(ionF=cst.getInt(21));
+	            mat.add(plasmaF=cst.getInt(22));
+	            
+	            mat.add(lightE=cst.getInt(23));
+	            mat.add(heavyE=cst.getInt(24));
+	            mat.add(battleE=cst.getInt(25));
+	            mat.add(armoredE=cst.getInt(26));
+	            
+	            mat.add(lightEF=cst.getInt(27));
+	            mat.add(heavyEF=cst.getInt(28));
+	            mat.add(battleEF=cst.getInt(29));
+	            mat.add(armoredEF=cst.getInt(30));
+
+	        }while (id>0);
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: gENERAL");
+            System.out.println("Error: " + ex.getMessage());
+        }
+		
+		return mat;
+	}
+	
+	public void updateResource(int ids, int metal, int cristal, int deuterium) {
+		try {
+			CallableStatement cst = conn.prepareCall("{call GET_ENEMY (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			int id = -1;
+			System.out.println("llama al procedimiento get_enemy");
+			do {
+	            cst.setInt(1, ids);
+	            
+	            cst.setInt(3, metal);
+	            cst.setInt(4, cristal);
+	            cst.setInt(5, deuterium);
+	            
+	            
+	            cst.execute();
+	            
+        
+	        }while (id>0);
+		}
+		catch (SQLException ex) {
+			System.out.println("ERROR: ha havido algun error");
+            System.out.println("Error: " + ex.getMessage());
+        }
+	}
+	
+	
 	
 	
 	

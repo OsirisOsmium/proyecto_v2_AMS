@@ -17,6 +17,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JRadioButton;
@@ -24,6 +25,7 @@ import javax.swing.JTextArea;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
 import java.awt.event.ItemEvent;
 
 public class buildWindow extends JFrame implements ActionListener, ItemListener{
@@ -42,7 +44,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
 	
-
+	connectionOracle conn=new connectionOracle(url, user, password);
 
 	/**
 	 * Launch the application.
@@ -55,6 +57,7 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	 * Create the frame.
 	 */
 	public buildWindow() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
@@ -184,11 +187,19 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 		lblMetal.setBounds(613, 374, 45, 13);
 		contentPane.add(lblMetal);
 		
+		
 		lblDeuterium = new JLabel("XX");
 		lblDeuterium.setForeground(Color.WHITE);
 		lblDeuterium.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblDeuterium.setBounds(613, 406, 45, 13);
 		contentPane.add(lblDeuterium);
+		
+		
+		ArrayList<Integer> cantidad=conn.Stats(1);
+		lblMetal.setText(cantidad.get(0).toString());
+		lblDeuterium.setText(cantidad.get(1).toString());
+		
+		
 		
 		lblBackground = new JLabel("");
 		lblBackground.setBounds(0, 0, 809, 482);

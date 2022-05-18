@@ -18,6 +18,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Window.Type;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 
 public class mainWindow extends JFrame implements ActionListener{
 
@@ -44,6 +45,7 @@ public class mainWindow extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public mainWindow() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\YavinIV.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
@@ -109,8 +111,8 @@ public class mainWindow extends JFrame implements ActionListener{
 		lblTitle.setEnabled(false);
 		lblTitle.setBorder(null);
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		lblTitle.setBounds(396, 8, 403, 79);
+		lblTitle.setFont(new Font("Segoe UI Black", Font.PLAIN, 70));
+		lblTitle.setBounds(155, 154, 584, 154);
 		contentPane.add(lblTitle);
 		
 		JLabel lblBackground = new JLabel("");
