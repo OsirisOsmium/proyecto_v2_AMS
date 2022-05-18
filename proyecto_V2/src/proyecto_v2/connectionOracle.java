@@ -49,7 +49,7 @@ public class connectionOracle {
 		            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
 		            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
 		            cst.registerOutParameter(4, java.sql.Types.INTEGER);
-		            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+		            cst.registerOutParameter(5, java.sql.Types.VARCHAR);
 
 		            cst.execute();
 		            String us=cst.getString(2);
@@ -359,18 +359,17 @@ public class connectionOracle {
 	public String viewStep() {
 		String text="";
 		try {
-			String query="select * from step";
-			Statement stmnt =conn.createStatement();
+			String query = "select * from step";
+			Statement stmnt=conn.createStatement();
 			ResultSet rs=stmnt.executeQuery(query);
-			while(rs.next()) {
-				
-				text=text+rs.getInt("id_ship")+"	"+rs.getString("name")+"		"+rs.getInt("basedamage");
+			while (rs.next()){
+				text=text+"Id_Step: "+rs.getInt(1)+" Battle_id_battle: "+rs.getInt(2)+" OrderPosition: "+rs.getInt(3)+" Descripcion: "+rs.getString(4);
+
 			}
-			
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("No se ha connectado con SQL");
+			System.out.println("stemp seteado en el lbl del replay");
+		}catch(SQLException e) {
+			System.out.println("Ha habido algun error");
+			e.getStackTrace();
 		}
 		return text;
 	}

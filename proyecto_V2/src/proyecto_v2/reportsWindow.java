@@ -15,17 +15,19 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
+import javax.swing.JScrollBar;
 
 public class reportsWindow extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain, btn;
+	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain, btnNewButton;
 	private JLabel lblNewLabel_2;
 
 	private String url="jdbc:oracle:thin:@localhost:1521:xe";
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
 	private JTextArea textArea;
+	private JTextArea textArea_1;
 	/**
 	 * Launch the application.
 	 */
@@ -96,11 +98,20 @@ public class reportsWindow extends JFrame implements ActionListener{
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);
 		
+		textArea_1 = new JTextArea();
+		textArea_1.setEditable(false);
+		textArea_1.setBounds(356, 51, 387, 371);
+		contentPane.add(textArea_1);
 		
+		btnNewButton = new JButton("Import data STEP");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton.setBounds(165, 201, 159, 45);
+		btnNewButton.addActionListener(this);
+		contentPane.add(btnNewButton);
 		
+		////////////////////////////
 		
-		
-		
+
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setBounds(0, 0, 809, 482);
 		ImageIcon imagen4= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\espacio_fondo.jpeg");
@@ -108,17 +119,14 @@ public class reportsWindow extends JFrame implements ActionListener{
 		lblBackground. setIcon(icono4);//establece el ImageIcon en el label
 		contentPane.add(lblBackground);//añadimos el label
 		
-		
-		
-		////////////////////////////
-		
-		
 		setVisible(true);
 	}
 	public void actionPerformed(ActionEvent e) {
 		connectionOracle conn=new connectionOracle(url, user, password);
 
-		
+		if (btnNewButton==e.getSource()) {
+			textArea_1.setText(conn.viewStep());
+		}
 		
 		if (btnViewPlanetStat==e.getSource()){
 			//viewWindow view=new viewWindow();

@@ -107,14 +107,6 @@ public class comingWindow extends JFrame implements ActionListener{
 		
 		////////////////////////////
 		
-		
-		
-		btnBack = new JButton("Back");
-		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnBack.addActionListener(this);
-		btnBack.setBounds(319, 404, 115, 35);
-		contentPane.add(btnBack);
-		
 		JLabel lblTitle = new JLabel("NEW THREAD COMMING");
 		lblTitle.setForeground(Color.WHITE);
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);

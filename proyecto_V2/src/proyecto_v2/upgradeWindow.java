@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import planetWars.Planet;
 
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -36,7 +35,6 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	private String password="PLANET_WARS_V2";
 	
 	connectionOracle conn=new connectionOracle(url, user, password);
-	Planet classPlanet=new Planet();
 
 	
 
@@ -209,10 +207,8 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		connectionOracle conn=new connectionOracle(url, user, password);
 
 		if (btnUpDef==e.getSource()) {
-			classPlanet.upgradeTechnologyDefense();
 		}
 		if (btnUpAtack==e.getSource()) {
-			classPlanet.upgradeTechnologyAttack();
 
 		}
 		

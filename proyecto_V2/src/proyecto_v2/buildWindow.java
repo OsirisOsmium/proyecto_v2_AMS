@@ -10,7 +10,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import planetWars.Planet;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -43,7 +42,6 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 	private String user="PLANET_WARS_V2";
 	private String password="PLANET_WARS_V2";
 	
-	Planet classPlanet=new Planet();
 
 
 	/**
@@ -237,28 +235,24 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 				System.out.println("Accion de add del TROPS con Light Hunter");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newLigthHunter(cant);
 				
 			}
 			if (Trops.equalsIgnoreCase("Heavy Hunter")) {
 				System.out.println("Accion de add del TROPS con Heavy Hunter");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newHeavyHunter(cant);
 
 			}
 			if (Trops.equalsIgnoreCase("Battle Ship")) {
 				System.out.println("Accion de add del TROPS con Battle Ship");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newBattleShip(cant);
 
 			}
 			if (Trops.equalsIgnoreCase("Armored Ship")) {
 				System.out.println("Accion de add del TROPS con Armored Ship");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newArmoredShip(cant);
 
 			}
 			
@@ -267,21 +261,18 @@ public class buildWindow extends JFrame implements ActionListener, ItemListener{
 				System.out.println("Accion de add del DEFENSE con Missile Launcher");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newMissileLauncher(cant);
 
 			}
 			if (Trops.equalsIgnoreCase("Ion Cannon")) {
 				System.out.println("Accion de add del DEFENSE con Ion Cannon");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newIonCannon(cant);
 
 			}
 			if (Trops.equalsIgnoreCase("PLasma Cannon")) {
 				System.out.println("Accion de add del DEFENSE con PLasma Cannon");
 				int cant=Integer.parseInt(txtNumAñadir.getText());
 				
-				classPlanet.newPlasmaCannon(cant);
 
 			}
 		}
