@@ -1,6 +1,12 @@
-package Projecto2;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public interface Variables {
+	
 	// resources available to create the first enemy fleet
 	public final int DEUTERIUM_BASE_ENEMY_ARMY = 26000;
 	public final int METAL_BASE_ENEMY_ARMY = 180000;
@@ -123,5 +129,29 @@ public interface Variables {
 	
 	// percentage of waste that will be generated with respect to the cost of the units
 	public final int PERCENTATGE_WASTE = 70;
+	
+	public static int conseguirValor(String constante,Connection cn) {
+		 BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+	
+	     try {
+	         
+	         // Llamada al procedimiento almacenado
+	         CallableStatement cst = cn.prepareCall("{call GET_CONSVAL_BYNAME (?,?)}");
+	         cst.setString(1, constante);
+	         cst.registerOutParameter(2, java.sql.Types.INTEGER);
+	         cst.execute();
+	         int valor=cst.getInt(2);
+	         return valor;
+	     } catch (SQLException ex) {
+	         System.out.println("Error: " + ex.getMessage());
+	     } finally {
+	         try {
+	             cn.close();
+	         } catch (SQLException ex) {
+	             System.out.println("Error: " + ex.getMessage());
+	         }
+	     }
+		return 0;
+	}
 
 }
