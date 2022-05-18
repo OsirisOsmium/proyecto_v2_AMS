@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="UNITS Defense FK" directorySegmentName="seg_0" id="CBFEF3A3-4C2E-A288-55C6-CE933435667E">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-10 19:13:31 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="1343D15C-3B40-E491-45C3-5C8F631A17DE" value="true"/>
+</engineerTo>
+<sourcePk>9E61785A-9E87-2C3D-9638-3AA64BB20E82</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>64708AED-7ED9-CBB4-35D4-F995918CF18F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8A5FA8D4-DCC2-E42F-6AC0-EC2CB92E2361</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="UNITS" directorySegmentName="seg_0" id="0C4C04EB-42BE-FE88-103D-8251AAA2F080">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Planet_ID_Planet" id="4487B71E-8538-286D-3952-A647B3E748E5">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Ship_ID_Ship" id="68BF2DBA-4AE6-39A5-280E-08AA3109168C">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_UNIT" id="A564E293-53ED-CFFC-64AB-75D639C3C883">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Enemy_ID_Enemy" id="D85BF563-C378-FDC2-5DDF-3546B550C4EF">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Defense_ID_Defense" id="D926F5C8-1104-F518-7E73-09B0F0302285">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="defense_Level" id="E55C3DED-51C0-E2D0-4810-11AD82638B9C">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="attack_Level" id="E6B37C35-96E8-A5C5-14C5-738240245FED">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="UNITS_Defense_FK" id="67A9FBD8-FD40-E9A8-395F-E56A397C9A2D">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="UNITS_Enemy_FK" id="D6AE5E8A-EC05-094D-6662-33DC421E9DFC">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="UNITS_Ship_FK" id="DB54E0E6-AF5A-64D6-F24C-57B3A70A90DC">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="UNITS_Planet_FK" id="E528A3E5-DBF1-1933-1D43-62F2670011F6">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="UNITS_PK" id="C775C58E-5FAF-61A1-FB44-5E4B13420E16">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

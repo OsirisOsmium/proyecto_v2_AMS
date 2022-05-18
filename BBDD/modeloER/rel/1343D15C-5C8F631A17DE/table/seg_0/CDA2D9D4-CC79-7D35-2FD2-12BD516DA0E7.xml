@@ -1,0 +1,605 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CDA2D9D4-CC79-7D35-2FD2-12BD516DA0E7" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="BATTLE">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>BATTLE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>AA18C13C-7E9E-6267-0396-7E5318FDEB16</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_BATTLE" id="FBA9435B-D828-E4E7-F874-CC1369304B2D">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>ID_BATTLE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>C76986EB-6DAD-1576-C517-D907235C4F55</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLAYER_ID_PLAYER" id="BF56A3D4-BF91-6F21-214D-502280709974">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>PLAYER_ID_PLAYER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>6001FDF0-36EF-8332-4B65-F40E379933CD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E3038E60-576B-BD85-19BA-768C7E1CF966" referredColumn="84984D03-E89D-711F-B8B1-DD81662C18F4"/>
+</associations>
+</Column>
+<Column name="ENEMY_ID_ENEMY" id="D9A8908D-AFB5-544C-9454-A853ABD855A7">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>ENEMY_ID_ENEMY</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>2E9DC33A-3674-436E-4317-0879E5300C3A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="076E8571-241E-D8BF-9876-700BFF7ADD6F" referredColumn="2D75ACEE-DB80-F9BE-2617-9C95CB82A706"/>
+</associations>
+</Column>
+<Column name="PLANET_ID_PLANET" id="C8D684A6-80B2-8892-E3E3-7409BAAD830E">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>PLANET_ID_PLANET</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>AAC7EAFB-1DD3-1507-6256-616DBECF0990</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97F12832-708E-7626-EE7B-92AA14C26321" referredColumn="60A921A8-31FD-DA4A-A545-5F759858D926"/>
+</associations>
+</Column>
+<Column name="PLAYER_WINNER" id="F32E8C3E-25EE-297E-FD11-A62782E1CD3B">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>PLAYER_WINNER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>80F2A27E-44AF-FBF0-6D18-50250219BAC5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENEMY_WINNER" id="C90590DB-2086-950A-514B-C8A9E27A3E4F">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>ENEMY_WINNER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>4B51D90F-73FF-1601-1578-9788837D8701</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WASTE_METAL" id="C8669394-3723-4067-3851-B528945E6AB7">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>WASTE_METAL</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>D1570A74-CAC6-0C61-B327-C1BC4697E26D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WASTE_DEUTERIUM" id="81734ECC-3BBE-262B-D787-E635DF31AA16">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>WASTE_DEUTERIUM</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>5DFA38CF-EEFD-8014-8636-0001839356B9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_LIGHTHUNTER" id="69C97740-2D33-E780-ECBD-39ADB206F054">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_LIGHTHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>A0900F8C-4347-F41F-126E-740CBD5B067E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_HEAVYHUNTER" id="510AC879-7BD7-B571-71E9-98931212035A">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_HEAVYHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>C2126C4A-2377-E1DA-AE86-6207F83764D5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_BATTLESHIP" id="A90EE692-978F-6C23-6346-0D815D67C87B">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_BATTLESHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>EA580459-9AF8-7E3D-2A69-13D8A64D13D7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_ARMOREDSHIP" id="FBF0271C-8075-DAEE-17A8-D7E49F54B4D6">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_ARMOREDSHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>EF5B615C-D377-7C38-6B0F-26650367B992</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_MISSILELAUNCHER" id="53CFC009-35D9-98D0-8705-D82DB4EC7080">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_MISSILELAUNCHER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>C27EA90A-FF98-8E21-46C4-995EA13BA016</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_IONCANNON" id="F5EA8B4E-FFC7-36EC-631A-994A19758537">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_IONCANNON</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>D9EA68A5-1A80-534A-C81F-FC52D9C746D2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UI_PLASMACANNON" id="D33A9BF5-EE6B-C0B4-67B1-5D5B65491FFD">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UI_PLASMACANNON</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>74F6CD2A-2D1D-8221-9520-F5B9FFA27753</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_LIGHTHUNTER" id="903DCB13-ABDD-D5B2-C313-65E49224B9CE">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_LIGHTHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>DDA764FB-5B5B-9341-FCCA-EFF4A8413384</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_HEAVYHUNTER" id="2735ADF9-3203-6BE8-AA4B-976E8372181C">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_HEAVYHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>ABE96066-90F7-4989-15F4-A6E0344522F0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_BATTLESHIP" id="2470DCE9-3284-BD34-B048-1372214A65E8">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_BATTLESHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>15E0F353-1C62-E052-4E68-B9BA7F82325F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_ARMOREDSHIP" id="B2E7DA14-5694-5BB0-B641-E7275AAC657D">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_ARMOREDSHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>581977E3-0CFB-5018-71A7-1722F4C9C721</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_MISSILELAUNCHER" id="B4FEC2F8-4DB6-6A3A-C50E-995035CF21CD">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_MISSILELAUNCHER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>2E213726-C9C4-4FEC-ED3B-409BD05C939A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_IONCANNON" id="9FD9B130-B8E8-E718-1CFD-6E71E44E294B">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_IONCANNON</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>CDFE252A-E912-14BD-38F3-DFE0B5A6283E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF_PLASMACANNON" id="D05AE93A-C389-F24F-E540-719CBEA5C3B1">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>UF_PLASMACANNON</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>3A57C5C4-5824-C7F6-3795-3F9A9A26805D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_LIGHTHUNTER" id="126A351E-A707-3C81-A4D7-BD80BA230B7E">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EI_LIGHTHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>0709E8A5-36F5-130D-563B-1B4D4C3C4E6D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_HEAVYHUNTER" id="8BDE8396-20E0-1FCF-9D24-90B73D565BB7">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EI_HEAVYHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>617B831F-4BB0-2904-7D0D-F98682B81C5A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_BATTLESHIP" id="F37895E0-BCF8-2037-1330-022396DDE609">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EI_BATTLESHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>DB2E965C-86E7-61CB-5CA0-7E25565E6413</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EI_ARMOREDSHIP" id="3EC5AA71-C14D-2BBF-793C-A1C836BE7052">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EI_ARMOREDSHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>67F463EB-130E-8CE6-1E92-6605677D603A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_LIGHTHUNTER" id="E354825E-6108-EA78-D228-2D0175569125">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EF_LIGHTHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>295CD219-853B-3768-23BE-776328330B40</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_HEAVYHUNTER" id="5EB89DC0-839D-FB30-1986-682CA2188539">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EF_HEAVYHUNTER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>CB76551D-085B-CEB3-16D0-CA174DF768A0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_BATTLESHIP" id="64441F4C-9208-EBB1-3711-E57DC9378454">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EF_BATTLESHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>73E34C4D-B172-A68B-E829-1DA80D3AF4FE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EF_ARMOREDSHIP" id="08F4F6F9-0940-4009-BBFA-6753D1479ED5">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>BATTLE</sourceObjSchema>
+<sourceObjName>EF_ARMOREDSHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>751CD093-41AF-D73B-5F20-60E6722EFC32</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="67C3810C-AE6F-C5A1-C380-CD350CF6633C" name="BATTLE_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>BATTLE_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>2FF7F588-6C91-9EEA-8529-02FBAA29D8A3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBA9435B-D828-E4E7-F874-CC1369304B2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23D43355-4DF4-EE9E-3A93-F949E523B427" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="BATTLE_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>BATTLE_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>5B8F4102-6B31-E4F7-4134-D98DD27FF751</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBA9435B-D828-E4E7-F874-CC1369304B2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69B63B42-5DD1-E8AC-B8B8-6C4AA1329E3F" name="BATTLE_ENEMY_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9A8908D-AFB5-544C-9454-A853ABD855A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F1768C8-F886-F85E-669C-B4F108605043" name="BATTLE_PLANET_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8D684A6-80B2-8892-E3E3-7409BAAD830E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16A06886-16CC-51FD-3DCE-440344FF9A1E" name="BATTLE_PLAYER_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF56A3D4-BF91-6F21-214D-502280709974"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

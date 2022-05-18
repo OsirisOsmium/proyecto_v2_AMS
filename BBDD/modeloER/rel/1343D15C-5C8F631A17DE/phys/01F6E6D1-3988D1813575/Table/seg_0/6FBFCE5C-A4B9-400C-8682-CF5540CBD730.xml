@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Ship" directorySegmentName="seg_0" id="6FBFCE5C-A4B9-400C-8682-CF5540CBD730">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="baseDamage" id="188CF4B6-D46F-CBE3-2813-FA54E6545FCA">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="crystal_Cost" id="1C394C31-9299-2C31-01CC-FD8C4C76C548">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="speed" id="41BBC53C-8354-4DF6-B4B8-10F648E8E10A">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="name" id="434B5EF8-C27D-7074-E7B2-7D1BDAC516BB">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="armor" id="4FADDD70-9418-7E13-B2D4-BB09A449E51E">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="deuterium_Cost" id="53B48662-F419-B3DC-3A0A-6603F7734C17">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="metal_Cost" id="5CDF7C63-6414-3457-740B-7F5AA7ADD5CA">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="generateWasting" id="7C219B7F-3709-C9A7-F1F1-E6263BEF985D">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_Ship" id="C4BEA7F9-EEBD-D443-A46D-DED442946D95">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="initialArmor" id="FC4173E6-09FF-0E48-228A-271E2F8B6D69">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Ship_PK" id="6C4A79AB-9407-A4F2-15DA-47A048FC13D9">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Ship_name_UN" id="8AF49D3D-E8FE-7602-4E51-8FEEF072AECA">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

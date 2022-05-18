@@ -1,0 +1,234 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="54FD8690-E039-94A8-B1CE-A31D4C00F1B9" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="SHIP">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>SHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>E4C51897-8EC5-D787-C5C2-A5EB5278901A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SHIP" id="3A83D41C-E4FB-1E6C-CB4A-93D488F063AC">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>ID_SHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>CAD8413B-E2F4-A38B-9B5A-1EC1C32BA968</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="44FCF227-8804-A2E3-D8C1-D9F2715A14D1">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>7D09FBDF-FF0E-1EB2-C2CD-99FB7ED1A6F0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="METAL_COST" id="427C067C-F4D8-A9BE-8D48-7B110A2F502B">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>METAL_COST</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>8A929577-6EC6-0A68-EC86-2F8F870D5D0C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRYSTAL_COST" id="1D31CC6C-A570-97FE-44B8-9612A2B10B30">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>CRYSTAL_COST</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>C3DE6674-7089-C2D2-6357-7146469CD25C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEUTERIUM_COST" id="9B2FE78C-9146-453E-FCA7-88B0EEFEA8A2">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>DEUTERIUM_COST</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>7D949AEA-A9D4-B7D0-EECC-FEB3A6CB930D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INITIALARMOR" id="BFD5B756-89B3-8F31-500D-52D0F17C6013">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>INITIALARMOR</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>996B56B7-48DF-87FC-FA3F-438817382A85</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARMOR" id="B1A1237B-E7EE-9B6D-C65E-1764060B46D6">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>ARMOR</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>0FE029AC-8489-5BFD-C0E2-168CBE78C90C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BASEDAMAGE" id="DB79C9DB-8C28-2B2A-E86D-F78775EDACDB">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>BASEDAMAGE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>6185F646-2D49-1091-A3C5-A8333219FA2F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPEED" id="8FF7C264-E0A7-8B63-57C3-52B1C5B6DA31">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>SPEED</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>9EEC8D0A-4491-B0B2-8506-2F4D8F90EE11</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENERATEWASTING" id="FDC97861-7167-8C01-C141-1797935B03DE">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>SHIP</sourceObjSchema>
+<sourceObjName>GENERATEWASTING</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>01C9DC88-B32D-4C73-FE2B-DAD7E6F8DDB6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ADA4AD70-39DD-2A7D-9B35-A5104E7983B5" name="SHIP_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>SHIP_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>B6005D5F-20B4-74CC-4D2D-94750D40EB4F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A83D41C-E4FB-1E6C-CB4A-93D488F063AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C2327176-16B7-202E-ACC3-348FE98B7DEE" name="SHIP_NAME_UN">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>SHIP_NAME_UN</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>A4A54609-B4D1-24E6-33B5-983CABB9211F</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44FCF227-8804-A2E3-D8C1-D9F2715A14D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA210083-2699-3D84-4AA0-C4EF90369172" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="SHIP_NAME_UN">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>SHIP_NAME_UN</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>E65499EB-F1A9-AAAB-B508-C3AF7B1C126A</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44FCF227-8804-A2E3-D8C1-D9F2715A14D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5695DA71-4480-75C2-D911-84C9A67DDDA4" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="SHIP_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>SHIP_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>701DBFDE-3843-963D-F0A0-E9DABDE71140</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A83D41C-E4FB-1E6C-CB4A-93D488F063AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

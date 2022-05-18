@@ -1,0 +1,216 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F1C3255-C367-1BB0-2637-6E19B30B23F1" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="UNITS">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>UNITS</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>7FFEA1ED-D097-4708-339B-629AA4DAD6D3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_UNIT" id="550A4D17-C460-B102-32F8-8E23B7CACA3C">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>ID_UNIT</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>0980EFBD-467B-BA85-0CA3-62615D3AABD1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEFENSE_LEVEL" id="3326E309-98F7-467E-278A-508750D93BB9">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>DEFENSE_LEVEL</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>3415AA4A-7035-0BC0-6C85-E0A03DBF0821</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATTACK_LEVEL" id="1030B9B6-CE54-57E4-D4B9-0B8AA2174A76">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>ATTACK_LEVEL</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>9B11A714-4CED-9714-8AD2-3C0868D0AFCA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEFENSE_ID_DEFENSE" id="90B1714E-B51A-D21A-8C53-D982B5A32B89">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>DEFENSE_ID_DEFENSE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>3FCCD9D2-FA78-A4E8-31A1-E9093E4CA91F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="234C7B87-28B1-42CD-B82C-9D29D131A17A" referredColumn="69D03DF8-0B26-96DF-0CEC-0D51CAE83994"/>
+</associations>
+</Column>
+<Column name="SHIP_ID_SHIP" id="02847FE4-6F5D-5375-5B9B-F66B77BF3A38">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>SHIP_ID_SHIP</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>4485B0E7-2491-0213-6505-8FF309C8107B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="74644CFC-EEE6-FC96-7BE6-D2CB5FB85770" referredColumn="3A83D41C-E4FB-1E6C-CB4A-93D488F063AC"/>
+</associations>
+</Column>
+<Column name="ENEMY_ID_ENEMY" id="775B010F-06BA-DEE8-6A22-3C4AC56E60D7">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>ENEMY_ID_ENEMY</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>CEC837A9-31FE-1153-152D-C09759E308C7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E05B3C3A-F03C-2EBC-D1CE-726618F25867" referredColumn="2D75ACEE-DB80-F9BE-2617-9C95CB82A706"/>
+</associations>
+</Column>
+<Column name="PLANET_ID_PLANET" id="F16F2BE9-5BE3-572E-49E0-2B3126347BC5">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>UNITS</sourceObjSchema>
+<sourceObjName>PLANET_ID_PLANET</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>3138D4BF-B8BF-B6D6-1233-4857AD5BA81C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EFBD547F-B1BC-ED64-B609-36CEF9BDA2CE" referredColumn="60A921A8-31FD-DA4A-A545-5F759858D926"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D5683F6-8BE5-3FB9-9963-74121E58FC75" name="UNITS_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>UNITS_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>283D679A-82EA-DC7D-BB78-AEA8F6BEAA5C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="550A4D17-C460-B102-32F8-8E23B7CACA3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="676C3C32-64F5-A9E1-D5F5-06EAB487DDEC" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="UNITS_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>UNITS_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>E50FC860-3D12-A4C1-5094-5E1B1395F1B7</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="550A4D17-C460-B102-32F8-8E23B7CACA3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9947D785-46DB-7363-B2E7-FA753078C979" name="UNITS_DEFENSE_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90B1714E-B51A-D21A-8C53-D982B5A32B89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A6B1ED3-04D0-EAAD-CFE0-F195F3FE5B7B" name="UNITS_ENEMY_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="775B010F-06BA-DEE8-6A22-3C4AC56E60D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E1FE4DF-B82F-67F9-5E18-740362715931" name="UNITS_PLANET_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F16F2BE9-5BE3-572E-49E0-2B3126347BC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9BE778CC-8506-B900-3C09-2680B9A35ACE" name="UNITS_SHIP_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02847FE4-6F5D-5375-5B9B-F66B77BF3A38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
