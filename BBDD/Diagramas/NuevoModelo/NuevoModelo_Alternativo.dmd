@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="NuevoModelo_Alternativo" id="EF76CC30-2DE4-602C-5172-F1F0C17896EA" version="3.5">
-<createdBy>Albert</createdBy>
-<createdTime>2022-05-07 10:34:11 UTC</createdTime>
-<ownerDesignName>NuevoModelo</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>EF76CC30-2DE4-602C-5172-F1F0C17896EA</designId>
-</OSDM_Design>
