@@ -38,6 +38,7 @@ public class connectionOracle {
 	public void iniciar() {
 		try {
 			CallableStatement cst=conn.prepareCall("");
+			
 			cst.execute();
 		}
 		catch (SQLException ex) {
