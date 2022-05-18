@@ -134,6 +134,7 @@ public class Battle{
 		String[] report = null;
 		report[0]="BATTLE STATISTICS\n\nArmy planet\nLight Hunter    Units: "+this.initialArmies[0][0]+
 				" Drops: "+(this.initialArmies[0][0]-this.actualNumberUnitsPlanet[0]);
+		
 		return report;
 	}
 	
@@ -214,10 +215,20 @@ public class Battle{
 			numeroActual=numeroActual+army[i].size();
 		}
 		if (army.length==7) {
-			return (numeroActual*100/this.getInitialNumberUnitsPlanet());
+			try {
+				return (numeroActual*100/this.getInitialNumberUnitsPlanet());
+			}
+			catch(Exception e) {
+				System.out.println("El ejercito del planeta no tiene unidades");
+			}
 		}
 		else if (army.length==4) {
-			return (numeroActual*100/this.getInitialNumberUnitsEnemy());
+			try {
+				return (numeroActual*100/this.getInitialNumberUnitsEnemy());
+			}
+			catch(Exception e) {
+				System.out.println("El ejercito del enemigo no tiene unidades");
+			}
 		}
 		return 0;
 	}
@@ -382,19 +393,13 @@ public class Battle{
 		}
 		this.setBattleDevelopment(this.battleDevelopment+reporteBatalla);
 	}
-	public void batallas() {
+	public int[] batallas() {
+		int[] valores=new int[2];
 		int turn=0;
 		int lastTurn=0;
 		int planetPct=this.remainderPercentageFleet(this.getPlanetArmy());
 		int enemyPct=this.remainderPercentageFleet(this.getEnemyArmy());
-		while(planetPct>20 && enemyPct>20) {
-			planetPct=this.remainderPercentageFleet(this.getPlanetArmy());
-			enemyPct=this.remainderPercentageFleet(this.getEnemyArmy());
-			for (int i=0;i<this.getEnemyArmy().length;i++) {
-				System.out.println("Planeta: "+this.getPlanetArmy()[i].size());
-				System.out.println("Enemigo: "+this.getEnemyArmy()[i].size());
-			}
-			System.out.println("Planeta: "+planetPct+" Enemigo "+enemyPct);
+		while(planetPct>=20 && enemyPct>=20) {
 			if (turn==0) {
 				lastTurn=(int) (Math.random()*(3-1));
 			}
@@ -407,8 +412,22 @@ public class Battle{
 				}
 			}
 			this.batalla(lastTurn);
+			planetPct=this.remainderPercentageFleet(this.getPlanetArmy());
+			enemyPct=this.remainderPercentageFleet(this.getEnemyArmy());
 			turn++;
 		}
+		boolean ganador=false;
+		if (this.fleetResourceCost(planetArmy)[1]>this.fleetResourceCost(enemyArmy)[1]) {
+			ganador=true;
+		}
+		else if (this.fleetResourceCost(planetArmy)[1]<this.fleetResourceCost(enemyArmy)[1]) {
+			ganador=false;
+		}
+		/*if (ganador) {
+			valores[0]=0;
+			valores[1]=
+		}*/
+		return valores;
 	}
 	
 	public void updateActualactualNumberUnits() {

@@ -1,3 +1,11 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -6,57 +14,49 @@ public class Main {
 	private static int numBatallas=0;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*Planet planet=new Planet();
-		Planet enemy=new Planet();
-		planet.newLigthHunter(5);
-		planet.newArmoredShip(5);
-		planet.newBattleShip(5);
-		planet.newHeavyHunter(5);
-		planet.newIonCannon(5);
-		planet.newMissileLauncher(5);
-		planet.newPlasmaCannon(5);
-		enemy.newLigthHunter(5);
-		enemy.newArmoredShip(5);
-		enemy.newBattleShip(5);
-		enemy.newHeavyHunter(5);
-		planet.printStats();
-		ArrayList<MilitaryUnit>[] army=planet.getArmy();
-		System.out.println(army[1].get(1));
-		ArrayList<MilitaryUnit>[] enemigo=new ArrayList [4];
-		enemigo[0]=enemy.getArmy()[0];
-		enemigo[1]=enemy.getArmy()[1];
-		enemigo[2]=enemy.getArmy()[2];
-		enemigo[3]=enemy.getArmy()[3];
-		Battle battle=new Battle(planet.getArmy(),enemigo);
-		int turn=0;
-		int lastTurn=0;
-		int planetPct=battle.remainderPercentageFleet(battle.getPlanetArmy());
-		int enemyPct=battle.remainderPercentageFleet(battle.getEnemyArmy());
-		while(planetPct>20 && enemyPct>20) {
-			planetPct=battle.remainderPercentageFleet(battle.getPlanetArmy());
-			enemyPct=battle.remainderPercentageFleet(battle.getEnemyArmy());
-			for (int i=0;i<battle.getEnemyArmy().length;i++) {
-				System.out.println("Planeta: "+battle.getPlanetArmy()[i].size());
-				System.out.println("Enemigo: "+battle.getEnemyArmy()[i].size());
-			}
-			System.out.println("Planeta: "+planetPct+" Enemigo "+enemyPct);
-			if (turn==0) {
-				lastTurn=(int) (Math.random()*(3-1));
-			}
-			else {
-				if (lastTurn==0) {
-					lastTurn=1;
-				}
-				else if (lastTurn==1) {
-					lastTurn=0;
-				}
-			}
-			battle.batalla(lastTurn);
-			turn++;
-			//System.out.println(battle.getBattleDevelopment());
-		}
-		System.out.println("Batalla en main\n"+battle.getBattleDevelopment());
-		//System.out.println(battle.getBattleReport(0));*/
+		ArrayList<MilitaryUnit>[] enemy=createEnemyArmy();
+		Planet planet=new Planet();
+		logInWindow login=new logInWindow(planet,enemy);
+		Timer time = new Timer();
+		TimerTask task = new TimerTask() {;
+		    public void schedule(TimerTask task,long delay, long period) {
+		        run();
+		    }
+		        public void run()
+		        {
+		            planet.setMetal(planet.getMetal()+Variables.PLANET_METAL_GENERATED);
+		            planet.setDeuterium(planet.getDeuterium()+Variables.PLANET_DEUTERIUM_GENERATED);
+		            String url="jdbc:oracle:thin:@192.168.40.2:1521:orcl";
+		    		String user="alumnoAMS17";
+		    		String password="alumnoAMS17";
+		    		connectionOracle conn=new connectionOracle(url, user, password);
+		    		conn.insertarPlaneta(planet);
+		        }
+		        };
+		    time.schedule(task, 5000, 5000);
+		    Timer time2 = new Timer();
+		    TimerTask ts2 = new TimerTask() {;
+		    public void schedule(TimerTask ts2,long delay, long period) {
+		        run();
+		    }
+		        public void run()
+		        {
+		        	ArrayList<MilitaryUnit>[] enemy=createEnemyArmy();
+		    		login.setEnemyArmy(enemy);
+		    		Battle battle=new Battle(planet.getArmy(),enemy);
+		    		battle.batallas();
+		    		//new comingWindow(planet,enemy);
+		    		
+		        }
+		        };
+		    time.schedule(ts2, 180000, 180000);	
+		/*planet.newLigthHunter(5);
+  		planet.newHeavyHunter(3);
+  		planet.newArmoredShip(1);
+  		planet.newBattleShip(1);
+  		planet.newIonCannon(3);
+  		planet.newMissileLauncher(5);
+  		planet.newPlasmaCannon(2);
 		Timer time = new Timer();
 		TimerTask task = new TimerTask() {;
 		public void schedule(TimerTask task,long delay, long period) {
@@ -64,16 +64,76 @@ public class Main {
 		}
 	        public void run()
 	        {
-	            
+	        	BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+	            Connection cn = null;
 
+	            try {
+	                // Carga el driver de oracle
+	               DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+	                
+	                // Conecta con la base de datos orcl con el usuario system y la contrase�a password
+
+	                cn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.40.2:1521:orcl", "alumnoAMS17", "alumnoAMS17");
+	                
+	                // Llamada al procedimiento almacenado
+	                CallableStatement cst = cn.prepareCall("{call INSERT_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+	               
+	                    // Parametro 1 del procedimiento almacenado
+	                    
+	                    // Definimos los tipos de los parametros de salida del procedimiento almacenado
+	                    cst.setInt(1, 1);
+	                    cst.setString(2, "Planeta");
+	                    cst.setInt(3, planet.getMetal());
+	                    cst.setInt(4, 0);
+	                    cst.setInt(5, planet.getDeuterium());
+	                    cst.setInt(6, planet.getArmy()[0].size());
+	                    cst.setInt(7, planet.getArmy()[1].size());
+	                    cst.setInt(8, planet.getArmy()[2].size());
+	                    cst.setInt(9, planet.getArmy()[3].size());
+	                    cst.setInt(10, planet.getArmy()[4].size());
+	                    cst.setInt(11, planet.getArmy()[5].size());
+	                    cst.setInt(12, planet.getArmy()[6].size());
+	                    cst.setInt(13, planet.getTechnologyDefense());
+	                    cst.setInt(14, planet.getUpgradeDefenseTechnologyDeuteriumCost());
+	                    cst.setInt(15, planet.getTechnologyAtack());
+	                    cst.setInt(16,planet.getUpgradeAttackTechnologyDeuteriumCost());
+	                    
+	                    // Ejecuta el procedimiento almacenado
+	                    cst.execute();
+
+	                
+
+	            } catch (SQLException ex) {
+	                System.out.println("Error: " + ex.getMessage());
+	            } finally {
+	                try {
+	                    cn.close();
+	                } catch (SQLException ex) {
+	                    System.out.println("Error: " + ex.getMessage());
+	                }
+	            }
 		        System.out.println(numBatallas);
-		        createEnemyArmy();
-		  		viewThread(createEnemyArmy());
+		        ArrayList<MilitaryUnit>[] enemyArmy=createEnemyArmy();
+		  		viewThread(enemyArmy);
+		  		Battle batalla=new Battle(planet.getArmy(),enemyArmy);
+		  		boolean ganador=batalla.batallas();
+		  		System.out.println(batalla.getBattleDevelopment());
+		  		planet.setArmy(batalla.getPlanetArmy());
+		  		for (int i=0;i<planet.getArmy().length;i++) {
+		  			System.out.println(planet.getArmy()[i].size());
+		  		}
+		  		if (ganador==true) {
+		  			System.out.println("Usuario gana");
+		  		}
+		  		else {
+		  			System.out.println("Usuario pierde");
+		  		}
 		  		numBatallas=numBatallas+1;
+		  		
 	        }
 	        };
-	    time.schedule(task, 3000, 5000);
-	}
+	    time.schedule(task, 5000, 5000);*/
+}
 	public static void viewThread(ArrayList<MilitaryUnit>[] army) {
 		System.out.println("NEW THREAD COMING");
 		System.out.println("Light Hunter       "+army[0].size());
@@ -120,7 +180,15 @@ public class Main {
 					}
 				}
 		}
-		enemyArmy=enemyPlanet.getArmy();
+		enemyArmy[0]=enemyPlanet.getArmy()[0];
+		enemyArmy[1]=enemyPlanet.getArmy()[1];
+		enemyArmy[2]=enemyPlanet.getArmy()[2];
+		enemyArmy[3]=enemyPlanet.getArmy()[3];
+		String url="jdbc:oracle:thin:@192.168.40.2:1521:orcl";
+		String user="alumnoAMS17";
+		String password="alumnoAMS17";
+		connectionOracle conn=new connectionOracle(url, user, password);
+		conn.insertarEnemigo(enemyArmy, metalInicial, deuterioInicial);
 		return enemyArmy;
 	}
 }

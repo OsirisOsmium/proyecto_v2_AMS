@@ -17,8 +17,8 @@ public class Planet {
 	public Planet() {
 		this.technologyDefense=1;
 		this.technologyAtack=1;
-		this.metal=100000000;
-		this.deuterium=1000000000;
+		this.metal=10000;
+		this.deuterium=1000;
 		Defense ship=new MissileLauncher();
 		this.upgradeDefenseTechnologyDeuteriumCost=ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
 		this.upgradeAttackTechnologyDeuteriumCost=ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_ATTACK_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
@@ -145,7 +145,8 @@ public class Planet {
 	
 	public void upgradeTechnologyDefense() {
 		Defense ship=new MissileLauncher();
-		int costeUpgrade=ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
+		int costeUpgrade=ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST+(ship.UPGRADE_BASE_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_DEFENSE_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1)))/100);
+		this.setUpgradeDefenseTechnologyDeuteriumCost(costeUpgrade);
 		if (this.deuterium>=costeUpgrade) {
 			this.deuterium=this.deuterium-costeUpgrade;
 			this.technologyDefense=this.technologyDefense+1;
@@ -162,7 +163,8 @@ public class Planet {
 	
 	public void upgradeTechnologyAttack() {
 		Ship ship=new LigthHunter();
-		int costeUpgrade=ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST+ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_ATTACK_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1))/100);
+		int costeUpgrade=ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST+(ship.UPGRADE_BASE_ATTACK_TECHNOLOGY_DEUTERIUM_COST*((ship.UPGRADE_PLUS_ATTACK_TECHNOLOGY_DEUTERIUM_COST*(this.technologyAtack-1)))/100);
+		this.setUpgradeAttackTechnologyDeuteriumCost(costeUpgrade);
 		if (this.deuterium>=costeUpgrade) {
 			this.deuterium=this.deuterium-costeUpgrade;
 			this.technologyAtack=this.technologyAtack+1;
