@@ -337,14 +337,14 @@ public class viewWindow extends JFrame implements ActionListener{
 			viewWindow view=new viewWindow(planet,enemyArmy,ides);
 			this.setVisible(false);
 			//conn.viewStats(1);
-			//view.setVisible(true);
+			view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			upgradeWindow upgrade=new upgradeWindow(planet,enemyArmy,ides);
 			this.setVisible(false);
 			//conn.viewUpgrade(1);
-			//upgrade.setVisible(true);
+			upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

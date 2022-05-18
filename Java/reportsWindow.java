@@ -22,7 +22,7 @@ public class reportsWindow extends JFrame implements ActionListener{
 	private int ides;
 	private JPanel contentPane;
 	private JButton btnBack, btnBuild, btnViewPlanetStat, btnUpgrade, btnReports, btnThreadComing, btnLogOut, btnMain;
-	private JLabel lblNewLabel_2,report;
+	private JLabel lblNewLabel_2;
 
 	private String url="jdbc:oracle:thin:@192.168.40.2:1521:orcl";
 	private String user="alumnoAMS17";

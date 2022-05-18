@@ -130,7 +130,7 @@ public interface Variables {
 	// percentage of waste that will be generated with respect to the cost of the units
 	public final int PERCENTATGE_WASTE = 70;
 	
-	public static int conseguirValor(String constante,Connection cn) {
+	/*public static int conseguirValor(String constante,Connection cn) {
 		 BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 	
 	     try {
@@ -152,6 +152,6 @@ public interface Variables {
 	         }
 	     }
 		return 0;
-	}
+	}*/
 
 }

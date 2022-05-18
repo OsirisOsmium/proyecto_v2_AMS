@@ -58,6 +58,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 	public upgradeWindow(Planet planet,ArrayList<MilitaryUnit>[] enemyArmy,int ides) {
 		this.planet=planet;
 		this.enemyArmy=enemyArmy;
+		this.ides=ides;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
@@ -117,7 +118,7 @@ public class upgradeWindow extends JFrame implements ActionListener{
 		lblNewLabel_2.setBackground(SystemColor.inactiveCaption);
 		lblNewLabel_2.setBounds(0, 0, 110, 482);
 		lblNewLabel_2.setOpaque(true);
-		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon imagen= new ImageIcon("vertical_lado.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tama�o del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//a�adimos el label
@@ -217,14 +218,14 @@ public class upgradeWindow extends JFrame implements ActionListener{
 			viewWindow view=new viewWindow(planet,enemyArmy,ides);
 			this.setVisible(false);
 			//conn.viewStats(1);
-			//view.setVisible(true);
+			view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			upgradeWindow upgrade=new upgradeWindow(planet,enemyArmy,ides);
 			this.setVisible(false);
 			//conn.viewUpgrade(1);
-			//upgrade.setVisible(true);
+			upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

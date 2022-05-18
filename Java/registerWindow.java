@@ -25,10 +25,10 @@ import java.util.ArrayList;
 public class registerWindow extends JFrame implements ActionListener{
 	private Planet planet;
 	private ArrayList<MilitaryUnit>[] enemyArmy;
-	private int ides;
 	private JPanel contentPane;
 	private JTextField txtUsername, txtDate, txtPassword;
 	private JButton btnBack, btnSingIn;
+	
 	
 	private String url="jdbc:oracle:thin:@192.168.40.2:1521:orcl";
 	private String user="alumnoAMS17";
@@ -127,7 +127,8 @@ public class registerWindow extends JFrame implements ActionListener{
 			
 			if (conn.SignIn(username, password, date) == true) {
 				JOptionPane.showMessageDialog(null, "EXITO: Se ha registrado el usuario  "+username);
-				
+				this.planet=conn.recibirPlaneta();
+				//conn.insertarPlaneta(planet);
 				logInWindow logIn=new logInWindow(planet,enemyArmy);
 				this.setVisible(false);
 				logIn.setVisible(true);

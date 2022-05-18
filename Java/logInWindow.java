@@ -41,16 +41,18 @@ public class logInWindow extends JFrame implements ActionListener{
 	private Planet planet;
 	private ArrayList<MilitaryUnit>[] enemyArmy;
 	private int ides;
+	private boolean iniciado;
 	private JPanel contentPane;
 	private JTextField txtUsername, txtPassword;
 	private JButton btnLogIn, btnSingIn;
 	
+
 	private String url="jdbc:oracle:thin:@192.168.40.2:1521:orcl";
 	private String user="alumnoAMS17";
 	private String password="alumnoAMS17";
 	
-	Connection conn;
-	
+	//Connection conn;
+	private connectionOracle conn=new connectionOracle(url, user, password);
 
 	/**
 	 * Launch the application.
@@ -65,10 +67,16 @@ public class logInWindow extends JFrame implements ActionListener{
 	public void setEnemyArmy(ArrayList<MilitaryUnit>[] enemyArmy) {
 		this.enemyArmy = enemyArmy;
 	}
+	public connectionOracle getConn() {
+		return this.conn;
+	}
+	
 	public int getIdes() {
 		return this.ides;
 	}
-	
+	public Planet getPlanet() {
+		return this.planet;
+	}
 	public logInWindow(Planet planet,ArrayList<MilitaryUnit>[] enemyArmy) {
 		this.planet=planet;
 		this.enemyArmy=enemyArmy;
@@ -126,7 +134,12 @@ public class logInWindow extends JFrame implements ActionListener{
 		
 		setVisible(true);
 	}
-
+	
+	public boolean getIniciado() {
+		return iniciado;
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (btnLogIn==e.getSource()) {
@@ -139,6 +152,7 @@ public class logInWindow extends JFrame implements ActionListener{
 			boolean retorno=conn.LogIn(username, pass);
 			this.ides=conn.getIdes();
 			if (retorno==true) {
+				this.iniciado=retorno;
 				this.planet=conn.recibirPlaneta();
 				mainWindow main=new mainWindow(planet,enemyArmy,ides);
 				this.setVisible(false);

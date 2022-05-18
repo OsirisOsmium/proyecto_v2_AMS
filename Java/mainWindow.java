@@ -104,7 +104,7 @@ public class mainWindow extends JFrame implements ActionListener{
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(0, 0, 110, 482);
-		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon imagen= new ImageIcon("vertical_lado.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tama�o del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//a�adimos el label
@@ -126,7 +126,9 @@ public class mainWindow extends JFrame implements ActionListener{
 		ImageIcon icono2= new ImageIcon(imagen2.getImage().getScaledInstance(lblBackground.getWidth(),lblBackground.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tama�o del label
 		lblBackground. setIcon(icono2);//establece el ImageIcon en el label
 		contentPane.add(lblBackground);//a�adimos el label		
-		
+		connectionOracle conn=new connectionOracle(url, user, password);
+		System.out.println("LIGHTHUNTERS EN MAIN "+this.planet.getArmy()[0].size());
+		conn.actualizarPlaneta(this.planet);
 		setVisible(true);
 	}
 
@@ -138,14 +140,14 @@ public class mainWindow extends JFrame implements ActionListener{
 			viewWindow view=new viewWindow(planet,enemyArmy,ides);
 			this.setVisible(false);
 			//conn.viewStats(1);
-			//view.setVisible(true);
+			view.setVisible(true);
 		}
 		
 		if (btnUpgrade==e.getSource()){
 			upgradeWindow upgrade=new upgradeWindow(planet,enemyArmy,ides);
 			this.setVisible(false);
 			//conn.viewUpgrade(1);
-			//upgrade.setVisible(true);
+			upgrade.setVisible(true);
 		}
 		
 		if (btnBuild==e.getSource()){

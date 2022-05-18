@@ -36,18 +36,21 @@ public class ArmoredShip extends Ship {
 	@Override
 	public int getMetalCost() {
 		// TODO Auto-generated method stub
+
 		return Variables.METAL_COST_ARMOREDSHIP;
 	}
 
 	@Override
 	public int getDeuteriumCost() {
 		// TODO Auto-generated method stub
+	
 		return Variables.DEUTERIUM_COST_ARMOREDSHIP;
 	}
 
 	@Override
 	public int getChanceGeneratinWaste() {
 		// TODO Auto-generated method stub
+		
 		if (this.getArmor()<=0) {
 			return Variables.CHANCE_GENERATNG_WASTE_ARMOREDSHIP;
 		}
@@ -57,6 +60,7 @@ public class ArmoredShip extends Ship {
 	@Override
 	public int getChanceAttackAgain() {
 		// TODO Auto-generated method stub
+		
 		return Variables.CHANCE_ATTACK_AGAIN_ARMOREDSHIP;
 	}
 

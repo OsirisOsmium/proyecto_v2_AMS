@@ -11,12 +11,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 public class connectionOracle {
-	int ides;
+	private int ides;
 	Connection conn;
 	
 	public connectionOracle(String url, String user, String password){
@@ -36,13 +35,7 @@ public class connectionOracle {
 			System.out.println("ERROR: El driver NO se ha cargado");
 		}
 	}
-	public void prueba(int num) throws SQLException {
-		Statement st=conn.createStatement();
-		ResultSet rs=st.executeQuery("select count(*) from planet where id_planet="+num);
-		rs.next();
-		System.out.println(rs.getInt(1));
-		rs.close();
-	}
+
 	public boolean LogIn(String username, String password) {
 		String txt="";
 		boolean action=true;
@@ -257,137 +250,20 @@ public class connectionOracle {
 		return text;
 	}
 
-	public void viewStats(int ids) {
-		try {
-			//viewWindow view=new viewWindow(new Planet(),new ArrayList<MilitaryUnit>[4]);
-			CallableStatement cst = conn.prepareCall("{call GET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
-			int id = -1;
-			System.out.println("llama al procedimiento");
-			do {
-	            // Parametro 1 del procedimiento almacenado
-	            cst.setInt(1, ids);
-	            
-	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
-	            cst.registerOutParameter(2, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
-	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(11, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(12, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(13, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(14, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(15, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(16, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(17, java.sql.Types.INTEGER);
-	            
-	            // Ejecuta el procedimiento almacenado
-	            cst.execute();
-	            String numMetal=cst.getString(4);
-	            String numDeuterium=cst.getString(6);
-	            
-	            String lvlAttack=cst.getString(16);
-	            String lvlDefense=cst.getString(14);
-	            
-	            String numLight=cst.getString(7);
-	            String numHeavy=cst.getString(8);
-	            String numBattle=cst.getString(9);
-	            String numArmored=cst.getString(10);
-	            
-	            String numMissile=cst.getString(11);
-	            String numIon=cst.getString(12);
-	            String numPlasma=cst.getString(13);
-	            
-	           /* view.lblNumMetal.setText(String.valueOf(numMetal));
-				view.lblNumDeuterium.setText(String.valueOf(numDeuterium));
-				
-				view.lblLvlAtack.setText(String.valueOf(lvlAttack));
-				view.lblLvlDefense.setText(String.valueOf(lvlDefense));
-				
-				view.lblNumLight.setText(String.valueOf(numLight));
-				view.lblNumHeavy.setText(String.valueOf(numHeavy));
-				view.lblNumBattle.setText(String.valueOf(numBattle));
-				view.lblNumArmored.setText(String.valueOf(numArmored));
-				
-				view.lblnumMissile.setText(String.valueOf(numMissile));
-				view.lblNumIon.setText(String.valueOf(numIon));
-				view.lblNumPlasma.setText(String.valueOf(numPlasma));         
-	            
-	        }while (id>0);
-		}
-		catch (SQLException ex) {
-			System.out.println("ERROR: ha havido algun error");
-            System.out.println("Error: " + ex.getMessage());
-        }
-	}
-	
-	public void viewUpgrade(int ids) {
-		try {
-			Planet planet=new Planet();
-			//upgradeWindow up=new upgradeWindow(planet);
-			CallableStatement cst = conn.prepareCall("{call GET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
-			int id = -1;
-			System.out.println("llama al procedimiento get_upgrade");
-			do {
-	            // Parametro 1 del procedimiento almacenado
-	            cst.setInt(1, ids);
-	            
-	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
-	            cst.registerOutParameter(2, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(3, java.sql.Types.VARCHAR);
-	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(10, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(11, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(12, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(13, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(14, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(15, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(16, java.sql.Types.INTEGER);
-	            cst.registerOutParameter(17, java.sql.Types.INTEGER);
-	            
-	            // Ejecuta el procedimiento almacenado
-	            cst.execute();
-	            String costDefenseUP=cst.getString(15);
-	            String CostAttackUP=cst.getString(17);
-	            String LvlAttack=cst.getString(16);
-	            String LvlDefense=cst.getString(14);
-	            
-	            /*up.lblCostDefense.setText(String.valueOf(costDefenseUP));
-				up.lblCostAttack.setText(String.valueOf(CostAttackUP));				
-				up.lblActualAttack.setText(String.valueOf(LvlAttack));
-				up.lblActualDefense.setText(String.valueOf(LvlDefense));*/
-				System.out.println("ha devuelto los valores de el update");        
-	            
-	        }while (id>0);
-		}
-		catch (SQLException ex) {
-			System.out.println("ERROR: ha havido algun error");
-            System.out.println("Error: " + ex.getMessage());
-        }
-	}
 	public void insertarPlaneta(Planet planet) {
 		try { 
 			Statement st=conn.createStatement();
-			ResultSet rs=st.executeQuery("select count(*) from planet where id_planet="+ides);
+			ResultSet rs=st.executeQuery("select max(id_player) from player");
 			rs.next();
-			int planetaEx=rs.getInt(1);
+			int id=rs.getInt(1);
 			rs.close();
-			if (planetaEx==0) {
-				CallableStatement cst = conn.prepareCall("{call INSERT_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			CallableStatement cst = conn.prepareCall("{call INSERT_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
 		         
 		         // Parametro 1 del procedimiento almacenado
 		         
 		         // Definimos los tipos de los parametros de salida del procedimiento almacenado
-		         cst.setInt(1, ides);
+		        System.out.println("id actual: "+id); 
+				cst.setInt(1,3);
 		         cst.setString(2, "Planeta");
 		         cst.setInt(3, planet.getMetal());
 		         cst.setInt(4, 0);
@@ -403,54 +279,51 @@ public class connectionOracle {
 		         cst.setInt(14,planet.getUpgradeDefenseTechnologyDeuteriumCost());
 		         cst.setInt(15, planet.getTechnologyAtack());
 		         cst.setInt(16,planet.getUpgradeAttackTechnologyDeuteriumCost());
-		         
 		         // Ejecuta el procedimiento almacenado
 		         cst.execute();
-	
+		         
 	     
-			}
-			else if(planetaEx>0) {
-				CallableStatement cst=conn.prepareCall("{call SET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
-				Statement stm=conn.createStatement();
-				ResultSet rst=st.executeQuery("select * from planet where player_id_player="+ides);
-				rs.next();
-				int id_planeta=rs.getInt(0);
-				rs.close();
-				 cst.setInt(1, ides);
-				 cst.setInt(2, id_planeta);
-		         cst.setString(3, "Planeta");
-		         cst.setInt(4, planet.getMetal());
-		         cst.setInt(5, 0);
-		         cst.setInt(6, planet.getDeuterium());
-		         cst.setInt(7, planet.getArmy()[0].size());
-		         cst.setInt(8, planet.getArmy()[1].size());
-		         cst.setInt(9, planet.getArmy()[2].size());
-		         cst.setInt(10, planet.getArmy()[3].size());
-		         cst.setInt(11, planet.getArmy()[4].size());
-		         cst.setInt(12, planet.getArmy()[5].size());
-		         cst.setInt(13, planet.getArmy()[6].size());
-		         cst.setInt(14, planet.getTechnologyDefense());
-		         cst.setInt(15,planet.getUpgradeDefenseTechnologyDeuteriumCost());
-		         cst.setInt(16, planet.getTechnologyAtack());
-		         cst.setInt(17,planet.getUpgradeAttackTechnologyDeuteriumCost());
-		         
-		         // Ejecuta el procedimiento almacenado
-		         cst.execute();
-			}
 		 } catch (SQLException ex) {
 		     System.out.println("Error: " + ex.getMessage());
 		     ex.printStackTrace();
 		 } 
 	}
-	
+	public void actualizarPlaneta(Planet planet) {
+		try {
+		CallableStatement cst=conn.prepareCall("{call SET_PLANET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+		
+		cst.setInt(1, ides);
+		cst.setInt(2, ides);
+        cst.setString(3, "Planeta");
+        cst.setInt(4, planet.getMetal());
+        cst.setInt(5, 0);
+        cst.setInt(6, planet.getDeuterium());
+        cst.setInt(7, planet.getArmy()[0].size());
+        System.out.println("LIGTHUNTER PLANETA: "+planet.getArmy()[0].size());
+        cst.setInt(8, planet.getArmy()[1].size());
+        cst.setInt(9, planet.getArmy()[2].size());
+        cst.setInt(10, planet.getArmy()[3].size());
+        cst.setInt(11, planet.getArmy()[4].size());
+        cst.setInt(12, planet.getArmy()[5].size());
+        cst.setInt(13, planet.getArmy()[6].size());
+        cst.setInt(14, planet.getTechnologyDefense());
+        cst.setInt(15,planet.getUpgradeDefenseTechnologyDeuteriumCost());
+        cst.setInt(16, planet.getTechnologyAtack());
+        cst.setInt(17,planet.getUpgradeAttackTechnologyDeuteriumCost());
+        
+        // Ejecuta el procedimiento almacenado
+        cst.execute();
+	} catch (SQLException ex) {
+	    System.out.println("Error: " + ex.getMessage());
+	    ex.printStackTrace();
+	} 
+}
 	public Planet recibirPlaneta() {
 		Planet planet=new Planet();
 		try {
-			CallableStatement cst = conn.prepareCall("{call GET_PLANET_BYUSER (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+			CallableStatement cst = conn.prepareCall("{call GET_PLANET_BYNAME (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
 	            // Parametro 1 del procedimiento almacenado
-			System.out.println("IDES "+ides);
 	            cst.setInt(1, ides);
-	            
 	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
 	            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
 	            cst.registerOutParameter(3, java.sql.Types.INTEGER);
@@ -513,7 +386,7 @@ public class connectionOracle {
 	
 	public void insertarEnemigo(ArrayList<MilitaryUnit>[] enemyArmy,int metalInicial,int deuterioInicial) {
 		try { 
-			CallableStatement cst = conn.prepareCall("{call INSERT_ENEMY (?,?,?,?,?,?,?,?,?,?)}");
+			CallableStatement cst = conn.prepareCall("{call INSERT_ENEMY (?,?,?,?,?,?,?,?)}");
 	         
 	         
 	         // Parametro 1 del procedimiento almacenado
@@ -527,8 +400,6 @@ public class connectionOracle {
 	         cst.setInt(6, enemyArmy[1].size());
 	         cst.setInt(7, enemyArmy[2].size());
 	         cst.setInt(8, enemyArmy[3].size());
-	         cst.setInt(9, 0);
-	         cst.setInt(10, 0);
 	         
 	         // Ejecuta el procedimiento almacenado
 	         cst.execute();
@@ -555,13 +426,6 @@ public class connectionOracle {
 	         cst.setInt(1, ides);
 	         cst.setInt(2, idEnemigo);
 	         cst.setInt(3, ides);
-	         /*cst.setInt(4, deuterioInicial);
-	         cst.setInt(5, enemyArmy[0].size());
-	         cst.setInt(6, enemyArmy[1].size());
-	         cst.setInt(7, enemyArmy[2].size());
-	         cst.setInt(8, enemyArmy[3].size());
-	         cst.setInt(9, 0);
-	         cst.setInt(10, 0);*/
 	         
 	         // Ejecuta el procedimiento almacenado
 	         cst.execute();
@@ -573,39 +437,43 @@ public class connectionOracle {
 		 } 
 	}
 	
-	public void addTrops(String tipo, int cant, int numMetal, int numDeuterium) {
-		
-		if (tipo=="Light Hunter") {
-			tipo="NUM_LIGHTHUNTER";
-		}
-		else if(tipo=="Heavy Hunter") {
-			tipo="NUM_HEAVYHUNTER";
-		}
-		else if (tipo=="Battle Ship") {
-			tipo="NUM_BATTLESHIP";
-		}
-		else if (tipo=="Armored Ship") {
-			tipo="NUM_ARMOREDSHIP";
-		}
-		else if (tipo=="Missile Launcher") {
-			tipo="NUM_MISSILELAUNCHER";
-		}
-		else if (tipo=="Ion Cannon") {
-			tipo="NUM_IONCANNON";
-		}
-		else if (tipo=="PLasma Cannon") {
-			tipo="NUM_PLASMACANNON";
-		}
+	public int[] recibirEnemigo() {
+		int[] enemy=new int[4];
 		try {
-		       String sqlactualizar="UPDATE planet SET "+tipo+"="+cant;
-		       PreparedStatement psta=conn.prepareStatement(sqlactualizar);
-		       psta.execute();
-		       JOptionPane.showMessageDialog(null, "A�adido correctamente");
-		    }catch (Exception e){
-		        System.out.println(e.getCause());
-
-		    }
+			Statement st=conn.createStatement();
+			ResultSet rs=st.executeQuery("select max(id_enemy) from enemy");
+			rs.next();
+			int id=rs.getInt(1);
+			rs.close();
+			CallableStatement cst = conn.prepareCall("{call GET_ENEMY (?,?,?,?,?,?,?,?,?)}");
+	            // Parametro 1 del procedimiento almacenado
+	            cst.setInt(1, id);
+	            // Definimos los tipos de los parametros de salida del procedimiento almacenado
+	            cst.registerOutParameter(2, java.sql.Types.VARCHAR);
+	            cst.registerOutParameter(3, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(4, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(5, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(6, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(7, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(8, java.sql.Types.INTEGER);
+	            cst.registerOutParameter(9, java.sql.Types.INTEGER);
+	            
+	            // Ejecuta el procedimiento almacenado
+	            cst.execute();
+	            enemy[0]=cst.getInt(6);
+	            enemy[1]=cst.getInt(7);
+	            enemy[2]=cst.getInt(8);
+	            enemy[3]=cst.getInt(9);
+	           
+	            
+			}
+	        catch (SQLException ex) {
+	    			System.out.println("ERROR: ha havido algun error");
+	                System.out.println("Error: " + ex.getMessage());
+	           }
+		return enemy;
+		
 	}
-	
+
 	
 }

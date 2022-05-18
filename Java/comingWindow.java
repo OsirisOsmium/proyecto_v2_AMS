@@ -47,7 +47,9 @@ public class comingWindow extends JFrame implements ActionListener{
 		this.planet=planet;
 		this.enemyArmy=enemyArmy;
 		this.ides=ides;
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		connectionOracle conn=new connectionOracle(url, user, password);
+		int[] enemy=conn.recibirEnemigo();
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 519);
 		contentPane = new JPanel();
 		setLocationRelativeTo(null);
@@ -105,7 +107,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		lblNewLabel_2.setBackground(SystemColor.inactiveCaption);
 		lblNewLabel_2.setBounds(0, 0, 110, 482);
 		lblNewLabel_2.setOpaque(true);
-		ImageIcon imagen= new ImageIcon("C:\\Users\\fraci\\Documents\\Ciclo Formativo\\C.F. Aplicaciones Multiplataforma\\PROYECTO_V2\\reoyecto_v2_AMS\\proyecto_V2\\resource\\vertical_lado.jpg");
+		ImageIcon imagen= new ImageIcon("vertical_lado.jpg");
 		ImageIcon icono= new ImageIcon(imagen.getImage().getScaledInstance(lblNewLabel_2.getWidth(),lblNewLabel_2.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tama�o del label
 		lblNewLabel_2. setIcon(icono);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel_2);//a�adimos el label
@@ -134,7 +136,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		lblShip_1.setBounds(270, 127, 101, 35);
 		contentPane.add(lblShip_1);
 		
-		JLabel lblShip_1_1 = new JLabel(String.valueOf(enemyArmy[0].size()));
+		JLabel lblShip_1_1 = new JLabel(String.valueOf(enemy[0]));
 		lblShip_1_1.setForeground(Color.WHITE);
 		lblShip_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblShip_1_1.setBounds(450, 127, 175, 35);
@@ -146,7 +148,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		lblShip_1_2.setBounds(270, 172, 101, 35);
 		contentPane.add(lblShip_1_2);
 		
-		JLabel lblShip_1_1_1 = new JLabel(String.valueOf(enemyArmy[1].size()));
+		JLabel lblShip_1_1_1 = new JLabel(String.valueOf(enemy[1]));
 		lblShip_1_1_1.setForeground(Color.WHITE);
 		lblShip_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblShip_1_1_1.setBounds(450, 172, 175, 35);
@@ -158,7 +160,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		lblShip_1_3.setBounds(270, 222, 101, 35);
 		contentPane.add(lblShip_1_3);
 		
-		JLabel lblShip_1_1_2 = new JLabel(String.valueOf(enemyArmy[2].size()));
+		JLabel lblShip_1_1_2 = new JLabel(String.valueOf(enemy[2]));
 		lblShip_1_1_2.setForeground(Color.WHITE);
 		lblShip_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblShip_1_1_2.setBounds(450, 222, 175, 35);
@@ -170,7 +172,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		lblShip_1_4.setBounds(270, 267, 101, 35);
 		contentPane.add(lblShip_1_4);
 		
-		JLabel lblShip_1_1_3 = new JLabel(String.valueOf(enemyArmy[3].size()));
+		JLabel lblShip_1_1_3 = new JLabel(String.valueOf(enemy[3]));
 		lblShip_1_1_3.setForeground(Color.WHITE);
 		lblShip_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblShip_1_1_3.setBounds(450, 267, 175, 35);
@@ -184,8 +186,7 @@ public class comingWindow extends JFrame implements ActionListener{
 		ImageIcon icono4= new ImageIcon(imagen4.getImage().getScaledInstance(lblNewLabel.getWidth(),lblNewLabel.getHeight(),Image.SCALE_DEFAULT));//auto escala la imagen al tama�o del label
 		lblNewLabel. setIcon(icono4);//establece el ImageIcon en el label
 		contentPane.add(lblNewLabel);//a�adimos el label
-		
-		
+
 		setVisible(true);
 	}
 	@Override

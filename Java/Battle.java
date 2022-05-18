@@ -157,7 +157,7 @@ public class Battle{
 		int loses01=0;
 		int loses10=0;
 		int loses11=0;
-		loses00=(this.initialArmies[0][0]-this.actualNumberUnitsPlanet[0])*Variables.METAL_COST_LIGTHHUNTER;
+		loses00=loses00+(this.initialArmies[0][0]-this.actualNumberUnitsPlanet[0])*Variables.METAL_COST_LIGTHHUNTER;
 		loses00=loses00+(this.initialArmies[0][1]-this.actualNumberUnitsPlanet[1])*Variables.METAL_COST_HEAVYHUNTER;
 		loses00=loses00+(this.initialArmies[0][2]-this.actualNumberUnitsPlanet[2])*Variables.METAL_COST_BATTLESHIP;
 		loses00=loses00+(this.initialArmies[0][3]-this.actualNumberUnitsPlanet[3])*Variables.METAL_COST_ARMOREDSHIP;
@@ -394,7 +394,7 @@ public class Battle{
 		this.setBattleDevelopment(this.battleDevelopment+reporteBatalla);
 	}
 	public int[] batallas() {
-		int[] valores=new int[2];
+		int[] valores=new int[3];
 		int turn=0;
 		int lastTurn=0;
 		int planetPct=this.remainderPercentageFleet(this.getPlanetArmy());
@@ -423,10 +423,75 @@ public class Battle{
 		else if (this.fleetResourceCost(planetArmy)[1]<this.fleetResourceCost(enemyArmy)[1]) {
 			ganador=false;
 		}
-		/*if (ganador) {
-			valores[0]=0;
-			valores[1]=
-		}*/
+		if (ganador) {
+			int metalRecibido=0;
+			int deuterioRecibido=0;
+			int[] cogerMetal=new int[4];
+
+			for (int i=0;i<this.resourcesLoses[1].length;i++) {
+				cogerMetal[i]=(int) (Math.random() * (100-1));
+			}
+			if (cogerMetal[0]>Variables.CHANCE_GENERATNG_WASTE_LIGTHHUNTER) {
+				valores[0]=valores[0]+(this.initialArmies[1][0]-this.actualNumberUnitsEnemy[0])*Variables.METAL_COST_LIGTHHUNTER;
+				valores[1]=valores[1]+(this.initialArmies[1][0]-this.actualNumberUnitsEnemy[0])*Variables.DEUTERIUM_COST_LIGTHHUNTER*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[1]>Variables.CHANCE_GENERATNG_WASTE_HEAVYHUNTER) {
+				valores[0]=valores[0]+(this.initialArmies[1][1]-this.actualNumberUnitsEnemy[1])*Variables.METAL_COST_HEAVYHUNTER*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[1][1]-this.actualNumberUnitsEnemy[1])*Variables.DEUTERIUM_COST_HEAVYHUNTER*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[2]>Variables.CHANCE_GENERATNG_WASTE_BATTLESHIP) {
+				valores[0]=valores[0]+(this.initialArmies[1][2]-this.actualNumberUnitsEnemy[2])*Variables.METAL_COST_BATTLESHIP*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[1][2]-this.actualNumberUnitsEnemy[2])*Variables.DEUTERIUM_COST_BATTLESHIP*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[3]>Variables.CHANCE_GENERATNG_WASTE_ARMOREDSHIP) {
+				valores[0]=valores[0]+(this.initialArmies[1][3]-this.actualNumberUnitsEnemy[3])*Variables.METAL_COST_ARMOREDSHIP*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[1][3]-this.actualNumberUnitsEnemy[3])*Variables.DEUTERIUM_COST_ARMOREDSHIP*(Variables.PERCENTATGE_WASTE/100);
+			}
+			valores[3]=0;
+		}
+		else {
+			int metalRecibido=0;
+			int deuterioRecibido=0;
+			int[] cogerMetal=new int[7];
+			for (int i=0;i<this.resourcesLoses[0].length;i++) {
+				cogerMetal[i]=(int) (Math.random() * (100-1));
+			}
+			
+			
+			
+			
+			
+			
+			if (cogerMetal[0]>Variables.CHANCE_GENERATNG_WASTE_LIGTHHUNTER) {
+				valores[0]=valores[0]+(this.initialArmies[0][0]-this.actualNumberUnitsPlanet[0])*Variables.METAL_COST_LIGTHHUNTER*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][0]-this.actualNumberUnitsPlanet[0])*Variables.DEUTERIUM_COST_LIGTHHUNTER*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[1]>Variables.CHANCE_GENERATNG_WASTE_HEAVYHUNTER) {
+				valores[0]=valores[0]+(this.initialArmies[0][1]-this.actualNumberUnitsPlanet[1])*Variables.METAL_COST_HEAVYHUNTER*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][1]-this.actualNumberUnitsPlanet[1])*Variables.DEUTERIUM_COST_HEAVYHUNTER*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[2]>Variables.CHANCE_GENERATNG_WASTE_BATTLESHIP) {
+				valores[0]=valores[0]+(this.initialArmies[0][2]-this.actualNumberUnitsPlanet[2])*Variables.METAL_COST_BATTLESHIP*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][2]-this.actualNumberUnitsPlanet[2])*Variables.DEUTERIUM_COST_BATTLESHIP*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[3]>Variables.CHANCE_GENERATNG_WASTE_ARMOREDSHIP) {
+				valores[0]=valores[0]+(this.initialArmies[0][3]-this.actualNumberUnitsPlanet[3])*Variables.METAL_COST_ARMOREDSHIP*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][3]-this.actualNumberUnitsPlanet[3])*Variables.DEUTERIUM_COST_ARMOREDSHIP*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[4]>Variables.CHANCE_GENERATNG_WASTE_MISSILELAUNCHER) {
+				valores[0]=valores[0]+(this.initialArmies[0][4]-this.actualNumberUnitsPlanet[4])*Variables.METAL_COST_MISSILELAUNCHER*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][4]-this.actualNumberUnitsPlanet[4])*Variables.DEUTERIUM_COST_MISSILELAUNCHER*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[5]>Variables.CHANCE_GENERATNG_WASTE_IONCANNON) {
+				valores[0]=valores[0]+(this.initialArmies[0][5]-this.actualNumberUnitsPlanet[5])*Variables.METAL_COST_IONCANNON*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][5]-this.actualNumberUnitsPlanet[5])*Variables.DEUTERIUM_COST_IONCANNON*(Variables.PERCENTATGE_WASTE/100);
+			}
+			if (cogerMetal[6]>Variables.CHANCE_GENERATNG_WASTE_PLASMACANNON) {
+				valores[0]=valores[0]+(this.initialArmies[0][6]-this.actualNumberUnitsPlanet[6])*Variables.METAL_COST_PLASMACANNON*(Variables.PERCENTATGE_WASTE/100);
+				valores[1]=valores[1]+(this.initialArmies[0][6]-this.actualNumberUnitsPlanet[6])*Variables.DEUTERIUM_COST_PLASMACANNON*(Variables.PERCENTATGE_WASTE/100);
+			}
+			valores[3]=1;
+		}
 		return valores;
 	}
 	
