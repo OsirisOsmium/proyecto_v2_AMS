@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="MDSYS" directorySegmentName="seg_0" id="MDSYS">
-<createdBy>alumne</createdBy>
-<createdTime>2022-05-18 16:20:00 UTC</createdTime>
-<ownerDesignName>modeloER</ownerDesignName>
-<nullInstance>true</nullInstance>
-<storableNullInstance>true</storableNullInstance>
-</UserOraclev10g>
