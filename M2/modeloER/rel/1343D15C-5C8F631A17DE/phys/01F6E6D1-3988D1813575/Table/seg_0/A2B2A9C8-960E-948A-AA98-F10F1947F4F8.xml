@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Player" directorySegmentName="seg_0" id="A2B2A9C8-960E-948A-AA98-F10F1947F4F8">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="password" id="214CC0C0-043B-2239-3E43-05695F72F5B7">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="playername" id="46E8A718-AF02-B362-2798-E8227DBE495D">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_Player" id="7BCD10A2-87DD-1247-5AAE-0605CE31AC53">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="birth_date" id="F122297E-C27E-66CD-6670-D2BB30562F3E">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="User_PK" id="56533224-9525-489F-BD11-3DABAB52B03D">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="User_username_UN" id="B0156C59-B80B-9883-EFAA-22A0CCC56DBC">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:20:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

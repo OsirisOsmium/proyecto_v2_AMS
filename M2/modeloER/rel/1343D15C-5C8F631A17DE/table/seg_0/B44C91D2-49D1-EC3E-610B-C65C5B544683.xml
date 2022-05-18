@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B44C91D2-49D1-EC3E-610B-C65C5B544683" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="PLAYER">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>PLAYER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>D202DD56-F02E-879A-EDC6-8DEC92D06BBF</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PLAYER" id="84984D03-E89D-711F-B8B1-DD81662C18F4">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PLAYER</sourceObjSchema>
+<sourceObjName>ID_PLAYER</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>508B573D-6B3E-A713-7E65-F11FACE230BE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLAYERNAME" id="AEA38132-3F31-85F0-8B24-8DFF8A3C0366">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PLAYER</sourceObjSchema>
+<sourceObjName>PLAYERNAME</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>F89BC077-1A90-0AAF-02D2-DE71D18B8346</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="354FE0A1-B5C5-9145-6380-D12A9CB04594">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PLAYER</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>26BCA5D7-17F0-C272-5DC3-B1DB3FA2D952</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTH_DATE" id="3AF0CF6D-DA9C-5E19-5808-C807EAB53A7C">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PLAYER</sourceObjSchema>
+<sourceObjName>BIRTH_DATE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>05A73A88-5FF9-379B-3B09-BC855CD6CFEC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8E4D3105-BFA8-FF6C-B7F0-CDDE4AAACCDE" name="PLAYER_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>PLAYER_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>450A7CB8-403D-6BE8-1CFD-7F95CCCA6970</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84984D03-E89D-711F-B8B1-DD81662C18F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98C9C9A4-FD22-5A62-8C98-A61EF38520A2" name="PLAYER_PLAYERNAME_UN">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>PLAYER_PLAYERNAME_UN</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>7407F634-CFA1-1AC9-7A76-0A2B4B2134EA</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEA38132-3F31-85F0-8B24-8DFF8A3C0366"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA150866-01BA-7791-4013-B8076CF25F96" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="PLAYER_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>PLAYER_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>29033745-14EA-C83F-6A91-5AABDFEFE55A</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84984D03-E89D-711F-B8B1-DD81662C18F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7D99C9F-E0EA-460C-C189-0D52760F61C1" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="PLAYER_PLAYERNAME_UN">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>PLAYER_PLAYERNAME_UN</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>6589F096-74F1-1842-6A86-7CEC25963E3E</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEA38132-3F31-85F0-8B24-8DFF8A3C0366"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

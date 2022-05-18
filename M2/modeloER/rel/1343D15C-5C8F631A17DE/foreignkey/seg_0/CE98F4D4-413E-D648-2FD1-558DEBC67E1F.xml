@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE98F4D4-413E-D648-2FD1-558DEBC67E1F" containerWithKeyObject="98A2DFD5-39CB-AA69-74AD-F7CBEB5FE713" localFKIndex="55BA28F9-D886-5909-B2ED-0063EAB3B44C" name="SETPS_BATTLE_BATTLE_FK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>SETPS_BATTLE_BATTLE_FK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>4C222573-8D2E-3908-C95C-39944C160BB9</importedID>
+<referredTableLongName>PROYECTO2.BATTLE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CDA2D9D4-CC79-7D35-2FD2-12BD516DA0E7</referredTableID>
+<keyObject>67C3810C-AE6F-C5A1-C380-CD350CF6633C</keyObject>
+<referredKeyID>67C3810C-AE6F-C5A1-C380-CD350CF6633C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_BATTLE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

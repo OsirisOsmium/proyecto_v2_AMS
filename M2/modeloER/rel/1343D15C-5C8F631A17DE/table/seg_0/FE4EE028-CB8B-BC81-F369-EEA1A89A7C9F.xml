@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FE4EE028-CB8B-BC81-F369-EEA1A89A7C9F" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="CONSTANTS">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>CONSTANTS</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>E332EEFD-93CC-0135-36DE-909E3929509D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CONSTANT" id="9CC949B5-CA8F-6E6A-1EB0-8BAA7E5F5304">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>CONSTANTS</sourceObjSchema>
+<sourceObjName>ID_CONSTANT</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>B75E5160-F93F-5978-D762-655123ABE0E6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="23CCFA12-F079-0AFF-BAC4-FAB896ED980E">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>CONSTANTS</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>DF755DE3-5F9B-D29C-E350-E00C83240A52</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALUE" id="5735E9A5-362F-1D6F-C4B1-58AE896C7038">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>CONSTANTS</sourceObjSchema>
+<sourceObjName>VALUE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>E36D0C76-7E21-EEB9-465A-01B037B93000</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="543BC78E-2607-6D4A-7BD7-3939CE4772CD" name="CONSTANTS_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>CONSTANTS_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>B86923DC-7EAF-9A4E-A149-7E3DE1E4EC02</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CC949B5-CA8F-6E6A-1EB0-8BAA7E5F5304"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8807188F-C10D-EA41-46C6-E6236F937BE8" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="CONSTANTS_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>CONSTANTS_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>6BF62803-3066-0198-422A-B87F498925D2</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CC949B5-CA8F-6E6A-1EB0-8BAA7E5F5304"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

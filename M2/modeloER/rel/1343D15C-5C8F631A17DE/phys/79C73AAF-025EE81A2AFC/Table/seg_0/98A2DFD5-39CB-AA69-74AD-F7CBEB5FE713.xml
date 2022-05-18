@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STEP" directorySegmentName="seg_0" id="98A2DFD5-39CB-AA69-74AD-F7CBEB5FE713">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<schemaObject>C9BB032A-4B8B-ABCF-06F6-2CC270041148</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>7284E956-EB25-8535-2242-240551469EEB</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ORDER_POSITION" id="51246E63-93F5-6A47-5FB4-1CD4841EB627">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BATTLE_ID_BATTLE" id="6724F1F0-7308-7A8C-4F53-2D919E17AB57">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_STEP" id="715DE812-15A4-50B4-ACE6-CFF236F1DF60">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPTION" id="E511D7A7-20CC-B1CD-3288-0017AA5BC146">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="SETPS_BATTLE_PK" id="DCD24A54-109E-A2E7-40BC-3D6FE5B65C6F">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<schemaObject>C9BB032A-4B8B-ABCF-06F6-2CC270041148</schemaObject>
+<segment>45839304-4465-E0D2-313D-D571C1568DB1</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SETPS_BATTLE_BATTLE_FK" id="55BA28F9-D886-5909-B2ED-0063EAB3B44C">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="SETPS_BATTLE_PK" id="FABA42B5-79E0-D6C3-2E11-8AF98394E5EA">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<segment>45839304-4465-E0D2-313D-D571C1568DB1</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+<existingIndex>DCD24A54-109E-A2E7-40BC-3D6FE5B65C6F</existingIndex>
+<indexSegment>45839304-4465-E0D2-313D-D571C1568DB1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

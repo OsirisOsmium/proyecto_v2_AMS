@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Constants" directorySegmentName="seg_0" id="D32FA8C4-8F5B-9C90-8ADB-4C6A05199CE3">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="name" id="113FE807-CBB1-BF37-4119-4DED04D9FB1D">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_Constant" id="1D75458A-FB20-7A08-2CB6-9FC830363318">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="value" id="F87155EE-AD02-8BAF-AA95-2703E1C0BA04">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Constants_PK" id="8D4590EC-3DF1-1836-D9B0-74436298A38E">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Constants_name_UN" id="1894E331-D2E6-EE72-3A94-2A213D0A94C4">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:44 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

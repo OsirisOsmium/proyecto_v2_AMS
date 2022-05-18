@@ -1,0 +1,294 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76B3D66A-39B8-5AF7-5EB9-DC6F9376A837" name="Planet">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>1B1E5212-0585-73C0-49A3-3C2B3FA0FAB0</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Planet" id="0C92107A-BA17-39DC-8AAC-079DD8526C18">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>64DF48F0-A271-B873-75B5-ADED0517DEA5</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Player_ID_Player" id="3960A7B9-CC8C-0699-2C96-3E72040A12C2">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>F9F761BE-59B1-328B-0AC3-27AC30BA8A0B</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA4356CD-520E-0EA7-ECBF-ED9B256E9022" referredColumn="7BCD10A2-87DD-1247-5AAE-0605CE31AC53"/>
+</associations>
+</Column>
+<Column name="planet_Name" id="8330722D-B429-0F00-24A2-E39992D94276">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>859CA4BF-9946-076D-7602-E849677EB269</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Metal" id="8FD16275-67DB-719B-AA4F-26A22E751A0F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>7C1B9ECD-6DF8-D661-2C58-B0D1BD807B20</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Crystal" id="EF66C603-9E6B-402C-C042-D170D091BDDD">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>FCF469E4-91CB-CCBE-E3FE-771522DDD974</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity_Deuterium" id="875EC317-2004-6994-40E0-8D64BB10A090">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>3B83B322-EE56-FFD5-F816-34551A17C2D5</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_LightHunter" id="64B7B701-4351-1AEF-0572-9F31B9AFA3EC">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>764F72A7-D9A5-8934-8783-27DCF1C6C40F</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_HeavyHunter" id="10A4F3A8-3720-6FA5-E650-9BED5E1507E5">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>0821EC05-4727-2EEB-B860-F9DE8063B297</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_BattleShip" id="1FA4CA89-B4FE-98BC-2531-E6A59A5BC949">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>1785E531-1FBA-3487-806F-8B34A13A4A6E</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_ArmoredShip" id="3AF88E55-3893-B2EA-E151-7462EAAEC18F">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>E7195053-1EE0-847C-B3F4-AA40E154E899</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_MissileLauncher" id="B2C12236-11EE-2E7E-078F-D353FD682077">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>0C065BEC-36E3-7492-303E-593BC4DA4928</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_IonCannon" id="7E697674-9759-139E-765E-ADC2BD5C8886">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>BE4D4631-B3A5-F2A9-CFD0-8E60446C94FE</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_PlasmaCannon" id="2B5869B0-9713-0F76-F22D-E04262A6969A">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 13:00:45 UTC</createdTime>
+<generatorID>708D1F55-3DD0-24FB-1B8B-0F25E7B14CE7</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="current_LevelDefense" id="D2517FCD-AEAE-38EA-2D03-463ADC62D5C6">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:49:23 UTC</createdTime>
+<generatorID>6CB806A1-81BB-004F-F8E7-71558603FF94</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cost_DefenseUp" id="5B1AB2FA-5D5C-77BE-5951-5100A4AC8B69">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:49:23 UTC</createdTime>
+<generatorID>591B6A68-D427-CA1C-581F-EE2DEA494CB8</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="current_LevelAttack" id="DC43BF9F-1A16-8303-1ACF-1BDD03F392DB">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:49:23 UTC</createdTime>
+<generatorID>F228AC4B-3A37-FE02-CA31-5EDD6A3A7CEE</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cost_AttackUp" id="AF4E8610-E3AD-91E8-02E5-1AB0956D85C1">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 21:49:23 UTC</createdTime>
+<generatorID>A70CC261-6138-5324-7307-F175A1083E54</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="technology_Defense_ID_LevelDef" id="D227C431-B434-8E38-D281-462F6D0C68C4">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>60FF311B-2D3E-741C-93FE-313EB50C4F39</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="technology_Attack_ID_LevelAt" id="AF7F53C1-7391-0EB3-4E17-23BE3A7B7D57">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:12 UTC</createdTime>
+<generatorID>149FBFEF-D90B-6A72-B729-2289D8253530</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="096E386B-3EEC-A21B-D963-3091095CFED3" name="Planet_PK">
+<createdBy>Albert</createdBy>
+<createdTime>2022-05-07 12:27:55 UTC</createdTime>
+<generatorID>9C97825F-4376-6603-794E-408A4FC34B08</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C92107A-BA17-39DC-8AAC-079DD8526C18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0287F668-19D3-4AF2-3F20-D00E35D15F91" name="Planet_User_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-15 15:07:03 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C624726-CDAE-295A-ED79-D7E45CBBD963" name="Planet_User_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-17 07:12:14 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35E88409-6322-E7C2-20F7-7613A83271B3" name="Planet_User_FK">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:19:22 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3960A7B9-CC8C-0699-2C96-3E72040A12C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

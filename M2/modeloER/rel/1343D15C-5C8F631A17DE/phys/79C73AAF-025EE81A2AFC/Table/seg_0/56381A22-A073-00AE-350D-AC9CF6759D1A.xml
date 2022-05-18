@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DEFENSE" directorySegmentName="seg_0" id="56381A22-A073-00AE-350D-AC9CF6759D1A">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<schemaObject>C9BB032A-4B8B-ABCF-06F6-2CC270041148</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>90C2F9D8-E834-C5EB-D782-A14BE591503A</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="BASEDAMAGE" id="3FAB6081-E3E0-B7F1-5A5F-43EFBDDB7DE7">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CRYSTAL_COST" id="5986553E-4C1B-DF7E-5D6E-A581305F960A">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_DEFENSE" id="69D03DF8-0B26-96DF-0CEC-0D51CAE83994">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ARMOR" id="7D4C7BB9-CF05-1F48-7DE2-6B751E437295">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SPEED" id="AD73BA46-5763-1D12-9BD6-82E0D453F291">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEUTERIUM_COST" id="BA396C09-7A98-8842-D688-A7CEA2AEC6C9">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INITIALARMOR" id="BE0FFC89-0EB3-72BC-B45E-6ABD55C009C8">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="METAL_COST" id="BFF051AF-15E6-A0E4-C0C5-395D91D599F5">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GENERATEWASTING" id="EF239F5E-54B1-99C9-484A-0A0D59068362">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="F55E12A5-6F7F-3738-FB23-0C6658172BC8">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DEFENSE_NAME_UN" id="3A3E2BE3-2BE8-13C8-52E1-078567F7429C">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<schemaObject>C9BB032A-4B8B-ABCF-06F6-2CC270041148</schemaObject>
+<segment>A2655109-5A09-6C39-63C6-43D07A16550C</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DEFENSE_PK" id="F42A335C-1EA9-5E14-382A-FA3A27013A01">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<schemaObject>C9BB032A-4B8B-ABCF-06F6-2CC270041148</schemaObject>
+<segment>A2655109-5A09-6C39-63C6-43D07A16550C</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DEFENSE_PK" id="E6FDB797-989B-38FE-00E2-8E351A2B7256">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<segment>A2655109-5A09-6C39-63C6-43D07A16550C</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+<existingIndex>F42A335C-1EA9-5E14-382A-FA3A27013A01</existingIndex>
+<indexSegment>A2655109-5A09-6C39-63C6-43D07A16550C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="DEFENSE_NAME_UN" id="A6F67897-10D9-8288-31D1-BA3138200C82">
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<segment>A2655109-5A09-6C39-63C6-43D07A16550C</segment>
+<tableSpace>1A1F6F57-605C-F60F-F319-AFF3013AB1A2</tableSpace>
+<existingIndex>3A3E2BE3-2BE8-13C8-52E1-078567F7429C</existingIndex>
+<indexSegment>A2655109-5A09-6C39-63C6-43D07A16550C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

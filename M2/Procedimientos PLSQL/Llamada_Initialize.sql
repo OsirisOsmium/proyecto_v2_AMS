@@ -1,0 +1,9 @@
+SET SERVEROUTPUT ON
+
+DECLARE
+BEGIN
+Initialize;
+
+END;
+
+

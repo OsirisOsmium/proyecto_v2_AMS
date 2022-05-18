@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="97F12832-708E-7626-EE7B-92AA14C26321" containerWithKeyObject="CDA2D9D4-CC79-7D35-2FD2-12BD516DA0E7" localFKIndex="9F1768C8-F886-F85E-669C-B4F108605043" name="BATTLE_PLANET_FK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>BATTLE_PLANET_FK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>489ACC6B-01F0-655A-4BFB-B00BCE36B972</importedID>
+<referredTableLongName>PROYECTO2.PLANET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>81DA8C26-CABF-46D5-E2E5-23691CA05CE4</referredTableID>
+<keyObject>46AB160B-8238-3FDB-BFA6-34927BF1B1D7</keyObject>
+<referredKeyID>46AB160B-8238-3FDB-BFA6-34927BF1B1D7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PLANET</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

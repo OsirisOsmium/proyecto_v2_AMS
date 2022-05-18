@@ -1,0 +1,234 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56381A22-A073-00AE-350D-AC9CF6759D1A" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="DEFENSE">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>DEFENSE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>EDCE7B13-6982-EFA3-D8BD-69FD14A18D41</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DEFENSE" id="69D03DF8-0B26-96DF-0CEC-0D51CAE83994">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>ID_DEFENSE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>9FAF17B1-E477-AFDC-6145-3A46BC3695D6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="F55E12A5-6F7F-3738-FB23-0C6658172BC8">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>EDDA98B2-FF89-502F-3313-5F8B94676C24</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="METAL_COST" id="BFF051AF-15E6-A0E4-C0C5-395D91D599F5">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>METAL_COST</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>49020F31-64D6-D6F1-94EF-31B06283EA5E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRYSTAL_COST" id="5986553E-4C1B-DF7E-5D6E-A581305F960A">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>CRYSTAL_COST</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>74F443CF-01EE-959E-B582-F8980731618A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEUTERIUM_COST" id="BA396C09-7A98-8842-D688-A7CEA2AEC6C9">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>DEUTERIUM_COST</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>83CB72AF-EBC4-FD0B-69F6-C9C3EC3DE981</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INITIALARMOR" id="BE0FFC89-0EB3-72BC-B45E-6ABD55C009C8">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>INITIALARMOR</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>39D87C49-7488-4877-196B-AD8551F27868</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARMOR" id="7D4C7BB9-CF05-1F48-7DE2-6B751E437295">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>ARMOR</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>ADE170DA-BA1B-6FE5-ADDA-FFD57DB16F58</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BASEDAMAGE" id="3FAB6081-E3E0-B7F1-5A5F-43EFBDDB7DE7">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>BASEDAMAGE</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>02B738F6-5C94-9184-7B64-A5E17792EBC2</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPEED" id="AD73BA46-5763-1D12-9BD6-82E0D453F291">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>SPEED</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>D73EE9BA-7BB9-8417-AFD9-7250CAE82D91</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENERATEWASTING" id="EF239F5E-54B1-99C9-484A-0A0D59068362">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>DEFENSE</sourceObjSchema>
+<sourceObjName>GENERATEWASTING</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>BBAA22E6-FFB2-D018-9DC8-CA3E95CAF463</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6FDB797-989B-38FE-00E2-8E351A2B7256" name="DEFENSE_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>DEFENSE_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>C4B453E0-DC5D-F6AF-2252-E8B9EE8824A4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69D03DF8-0B26-96DF-0CEC-0D51CAE83994"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6F67897-10D9-8288-31D1-BA3138200C82" name="DEFENSE_NAME_UN">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>DEFENSE_NAME_UN</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>9AA34CFD-5822-72E3-5F6C-E11998CA4257</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F55E12A5-6F7F-3738-FB23-0C6658172BC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A3E2BE3-2BE8-13C8-52E1-078567F7429C" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="DEFENSE_NAME_UN">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>DEFENSE_NAME_UN</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>EFD2B9F5-83C1-2692-80C6-1671E8A3D384</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F55E12A5-6F7F-3738-FB23-0C6658172BC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F42A335C-1EA9-5E14-382A-FA3A27013A01" schemaObject="C9BB032A-4B8B-ABCF-06F6-2CC270041148" name="DEFENSE_PK">
+<sourceConnName>PROYECTO2</sourceConnName>
+<sourceObjSchema>PROYECTO2</sourceObjSchema>
+<sourceObjName>DEFENSE_PK</sourceObjName>
+<createdBy>alumne</createdBy>
+<createdTime>2022-05-18 16:21:51 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<importedID>A2443B52-28EC-8775-BA1E-26E6FB2A7D94</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69D03DF8-0B26-96DF-0CEC-0D51CAE83994"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
