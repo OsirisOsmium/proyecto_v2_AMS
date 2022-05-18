@@ -1,5 +1,5 @@
 CREATE OR REPLACE PROCEDURE INSERT_PLANET( 
-id_usuario IN planet.user_id_user%TYPE, 
+id_usuario IN planet.player_id_player%TYPE, 
 nombre IN planet.planet_Name%TYPE, 
 metal IN planet.quantity_metal%TYPE, 
 cristal IN planet.quantity_crystal%TYPE,
@@ -20,28 +20,21 @@ IS
 max_Id NUMBER(6) := 0;
 id_Entrada_Insertar NUMBER(6);
 
-idUser_Encontrada NUMBER(1);
-excepcion_IdUser EXCEPTION;
+idplayer_Encontrada NUMBER(1);
+excepcion_Idplayer EXCEPTION;
 
 insert_Script VARCHAR(1000);
 
 BEGIN
+id_Entrada_Insertar:=id_usuario;
+SELECT COUNT(id_player) INTO idplayer_Encontrada
+FROM player
+WHERE id_player = id_Usuario;
 
-SELECT COUNT(id_User) INTO idUser_Encontrada
-FROM "USER"
-WHERE id_User = id_Usuario;
-
-IF idUser_Encontrada =0 THEN 
-RAISE excepcion_IdUser;
+IF idplayer_Encontrada =0 THEN 
+RAISE excepcion_Idplayer;
 END IF;
 
-SELECT MAX(id_planet) INTO max_Id
-FROM PLANET;
-IF max_Id IS NULL THEN
-id_Entrada_Insertar := 1;
-ELSE
-id_Entrada_Insertar := max_Id +1;
-END IF;
 
 insert_Script := 'INSERT INTO PLANET
 VALUES('''||id_Entrada_Insertar||''', 
@@ -85,7 +78,7 @@ COMMIT;
 
 EXCEPTION
 
-WHEN excepcion_IdUser THEN
+WHEN excepcion_Idplayer THEN
 DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID de usuario en la base de datos y no se le puede asignar al planeta');
 ROLLBACK;
 

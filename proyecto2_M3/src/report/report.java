@@ -10,7 +10,7 @@ public class report {
 	/*Para probar el print, esta en un main*/
 	public static void main(String[] args) {
 		try {
-			/*Estas dos variables se deberian entrar desde fuera, por ejemplo si esto se hace una clase*/
+			/*Estas dos variables id_Batalla y la conexión, se deberian entrar desde fuera*/
 			int id_Batalla =1;
 			
 			Connection conexion =null;
@@ -67,7 +67,7 @@ public class report {
 			CallableStatement cstat_IonCannon =conexion.prepareCall("{call GET_DEFENSE(?,?,?,?,?,?,?,?)}");
 			CallableStatement cstat_PlasmaCannon =conexion.prepareCall("{call GET_DEFENSE(?,?,?,?,?,?,?,?)}");
 			
-			CallableStatement cstat_Battle =conexion.prepareCall("call GET_BATTLE(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
+			CallableStatement cstat_Battle =conexion.prepareCall("call GET_BATTLE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
 			
 			cstat_LightHunter.setInt(1, 1);
 			cstat_LightHunter.registerOutParameter(2, java.sql.Types.VARCHAR);
@@ -323,12 +323,12 @@ public class report {
 			/*BBDD*/winner_Planet= 1;
 			/*BBDD*/winner_Enemy= 0;
 			
-			message_Winner = "";
-			
 			if(winner_Planet == 1) {
 				message_Winner = "Battle Winned by Planet, We Collect Rubble";
 			}else if(winner_Enemy ==1){
 				message_Winner = "Battle Winned by enemy, He Takes the Planet";
+			}else {
+				message_Winner = "";
 			}
 					
 			full_Report = "BATTLE NUMBER: "+id_Batalla+

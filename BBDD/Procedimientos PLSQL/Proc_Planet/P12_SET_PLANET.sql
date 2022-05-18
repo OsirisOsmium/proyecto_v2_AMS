@@ -1,5 +1,5 @@
 CREATE OR REPLACE PROCEDURE SET_PLANET(id_Entrada IN planet.id_planet%TYPE, 
-id_usuario IN planet.user_id_user%TYPE, 
+id_usuario IN planet.player_id_player%TYPE, 
 nombre IN planet.planet_Name%TYPE, 
 
 metal IN planet.quantity_metal%TYPE, 
@@ -20,7 +20,7 @@ coste_SubirAtaque IN planet.cost_DefenseUp%TYPE)
 IS
 
 id_planeta_Insertar  planet.id_planet%TYPE;
-id_usuario_Insertar planet.user_id_user%TYPE;
+id_usuario_Insertar planet.player_id_player%TYPE;
 nombre_Insertar planet.planet_Name%TYPE;
 
 metal_Insertar planet.quantity_metal%TYPE;
@@ -42,8 +42,8 @@ coste_SubirAtaque_Insertar planet.cost_AttackUp%TYPE;
 id_Encontrada NUMBER(1);
 excepcion_Id EXCEPTION;
 
-idUser_Encontrada NUMBER(1);
-excepcion_IdUser EXCEPTION;
+idplayer_Encontrada NUMBER(1);
+excepcion_Idplayer EXCEPTION;
 
 update_Script VARCHAR(1000);
 
@@ -56,16 +56,16 @@ IF id_Encontrada =0 THEN
 RAISE excepcion_Id;
 END IF;
 
-SELECT COUNT(id_User) INTO idUser_Encontrada
-FROM "USER"
-WHERE id_User = id_Usuario;
+SELECT COUNT(id_player) INTO idplayer_Encontrada
+FROM PLAYER
+WHERE id_player = id_Usuario;
 
-IF idUser_Encontrada =0 THEN 
-RAISE excepcion_IdUser;
+IF idplayer_Encontrada =0 THEN 
+RAISE excepcion_Idplayer;
 END IF;
 
 IF id_Usuario IS NULL THEN
-SELECT user_Id_User INTO id_Usuario_Insertar
+SELECT player_Id_player INTO id_Usuario_Insertar
 FROM PLANET
 WHERE id_Planet = id_Entrada;
 ELSE
@@ -193,7 +193,7 @@ coste_SubirAtaque_Insertar := coste_SubirAtaque;
 END IF;
 
 update_Script := 'UPDATE PLANET
-SET user_id_user = '''||id_Usuario_Insertar||''',
+SET player_id_player = '''||id_Usuario_Insertar||''',
 planet_Name = '''||nombre_Insertar||''', 
 quantity_metal = '''||metal_Insertar||''', 
 quantity_crystal = '''||cristal_Insertar||''', 
@@ -209,7 +209,7 @@ current_LevelDefense = '''||nivelDefensa_Insertar||''',
 cost_AttackUp ='''||coste_SubirDefensa_Insertar||''',
 current_LevelAttack = '''||nivelAtaque_Insertar||''',
 cost_DefenseUp ='''||coste_SubirAtaque_Insertar||'''
-WHERE id_user = '||id_Entrada||'';
+WHERE id_player = '||id_Entrada||'';
 
 execute immediate update_script;
 
@@ -239,7 +239,7 @@ WHEN excepcion_Id THEN
 DBMS_OUTPUT.PUT_LINE('No se ha encontrado esta ID en la base de datos');
 ROLLBACK;
 
-WHEN excepcion_IdUser THEN
+WHEN excepcion_Idplayer THEN
 DBMS_OUTPUT.PUT_LINE('No se ha encontrado este ID de usuario en la base de datos y no se puede asignar al planeta');
 ROLLBACK;
 

@@ -96,22 +96,6 @@ ELSE
 acorazados_Insertar := acorazados;
 END IF;
 
-IF nivelDefensa IS NULL THEN
-SELECT current_LevelDefense INTO nivelDefensa_Insertar
-FROM ENEMY
-WHERE id_Enemy = id_Entrada;
-ELSE
-nivelDefensa_Insertar := nivelDefensa;
-END IF;
-
-IF nivelAtaque IS NULL THEN
-SELECT current_LevelAttack INTO nivelAtaque_Insertar
-FROM ENEMY
-WHERE id_Enemy = id_Entrada;
-ELSE
-nivelAtaque_Insertar := nivelAtaque;
-END IF;
-
 update_Script := 'UPDATE ENEMY
 SET name = '''||nombre_Insertar||''',
 SET quantity_Metal = '''||metal_insertar||''',
@@ -121,7 +105,7 @@ SET num_LightHunter= '''||cazadores_L_Insertar||''',
 SET num_HeavyHunter = '''||cazadores_H_Insertar||''',
 SET num_BattleShip = '''||naves_Batalla_Insertar||''',
 SET num_ArmoredShip = '''||acorazados_Insertar||'''
-WHERE id_user = '||id_Entrada||'';
+WHERE id_player = '||id_Entrada||'';
 
 execute immediate update_Script;
 

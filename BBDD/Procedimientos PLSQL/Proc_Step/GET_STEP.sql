@@ -26,7 +26,7 @@ WHEN excepcion_Id THEN
 DBMS_OUTPUT.PUT_LINE('No se ha encontrado esta ID en la base de datos');
 
 WHEN OTHERS THEN
-DBMS_OUTPUT.PUT_LINE('Error en el proceso GET_USER:');
+DBMS_OUTPUT.PUT_LINE('Error en el proceso GET_STEP:');
 DBMS_OUTPUT.PUT_LINE('Descripcion del error: '||SQLERRM);
 
 END;

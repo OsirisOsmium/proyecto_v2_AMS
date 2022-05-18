@@ -1,9 +1,8 @@
 CREATE OR REPLACE PROCEDURE INSERT_BATTLE(
-id_Entrada IN battle.ID_Battle%TYPE,
-usuario IN battle.user_ID_User%TYPE,
+usuario IN battle.player_ID_player%TYPE,
 enemigo IN battle.enemy_ID_Enemy%TYPE,
 planeta IN battle.planet_ID_planet%TYPE,
-ganador_Usuario IN battle.User_Winner%TYPE,
+ganador_Usuario IN battle.player_Winner%TYPE,
 ganador_Enemigo IN battle.enemy_Winner%TYPE,
 residuos_Metal IN battle.waste_Metal%TYPE,
 residuos_Deuterio IN battle.waste_Deuterium%TYPE,

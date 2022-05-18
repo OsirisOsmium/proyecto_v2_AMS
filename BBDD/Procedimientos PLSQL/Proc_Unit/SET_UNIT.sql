@@ -83,7 +83,7 @@ SET defense_ID_Defense= '''||unidadDefensiva_insertar||''',
 SET ship_ID_Ship = '''||unidadNave_insertar||''',
 SET enemy_ID_Enemy= '''||enemigo_Insertar||''',
 SET planet_ID_Planet= '''||planeta_insertar||'''
-WHERE id_user = '||id_Entrada||'';
+WHERE id_player = '||id_Entrada||'';
 
 execute immediate update_Script;
 DBMS_OUTPUT.PUT_LINE('Actualizada la entrada '||id_Entrada||' de la base de datos UNITS con estos nuevos valores:');

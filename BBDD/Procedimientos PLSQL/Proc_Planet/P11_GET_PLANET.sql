@@ -1,6 +1,6 @@
 CREATE OR REPLACE PROCEDURE GET_PLANET(
 id_Entrada IN planet.id_planet%TYPE, 
-id_usuario OUT planet.user_id_user%TYPE, 
+id_usuario OUT planet.player_id_player%TYPE, 
 nombre OUT planet.planet_Name%TYPE, 
 metal OUT planet.quantity_metal%TYPE, 
 cristal OUT planet.quantity_crystal%TYPE,
@@ -31,7 +31,7 @@ IF id_Encontrada =0 THEN
 RAISE excepcion_Id;
 END IF;
 
-SELECT  user_id_user, planet_Name, quantity_metal, quantity_crystal,
+SELECT  player_id_player, planet_Name, quantity_metal, quantity_crystal,
 quantity_deuterium, num_LightHunter, num_HeavyHunter, num_BattleShip, num_ArmoredShip, 
 num_MissileLauncher, num_IonCannon, num_PlasmaCannon, current_LevelDefense,
 cost_AttackUp, current_LevelAttack, cost_DefenseUp
@@ -55,7 +55,7 @@ END;
 
 /*
 id_planeta  planet.id_planet%TYPE;
-id_usuario planet.user_id_user%TYPE;
+id_usuario planet.player_id_player%TYPE;
 nombre planet.planet_Name%TYPE;
 
 metal planet.quantityt_metal%TYPE;

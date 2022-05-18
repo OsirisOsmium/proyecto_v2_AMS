@@ -1,9 +1,9 @@
 CREATE OR REPLACE PROCEDURE SET_BATTLE(
 id_Entrada IN battle.ID_Battle%TYPE,
-usuario IN battle.user_ID_User%TYPE,
+usuario IN battle.player_ID_player%TYPE,
 enemigo IN battle.enemy_ID_Enemy%TYPE,
 planeta IN battle.planet_ID_planet%TYPE,
-ganador_Usuario IN battle.User_Winner%TYPE,
+ganador_Usuario IN battle.player_Winner%TYPE,
 ganador_Enemigo IN battle.enemy_Winner%TYPE,
 residuos_Metal IN battle.waste_Metal%TYPE,
 residuos_Deuterio IN battle.waste_Deuterium%TYPE,
@@ -38,10 +38,10 @@ EF_Acorazados IN battle.EF_ArmoredShip%TYPE
 IS
 
 id_Entrada_Insertar  battle.ID_Battle%TYPE;
-usuario_Insertar  battle.user_ID_User%TYPE;
+usuario_Insertar  battle.player_ID_player%TYPE;
 enemigo_Insertar  battle.enemy_ID_Enemy%TYPE;
 planeta_Insertar  battle.planet_ID_planet%TYPE;
-ganador_Usuario_Insertar  battle.user_Winner%TYPE;
+ganador_Usuario_Insertar  battle.player_Winner%TYPE;
 ganador_Enemigo_Insertar  battle.enemy_Winner%TYPE;
 residuos_Metal_Insertar  battle.waste_Metal%TYPE;
 residuos_Deuterio_Insertar  battle.waste_Deuterium%TYPE;
@@ -87,7 +87,7 @@ RAISE excepcion_Id;
 END IF;
 
 IF usuario IS NULL THEN
-SELECT user_ID_user INTO usuario_Insertar
+SELECT player_ID_player INTO usuario_Insertar
 FROM BATTLE
 WHERE id_Battle = id_Entrada;
 ELSE
@@ -111,7 +111,7 @@ planeta_Insertar := planeta;
 END IF;
 
 IF ganador_Usuario IS NULL THEN
-SELECT user_Winner INTO ganador_Usuario_Insertar
+SELECT player_Winner INTO ganador_Usuario_Insertar
 FROM BATTLE
 WHERE id_Battle = id_Entrada;
 ELSE
@@ -319,10 +319,10 @@ ef_Acorazados_Insertar := ef_Acorazados;
 END IF;
 
 update_Script := 'UPDATE BATTLE
-SET user_id_user = '''||usuario_Insertar||''',
+SET player_id_player = '''||usuario_Insertar||''',
 SET enemy_id_enemy = '''||enemigo_Insertar||''',
 SET planet_id_planet = '''||planeta_Insertar||''',
-SET winner_User = '''||ganador_Usuario_Insertar||''',
+SET winner_player = '''||ganador_Usuario_Insertar||''',
 SET winner_Enemy = '''||ganador_Enemigo_Insertar||''',
 SET waste_Metal = '''||residuos_Metal_Insertar||''',
 SET waste_Deuterium = '''||residuos_Deuterio_Insertar||''',

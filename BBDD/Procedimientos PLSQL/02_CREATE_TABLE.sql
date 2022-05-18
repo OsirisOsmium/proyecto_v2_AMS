@@ -3,7 +3,6 @@ SET SERVEROUTPUT ON
 CREATE OR REPLACE PROCEDURE CREATE_TABLE
 
 IS
-
 exists_Battle NUMBER(1);
 exists_Constants NUMBER(1);
 exists_Defense NUMBER(1);
@@ -317,15 +316,4 @@ DBMS_OUTPUT.PUT_LINE('ERROR en la creacion de las tablas');
 DBMS_OUTPUT.PUT_LINE('Descipcion del error; '||SQLERRM);
 ROLLBACK;
 */
-END;
-
-/
-
-SET SERVEROUTPUT ON
-
-BEGIN
-
-DROP_TABLE;
-CREATE_TABLE;
-
 END;
